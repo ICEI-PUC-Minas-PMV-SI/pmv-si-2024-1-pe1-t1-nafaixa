@@ -1,4 +1,4 @@
-# Na Faixa
+# NaFaixa
 
 `CURSO: Sistemas de Informação`
 
