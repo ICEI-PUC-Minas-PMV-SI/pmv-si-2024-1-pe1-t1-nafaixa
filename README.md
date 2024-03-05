@@ -6,13 +6,15 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O “Na Faixa” é uma plataforma digital que conecta organizadores de eventos gratuitos a potenciais participantes, oferecendo uma ampla gama de opções para todos os gostos e idades. Seja um workshop, show, exposição artística, ou qualquer outra atividade sem custo, nossa plataforma é o ponto de encontro perfeito para organizadores e participantes.
+
+Com proposta inovadora, o Na Faixa visa criar uma comunidade inclusiva, onde a cultura e o conhecimento estão ao alcance de todos, independentemente de sua poder aquisitivo.
 
 ## Integrantes
 
 * Catharina Perdigão Carneiro
 * Rita Laura Gonçalves
-* Camile Parma Vitória
+* Camille Parma Vitoria
 * Amanda Magalhães Silva
 * Bernardo dos Santos Utsch
 * Gustavo Torres da Rocha Castro
