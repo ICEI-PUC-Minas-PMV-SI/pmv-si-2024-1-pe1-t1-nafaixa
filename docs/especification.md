@@ -6,21 +6,14 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
 
-## Personas
+## Persona 01
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Pedro tem 26 anos, é solteiro, nasceu na periferia, é graduado em Sistemas de Informação e atualmente trabalha como Tech Lead em uma empresa de tecnologia local. É engajado em comunidades de eventos voltados à tecnologia, dos quais participa sempre que possível para se manter atualizado no mercado, e onde recentemente foi convidado por um líder da comunidade para ajudar na organização de um evento gratuito focado no empreendedorismo para jovens adultos. Mesmo estando ansioso por estar fazendo algo novo, Pedro embarca nesta jornada e após a preparação do evento, busca uma plataforma que o auxilie a atrair seu público desejado.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+## Persona 02
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Gabriela tem 22 anos, está em um relacionamento há dois anos, está no segundo semestre da graduação de Engenharia da Computação e está em busca de sua primeira oportunidade na área de desenvolvimento. Após muitos currículos enviados e pouco retorno, Gabriela decide participar de eventos de tecnologia para expandir seu networking, porém os ingressos para esses eventos são muito caros e ela busca por oportunidades de eventos gratuitos em sua cidade. 
+
 
 ## Histórias de Usuários
 | EU COMO | QUERO/PRECISO | PARA |
