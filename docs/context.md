@@ -1,25 +1,42 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+    O papel do mercado de eventos na economia brasileira é de extrema relevância, uma vez
+que, mesmo eventos de acesso gratuito, mobilizam uma ampla gama de serviços desde a fase
+de preparação até sua conclusão. Além disso, esses eventos desempenham um papel crucial
+como impulsionadores da ciência, cultura e até mesmo na promoção de novos
+empreendimentos, gerando impactos positivos em todo o ecossistema de inovação. Segundo
+dados divulgados em janeiro de 2023 pela ABRAPE (Associação Brasileira dos Promotores de
+Eventos), o mercado de eventos e seu hub setorial representam 3,8% do PIB brasileiro, com um
+faturamento anual que ultrapassa 290 bilhões de reais.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+    Diante da conjuntura financeira atual enfrentada pela população brasileira e dos desafios
+de divulgação que impactam os organizadores de eventos gratuitos, surge a iniciativa do
+"NaFaixa", um website projetado para agir como uma ponte entre ambas as partes.
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+    O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos gratuitos a
+potenciais participantes, oferecendo uma ampla gama de opções para todos os gostos e idades.
+Seja um workshop, show, exposição artística, ou qualquer outra atividade sem custo, nossa
+plataforma é o ponto de encontro perfeito para organizadores e participantes. Com proposta
+inovadora, o “NaFaixa” visa criar uma comunidade inclusiva, onde a cultura e o conhecimento
+estão ao alcance de todos, independentemente de seu poder aquisitivo.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
+    Eventos gratuitos com baixo engajamento devido a falta de divulgação efetiva.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+    Apesar do cenário econômico promissor para o setor de eventos, não é raro descobrir
+sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de
+comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa
+com setenta participantes, onde 51,4% das pessoas respondentes afirmaram já ter perdido um
+evento por conta da falta de divulgação sobre o mesmo. A ausência de publicidade adequada
+resulta em baixa visibilidade do evento e, consequentemente, em uma audiência menor. Esse
+problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem investimento
+ainda menor em marketing e publicidade, impactando negativamente a quantidade de
+pessoas alcançadas.
+    
+    Quais estratégias eficazes podem ser implementadas para melhorar o engajamento de
+participantes em eventos gratuitos?
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
