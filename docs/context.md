@@ -1,6 +1,6 @@
 # Introdução
 
-    O papel do mercado de eventos na economia brasileira é de extrema relevância, uma vez
+O papel do mercado de eventos na economia brasileira é de extrema relevância, uma vez
 que, mesmo eventos de acesso gratuito, mobilizam uma ampla gama de serviços desde a fase
 de preparação até sua conclusão. Além disso, esses eventos desempenham um papel crucial
 como impulsionadores da ciência, cultura e até mesmo na promoção de novos
@@ -9,11 +9,11 @@ dados divulgados em janeiro de 2023 pela ABRAPE (Associação Brasileira dos Pro
 Eventos), o mercado de eventos e seu hub setorial representam 3,8% do PIB brasileiro, com um
 faturamento anual que ultrapassa 290 bilhões de reais.
 
-    Diante da conjuntura financeira atual enfrentada pela população brasileira e dos desafios
+Diante da conjuntura financeira atual enfrentada pela população brasileira e dos desafios
 de divulgação que impactam os organizadores de eventos gratuitos, surge a iniciativa do
 "NaFaixa", um website projetado para agir como uma ponte entre ambas as partes.
 
-    O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos gratuitos a
+O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos gratuitos a
 potenciais participantes, oferecendo uma ampla gama de opções para todos os gostos e idades.
 Seja um workshop, show, exposição artística, ou qualquer outra atividade sem custo, nossa
 plataforma é o ponto de encontro perfeito para organizadores e participantes. Com proposta
@@ -22,9 +22,9 @@ estão ao alcance de todos, independentemente de seu poder aquisitivo.
 
 ## Problema
 
-    Eventos gratuitos com baixo engajamento devido a falta de divulgação efetiva.
+Eventos gratuitos com baixo engajamento devido a falta de divulgação efetiva.
 
-    Apesar do cenário econômico promissor para o setor de eventos, não é raro descobrir
+Apesar do cenário econômico promissor para o setor de eventos, não é raro descobrir
 sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de
 comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa
 com setenta participantes, onde 51,4% das pessoas respondentes afirmaram já ter perdido um
@@ -34,7 +34,7 @@ problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem i
 ainda menor em marketing e publicidade, impactando negativamente a quantidade de
 pessoas alcançadas.
     
-    Quais estratégias eficazes podem ser implementadas para melhorar o engajamento de
+Quais estratégias eficazes podem ser implementadas para melhorar o engajamento de
 participantes em eventos gratuitos?
 
 
