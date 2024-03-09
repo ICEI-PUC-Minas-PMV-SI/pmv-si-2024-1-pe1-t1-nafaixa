@@ -58,7 +58,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
-## Público-Alvo
+## Público-Alvo 
 
 - Pessoas de 18 a 60 anos, residentes de zonas urbanas, engajadas na produção de eventos gratuitos e que desejam aumentar o engajamento de seus eventos.
 - Pessoas de 16 a 45 anos, residentes de zonas urbanas, com renda entre R$1.000,00 e R$5.000,00 e que desejam encontrar eventos gratuitos com mais facilidade.
