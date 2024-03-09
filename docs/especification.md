@@ -23,22 +23,76 @@ Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos 
 Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
 
 ## Histórias de Usuários
+| EU COMO | QUERO/PRECISO | PARA |
+| --- | --- | --- |
+| Organizador de eventos | cadastrar meu evento na plataforma | atrair potenciais participantes. |
+| Organizador de eventos | ter visibilidade prévia de quem confirmou presença no meu evento | poder gerenciar os recursos da melhor forma. |
+| Organizador de eventos | poder alterar meus dados pessoais | caso seja necessário atualizá-los. |
+| Organizador de eventos | poder alterar os dados dos meus eventos cadastrados | caso haja alguma atualização a ser feita. |
+| Pessoa interessada em eventos gratuitos | filtrar os eventos por categoria específica | facilitar minha busca. |
+| Pessoa interessada em eventos gratuitos | pesquisar por um evento específico | facilitar minha busca. |
+| Pessoa interessada em eventos gratuitos | visualizar os eventos mais próximos a mim | facilitar minha busca. |
+| Pessoa interessada em eventos gratuitos | ter a visibilidade de todos os eventos gratuitos disponíveis | analisar todas as opções. |
+| Pessoa interessada em eventos gratuitos | acessar todos os detalhes do evento que eu tiver interesse | saber todas as informações relevantes. |
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+01: Como um organizador de eventos, eu quero poder cadastrar meu evento na plataforma para
+atrair potenciais participantes.
+- CA 01: O evento criado precisa ter os seguintes dados: Nome, categoria, data e localização
+do evento.
+- CA 02: Depois de criado o evento, o sistema deve informar que foi cadastrado com
+sucesso, caso contrário deverá retornar mensagem de erro.
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+02: Como um organizador de eventos, eu quero ter visibilidade prévia das pessoas que
+confirmaram presença no meu evento para utilizar os recursos da melhor forma.
+- CA 01: O sistema deve apresentar um botão para o usuário demonstrar interesse no
+evento.
+- CA 02: Ao usuário confirmar sua presença, este dado deve ser enviado/apresentado ao
+organizador.
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+03: Como um organizador de eventos, eu quero poder alterar meus dados pessoais para caso
+seja necessário atualizá-los.
+- CA 01: O organizador deve ser autenticado no sistema.
+  
+04: Como um organizador de eventos, eu quero poder alterar os dados dos meus eventos
+cadastrados para caso haja alguma atualização a ser feita.
+- CA 01: O organizador deve estar autenticado no sistema.
+  
+05: Como uma pessoa interessada em eventos gratuitos, eu quero poder filtrar os eventos por
+categorias específicas para facilitar minha busca.
+- CA 01: O sistema deve ser capaz de filtrar apenas uma categoria por vez.
+- CA 02: O filtro deve ter como base a lista de categorias disponíveis.
+- CA 03: A busca deverá retornar os eventos específicos da categoria selecionada.
+- CA 04: Caso não encontrado nenhum resultado, o sistema deve mostrar mensagem de
+erro.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+06: Como uma pessoa interessada em eventos gratuitos, eu quero poder pesquisar por um
+evento específico para facilitar minha busca.
+- CA 01: A busca deve permitir filtrar por nome e localização ou por palavras-chave.
+- CA 02: Caso não encontrado nenhum resultado, o sistema deve mostrar mensagem de
+erro.
+- CA 03: A busca deverá retornar os eventos compatíveis com as palavras-chave inseridas.
+  
+07: Como uma pessoa interessada em eventos gratuitos, eu quero poder visualizar os eventos
+mais próximos a mim para facilitar minha busca.
+- CA 01: O usuário deve permitir o uso de sua localização.
+- CA 02: O sistema deverá utilizar a API do Google Maps para reconhecer a localização do
+usuário.
+- CA 03: Caso não exista evento próximo ao usuário, não deverá listar.
+  
+08: Como uma pessoa interessada em eventos gratuitos, eu quero ter a visibilidade de todos os
+eventos gratuitos disponíveis para analisar todas as opções.
+- CA 01: O sistema deve listar todos os eventos cadastrados ordenados por data.
+- CA 02: Caso não exista nenhum evento cadastrado, não deverá listar.
+  
+09: Como uma pessoa interessada em eventos gratuitos, eu quero ter acesso aos detalhes do
+evento que eu tiver interesse para saber todas as informações importantes.
+- CA 01: O evento deve conter nome, categoria, data e localização.
+
+| ID | DESCRIÇÃO DA RESTRIÇÃO |
+| --- | --- |
+| 01 | O projeto deverá ser entregue até o final do semestre |
+| 02 | Não pode ser desenvolvido um módulo de backend |
+| 03 | Não pode ser utilizado um banco de dados |
 
 ## Requisitos
 
