@@ -93,10 +93,108 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+| ID | DESCRIÇÃO DO REQUISITO | PRIORIDADE |
+| --- | --- | --- |
+| RF-001 | O sistema deve oferecer a funcionalidade de cadastrar um novo evento. | ALTA |
+| RF-002 | O sistema deve fornecer um filtro por categoria para facilitar a navegação. | ALTA |
+| RF-003 | O sistema deve apresentar uma barra de pesquisa para facilitar a localização de eventos específicos. | MÉDIA |
+| RF-004 | O sistema deve apresentar uma listagem de eventos por proximidade de localização. | BAIXA |
+| RF-005 | O sistema deve apresentar uma listagem completa de todos os eventos cadastrados. | ALTA |
+| RF-006 | O sistema deve apresentar os dados detalhados de todos os eventos cadastrados. | ALTA |
+| RF-007 | O sistema deve oferecer a opção de confirmar presença em um ou mais eventos. | MÉDIA |
+| RF-008 | O sistema deve oferecer uma página de cadastro de organizador. | ALTA |
+| RF-009 | O sistema deve oferecer uma página de login para o organizador. | ALTA |
+| RF-010 | O sistema deve oferecer uma página para alteração de dados do organizador. | ALTA |
+| RF-011 | O sistema deve oferecer a opção de alteração dos dados do evento já cadastrado. | ALTA |
+
+RF01: Cadastro de novo evento
+- Descrição: O sistema deve oferecer a funcionalidade de cadastrar um novo evento.
+- Pré-condições: O usuário está autenticado no sistema.
+- Fluxo Principal:
+1. O usuário acessa a página de cadastro de eventos.
+2. Preenche as informações do novo evento.
+3. Confirma o cadastro do evento.
+
+RF02: Filtro por categoria
+- Descrição: O sistema deve fornecer um filtro por categoria para facilitar a navegação.
+- Pré-condições: O usuário está na página principal.
+- Fluxo Principal:
+1. O usuário seleciona a categoria desejada.
+2. A lista de eventos é filtrada de acordo com a categoria escolhida.
+
+RF03: Barra de pesquisa
+- Descrição: O sistema deve apresentar uma barra de pesquisa para facilitar a localização de
+eventos específicos.
+- Pré-condições: O usuário está na página principal.
+- Fluxo Principal:
+1. O usuário insere palavras-chave na barra de pesquisa.
+2. A lista de eventos é filtrada com base nos termos inseridos.
+
+RF04: Listagem por localização
+- Descrição: O sistema deve apresentar uma listagem de eventos por proximidade de
+localização.
+- Pré-condições: O usuário deve permitir o acesso a localização..
+- Fluxo Principal:
+1. O usuário permite ao sistema identificar sua localização.
+2. O usuário solicita a lista de eventos com base na sua localização ao clicar em um ícone de
+busca por localização.
+3. A lista de eventos é exibida com base na localização especificada.
+
+RF05: Listagem de todos os eventos
+- Descrição: O sistema deve apresentar uma listagem completa de todos os eventos
+cadastrados.
+- Pré-condições: O usuário está na página principal.
+- Fluxo Principal:
+1. O usuário acessa a página de listagem completa de eventos.
+
+RF06: Apresentação de dados dos eventos
+- Descrição: O sistema deve apresentar os dados detalhados de todos os eventos cadastrados.
+- Pré-condições: O usuário está visualizando a página de detalhes do evento.
+- Fluxo Principal:
+1. O usuário seleciona um evento específico.
+2. Os dados completos do evento são exibidos.
+
+RF07: Confirmação de presença
+- Descrição: O sistema deve oferecer a opção de confirmar presença em um ou mais eventos.
+- Pré-condições: O usuário está visualizando a página de detalhes do evento e informar um
+e-mail.
+- Fluxo Principal:
+1. O usuário acessa a página do evento desejado.
+2. O usuário insere seu e-mail.
+3. Seleciona a opção de confirmar presença.
+
+RF08: Cadastro de organizador
+- Descrição: O sistema deve oferecer uma página de cadastro de organizador.
+- Pré-condições: O usuário deve um conter e-mail válido.
+- Fluxo principal:
+1. O usuário acessa o portal do organizador.
+2. O usuário deve inserir os dados necessários para cadastro.
+3. O usuário confirma seu cadastro como organizador.
+
+RF09: Login do organizador
+- Descrição: O sistema deve oferecer uma página de login para o organizador.
+- Pré-condições: O usuário deve estar cadastrado na plataforma como organizador.
+- Fluxo principal:
+1. O usuário acessa o portal do organizador.
+2. O usuário insere os dados solicitados.
+3. O usuário efetua o login e é apresentada a tela de organizador.
+
+RF10: Alteração de dados do organizador
+- Descrição: O sistema deve oferecer uma página para alteração de dados do organizador.
+- Pré condições: O organizador precisa estar autenticado na plataforma.
+- Fluxo principal:
+1. O usuário acessa o portal do organizador.
+2. O usuário acessa a tela de configuração.
+3. O sistema oferece a opção de alterar seu e-mail, nome ou senha.
+
+RF11: Alteração de dados dos eventos cadastrados
+- Descrição: O sistema deve oferecer a opção de alteração dos dados do evento já cadastrado.
+- Pré condições: O organizador deve estar autenticado e possuir um evento cadastrado na
+plataforma.
+- Fluxo principal:
+1. O usuário deve acessar o portal do organizador.
+2. O usuário deve acessar seus eventos cadastrados.
+3. O usuário tem a opção de alterar as informações do seu evento, ou excluir o mesmo
 
 
 ### Requisitos não Funcionais
