@@ -8,7 +8,11 @@ O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos g
 
 ## Problema
 
-Não é raro descobrir sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa com setenta participantes, onde 51,4% das pessoas respondentes afirmaram já ter perdido um evento por conta da falta de divulgação sobre o mesmo. A ausência de publicidade adequada resulta em baixa visibilidade do evento e, consequentemente, em uma audiência menor. Esse problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem investimento ainda menor em marketing e publicidade, impactando negativamente a quantidade de pessoas alcançadas.
+Eventos gratuitos possui baixo engajamento devido a falta de divulgação efetiva. Não é raro descobrir sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa com setenta participantes, onde 51,4% das pessoas respondentes
+afirmaram já ter perdido um evento por conta da falta de divulgação sobre o mesmo. A ausência de publicidade adequada resulta em baixa visibilidade do evento e, consequentemente, em uma audiência menor. Esse problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem investimento ainda menor em marketing e publicidade, impactando negativamente a quantidade de pessoas alcançadas.
+
+Quais estratégias eficazes podem ser implementadas para melhorar o engajamento de
+participantes em eventos gratuitos?
 
 
 ## Objetivos
