@@ -8,28 +8,24 @@ O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos g
 
 ## Problema
 
-Eventos gratuitos possui baixo engajamento devido a falta de divulgação efetiva. Não é raro descobrir sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa com setenta participantes, onde 51,4% das pessoas respondentes afirmaram já ter perdido um evento por conta da falta de divulgação sobre o mesmo. A ausência de publicidade adequada resulta em baixa visibilidade do evento e, consequentemente, em uma audiência menor. Esse problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem investimento ainda menor em marketing e publicidade, impactando negativamente a quantidade de pessoas alcançadas.
+Eventos gratuitos possuem baixo engajamento devido a falta de divulgação efetiva. Não é raro descobrir sobre um evento incrível que aconteceu no fim de semana e que você perdeu devido à falta de comunicação efetiva sobre ele. Diante dessa constatação, realizamos uma pesquisa quantitativa com setenta participantes, onde 51,4% das pessoas respondentes afirmaram já ter perdido um evento por conta da falta de divulgação sobre o mesmo. A ausência de publicidade adequada resulta em baixa visibilidade do evento e, consequentemente, em uma audiência menor. Esse problema é ainda mais evidente em eventos gratuitos, que muitas vezes recebem investimento ainda menor em marketing e publicidade, impactando negativamente a quantidade de pessoas alcançadas.
 
 Quais estratégias eficazes podem ser implementadas para melhorar o engajamento de
 participantes em eventos gratuitos?
 
 
-## Objetivos
+## Objetivo Geral
 
-O projeto “NaFaixa” tem como principal objetivo o desenvolvimento de um website dedicado a
+O projeto “NaFaixa” tem como principal objetivo o desenvolvimento de um website dedicado a se tornar uma ponte eficaz entre organizadores e potenciais participantes de eventos gratuitos, promovendo uma comunidade mais inclusiva.
 
-se tornar uma ponte eficaz entre organizadores e potenciais participantes de eventos gratuitos,
-promovendo uma comunidade mais inclusiva
+
+## Objetivos Específicos
 
 ● Auxiliar organizadores de eventos gratuitos na divulgação de seus eventos.
-
 ● Auxiliar organizadores de eventos gratuitos a atrair público para seus eventos.
-
 ● Facilitar a busca de indivíduos interessados por eventos gratuitos.
-
 ● Democratizar o acesso a conhecimento, cultura e entretenimento.
  
-
 
 ## Justificativa
 
