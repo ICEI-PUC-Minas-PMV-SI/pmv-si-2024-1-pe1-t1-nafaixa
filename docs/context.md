@@ -21,10 +21,10 @@ O projeto “NaFaixa” tem como principal objetivo o desenvolvimento de um webs
 
 ## Objetivos Específicos
 
-● Auxiliar organizadores de eventos gratuitos na divulgação de seus eventos.
-● Auxiliar organizadores de eventos gratuitos a atrair público para seus eventos.
-● Facilitar a busca de indivíduos interessados por eventos gratuitos.
-● Democratizar o acesso a conhecimento, cultura e entretenimento.
+- Auxiliar organizadores de eventos gratuitos na divulgação de seus eventos.
+- Auxiliar organizadores de eventos gratuitos a atrair público para seus eventos.
+- Facilitar a busca de indivíduos interessados por eventos gratuitos.
+- Democratizar o acesso a conhecimento, cultura e entretenimento.
  
 
 ## Justificativa
