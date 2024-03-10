@@ -9,11 +9,13 @@ Nesta etapa do projeto foram utilizadas:
 - Calls em grupo para o planejamento dos requisitos funcionais e não funcionais.
 
 
-## Persona 01
+## Personas
+
+### Persona 01
 
 Pedro tem 26 anos, é solteiro, nasceu na periferia, é graduado em Sistemas de Informação e atualmente trabalha como Tech Lead em uma empresa de tecnologia local. É engajado em comunidades de eventos voltados à tecnologia, dos quais participa sempre que possível para se manter atualizado no mercado, e onde recentemente foi convidado por um líder da comunidade para ajudar na organização de um evento gratuito focado no empreendedorismo para jovens adultos. Mesmo estando ansioso por estar fazendo algo novo, Pedro embarca nesta jornada e após a preparação do evento, busca uma plataforma que o auxilie a atrair seu público desejado.
 
-## Persona 02
+### Persona 02
 
 Gabriela tem 22 anos, está em um relacionamento há dois anos, está no segundo semestre da graduação de Engenharia da Computação e está em busca de sua primeira oportunidade na área de desenvolvimento. Após muitos currículos enviados e pouco retorno, Gabriela decide participar de eventos de tecnologia para expandir seu networking, porém os ingressos para esses eventos são muito caros e ela busca por oportunidades de eventos gratuitos em sua cidade. 
 
@@ -197,25 +199,34 @@ plataforma.
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| ID | DESCRIÇÃO DO REQUISITO | PRIORIDADE |
+| --- | --- | --- |
+| RNF-001 | O sistema deve ser compatível com o Google Chrome,, garantindo uma experiência consistente. | ALTA |
+| RNF-002 | O sistema deve possuir uma API integrada com o Google Maps para fornecer informações de localização. | MÉDIA |
+| RNF-003 | As tecnologias fundamentais para o sistema são HTML, CSS e Javascript. | ALTA |
+| RNF-004 | Os dados do sistema devem ser armazenados no formato JSON. | ALTA |
+| RNF-005 | O sistema deve oferecer a funcionalidade de solicitar e obter a localização atual do usuário. | MÉDIA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+RNF01: Compatibilidade com o Google Chrome
+- Descrição: O sistema deve ser compatível com o Google Chrome, garantindo uma experiência consistente.
+- Critérios de Aceitação: O sistema é testado e otimizado para funcionar no navegador.
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+RNF02: Integração com Google Maps
+- Descrição: O sistema deve possuir uma API integrada com o Google Maps para fornecer informações de localização.
+- Critérios de Aceitação: A API do Google Maps é implementada e funcional.
+
+RNF03: Tecnologias utilizadas
+- Descrição: As tecnologias fundamentais para o sistema são HTML, CSS e Javascript.
+- Critérios de Aceitação: O desenvolvimento e a manutenção do sistema são realizados utilizando as tecnologias especificadas.
+
+RNF04: Armazenamento em JSON
+- Descrição: Os dados do sistema serão armazenados no formato JSON.
+- Critérios de Aceitação: Os dados são persistentes e podem ser recuperados conforme necessário utilizando a estrutura JSON.
+
+RNF05: Obter localização do usuário
+Descrição: O sistema deve oferecer a funcionalidade de solicitar e obter a localização atual do usuário.
+Critérios de Aceitação: O processo de solicitação de permissão para acessar a localização deve ser claro e compreensível para o usuário.
+
 
 ## Restrições
 
