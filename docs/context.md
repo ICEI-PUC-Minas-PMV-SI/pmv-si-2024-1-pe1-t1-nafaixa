@@ -23,8 +23,11 @@ se tornar uma ponte eficaz entre organizadores e potenciais participantes de eve
 promovendo uma comunidade mais inclusiva
 
 ● Auxiliar organizadores de eventos gratuitos na divulgação de seus eventos.
+
 ● Auxiliar organizadores de eventos gratuitos a atrair público para seus eventos.
+
 ● Facilitar a busca de indivíduos interessados por eventos gratuitos.
+
 ● Democratizar o acesso a conhecimento, cultura e entretenimento.
  
 
