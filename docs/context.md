@@ -17,23 +17,35 @@ participantes em eventos gratuitos?
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O projeto “NaFaixa” tem como principal objetivo o desenvolvimento de um website dedicado a
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+se tornar uma ponte eficaz entre organizadores e potenciais participantes de eventos gratuitos,
+promovendo uma comunidade mais inclusiva
+
+● Auxiliar organizadores de eventos gratuitos na divulgação de seus eventos.
+● Auxiliar organizadores de eventos gratuitos a atrair público para seus eventos.
+● Facilitar a busca de indivíduos interessados por eventos gratuitos.
+● Democratizar o acesso a conhecimento, cultura e entretenimento.
  
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Atualmente, é possível observar uma vasta oferta de eventos gratuitos que enfrentam
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+baixo engajamento devido a ausência de uma divulgação eficaz. Sejam eles presenciais ou
+virtuais, diversos eventos gratuitos enfrentam esse desafio. Este cenário afeta não apenas os
+organizadores, que dedicam tempo e recursos na preparação de eventos sem obter o retorno
+esperado, mas também prejudica potenciais participantes, que perdem valiosas oportunidades
+de adquirir conhecimento ou desfrutar de momentos de lazer.
+Diante deste problema identificado, surge a proposta do "NaFaixa", um projeto
+estrategicamente concebido para atender tanto aos organizadores de eventos quanto aos
+potenciais participantes. O foco principal do "NaFaixa" é facilitar a criação e divulgação de
+eventos gratuitos, estabelecendo uma conexão direta entre aqueles que organizam e aqueles
+que buscam experiências sem custo. Dessa forma, nosso projeto visa não apenas otimizar o
+retorno para os organizadores, mas também democratizar o acesso à cultura, conhecimento e
+entretenimento para um público mais amplo.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo 
 
