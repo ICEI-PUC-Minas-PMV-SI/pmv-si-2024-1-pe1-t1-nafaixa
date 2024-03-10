@@ -1,10 +1,13 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Como apresentado anteriormente, o “NaFaixa” visa auxiliar em problemas complementares que impactam os organizadores de eventos gratuitos e seu público. Nosso propósito é proporcionar benefícios mútuos, possibilitando uma divulgação eficiente dos eventos por parte dos organizadores e facilitando a busca por eventos gratuitos para o público.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+Nesta etapa do projeto foram utilizadas:
 
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
+- Ferramentas de Design Thinking para construção das personas;
+- Técnica 3W para escrita das histórias de usuário;
+- Calls em grupo para o planejamento dos requisitos funcionais e não funcionais.
+
 
 ## Persona 01
 
@@ -81,11 +84,6 @@ eventos gratuitos disponíveis para analisar todas as opções.
 evento que eu tiver interesse para saber todas as informações importantes.
 - CA 01: O evento deve conter nome, categoria, data e localização.
 
-| ID | DESCRIÇÃO DA RESTRIÇÃO |
-| --- | --- |
-| 01 | O projeto deverá ser entregue até o final do semestre |
-| 02 | Não pode ser desenvolvido um módulo de backend |
-| 03 | Não pode ser utilizado um banco de dados |
 
 ## Requisitos
 
@@ -223,14 +221,8 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| ID | DESCRIÇÃO DA RESTRIÇÃO |
+| --- | --- |
+| 01 | O projeto deverá ser entregue até o final do semestre |
+| 02 | Não pode ser desenvolvido um módulo de backend |
+| 03 | Não pode ser utilizado um banco de dados |
