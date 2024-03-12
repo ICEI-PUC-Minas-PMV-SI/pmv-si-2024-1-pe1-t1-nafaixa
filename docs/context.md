@@ -4,7 +4,6 @@ O papel do mercado de eventos na economia brasileira é de extrema relevância, 
 
 Segundo dados divulgados em janeiro de 2023 pela ABRAPE (Associação Brasileira dos Promotores de Eventos), o mercado de eventos e seu hub setorial representam 3,8% do PIB brasileiro, com um faturamento anual que ultrapassa 290 bilhões de reais. Apesar do cenário econômico promissor para o setor de eventos, é comum que eventos, em suma, gratuitos, percam audiência por conta da falta de divulgação eficaz. Diante da conjuntura financeira atual enfrentada pela população brasileira e dos desafios de divulgação que impactam os organizadores de eventos gratuitos, surge a iniciativa do "NaFaixa", um website projetado para agir como uma ponte entre ambas as partes.
 
-O “NaFaixa” é uma plataforma digital que conecta organizadores de eventos gratuitos a potenciais participantes, oferecendo uma ampla gama de opções para todos os gostos e idades. Seja um workshop, show, exposição artística, ou qualquer outra atividade sem custo, nossa plataforma é o ponto de encontro perfeito para organizadores e participantes. Com proposta inovadora, o “NaFaixa” visa criar uma comunidade inclusiva, onde a cultura e o conhecimento estão ao alcance de todos, independentemente de seu poder aquisitivo.
 
 ## Problema
 
