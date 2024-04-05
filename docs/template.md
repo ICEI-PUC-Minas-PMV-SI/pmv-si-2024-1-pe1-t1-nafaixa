@@ -1,4 +1,4 @@
-TEMPLATE DO USUÁRIO
+TEMPLATE PADRÃO DO USUÁRIO
 
 O template padrão de usuário começa pela padronização do layout completo, incluindo botões, logo na nav bar e footer. Ele também apresenta uma iconografia que serve como identificação para o usuário selecionar a categoria de eventos desejada.
 
