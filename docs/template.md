@@ -1,36 +1,20 @@
-# Template padrão do site
+TEMPLATE DO USUÁRIO
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+O template padrão de usuário começa pela padronização do layout completo, incluindo botões, logo na nav bar e footer. Ele também apresenta uma iconografia que serve como identificação para o usuário selecionar a categoria de eventos desejada.
 
-Explique as guias de estilo utilizadas no seu projeto.
-
-## Design
-
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
+![template padrao usuario - Rita](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/template%20padrao%20usuario%20-%20Rita.png)
 
 
-## Cores
+TEMPLATE PADRÃO DE PRODUTOR
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+O nosso template padrão para produtores se distingue por ter um menu exclusivo para eles. Esse menu permite criar eventos, visualizar os já criados e também modificar informações dos eventos e pessoais no perfil.
 
-
-## Tipografia
-
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+![template padrao produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/template%20padrao%20produtor.png)
 
 
-## Iconografia
+TABELA DE CORES E TIPOGRAFIA
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+A cor azul é amplamente reconhecida por transmitir sensações de confiança, versatilidade e segurança, o que pode fazer com que sejam transmitidos estes sentimentos aos usuários ao visualizarem a tabela de cores. Além disso, o azul é conhecido por ser uma cor que promove a acessibilidade, sendo facilmente percebida por pessoas com diferentes tipos de daltonismo. Essas características tornam o azul uma escolha ideal para nosso template, oferecendo uma experiência visualmente sólida e inclusiva.
+Para a escolha de nossa tipografia, optamos pelo uso de apenas duas fontes, ambas de fácil leitura, para auxiliar o nosso usuário a ter uma experiência de leitura mais simples e agradável.
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
-
-
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+![template padrao produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/fontes%20e%20cores%20-%20Rita.png)
