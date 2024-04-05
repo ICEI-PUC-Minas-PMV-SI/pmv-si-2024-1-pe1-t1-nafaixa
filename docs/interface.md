@@ -37,3 +37,5 @@ Caso o usuário nos permita coletar sua localização, os eventos serão filtrad
 ![pagina-eventos-por-proximidade](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20proximidade.png?raw=true)
 
 
+
+
