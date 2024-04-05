@@ -6,15 +6,15 @@
 
 ## Entrar - Criar conta - Visualizar perfil
 
-[!(https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/ENTRAR%20-%20CRIAR%20CONTA%20-%20VISUALIZAR%20PERFIL.png)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/6932f6d29f5d57727cd766b98ee9c4b440761917/docs/img/ENTRAR%20-%20CRIAR%20CONTA%20-%20VISUALIZAR%20PERFIL.png)
+![entrar-criar-visualizar](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/ENTRAR%20-%20CRIAR%20CONTA%20-%20VISUALIZAR%20PERFIL.png)
 
 ## Visualizar eventos - Criar evento
 
-[!(https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20-%20CRIAR%20EVENTO.png)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/6932f6d29f5d57727cd766b98ee9c4b440761917/docs/img/VISUALIZAR%20EVENTOS%20-%20CRIAR%20EVENTO.png)
+![visualizar-criar evento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20-%20CRIAR%20EVENTO.png)
 
 ## Visualizar eventos no mapa
 
-![Visualizar Eventos no mapa](docs/img/VISUALIZAR EVENTOS NO MAPA.png)
+![Visualizar Eventos no mapa](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20NO%20MAPA.png)
 
 ## Wireframes
 
