@@ -18,20 +18,22 @@
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
+Para os wireframes de nosso projeto, foi optado pelo modelo de alta fidelidade. Todas as telas possuem cabeçalho e rodapé padronizados, contendo a logo da nossa plataforma. Em nosso cabeçalho também será possível realizar uma busca personalizada através de nossa barra de pesquisa; selecionar uma localização a partir do dropdown "Localização"; e clicar em "Criar Evento" ou em "Entrar" caso o usuário seja um produtor de eventos. Já em nosso rodapé, será possível acessar nossas páginas de Sobre Nós e Termos de Uso.
 
-### Exemplo
+Na página inicial do nosso projeto, o usuário visualizará um carrossel no qual serão apresentadas as nossas principais categorias de eventos. Logo abaixo, opções de eventos próximos, categorias de eventos e todos os eventos disponíveis são funcionalidades de filtragem que compõem o site. A disposição em grade foi escolhida como padrão da nossa plataforma.
 
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
+![pagina-inicial](https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/ed97bc5e218ad28125a1000cb17e9ff9435d3393/docs/img/P%C3%A1gina%20inicial.png)
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Na página onde serão apresentados todos os eventos cadastrados, dispõem-se todos os eventos sem qualquer filtragem, sendo possível ordená-los pelo dropbox, no canto superior direito.
 
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![pagina-todos-os-eventos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Todos%20os%20eventos%20cadastrados.png?raw=true)
+
+Ao selecionar uma das categorias apresentadas na página inicial, o usuário será redirecionado à página de eventos por categoria, que apresentará todos os eventos cadastrados no nicho escolhido.
+
+![pagina-eventos-por-categoria](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20categoria.png?raw=true)
+
+Caso o usuário nos permita coletar sua localização, os eventos serão filtrados pela distância em relação ao usuário, onde será possível visualizar tais eventos em um mapa interativo e, abaixo, em uma listagem.
+
+![pagina-eventos-por-proximidade](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20proximidade.png?raw=true)
+
+
