@@ -16,6 +16,14 @@
 
 ![Visualizar Eventos no mapa](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20NO%20MAPA.png)
 
+## Visualizar eventos por categoria
+
+![Visualizar Eventos por categoria](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/EVENTOS%20POR%20CATEGORIA%20-%20TODOS%20OS%20EVENTOS.png)
+
+## Visualizar sobre nos
+
+![Visualizar Sobre nos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/SOBRE%20N%C3%93S%20-%20TERMOS%20DE%20USO.png)
+
 ## Wireframes
 
 Para os wireframes de nosso projeto, foi optado pelo modelo de alta fidelidade. Todas as telas possuem cabeçalho e rodapé padronizados, contendo a logo da nossa plataforma. Em nosso cabeçalho também será possível realizar uma busca personalizada através de nossa barra de pesquisa; selecionar uma localização a partir do dropdown "Localização"; e clicar em "Criar Evento" ou em "Entrar" caso o usuário seja um produtor de eventos. Já em nosso rodapé, será possível acessar nossas páginas de Sobre Nós e Termos de Uso.
