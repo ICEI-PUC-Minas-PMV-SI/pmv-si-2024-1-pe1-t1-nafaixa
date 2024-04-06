@@ -36,6 +36,14 @@ Caso o usuário nos permita coletar sua localização, os eventos serão filtrad
 
 ![pagina-eventos-por-proximidade](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20proximidade.png?raw=true)
 
+## Entrar/Login
 
+A página de login é simples e efetiva com campos claros de email e senha para “logar” na conta e opções de de se cadastrar e recuperar senha. Os termos de uso ficam disponiveis para leitura e aceitação do produtor.
 
+![pagina-de-login](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Login.png)
 
+## Recuperação de senha
+
+Aqui a recuperação de senha é feita enviando uma mensagem para o email cadastrado. 
+
+![pagina-recuperar-senha](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Recuperar%20senha.png)
