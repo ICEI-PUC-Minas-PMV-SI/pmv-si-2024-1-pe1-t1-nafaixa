@@ -50,6 +50,11 @@ Para realizar o cadastro, o produtor deverá preencher todos os campos da págin
 
 ![pagina-cadastro-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Cadastro%20de%20produtor(1).png)
 
+Nesta página, o produtor será capaz de alterar as informaçoes previamente fornecidas na página de cadastro de produtor, podendo também, adicionar foto de perfil, além disso, vemos uma funcionalidade compartilhada pelas telas de criação de eventos, perfil do produtor e meus eventos.
+
+![tela-perfil-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/commit/7318b85f1436e2fc99e2bc28d07bd7e9ff70f235)
+
+
 ## Entrar/Login
 
 A página de login é simples e efetiva com campos claros de email e senha para “logar” na conta e opções de de se cadastrar e recuperar senha. Os termos de uso ficam disponiveis para leitura e aceitação do produtor.
