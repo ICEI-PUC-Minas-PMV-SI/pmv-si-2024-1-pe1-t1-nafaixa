@@ -44,6 +44,12 @@ Caso o usuário nos permita coletar sua localização, os eventos serão filtrad
 
 ![pagina-eventos-por-proximidade](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20proximidade.png?raw=true)
 
+## Produtor
+
+Para realizar o cadastro, o produtor deverá preencher todos os campos da página para que seja autorizado a criar eventos. As informações requeridas nesta são de suma importância para a proteção do site, como empresa e para segurança dos futuros usuários participantes dos eventos.
+
+![pagina-cadastro-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Cadastro%20de%20produtor(1).png)
+
 ## Entrar/Login
 
 A página de login é simples e efetiva com campos claros de email e senha para “logar” na conta e opções de de se cadastrar e recuperar senha. Os termos de uso ficam disponiveis para leitura e aceitação do produtor.
