@@ -59,6 +59,9 @@ Ainda não foi decidido como, nem quais campos não serão obrigatórios.
 
 ![pagina-criar-evento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Criar%20evento(1).png)
 
+Aqui, o produtor será capaz de ver todos os eventos criados por ele e suas primeiras informações, são elas: nome do evento, endereço do evento, data do evento e quantas pessoas confirmaram a presença no evento. Os produtores podem editar os eventos e excluí-los.
+
+![pagina-meus-eventos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20meus%20eventos.png)
 
 
 ## Entrar/Login
