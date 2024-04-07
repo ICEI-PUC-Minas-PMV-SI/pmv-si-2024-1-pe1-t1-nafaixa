@@ -52,7 +52,7 @@ Para realizar o cadastro, o produtor deverá preencher todos os campos da págin
 
 Nesta página, o produtor será capaz de alterar as informaçoes previamente fornecidas na página de cadastro de produtor, podendo também, adicionar foto de perfil, além disso, vemos uma funcionalidade compartilhada pelas telas de criação de eventos, perfil do produtor e meus eventos.
 
-![tela-perfil-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/commit/7318b85f1436e2fc99e2bc28d07bd7e9ff70f235)
+![tela-perfil-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Perfil%20do%20produtor(2).png)
 
 
 ## Entrar/Login
