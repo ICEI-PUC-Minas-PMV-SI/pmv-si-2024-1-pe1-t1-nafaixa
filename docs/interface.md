@@ -71,6 +71,6 @@ A página de login é simples e efetiva com campos claros de email e senha para 
 
 ## Recuperação de senha
 
-Aqui a recuperação de senha é feita enviando uma mensagem para o email cadastrado.
+Aqui a recuperação de senha é feita enviando uma mensagem para o e-mail cadastrado.
 
 ![pagina-recuperar-senha](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Recuperar%20senha.png)
