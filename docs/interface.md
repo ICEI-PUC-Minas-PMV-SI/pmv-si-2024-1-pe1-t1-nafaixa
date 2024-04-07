@@ -63,7 +63,6 @@ Aqui, o produtor será capaz de ver todos os eventos criados por ele e suas prim
 
 ![pagina-meus-eventos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20meus%20eventos.png)
 
-
 ## Entrar/Login
 
 A página de login é simples e efetiva com campos claros de email e senha para “logar” na conta e opções de de se cadastrar e recuperar senha. Os termos de uso ficam disponiveis para leitura e aceitação do produtor.
@@ -72,6 +71,6 @@ A página de login é simples e efetiva com campos claros de email e senha para 
 
 ## Recuperação de senha
 
-Aqui a recuperação de senha é feita enviando uma mensagem para o email cadastrado. 
+Aqui a recuperação de senha é feita enviando uma mensagem para o email cadastrado.
 
 ![pagina-recuperar-senha](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Recuperar%20senha.png)
