@@ -54,6 +54,12 @@ Nesta página, o produtor será capaz de alterar as informaçoes previamente for
 
 ![tela-perfil-do-produtor](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Perfil%20do%20produtor(2).png)
 
+Para criar um evento é necessário que o produtor descreva informações pertinentes para auxiliar o usuário na decisão de participar do evento, porém nem todos os campos são obrigatórios para a criação do evento.
+Ainda não foi decidido como, nem quais campos não serão obrigatórios.
+
+![pagina-criar-evento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Criar%20evento(1).png)
+
+
 
 ## Entrar/Login
 
