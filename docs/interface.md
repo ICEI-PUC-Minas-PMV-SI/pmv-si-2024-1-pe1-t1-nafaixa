@@ -4,23 +4,23 @@
 
 ## User Flow
 
-## Entrar - Criar conta - Visualizar perfil
+### Entrar - Criar conta - Visualizar perfil
 
 ![entrar-criar-visualizar](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/ENTRAR%20-%20CRIAR%20CONTA%20-%20VISUALIZAR%20PERFIL.png)
 
-## Visualizar eventos - Criar evento
+### Visualizar eventos - Criar evento
 
 ![visualizar-criar evento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20-%20CRIAR%20EVENTO.png)
 
-## Visualizar eventos no mapa
+### Visualizar eventos no mapa
 
 ![Visualizar Eventos no mapa](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/VISUALIZAR%20EVENTOS%20NO%20MAPA.png)
 
-## Visualizar eventos por categoria
+### Visualizar eventos por categoria
 
 ![Visualizar Eventos por categoria](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/EVENTOS%20POR%20CATEGORIA%20-%20TODOS%20OS%20EVENTOS.png)
 
-## Visualizar sobre nos
+### Visualizar página Sobre Nós
 
 ![Visualizar Sobre nos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/SOBRE%20N%C3%93S%20-%20TERMOS%20DE%20USO.png)
 
@@ -44,7 +44,12 @@ Caso o usuário nos permita coletar sua localização, os eventos serão filtrad
 
 ![pagina-eventos-por-proximidade](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1gina%20-%20Eventos%20por%20proximidade.png?raw=true)
 
-## Produtor
+A página a seguir apresentará informações necessárias ao usuário como nome, local, data e horário que acontecerá o evento selecionado. Além disso, informações adicionais que serão apresentadas como a descrição do evento, informações gerais e detalhes do produtor do evento são importantes campos para melhorar a experiência do usuário. Um chamado de ação é utilizado para incentivar o usuário a participar do evento e se cadastrar com o próprio email.
+
+![pagina-detalhes-do-evento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20detalhes%20do%20evento.png?raw=true)
+
+
+### Produtor
 
 Para realizar o cadastro, o produtor deverá preencher todos os campos da página para que seja autorizado a criar eventos. As informações requeridas nesta são de suma importância para a proteção do site, como empresa e para segurança dos futuros usuários participantes dos eventos.
 
