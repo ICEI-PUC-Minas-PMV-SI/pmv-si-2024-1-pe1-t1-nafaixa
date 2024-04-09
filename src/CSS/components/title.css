@@ -1,0 +1,41 @@
+h1 {
+    font-family: "poppins";
+    font-size: 24px;
+    color: #000;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+}
+
+button {
+    background-color: #e2ecf3;
+    padding: 10px;
+    border-radius: 5px;
+
+    
+}
+
+button:hover{
+    transform: scale(1.08)
+
+
+}
+
+h3 {
+    font-family: almarai;
+    font-size: 16px;
+    justify-content: center;
+    color: #5a5a5a;
+
+
+}
+
+p {
+    font-family: almarai;
+
+}

@@ -1,0 +1,14 @@
+:root{
+    --primary-color:var(--#fff)
+}
+
+.page { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 5px 0 5px;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}

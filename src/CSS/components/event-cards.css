@@ -1,0 +1,28 @@
+.cards {
+    width: 300px;
+    height: 366px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: "almarai";
+    transition: transform 100ms linear;
+}
+
+.cards:hover {
+    background-color: transparent;
+    transform: scale(1.08)
+}
+
+.imgcard {
+    width: 300px;
+    height: 264px;
+    border-radius: 5px;
+}
+
+.cards p {
+    font-size: 16px;
+    color: #000;    
+    margin: 6px;
+    padding: 3px;
+}

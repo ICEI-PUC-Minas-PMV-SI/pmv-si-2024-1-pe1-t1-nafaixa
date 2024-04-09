@@ -1,0 +1,9 @@
+ body, h1, h2, h3, p {
+    margin: 0px;
+}
+
+/* body {
+    display: block;
+    max-width: 1400;
+    justify-content: center;
+} */
