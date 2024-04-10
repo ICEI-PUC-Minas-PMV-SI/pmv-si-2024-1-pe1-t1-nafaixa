@@ -1,0 +1,14 @@
+article.categories-cards {
+    display: flex;
+    flex-direction: column; 
+    background: none;
+    width: 131px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+article.categories-cards:hover{
+    background-color: transparent;
+    transform: scale(1.08)
+}
+
