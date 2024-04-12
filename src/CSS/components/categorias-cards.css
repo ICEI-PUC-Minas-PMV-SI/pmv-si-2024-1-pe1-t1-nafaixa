@@ -5,6 +5,7 @@ article.categories-cards {
     width: 131px;
     text-align: center;
     padding-bottom: 5px;
+    cursor:pointer;
 }
 
 article.categories-cards:hover{

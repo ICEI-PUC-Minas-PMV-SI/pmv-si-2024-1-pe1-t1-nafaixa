@@ -18,11 +18,14 @@
     width: 300px;
     height: 264px;
     border-radius: 5px;
+    cursor:pointer;
 }
 
 .cards p {
+    font-family: almarai;
     font-size: 16px;
     color: #000;    
     margin: 6px;
     padding: 3px;
+    cursor:pointer;
 }
