@@ -1,0 +1,9 @@
+.texto-termos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2% 12%;
+    font-family: "Almarai", sans-serif;
+    line-height: 25px;
+    text-align: justify;
+}
