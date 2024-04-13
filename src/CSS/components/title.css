@@ -1,6 +1,7 @@
 h1 {
-    font-family: "poppins";
-    font-size: 24px;
+    font-family: "almarai";
+    font-size: 30px !important;
+    font-weight: bold !important;
     color: #000;
     margin: 5px;
     display: inline-flex;
@@ -28,7 +29,7 @@ button:hover{
 
 h3 {
     font-family: almarai;
-    font-size: 16px;
+    font-size: 16px !important;
     justify-content: center;
     color: #5a5a5a;
 
