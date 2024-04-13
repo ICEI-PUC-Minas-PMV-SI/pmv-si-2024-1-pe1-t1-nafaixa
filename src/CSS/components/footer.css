@@ -5,6 +5,18 @@ footer {
     #7ac9ff 14%,
     #0097ff 82.21%
   );
+  padding: 30px;
+}
+
+footer a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  font-family: "poppins";
+  transition: transform 100ms linear;
+  border-radius: 5px;
+  padding: auto;
 }
 
 .footercenter {
@@ -40,5 +52,3 @@ footer {
   padding-top: 10px;
   max-height: 50px;
 }
-
-
