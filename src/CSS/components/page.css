@@ -37,3 +37,12 @@
 .wrapper-carousel-control-next-icon {
   margin-left: auto;
 }
+
+.carousel-item img {
+  height: 320px;
+}
+
+.wrapper-carousel {
+  position: relative;
+  width: 100%;
+}
