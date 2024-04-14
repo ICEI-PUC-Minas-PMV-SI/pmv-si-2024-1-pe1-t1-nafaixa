@@ -12,20 +12,28 @@
 }
 
 .events-map {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .map-button {
-    text-decoration: none;
-    color: #fff;
-    font-family: "Almarai", sans-serif;
-    background-color: #7ac9ff;
-    font-size: smaller;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Almarai", sans-serif;
+  background-color: #7ac9ff;
+  font-size: smaller;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.wrapper-carousel-control-prev-icon {
+  margin-right: auto;
+}
+
+.wrapper-carousel-control-next-icon {
+  margin-left: auto;
 }
