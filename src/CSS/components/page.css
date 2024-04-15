@@ -64,18 +64,3 @@ body {
   box-shadow: 0px 0px 0px 0px #0097ff;
 }
 
-.arrows {
-  display: flex;
-  justify-content: space-between;
-}
-
-.arrows img {
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.title-and-arrows {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

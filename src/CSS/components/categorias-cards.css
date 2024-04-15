@@ -13,3 +13,9 @@ article.categories-cards:hover{
     transform: scale(1.08)
 }
 
+.categorias-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
