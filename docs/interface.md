@@ -76,6 +76,12 @@ Aqui a recuperação de senha é feita enviando uma mensagem para o e-mail cadas
 
 ![pagina-recuperar-senha](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Recuperar%20senha.png)
 
+Sendo realizada a verificação, é possível criar uma nova senha de acesso.
+
+![pagina-verificacao](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1g.%20Recupera%C3%A7%C3%A3o%20de%20senha%20-%20Verifica%C3%A7%C3%A3o.png?raw=true)
+
+![pagina-nova-senha](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/P%C3%A1g.%20Recupera%C3%A7%C3%A3o%20de%20senha%20-%20Nova%20senha.png?raw=true)
+
 Na página abaixo, é possível conhecer mais sobre o NaFaixa e a equipe que existe por trás do projeto. 
 
 ![pagina-sobre-nós](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa/blob/main/docs/img/Pg%20Sobre%20N%C3%B3s.png?raw=true)
