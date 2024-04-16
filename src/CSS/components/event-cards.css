@@ -1,3 +1,30 @@
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapper-mostrarMais {
+  display: flex;
+  margin: 50px 0;
+}
+
+.mostrarMais {
+  margin: auto;
+  color: #fff;
+  font-family: Almarai;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 120px;
+  background: rgba(122, 201, 255, 0.87);
+  border: none;
+}
+.mostrarMais:hover {
+  background-color: #2fa6f5;
+}
+
 .cards {
   width: 300px;
   height: auto;
@@ -37,3 +64,4 @@
 .event-title {
   font-weight: bold;
 }
+

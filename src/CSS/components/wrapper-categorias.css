@@ -1,9 +1,0 @@
-.wrapper-categorias{
-    display: flex;
-    gap: 5px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-}
-
