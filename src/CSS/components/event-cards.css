@@ -65,3 +65,24 @@
   font-weight: bold;
 }
 
+.events-nearme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertodos-button {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Almarai", sans-serif;
+  background-color: #7ac9ff;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.vertodos-button:hover {
+  background-color: #2fa6f5;
+}
