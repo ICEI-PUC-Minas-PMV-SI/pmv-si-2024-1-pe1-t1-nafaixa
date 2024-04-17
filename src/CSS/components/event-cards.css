@@ -13,16 +13,16 @@
   margin: auto;
   color: #fff;
   font-family: Almarai;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  border-radius: 120px;
-  background: rgba(122, 201, 255, 0.87);
+  border-radius: 5px;
+  background: #1769c3;
   border: none;
 }
 .mostrarMais:hover {
-  background-color: #2fa6f5;
+  background: #1769c3;
 }
 
 .cards {
@@ -74,8 +74,10 @@
   text-decoration: none;
   color: #fff;
   font-family: "Almarai", sans-serif;
-  background-color: #7ac9ff;
+  border-radius: 5px;
+  background: #1769c3;
   height: 30px;
+  font-size: 20px;
   line-height: 30px;
   margin-top: 30px;
   padding-right: 20px;
@@ -84,5 +86,6 @@
 }
 
 .vertodos-button:hover {
-  background-color: #2fa6f5;
+  border-radius: 5px;
+  background: #1769c3;
 }
