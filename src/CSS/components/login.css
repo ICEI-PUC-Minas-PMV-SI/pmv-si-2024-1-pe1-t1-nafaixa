@@ -4,6 +4,21 @@ body {
     flex-direction: column;
   }
   
-  footer {
+footer {
     margin-top: auto;
+  }
+
+.botaologin {
+    display: inline-block;
+    background: #1769c3;
+    color: aliceblue;
+    font-family: almarai;
+    font-size: 20px;
+    width: 270px;
+    padding-top: 7px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 100ms linear;
   }
