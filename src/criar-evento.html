@@ -173,7 +173,8 @@
                         <div class="form-item upload-baner">
                             <div enctype="_multipart/form-data">
                                 <label>Faça upload do baner do evento</label><br>
-                                <input type="file" name="file" id="baner-evento">
+                                <input type="file" accept="image/*" name="file" id="event-banner-input">
+                                <img height="auto" class="banner-preview" src="#" id="event-banner-preview" alt="Banner do evento">
                             </div>
                         </div>
 
@@ -209,26 +210,37 @@
 </body>
 
 <script>
-    const banerEvento = document.querySelector('#baner-evento');
-    const baner = document.querySelector('#baner');
+    // const banerEvento = document.querySelector('#baner-evento');
+    // const baner = document.querySelector('#baner');
 
-    banerEvento.addEventListener('change', event => {
+    // banerEvento.addEventListener('change', event => {
 
-        const reader = new FileReader;
+    //     const reader = new FileReader;
 
-        reader.onload = function (event) {
-            const previewImage = document.createElement('img');
-            previewImage.width = 115;
-            previewImage.height = 100;
-            previewImage.id = 'preview-image';
-            previewImage.src = event.target.result;
-            baner.insertAdjacentElement('afterend', previewImage);
+    //     reader.onload = function (event) {
+    //         const previewImage = document.createElement('img');
+    //         previewImage.width = 115;
+    //         previewImage.height = 100;
+    //         previewImage.id = 'preview-image';
+    //         previewImage.src = event.target.result;
+    //         baner.insertAdjacentElement('afterend', previewImage);
+    //     }
+
+    //     reader.readAsDataURL(baner.files[0]);
+
+
+    // })
+
+    const eventBannerInput = document.querySelector('#event-banner-input');
+    const eventBannerPreview = document.querySelector('#event-banner-preview')
+
+    eventBannerInput.onchange = evt => {
+        const [file] = eventBannerInput.files
+        if (file) {
+            eventBannerPreview.src = URL.createObjectURL(file)
         }
-
-        reader.readAsDataURL(baner.files[0]);
-
-
-    })
+        eventBannerPreview.style.display = "block"
+    }
 
     document.getElementById("evento-presencial-radio").onclick = function () {
         document.getElementById("evento-presencial-form").style.display = "block";

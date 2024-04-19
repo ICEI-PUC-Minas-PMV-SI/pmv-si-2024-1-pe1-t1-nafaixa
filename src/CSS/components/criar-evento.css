@@ -74,6 +74,11 @@
     box-sizing: border-box;
 }
 
+.banner-preview {
+    display: none;
+    max-width: 320px;
+}
+
 .rounded-button {
     display: flex;
     margin: 50px 0;
