@@ -25,9 +25,10 @@ header {
 .logo {
   object-fit: contain;
   max-height: 40px;
+  margin-left: 10px;
 }
 
-form {
+.nav-search {
   max-width: 600px;
   flex: 1;
   padding: 0px 20px 0px 20px;
