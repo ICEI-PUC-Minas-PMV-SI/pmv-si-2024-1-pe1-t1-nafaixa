@@ -25,11 +25,7 @@ body {
   width: 100%;
 }
 
-c
-/*
-   * Property styles in unhighlighted state.
-   */
-.property {
+c .evento {
   align-items: center;
   background-color: #ffffff;
   border-radius: 50%;
@@ -46,7 +42,7 @@ c
   width: 30px;
 }
 
-.property::after {
+.evento::after {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-top: 9px solid #ffffff;
@@ -61,23 +57,20 @@ c
   z-index: 1;
 }
 
-.property .icon {
+.evento .icon {
   align-items: center;
   display: flex;
   justify-content: center;
   color: #ffffff;
 }
 
-.property .details {
+.evento .details {
   display: none;
   flex-direction: column;
   flex: 1;
 }
 
-/*
-   * Property styles in highlighted state.
-   */
-.property.highlight {
+.evento.highlight {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
@@ -85,15 +78,15 @@ c
   width: auto;
 }
 
-.property.highlight::after {
+.evento.highlight::after {
   border-top: 9px solid #ffffff;
 }
 
-.property.highlight .details {
+.evento.highlight .details {
   display: flex;
 }
 
-.property.highlight .icon svg {
+.evento.highlight .icon svg {
   width: 50px;
   height: 50px;
 }
