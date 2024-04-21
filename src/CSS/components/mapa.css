@@ -12,15 +12,7 @@ p {
 p:last-of-type {
   margin-bottom: 0 !important;
 }
-:root {
-  --building-color: #ff9800;
-  --house-color: #0288d1;
-  --shop-color: #7b1fa2;
-  --warehouse-color: #558b2f;
-}
-/*
-   * Optional: Makes the sample page fill the window.
-   */
+
 html,
 body {
   height: 100%;
@@ -28,14 +20,11 @@ body {
   padding: 0;
 }
 
-/*
-   * Always set the map height explicitly to define the size of the div element
-   * that contains the map.
-   */
 #map {
   height: 300px;
   width: 100%;
 }
+
 c
 /*
    * Property styles in unhighlighted state.
@@ -79,40 +68,10 @@ c
   color: #ffffff;
 }
 
-.property .icon svg {
-  height: 20px;
-  width: auto;
-}
-
 .property .details {
   display: none;
   flex-direction: column;
   flex: 1;
-}
-
-.property .address {
-  color: #9e9e9e;
-  font-size: 10px;
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-
-.property .features {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.property .features > div {
-  align-items: center;
-  background: #f5f5f5;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  display: flex;
-  font-size: 10px;
-  gap: 5px;
-  padding: 5px;
 }
 
 /*
@@ -137,76 +96,4 @@ c
 .property.highlight .icon svg {
   width: 50px;
   height: 50px;
-}
-
-.property .bed {
-  color: #ffa000;
-}
-
-.property .bath {
-  color: #03a9f4;
-}
-
-.property .size {
-  color: #388e3c;
-}
-
-/*
-   * House icon colors.
-   */
-.property.highlight:has(.fa-house) .icon {
-  color: var(--house-color);
-}
-
-.property:not(.highlight):has(.fa-house) {
-  background-color: var(--house-color);
-}
-
-.property:not(.highlight):has(.fa-house)::after {
-  border-top: 9px solid var(--house-color);
-}
-
-/*
-   * Building icon colors.
-   */
-.property.highlight:has(.fa-building) .icon {
-  color: var(--building-color);
-}
-
-.property:not(.highlight):has(.fa-building) {
-  background-color: var(--building-color);
-}
-
-.property:not(.highlight):has(.fa-building)::after {
-  border-top: 9px solid var(--building-color);
-}
-
-/*
-   * Warehouse icon colors.
-   */
-.property.highlight:has(.fa-warehouse) .icon {
-  color: var(--warehouse-color);
-}
-
-.property:not(.highlight):has(.fa-warehouse) {
-  background-color: var(--warehouse-color);
-}
-
-.property:not(.highlight):has(.fa-warehouse)::after {
-  border-top: 9px solid var(--warehouse-color);
-}
-
-/*
-   * Shop icon colors.
-   */
-.property.highlight:has(.fa-shop) .icon {
-  color: var(--shop-color);
-}
-
-.property:not(.highlight):has(.fa-shop) {
-  background-color: var(--shop-color);
-}
-
-.property:not(.highlight):has(.fa-shop)::after {
-  border-top: 9px solid var(--shop-color);
 }
