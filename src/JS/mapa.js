@@ -38,32 +38,48 @@ function buildContent(property) {
 
   content.classList.add("property");
   content.innerHTML = `
-      <div class="icon">
-          <i aria-hidden="true" class="fa fa-icon fa-${property.type}" title="${property.type}"></i>
-          <span class="fa-sr-only">${property.type}</span>
-      </div>
-      <div class="details">
-          <div class="price">${property.price}</div>
-          <div class="address">${property.address}</div>
-          <div class="features">
-          <div>
-              <i aria-hidden="true" class="fa fa-bed fa-lg bed" title="bedroom"></i>
-              <span class="fa-sr-only">bedroom</span>
-              <span>${property.bed}</span>
-          </div>
-          <div>
-              <i aria-hidden="true" class="fa fa-bath fa-lg bath" title="bathroom"></i>
-              <span class="fa-sr-only">bathroom</span>
-              <span>${property.bath}</span>
-          </div>
-          <div>
-              <i aria-hidden="true" class="fa fa-ruler fa-lg size" title="size"></i>
-              <span class="fa-sr-only">size</span>
-              <span>${property.size} ft<sup>2</sup></span>
-          </div>
-          </div>
-      </div>
-      `;
+  <div class="icon">
+  <img class="imgEventoMapa"
+  src="assets/img/download (1).jpeg"
+  alt="event img"/>
+  </div>
+
+<div class="details">
+  <p class="event-title">Nome do evento</p>
+  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
+  <p>
+    <img src="./assets/img/local.svg" alt="Local do evento" />Local
+  </p>
+</div>
+
+  `;
+  // `
+  // <div class="icon">
+  //     <i aria-hidden="true" class="fa fa-icon fa-${property.type}" title="${property.type}"></i>
+  //     <span class="fa-sr-only">${property.type}</span>
+  // </div>
+  // <div class="details">
+  //     <div class="price">${property.price}</div>
+  //     <div class="address">${property.address}</div>
+  //     <div class="features">
+  //     <div>
+  //         <i aria-hidden="true" class="fa fa-bed fa-lg bed" title="bedroom"></i>
+  //         <span class="fa-sr-only">bedroom</span>
+  //         <span>${property.bed}</span>
+  //     </div>
+  //     <div>
+  //         <i aria-hidden="true" class="fa fa-bath fa-lg bath" title="bathroom"></i>
+  //         <span class="fa-sr-only">bathroom</span>
+  //         <span>${property.bath}</span>
+  //     </div>
+  //     <div>
+  //         <i aria-hidden="true" class="fa fa-ruler fa-lg size" title="size"></i>
+  //         <span class="fa-sr-only">size</span>
+  //         <span>${property.size} ft<sup>2</sup></span>
+  //     </div>
+  //     </div>
+  // </div>
+  // `;
   return content;
 }
 
