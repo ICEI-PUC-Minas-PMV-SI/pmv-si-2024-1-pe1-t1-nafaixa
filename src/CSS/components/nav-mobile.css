@@ -108,9 +108,11 @@ header {
 }
 
   .nav-search {
+    margin: auto;
     max-width: 600px;
     padding: 0px 20px 0px 20px;
     margin-top: 10px;
+    
   }
   
   .search {
@@ -121,6 +123,7 @@ header {
     border-radius: 28px;
     background: #f6f6f6;
     border: 1px #1769c3;
+    
   }
   
   .search-input {
