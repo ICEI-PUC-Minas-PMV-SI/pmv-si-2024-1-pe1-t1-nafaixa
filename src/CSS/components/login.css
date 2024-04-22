@@ -21,4 +21,114 @@ footer {
     text-align: center;
     border-radius: 20px;
     transition: transform 100ms linear;
+    cursor: pointer;
+    margin-left: 20.5%;
+    border-color: #1769c3;
+    
+  }
+
+  .txtlogin1 {
+    font-family: almarai;
+    font-size: 32px;
+    font-weight: 500 !important;
+    
+    
+  }
+
+  .txtlogin2{
+    font-family: almarai;
+    font-size: 20px;
+    font-weight: lighter;
+    
+  }
+
+ .logologin {
+  width: 374.94px;
+  height: 117.519px;
+  
+
+ }
+
+ .logincontainer {
+  display: block;
+  margin-top: 0;
+  margin: auto;
+
+ }
+
+ .textologin {
+text-align: center;
+line-height: 40px;
+
+ }
+
+ .containeremail {
+  font-family: almarai;
+  font-size: 16px ;
+  font-weight: 200 !important;
+  
+ }
+
+ .containeremail input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+ }
+
+ .containersenha {
+  font-family: almarai;
+  font-size: 16px ;
+  font-weight: 200 !important;
+ }
+
+ .containersenha input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+ }
+
+ .checkbox {
+  font-family: almarai;
+  font-size: 16px;
+  margin-bottom: 30px;
+  
+
+ }
+
+ .lembrarsenha a {
+font-family: almarai;
+font-size: 16px;
+text-decoration: none; 
+color: black ;
+font-weight: 700;
+
+}
+
+
+
+.lembrarsenha {
+text-align: center;
+margin-top: 10px;
+
+}
+ 
+.cadastro {
+  font-family: almarai;
+  font-size: 16px;
+  text-decoration: none; 
+  color: black ;
+  text-align: center;
+  margin-top: 10px;
+  
+  }
+
+  .cadastro a {
+    text-decoration: none; 
+    color: black ;
+    font-weight: 700;
+
   }
