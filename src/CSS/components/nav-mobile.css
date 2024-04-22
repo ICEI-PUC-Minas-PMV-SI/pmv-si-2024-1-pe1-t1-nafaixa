@@ -84,27 +84,27 @@ header {
     top: 8px;
 }
 
-.menu-hamburguer ul{
+#menu-options ul {
+    display: none;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100px;
+    width: 150px;
     background-color: rgba(0, 72, 157);
     color: white;
     padding: 20px;
-    margin-left: -100px;
+    margin-top: 50px;
+    margin-right: 10px;
     font-family: "poppins";
-
+    text-align: left;
 }
 
-checkbox-menu:checked ~ ul{
-    margin-left: 0px;
-
+.checkbox-menu:checked ~ #menu-options ul {
+    display: block;
 }
 
 .menu-hamburguer ul li a{
     text-decoration: none;
-
 }
 
   .nav-search {
@@ -144,7 +144,7 @@ checkbox-menu:checked ~ ul{
     text-align: right;
   }
   
-  nav a {
+  .navcenter a {
     color: white;
     font-size: 20px;
     text-decoration: none;
