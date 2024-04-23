@@ -20,6 +20,7 @@ header {
   align-items: center;
   max-width: 1400px;
   margin: auto;
+  display: none;
 }
 
 .logo {
@@ -97,4 +98,10 @@ a:hover {
 #button:hover {
   transform: scale(1.08);
   color: white;
+}
+
+@media (min-width: 860px){
+  .navcenter{
+    display: flex;
+  }
 }
