@@ -11,7 +11,7 @@ header {
     margin-bottom: 2px;
   }
   
-  .navcenter {
+  .navcenter-mobile {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -38,7 +38,7 @@ header {
     height: 22px;
   }
   
-.navcenter .menu-hamburguer label{
+.navcenter-mobile .menu-hamburguer label{
     position:relative;
     z-index: 999 ;
     display: block;
@@ -107,7 +107,7 @@ header {
     text-decoration: none;
 }
 
-  .nav-search {
+  .nav-search-mobile {
     margin: auto;
     max-width: 600px;
     padding: 0px 20px 0px 20px;
@@ -147,7 +147,7 @@ header {
     text-align: right;
   }
   
-  .navcenter a {
+  .navcenter-mobile a {
     color: white;
     font-size: 20px;
     text-decoration: none;
