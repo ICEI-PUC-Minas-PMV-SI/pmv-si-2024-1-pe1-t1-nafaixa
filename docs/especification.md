@@ -7,6 +7,7 @@ Nesta etapa do projeto foram utilizadas:
 - Ferramentas de Design Thinking para construção das personas;
 - Técnica 3W para escrita das histórias de usuário;
 - Calls em grupo para o planejamento dos requisitos funcionais e não funcionais.
+- Apagar
 
 
 ## Personas
