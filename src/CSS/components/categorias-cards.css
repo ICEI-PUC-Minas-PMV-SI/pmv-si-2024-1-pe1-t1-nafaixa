@@ -6,13 +6,14 @@
   
 .categorias-button{
     margin-right: 10px;
+
 }
 
-.wrapper-categorias{
+#wrapper-categorias{
     display: flex;
     gap: 5px;
     overflow: hidden;
-
+    white-space: nowrap
 }
 
 article.categories-cards {
@@ -31,4 +32,14 @@ article.categories-cards:hover{
     transform: scale(1.08)
 }
 
+#left-btn{
+    background: none;
+    border: none;
+    /* box-sizing: content-box; */
+}
+
+#right-btn{
+    background: none;
+    border: none;
+}
 
