@@ -88,10 +88,11 @@ header {
 
 #menu-options ul {
     display: none;
+    z-index: 1;
     position: absolute;
     right: 0;
     top: 0;
-    width: 150px;
+    width: 180px;
     background-color: rgba(0, 72, 157);
     color: white;
     padding: 20px;
@@ -99,13 +100,12 @@ header {
     margin-right: 10px;
     font-family: "poppins";
     text-align: left;
-
 }
-
+/* 
 #menu-options a{
-  /* padding-bottom: 10px */
+  padding-bottom: 100px
   gap: 50px;
-}
+} */
 
 .checkbox-menu:checked ~ #menu-options ul {
     display: block;
