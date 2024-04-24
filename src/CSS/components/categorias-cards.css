@@ -1,9 +1,9 @@
 .wrapper-categorias{
     display: flex;
     gap: 5px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    /* align-items: flex-start; */
 
 }
 
@@ -15,6 +15,7 @@ article.categories-cards {
     text-align: center;
     padding-bottom: 5px;
     cursor:pointer;
+    margin: 10px;
 }
 
 article.categories-cards:hover{
@@ -28,3 +29,7 @@ article.categories-cards:hover{
     align-items: center;
 }
   
+.categorias-button{
+    margin-right: 10px;
+}
+
