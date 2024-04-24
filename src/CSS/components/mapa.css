@@ -21,10 +21,12 @@ body {
 }
 
 #map {
-  height: 300px;
+  height: 420px;
   width: 100%;
 }
-
+.IconeEsconderMapa {
+  fill: #ffffff;
+}
 c .evento {
   align-items: center;
   background-color: #ffffff;
