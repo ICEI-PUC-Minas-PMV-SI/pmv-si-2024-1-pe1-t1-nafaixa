@@ -1,19 +1,28 @@
-
 .wrapper-carousel-control-prev-icon {
-    margin-right: auto;
-  }
-  
-  .wrapper-carousel-control-next-icon {
-    margin-left: auto;
-  }
-  
+  margin-right: auto;
+}
+
+.wrapper-carousel-control-next-icon {
+  margin-left: auto;
+}
+
+.carousel-item img {
+  height: 429px;
+}
+
+.wrapper-carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+@media only screen and (max-width: 800px) {
   .carousel-item img {
-    height: 429px;
+    height: 300px;
   }
-  
-  .wrapper-carousel {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 1em;
+}
+@media only screen and (max-width: 500px) {
+  .carousel-item img {
+    height: 200px;
   }
+}
