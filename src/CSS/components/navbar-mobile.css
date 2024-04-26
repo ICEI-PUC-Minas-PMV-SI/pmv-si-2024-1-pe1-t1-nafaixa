@@ -148,11 +148,11 @@ header {
     color: rgba(0, 0, 0, 0.5);
   }
   
-  nav {
+  /* nav {
     display: inline-flex;
     align-items: center;
     text-align: right;
-  }
+  } */
   
   .navcenter-mobile a {
     color: white;
@@ -165,7 +165,7 @@ header {
     padding: auto;
   }
   
-  a:hover {
+.navcenter-mobile a:hover {
     background-color: transparent;
     transform: scale(1.08);
   }
