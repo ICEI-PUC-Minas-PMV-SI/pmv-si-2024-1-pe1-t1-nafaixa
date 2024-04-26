@@ -59,7 +59,7 @@
                 <input type="checkbox" class="checkbox-menu">
 
                 <label for="checkbox-menu">
-                    <img src="assets/img/pic-perfil.svg" alt="foto perfil">
+                    <img src="https://source.unsplash.com/random/1" alt="foto perfil">
                 </label>
 
                 <div id="menu-options">
@@ -91,20 +91,22 @@
 
                 <div class="detalhes-evento">
                     <a href="pagina-detalhes-evento.html">
-                    <h2>Nome do evento</h2></a>
+                        <h2>Nome do evento</h2>
+                    </a>
                     <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
                     <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
 
                     <div class="action-icons">
-                        <a href="criar-evento.html">
+                        <button href="criar-evento.html">
                             <span class="material-symbols-outlined">edit</span>
                             <span>Editar</sp>
-                        </a>
-                        <a href="">
+                        </button>
+                        <button id="delete-btn">
                             <span class="material-symbols-outlined">delete</span>
                             Excluir
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -116,20 +118,22 @@
 
                 <div class="detalhes-evento">
                     <a href="pagina-detalhes-evento.html">
-                    <h2>Nome do evento</h2></a>
+                        <h2>Nome do evento</h2>
+                    </a>
                     <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
                     <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
 
                     <div class="action-icons">
-                        <a href="criar-evento.html">
+                        <button href="criar-evento.html">
                             <span class="material-symbols-outlined">edit</span>
                             <span>Editar</sp>
-                        </a>
-                        <a href="">
+                        </button>
+                        <button id="delete-btn">
                             <span class="material-symbols-outlined">delete</span>
                             Excluir
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -141,20 +145,22 @@
 
                 <div class="detalhes-evento">
                     <a href="pagina-detalhes-evento.html">
-                    <h2>Nome do evento</h2></a>
+                        <h2>Nome do evento</h2>
+                    </a>
                     <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
                     <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
 
                     <div class="action-icons">
-                        <a href="criar-evento.html">
+                        <button href="criar-evento.html">
                             <span class="material-symbols-outlined">edit</span>
                             <span>Editar</sp>
-                        </a>
-                        <a href="">
+                        </button>
+                        <button id="delete-btn">
                             <span class="material-symbols-outlined">delete</span>
                             Excluir
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -166,27 +172,36 @@
 
                 <div class="detalhes-evento">
                     <a href="pagina-detalhes-evento.html">
-                    <h2>Nome do evento</h2></a>
+                        <h2>Nome do evento</h2>
+                    </a>
                     <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
                     <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
 
                     <div class="action-icons">
-                        <a href="criar-evento.html">
+                        <button href="criar-evento.html">
                             <span class="material-symbols-outlined">edit</span>
                             <span>Editar</sp>
-                        </a>
-                        <a href="">
+                        </button>
+                        <button id="delete-btn">
                             <span class="material-symbols-outlined">delete</span>
                             Excluir
-                        </a>
+                        </button>
                     </div>
                 </div>
+
             </div>
-      
-        </div>
     </section>
 
+    <dialog class="delete-modal">
+        <p> Tem certeza que deseja excluir esse evento? Essa ação é irreversivel.</p>
+
+        <button id="cancelar-btn">Cancelar</button>
+        <button id="delete-btn">Excluir</button>
+    </dialog>
+
+    </div>
     <footer>
         <div class="footercenter">
             <div class="subtitulo">
@@ -201,6 +216,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const deleteBtn = document.getElementById("delete-btn")
+        const modal = document.querySelector("dialog")
+        const buttonClose = document.getElementById("cancelar-btn")
+
+        deleteBtn.onclick = function () {
+            modal.showModal()
+        }
+
+        buttonClose.onclick = function () {
+            modal.close()
+        }
+
+
+
+    </script>
 </body>
 
 </html>
