@@ -28,7 +28,6 @@ header {
   .logo {
     object-fit: contain;
     max-height: 40px;
-    margin-left: 10px;
   }
 
 .checkbox-menu{
@@ -97,7 +96,7 @@ header {
     color: white;
     padding: 20px;
     margin-top: 50px;
-    margin-right: 10px;
+    margin-right: 27px;
     font-family: "poppins";
     text-align: left;
 }
@@ -178,3 +177,4 @@ header {
       display: flex;
     }
   }
+

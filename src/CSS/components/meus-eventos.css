@@ -1,3 +1,12 @@
+.menu-hamburguer  {
+    padding: 10px;
+    /* margin-right: 10px; */
+    margin-bottom: 20px;
+
+}#menu-options{
+    /* margin-right: 10px; */
+}
+
 .cards-meus-eventos {
     display: flex;
     /* gap: 10px; */
@@ -56,6 +65,8 @@
     color: ;
     padding: 5px;
     border-radius: 5px;
+    color: #1769c3;
+    margin-top: 10px;
 }
 
 .action-icons a:hover {
@@ -72,4 +83,10 @@
     gap: 10px;
     justify-content: space-between;
     color: black;
+}
+
+.detalhes-evento div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

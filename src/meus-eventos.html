@@ -30,56 +30,65 @@
 <body>
     <header>
         <div class="navcenter">
-            <div>
-                <a href="index.html">
-                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          <div>
+            <a href="index.html">
+              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
+            /></a>
+          </div>
+          <form class="nav-search">
+            <div class="search">
+              <span class="search-icon material-symbols-outlined">search</span>
+              <input
+                class="search-input"
+                type="search"
+                placeholder="pesquise por evento"
+              />
             </div>
-            <form class="nav-search">
-                <div class="search">
-                    <span class="search-icon material-symbols-outlined">search</span>
-                    <input class="search-input" type="search" placeholder="pesquise por evento" />
-                </div>
-            </form>
-            <nav>
-                <a href="">Localização</a>
-                <a href="">Criar evento</a>
-                <a id="button" class="joinBtn" href="login.html">Entrar</a>
-            </nav>
-        </div>
-
-        <div class="navcenter-mobile">
-            <div>
-                <a href="index.html">
-                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
-            </div>
-
+          </form>
+          <nav class="nav-options-web">
             <a href="">Localização</a>
-
-            <nav class="menu-hamburguer">
-                <input type="checkbox" class="checkbox-menu">
-
-                <label for="checkbox-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-
-                <div id="menu-options">
-                    <ul>
-                        <a href="login.html">Entrar</a></br>
-                        <a href="criar-evento.html">Criar evento</a>
-                        <a href="#">Sair</a>
-                    </ul>
-                </div>
-            </nav>
+            <a href="">Criar evento</a>
+            <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+          </nav>
         </div>
-    </header>
+  
+        <div class="navcenter-mobile">
+          <div>
+            <a href="index.html">
+              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          </div>
+    
+          <a href="">Localização</a>
+    
+          <nav class="menu-hamburguer">
+            <input type="checkbox" class="checkbox-menu">
+    
+            <label for="checkbox-menu">
+                <img src="assets/img/pic-perfil.svg" alt="foto perfil">
+            </label>
+    
+            <div id="menu-options">
+              <ul>
+                <a href="login.html">Entrar</a></br>
+                <a href="criar-evento.html">Criar evento</a>
+                <a href="#">Sair</a>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
 
+      <form class="nav-search-mobile">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+        </div>
+      </form>
 
     <section class="page">
         <div style="width: 100%">
             <h1>Meus eventos</h1>
-            <!-- <a href="login.html"> -->
+            <!-- <a href="pagina-detalhes-evento.html"> -->
                 <div class="cards-meus-eventos">
                     <div class="img-container">
                         <img class="img-meu-evento" src="https://source.unsplash.com/random" alt="img do meu evento">
@@ -87,12 +96,12 @@
 
                     <div class="detalhes-evento">
                         <h2>Nome do evento</h2>
-                        <p>Endereço do evento</p>
-                        <p>Data do evento</p>
-                        <p>Pessoas confirmadas:</p>
+                        <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                        <div><img src="assets/img/data.svg" alt="">Data</div>
+                        <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
 
                         <div class="action-icons">
-                            <a href="">
+                            <a href="criar-evento.html">
                                 <span class="material-symbols-outlined">edit</span>
                                 <span>Editar</sp>
                             </a>
