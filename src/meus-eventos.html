@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus eventos</title>
+
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/components/navbar.css" />
+    <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
+    <link rel="stylesheet" href="CSS/components/page-style.css" />
+    <link rel="stylesheet" href="CSS/components/title.css" />
+    <link rel="stylesheet" href="CSS/components/footer.css" />
+    <link rel="stylesheet" href="CSS/components/meus-eventos.css">
+    <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="navcenter">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+                </a>
+            </div>
+            <form class="nav-search">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="pesquise por evento" />
+                </div>
+            </form>
+            <nav class="nav-options-web">
+                <a href="">Localização</a>
+                <a href="">Criar evento</a>
+                <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+            </nav>
+        </div>
+
+        <div class="navcenter-mobile">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+                </a>
+            </div>
+
+            <a href="">Localização</a>
+
+            <nav class="menu-hamburguer">
+                <input type="checkbox" class="checkbox-menu">
+
+                <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+                <div id="menu-options">
+                    <ul>
+                        <a href="login.html">Entrar</a></br>
+                        <a href="criar-evento.html">Criar evento</a>
+                        <a href="#">Sair</a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <form class="nav-search-mobile">
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+        </div>
+    </form>
+
+    <section class="page">
+        <div style="width: 100%">
+            <h1>Meus eventos</h1>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/1" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                        <h2>Nome do evento</h2>
+                    </a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
+
+                    <div class="action-icons">
+                        <button href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </button>
+                        <button id="delete-btn">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/2" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                        <h2>Nome do evento</h2>
+                    </a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
+
+                    <div class="action-icons">
+                        <button href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </button>
+                        <button id="delete-btn">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/3" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                        <h2>Nome do evento</h2>
+                    </a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
+
+                    <div class="action-icons">
+                        <button href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </button>
+                        <button id="delete-btn">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/4" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                        <h2>Nome do evento</h2>
+                    </a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
+                    </div>
+
+                    <div class="action-icons">
+                        <button href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </button>
+                        <button id="delete-btn">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <dialog class="delete-modal">
+        <p> Tem certeza que deseja excluir esse evento? Essa ação é irreversivel.</p>
+
+        <button id="cancelar-btn">Cancelar</button>
+        <button id="delete-btn">Excluir</button>
+    </dialog>
+
+    </div>
+    <footer>
+        <div class="footercenter">
+            <div class="subtitulo">
+                <p>O seu site de eventos gratuitos</p>
+
+                <img class="logofooter" src="assets/img/logo2.svg" alt="logo NaFaixa" />
+            </div>
+
+            <div class="txtfooter">
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="termosdeuso.html">Termos de uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const deleteBtn = document.getElementById("delete-btn")
+        const modal = document.querySelector("dialog")
+        const buttonClose = document.getElementById("cancelar-btn")
+
+        deleteBtn.onclick = function () {
+            modal.showModal()
+        }
+
+        buttonClose.onclick = function () {
+            modal.close()
+        }
+
+
+
+    </script>
+</body>
+
+</html>

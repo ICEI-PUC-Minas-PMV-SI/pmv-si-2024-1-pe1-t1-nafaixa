@@ -10,10 +10,10 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
     
-
 }
 
 button {
+    cursor: pointer;
     background-color: #e2ecf3;
     padding: 10px;
     border-radius: 5px;
