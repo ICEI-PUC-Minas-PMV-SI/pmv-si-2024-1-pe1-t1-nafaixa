@@ -30,89 +30,160 @@
 <body>
     <header>
         <div class="navcenter">
-          <div>
-            <a href="index.html">
-              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
-            /></a>
-          </div>
-          <form class="nav-search">
-            <div class="search">
-              <span class="search-icon material-symbols-outlined">search</span>
-              <input
-                class="search-input"
-                type="search"
-                placeholder="pesquise por evento"
-              />
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
             </div>
-          </form>
-          <nav class="nav-options-web">
-            <a href="">Localização</a>
-            <a href="">Criar evento</a>
-            <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
-          </nav>
+            <form class="nav-search">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="pesquise por evento" />
+                </div>
+            </form>
+            <nav class="nav-options-web">
+                <a href="">Localização</a>
+                <a href="">Criar evento</a>
+                <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+            </nav>
         </div>
-  
-        <div class="navcenter-mobile">
-          <div>
-            <a href="index.html">
-              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
-          </div>
-    
-          <a href="">Localização</a>
-    
-          <nav class="menu-hamburguer">
-            <input type="checkbox" class="checkbox-menu">
-    
-            <label for="checkbox-menu">
-                <img src="assets/img/pic-perfil.svg" alt="foto perfil">
-            </label>
-    
-            <div id="menu-options">
-              <ul>
-                <a href="login.html">Entrar</a></br>
-                <a href="criar-evento.html">Criar evento</a>
-                <a href="#">Sair</a>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
 
-      <form class="nav-search-mobile">
-        <div class="search">
-          <span class="search-icon material-symbols-outlined">search</span>
-          <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+        <div class="navcenter-mobile">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+            </div>
+
+            <a href="">Localização</a>
+
+            <nav class="menu-hamburguer">
+                <input type="checkbox" class="checkbox-menu">
+
+                <label for="checkbox-menu">
+                    <img src="assets/img/pic-perfil.svg" alt="foto perfil">
+                </label>
+
+                <div id="menu-options">
+                    <ul>
+                        <a href="login.html">Entrar</a></br>
+                        <a href="criar-evento.html">Criar evento</a>
+                        <a href="#">Sair</a>
+                    </ul>
+                </div>
+            </nav>
         </div>
-      </form>
+    </header>
+
+    <form class="nav-search-mobile">
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+        </div>
+    </form>
 
     <section class="page">
         <div style="width: 100%">
             <h1>Meus eventos</h1>
-            <!-- <a href="pagina-detalhes-evento.html"> -->
-                <div class="cards-meus-eventos">
-                    <div class="img-container">
-                        <img class="img-meu-evento" src="https://source.unsplash.com/random" alt="img do meu evento">
-                    </div>
 
-                    <div class="detalhes-evento">
-                        <h2>Nome do evento</h2>
-                        <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
-                        <div><img src="assets/img/data.svg" alt="">Data</div>
-                        <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/1" alt="img do meu evento">
+                </a>
 
-                        <div class="action-icons">
-                            <a href="criar-evento.html">
-                                <span class="material-symbols-outlined">edit</span>
-                                <span>Editar</sp>
-                            </a>
-                            <a href="">
-                                <span class="material-symbols-outlined">delete</span>
-                                Excluir
-                            </a>
-                        </div>
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                    <h2>Nome do evento</h2></a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+
+                    <div class="action-icons">
+                        <a href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </a>
+                        <a href="">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </a>
                     </div>
                 </div>
-            <!-- </a> -->
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/2" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                    <h2>Nome do evento</h2></a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+
+                    <div class="action-icons">
+                        <a href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </a>
+                        <a href="">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/3" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                    <h2>Nome do evento</h2></a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+
+                    <div class="action-icons">
+                        <a href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </a>
+                        <a href="">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-meus-eventos">
+                <a href="pagina-detalhes-evento.html" class="img-container">
+                    <img class="img-meu-evento" src="https://source.unsplash.com/random/4" alt="img do meu evento">
+                </a>
+
+                <div class="detalhes-evento">
+                    <a href="pagina-detalhes-evento.html">
+                    <h2>Nome do evento</h2></a>
+                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
+                    <div><img src="assets/img/data.svg" alt="">Data</div>
+                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:</div>
+
+                    <div class="action-icons">
+                        <a href="criar-evento.html">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span>Editar</sp>
+                        </a>
+                        <a href="">
+                            <span class="material-symbols-outlined">delete</span>
+                            Excluir
+                        </a>
+                    </div>
+                </div>
+            </div>
+      
         </div>
     </section>
 

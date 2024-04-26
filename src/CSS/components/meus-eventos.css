@@ -1,11 +1,8 @@
 .menu-hamburguer  {
     padding: 10px;
-    /* margin-right: 10px; */
     margin-bottom: 20px;
-
-}#menu-options{
-    /* margin-right: 10px; */
 }
+
 
 .cards-meus-eventos {
     display: flex;
@@ -18,6 +15,7 @@
     /* margin-bottom: 20px; */
     font-style: none;
     height: 200px;
+    margin-bottom: 20px;
 }
 
 .img-container {
@@ -47,6 +45,11 @@
 
 .page a:hover {
     background: #EAEAEA;
+}
+
+.detalhes-evento a{
+    text-decoration: none;
+    color: black;
 }
 
 .action-icons {
@@ -85,8 +88,12 @@
     color: black;
 }
 
+
+
 .detalhes-evento div{
     display: flex;
     align-items: center;
     gap: 5px;
 }
+
+
