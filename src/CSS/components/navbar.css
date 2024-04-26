@@ -65,7 +65,7 @@ nav {
   text-align: right;
 }
 
-nav a {
+.nav-options-web a {
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -76,12 +76,12 @@ nav a {
   padding: auto;
 }
 
-a:hover {
+.nav-options-web a:hover {
   background-color: transparent;
   transform: scale(1.08);
 }
 
-#button {
+#entrar-btn  {
   display: inline-block;
   border-radius: 5px;
   background: #1769c3;
@@ -95,7 +95,7 @@ a:hover {
   transition: transform 100ms linear;
 }
 
-#button:hover {
+#entrar-btn:hover {
   transform: scale(1.08);
   color: white;
 }
