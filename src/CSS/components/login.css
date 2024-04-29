@@ -42,7 +42,7 @@ footer {
     
   }
 
- .logologin {
+ .logo{
   width: 374.94px;
   height: 117.519px;
   
@@ -132,4 +132,18 @@ margin-top: 10px;
     color: black ;
     font-weight: 700;
 
+  }
+
+  @media (max-width: 465) {
+    .logincontainer{
+      margin: 20px;
+    }
+    .logo {
+      width: 90%;
+    }
+
+  header {
+    margin-bottom: 20px;
+  }
+   
   }
