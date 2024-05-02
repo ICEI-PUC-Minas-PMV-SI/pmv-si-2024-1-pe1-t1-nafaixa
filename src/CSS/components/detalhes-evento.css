@@ -27,13 +27,13 @@
     font-family: "Almarai", sans-serif;
     font-weight: bold;
     font-size: 30px;
-    padding: 2% 4%;
+    padding: 2% 5%;
 }
 
 .infos-evento {
     display: flex;
     flex-direction: column;
-    padding: 0% 4%;
+    padding: 0% 5%;
     gap: 10px;
 }
 
