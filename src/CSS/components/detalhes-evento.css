@@ -1,9 +1,13 @@
+.page {
+    max-width: 1400px;
+}
 
 .imagem-evento {
     display: flex;
     justify-content: center;
     position: relative;
     padding-top: 1%;
+    object-fit: cover;
 }
 
 .imagem-blur {
@@ -103,8 +107,12 @@
     gap: 10px;
 }
 
+.line-button-text input {
+    display: flex;
+    flex-grow: 0.5;
+}
+
 .button {
-    margin: auto;
     text-decoration: none;
     color: #ffffff;
     font-family: "Almarai", sans-serif;
@@ -114,10 +122,11 @@
     background: #1769c3;
     padding: 4px 20px;
     cursor: pointer;
+    transition: transform 100ms linear;
 }
 
 .button:hover {
-    background-color: #1769c3;
+    transform: scale(1.08);
 }
 
 

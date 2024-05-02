@@ -108,8 +108,9 @@ p {
     border-radius: 120px;
     background: #1769c3;
     cursor: pointer;
+    transition: transform 100ms linear;
 }
 
 .button-criar:hover {
-    background-color: #1769c3;
+    transform: scale(1.08);
 }
