@@ -1,0 +1,80 @@
+h1 {
+    font-family: "Almarai", sans-serif;
+    font-size: 24px;
+    padding: 2% 20% 0% 20%;
+}
+
+h2 {
+    font-family: "Almarai", sans-serif;
+    font-size: 20px;
+    padding: 2% 20% 2% 20%;
+}
+
+.form-produtor {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 20% 2% 20%;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 3px;
+}
+
+.form-item input {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.localizacao-produtor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 3px;
+}
+
+.localizacao-produtor input {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.adicional-produtor {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 20% 0% 20%;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 4px;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+p {
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+}
+
+#paragrafo {
+    padding: 0% 20% 2% 20%;
+}
+
+.contato-produtor {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 20% 0% 20%;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.perfil {
+    padding: 2% 20% 4% 20%;
+}

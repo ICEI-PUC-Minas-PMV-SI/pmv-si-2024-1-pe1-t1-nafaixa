@@ -29,7 +29,7 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
   />
-  <link rel="stylesheet" href="CSS/components/detalhes-evento.css">
+  <link rel="stylesheet" href="CSS/components/cadastro-produtor.css">
 </head>
 
 <body>
@@ -58,8 +58,60 @@
       </header>
 
       <h1>Informações pessoais</h1>
-      
+      <form action="" class="form-produtor">
+        <div class="form-item">
+          <label for="nome-produtor">Nome completo</label>
+          <input type="text" name="nome-produtor">
+        </div>
+        
+        <div class="form-item">
+          <label for="sobrenome-produtor">Sobrenome (em caso de pessoa física)</label>
+          <input type="text" name="sobrenome-produtor">
+        </div>
+        
+        <div class="form-item">
+          <label for="identificacao-produtor">CPF / CNPJ</label>
+          <input type="text" name="identificacao-produtor">
+        </div>
 
+        <div class="form-item">
+          <label for="celular-produtor">Celular</label>
+          <input type="text" name="celular-produtor">
+        </div>
+
+        <div class="form-item">
+          <label for="email-produtor">E-mail</label>
+          <input type="text" name="email-produtor">
+        </div>
+
+        <div class="localizacao-produtor">
+          <label for="cidade-produtor">Cidade</label>
+          <input type="text" name="cidade-produtor">
+          
+          <label for="estado-produtor">Estado</label>
+          <input type="text" name="estado-produtor">
+        </div>
+      </form>
+
+      <h2>Sobre o produtor</h2>
+      <form action="" class="adicional-produtor">
+          <label for="adicional-produtor">Fale sobre você - há quanto tempo esta no mercado, que tipo de evento produz, etc. </label>
+          <textarea name="adicional-produtor" type="text" cols="100" rows="10"></textarea>
+      </form>
+
+      <h2>Contato público</h2>
+      <p id="paragrafo">Informe um meio de contato para que o público possa entrar em contato com você.</p>
+      <form action="" class="contato-produtor">
+        <label for="email-publico">E-mail</label>
+        <input type="text" name="email-publico">
+
+        <label for="celular-publico">Celular</label>
+        <input type="text" name="celular-publico">
+      </form>
+
+      <div class="perfil">
+        <p>Faça upload da logo da sua produtora</p>
+      </div>
 
       <footer>
         <div class="footercenter">
