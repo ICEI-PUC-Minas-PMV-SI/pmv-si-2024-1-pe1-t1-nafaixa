@@ -8,7 +8,7 @@
 
 .imagem-blur {
     height: 500px;
-    width: 1500px;
+    width: 100%;
     filter: blur(10px);
 }
 
@@ -16,7 +16,7 @@
     position: absolute;
     padding-top: 3%;
     height: 400px;
-    width: 1400px;
+    width: 80%;
 }
 
 .nome-evento {
@@ -85,7 +85,6 @@
 .form-confirmacao {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-bottom: 2%;
     gap: 3px;
 }
@@ -93,12 +92,11 @@
 .form-confirmacao input {
     border-radius: 5px;
     padding: 5px;
-    padding-right: 200px;
 }
 
 .line-button-text {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .button {
@@ -115,7 +113,7 @@
 }
 
 .button:hover {
-    background-color: #1DAEEF;
+    background-color: #1769c3;
 }
 
 
