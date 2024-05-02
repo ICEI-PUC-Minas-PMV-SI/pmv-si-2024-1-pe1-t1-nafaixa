@@ -36,7 +36,7 @@
     font-family: "Almarai",sans-serif;
     font-weight: bold;
     font-size: 24px;
-    padding: 2% 12% 2% 12%;
+    padding: 2% 12% 0% 12%;
 }
 
 .topic-texto {
@@ -53,9 +53,55 @@
     flex-direction: row;
     align-items: center;
     text-align: justify;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
 }
 
 .sobre-produtor-icone {
     width: 100px;
     height: 100px;
 }
+
+.confirmacao {
+    display: flex;
+    padding: 2% 12% 2% 12%;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.form-confirmacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+.form-confirmacao input {
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 200px;
+}
+
+.line-button-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    margin: auto;
+    text-decoration: none;
+    color: #2fa6f5;
+    font-family: Almarai;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 120px;
+    background: rgba(255, 255, 255, 0.87);
+    border: solid 2px #2fa6f5;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+
