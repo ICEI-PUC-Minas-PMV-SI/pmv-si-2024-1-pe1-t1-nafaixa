@@ -1,0 +1,61 @@
+
+.imagem-blur {
+    width: 1500px;
+    height: 400px;
+    position: relative;
+    padding-bottom: 10%;
+}
+
+/*.imagem-evento {
+    width: 1400px;
+    height: 350px;
+    position: absolute;
+    padding-bottom: 20%;
+}*/
+
+.nome-evento {
+    font-family: "Almarai", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 2% 12% 2% 12%;
+}
+
+.infos-evento {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 12%;
+    gap: 10px;
+}
+
+.infos-evento-texto {
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.topic-h2 {
+    font-family: "Almarai",sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 2% 12% 2% 12%;
+}
+
+.topic-texto {
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    padding: 1% 12%;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.sobre-produtor {
+    display: flex;
+    padding: 2% 12% 2% 12%;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+}
+
+.sobre-produtor-icone {
+    width: 100px;
+    height: 100px;
+}
