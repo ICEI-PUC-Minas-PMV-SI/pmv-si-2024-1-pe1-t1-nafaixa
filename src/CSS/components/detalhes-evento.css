@@ -1,17 +1,23 @@
 
-.imagem-blur {
-    width: 1500px;
-    height: 400px;
+.imagem-evento {
+    display: flex;
+    justify-content: center;
     position: relative;
-    padding-bottom: 10%;
+    padding-top: 1%;
 }
 
-/*.imagem-evento {
-    width: 1400px;
-    height: 350px;
+.imagem-blur {
+    height: 500px;
+    width: 1500px;
+    filter: blur(10px);
+}
+
+.banner-evento {
     position: absolute;
-    padding-bottom: 20%;
-}*/
+    padding-top: 3%;
+    height: 400px;
+    width: 1400px;
+}
 
 .nome-evento {
     font-family: "Almarai", sans-serif;
@@ -58,8 +64,13 @@
 }
 
 .sobre-produtor-icone {
+    padding-right: 2%;
     width: 100px;
     height: 100px;
+}
+
+.sobre-produtor-text {
+    line-height: 25px;
 }
 
 .confirmacao {
