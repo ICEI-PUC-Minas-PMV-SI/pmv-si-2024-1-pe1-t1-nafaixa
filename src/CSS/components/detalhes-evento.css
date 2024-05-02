@@ -49,13 +49,13 @@
     font-family: "Almarai",sans-serif;
     font-weight: bold;
     font-size: 24px;
-    padding: 2%;
+    padding: 2% 2% 0% 2%;
 }
 
 .topic-texto {
     font-family: "Almarai", sans-serif;
     font-size: 16px;
-    padding: 2%;
+    padding: 1% 2% 1% 2%;
     text-align: justify;
     line-height: 25px;
 }
