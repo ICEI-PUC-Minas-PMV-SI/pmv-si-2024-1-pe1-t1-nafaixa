@@ -80,6 +80,18 @@
     line-height: 25px;
 }
 
+@media (max-width: 500px){
+    .sobre-produtor{
+        display: flexbox;
+        flex-wrap: wrap;
+        align-content: center;
+     }
+    .sobre-produtor-icone {
+        margin: auto;
+        padding-bottom: 10px;
+}
+}
+
 .confirmacao {
     display: flex;
     padding: 2%;
@@ -128,5 +140,3 @@
 .button:hover {
     transform: scale(1.08);
 }
-
-
