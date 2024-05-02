@@ -34,6 +34,9 @@
 }
 
 .infos-evento-texto {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-family: "Almarai", sans-serif;
     font-size: 16px;
 }
@@ -92,6 +95,7 @@
 .form-confirmacao input {
     border-radius: 5px;
     padding: 5px;
+    flex-grow: 0.5;
 }
 
 .line-button-text {
