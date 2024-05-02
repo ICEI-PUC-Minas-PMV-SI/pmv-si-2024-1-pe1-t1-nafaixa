@@ -27,13 +27,13 @@
     font-family: "Almarai", sans-serif;
     font-weight: bold;
     font-size: 30px;
-    padding: 2% 12% 2% 12%;
+    padding: 2% 4%;
 }
 
 .infos-evento {
     display: flex;
     flex-direction: column;
-    padding: 0% 12%;
+    padding: 0% 4%;
     gap: 10px;
 }
 
@@ -49,20 +49,20 @@
     font-family: "Almarai",sans-serif;
     font-weight: bold;
     font-size: 24px;
-    padding: 2% 12% 0% 12%;
+    padding: 2%;
 }
 
 .topic-texto {
     font-family: "Almarai", sans-serif;
     font-size: 16px;
-    padding: 1% 12%;
+    padding: 2%;
     text-align: justify;
     line-height: 25px;
 }
 
 .sobre-produtor {
     display: flex;
-    padding: 2% 12% 2% 12%;
+    padding: 2%;
     flex-direction: row;
     align-items: center;
     text-align: justify;
@@ -82,7 +82,7 @@
 
 .confirmacao {
     display: flex;
-    padding: 2% 12% 2% 12%;
+    padding: 2%;
     flex-direction: column;
     justify-content: space-between;
     font-family: "Almarai", sans-serif;
