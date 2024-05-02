@@ -76,5 +76,39 @@ p {
 }
 
 .perfil {
-    padding: 2% 20% 4% 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 20% 2% 20%;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.termos-uso {
+    text-decoration: none;
+    padding: 0% 20% 4% 20%;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.button-criar {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 120px;
+    background: #1769c3;
+    cursor: pointer;
+}
+
+.button-criar:hover {
+    background-color: #1DAEEF;
 }
