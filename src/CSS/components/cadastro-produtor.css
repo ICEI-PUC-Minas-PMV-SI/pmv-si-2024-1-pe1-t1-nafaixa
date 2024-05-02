@@ -1,11 +1,20 @@
+.page {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+}
+
+
 h1 {
     font-family: "Almarai", sans-serif;
-    font-size: 24px;
+    font-size: 28px;
+    padding-bottom: 2%;
 }
 
 h2 {
     font-family: "Almarai", sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    padding: 2% 0% 1% 0%;
 }
 
 .form-produtor {
@@ -19,13 +28,15 @@ h2 {
 .form-item {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    flex-grow: 1;
+    padding: 8px;
     gap: 3px;
 }
 
 .form-item input {
+    flex-grow: 1;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #7ac9ff;
 }
 
@@ -42,8 +53,9 @@ h2 {
 }
 
 .localizacao-produtor input {
+    flex-grow: 1;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #7ac9ff;
 }
 
@@ -51,7 +63,7 @@ h2 {
     display: flex;
     flex-direction: column;
     font-family: "Almarai", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     gap: 4px;
 }
 
@@ -62,7 +74,8 @@ textarea {
 
 p {
     font-family: "Almarai", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    padding-bottom: 2%;
 }
 
 .contato-produtor {
@@ -70,14 +83,21 @@ p {
     flex-direction: column;
     font-family: "Almarai", sans-serif;
     font-size: 14px;
-    gap: 4px;
+    gap: 5px;
+}
+
+.contato-produtor input {
+    border-radius: 5px;
+    border: 1px solid #7ac9ff;
+    padding: 8px;
 }
 
 .perfil {
+    padding-top: 2%;
     display: flex;
     flex-direction: column;
     font-family: "Almarai", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     gap: 10px;
 }
 
@@ -87,9 +107,10 @@ p {
 }
 
 .termos-uso {
+    padding: 2% 0% 2% 0%;
     text-decoration: none;
     font-family: "Almarai", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .button {
