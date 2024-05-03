@@ -31,6 +31,8 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
+
   </head>
 
   <body>
@@ -52,8 +54,10 @@
           </div>
         </form>
         <nav class="nav-options-web">
+          <div class="localização-web">
           <img src="assets/img/localpin.svg"</img>
-          <p id="city">Localização</p>
+          <a id="city">Localização</a>
+        </div>
           <a href="">Criar evento</a>
           <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
         </nav>
@@ -66,7 +70,7 @@
         </div>
       <div class="localizacao-mobile">
         <img src="assets/img/localpin.svg"</img>
-        <p id="city1">Localização</p>
+        <a id="city1">Localização</a>
       </div>
         <nav class="menu-hamburguer">
           <input type="checkbox" class="checkbox-menu">
@@ -96,6 +100,13 @@
     </form>
 
     </header>
+
+    <dialog id="locationPopup">
+      <p>Escolha uma localização</p>
+      <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
+    </dialog>
+
+
 
     <section class="page">
       <div style="width: 100%">
@@ -469,73 +480,133 @@
 
 <script>
 
-        // Função para obter a localização do usuário e preencher os dados
-        function getUserLocationAndFillData() {
-            if ('geolocation' in navigator) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
+          //Carrossel de categorias
+        const rightBtn = document.querySelector('#right-btn');
+        const leftBtn = document.querySelector('#left-btn');
 
-                    const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"; // Substitua pela sua chave de API do Google Maps
+        rightBtn.addEventListener("click", function(event) {
+          const conent = document.querySelector('#wrapper-categorias');
+          conent.scrollLeft += 150;
+          event.preventDefault();
+        });
 
-                    // Montando a URL da requisição de geocodificação reversa
-                    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
-
-                    // Fazendo a requisição para a API de geocodificação reversa
-                    fetch(url)
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log(data); // Exibir dados no console para depuração
+        leftBtn.addEventListener("click", function(event) {
+          const conent = document.querySelector('#wrapper-categorias');
+          conent.scrollLeft -= 150;
+          event.preventDefault();
+        });
 
 
+        // // Função para obter a localização do usuário e preencher os dados
+        // function getUserLocationAndFillData() {
+        //     if ('geolocation' in navigator) {
+        //         navigator.geolocation.getCurrentPosition(function(position) {
+        //             const latitude = position.coords.latitude;
+        //             const longitude = position.coords.longitude;
 
-                            // Extraindo e exibindo o nome da cidade no elemento HTML web
-                            const addressComponents = data.results[0].address_components;
-                            addressComponents.forEach(part => {
-                                if (part.types.includes("administrative_area_level_2")) {
-                                    const cityName = part.long_name;
-                                    document.getElementById('city').innerHTML = `<p> ${cityName}</p>`;
-                                }
-                            });
+        //             const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"; // Substitua pela sua chave de API do Google Maps
 
-                              // Extraindo e exibindo o nome da cidade no elemento HTML mobile
-                              const addressComponents2 = data.results[0].address_components;
-                            addressComponents2.forEach(part => {
-                                if (part.types.includes("administrative_area_level_2")) {
-                                    const cityName1 = part.long_name;
-                                    document.getElementById('city1').innerHTML = `<p> ${cityName1}</p>`;
-                                }
-                            });
-                        })
-                        .catch(error => {
-                            console.error('Erro ao obter dados de localização:', error);
-                        });
-                }, function(error) {
-                    console.error('Erro ao obter a localização do usuário:', error);
+        //             // Montando a URL da requisição de geocodificação reversa
+        //             const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
+
+        //             // Fazendo a requisição para a API de geocodificação reversa
+        //             fetch(url)
+        //                 .then(response => response.json())
+        //                 .then(data => {
+        //                     console.log(data); // Exibir dados no console para depuração
+
+
+
+        //                     // Extraindo e exibindo o nome da cidade no elemento HTML web
+        //                     const addressComponents = data.results[0].address_components;
+        //                     addressComponents.forEach(part => {
+        //                         if (part.types.includes("administrative_area_level_2")) {
+        //                             const cityName = part.long_name;
+        //                             document.getElementById('city').innerHTML = `<p> ${cityName}</p>`;
+        //                         }
+        //                     });
+
+        //                       // Extraindo e exibindo o nome da cidade no elemento HTML mobile
+        //                       const addressComponents2 = data.results[0].address_components;
+        //                     addressComponents2.forEach(part => {
+        //                         if (part.types.includes("administrative_area_level_2")) {
+        //                             const cityName1 = part.long_name;
+        //                             document.getElementById('city1').innerHTML = `<p> ${cityName1}</p>`;
+        //                         }
+        //                     });
+        //                 })
+        //                 .catch(error => {
+        //                     console.error('Erro ao obter dados de localização:', error);
+        //                 });
+        //         }, function(error) {
+        //             console.error('Erro ao obter a localização do usuário:', error);
+        //         });
+        //     } else {
+        //         console.error('Geolocalização não é suportada pelo navegador.');
+        //     }
+        // }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const locationLink = document.getElementById('city');
+    const locationPopup = document.getElementById('locationPopup');
+    const locationInput = document.getElementById('locationInput');
+
+    // Carregar localização salva no localStorage ao iniciar a página
+    loadSavedLocation();
+
+    locationLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        locationPopup.style.display = 'block';
+
+        const autocomplete = new google.maps.places.Autocomplete(locationInput, {
+            types: ['(cities)'],
+            componentRestrictions: { country: 'BR' }
+        });
+
+        autocomplete.addListener('place_changed', function() {
+            const place = autocomplete.getPlace();
+
+            if (place && place.address_components) {
+                const city = place.address_components.find(component => {
+                    return component.types.includes('locality');
                 });
-            } else {
-                console.error('Geolocalização não é suportada pelo navegador.');
+
+                if (city) {
+                    const cityName = city.long_name;
+                    updateNavbarLocation(cityName);
+                    saveLocationToLocalStorage(cityName); // Salvar localização no localStorage
+                }
             }
+        });
+    });
+
+    function updateNavbarLocation(cityName) {
+        locationLink.textContent = cityName;
+        locationPopup.style.display = 'none';
+    }
+
+    function saveLocationToLocalStorage(cityName) {
+        localStorage.setItem('userLocation', cityName);
+    }
+
+    function loadSavedLocation() {
+        const savedLocation = localStorage.getItem('userLocation');
+        if (savedLocation) {
+            updateNavbarLocation(savedLocation);
         }
+    }
+
+    document.addEventListener('click', function(event) {
+        if (!locationPopup.contains(event.target) && event.target !== locationLink) {
+            locationPopup.style.display = 'none';
+        }
+    });
+});
+
 
         // Chamar a função para obter a localização do usuário e preencher os dados ao carregar a página
         window.onload = getUserLocationAndFillData;
 
-          //Carrossel de categorias
-          const rightBtn = document.querySelector('#right-btn');
-          const leftBtn = document.querySelector('#left-btn');
-
-          rightBtn.addEventListener("click", function(event) {
-            const conent = document.querySelector('#wrapper-categorias');
-            conent.scrollLeft += 150;
-            event.preventDefault();
-          });
-
-          leftBtn.addEventListener("click", function(event) {
-            const conent = document.querySelector('#wrapper-categorias');
-            conent.scrollLeft -= 150;
-            event.preventDefault();
-          });
 
 </script>
 

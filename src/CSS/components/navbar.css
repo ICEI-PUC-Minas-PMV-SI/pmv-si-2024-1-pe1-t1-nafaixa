@@ -81,21 +81,26 @@ nav {
   padding: auto;
 }
 
+
+
+
 .nav-options-web a:hover {
   background-color: transparent;
   transform: scale(1.08);
 }
 
-.nav-options-web p{
+.localização-web{
   color: white;
   font-size: 20px;
-  text-decoration: none;
-  margin-right: 10px;
   font-family: "poppins";
   transition: transform 100ms linear;
-  border-radius: 5px;
-  padding: auto;
   margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.localização-web:hover{
+  transform: scale(1.08)
+
 }
 
 #entrar-btn  {
