@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+
+  <link rel="stylesheet" href="CSS/components/navbar.css">
+  <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
+
+
+</head>
+<body>
+  <header>
+    <div class="navcenter">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
+        /></a>
+      </div>
+      <form class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="pesquise por evento"
+          />
+        </div>
+      </form>
+      <nav class="nav-options-web">
+        <div class="localização-web">
+        <img src="assets/img/localpin.svg"</img>
+        <a id="city">Localização</a>
+      </div>
+        <a href="">Criar evento</a>
+        <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+      </nav>
+    </div>
+
+    <div class="navcenter-mobile">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+      </div>
+    <div class="localizacao-mobile">
+      <img src="assets/img/localpin.svg"</img>
+      <a id="city-mobile">Localização</a>
+    </div>
+      <nav class="menu-hamburguer">
+        <input type="checkbox" class="checkbox-menu">
+
+        <label for="checkbox-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div id="menu-options">
+          <ul>
+            <a href="login.html">Entrar</a></br>
+            <a href="criar-evento.html">Criar evento</a>
+            <a href="#">Sair</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <form class="nav-search-mobile">
+    <div class="search">
+      <span class="search-icon material-symbols-outlined">search</span>
+      <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+    </div>
+  </form>
+
+  <dialog id="locationPopup">
+    <p>Escolha uma localização</p>
+    <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
+  </dialog>
+
+
+</body>
+</html>
