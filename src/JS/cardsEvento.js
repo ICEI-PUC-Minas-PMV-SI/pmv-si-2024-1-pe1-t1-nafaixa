@@ -1,7 +1,5 @@
 // Função para obter os eventos do JSON Server e criar os cards de evento
 async function obterEventosEExibirCards(id, url) {
-  // const url = 'http://localhost:3000/eventos'; // URL do JSON Server (altere conforme necessário)
-
   try {
     const response = await fetch(url); // Faz a requisição para obter os eventos
     const eventos = await response.json(); // Converte a resposta para JSON
@@ -17,16 +15,27 @@ async function obterEventosEExibirCards(id, url) {
       const cardElement = document.createElement('div');
       cardElement.classList.add('cards');
 
-      // Preenche o conteúdo do card com os detalhes do evento
-      cardElement.innerHTML = `
-        <img class="imgcard" src="${evento.imagemUrl}" alt="event img" />
-        <p class="event-title">${evento.nome}</p>
-        <p><img src="./assets/img/data.svg" alt="Data do evento" />${evento.startDate}</p>
-        <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
-      `;
+      // Formata a data e o horário para o formato desejado (DD, nome do mês abreviado, YYYY - HH:mm)
+      const dataHoraString = `${evento.startDate} ${evento.startTime}`;
+      const dataHoraEvento = new Date(dataHoraString);
 
-      // Adiciona o card criado ao wrapper de cards na página
-      wrapperElement.appendChild(cardElement);
+      if (!isNaN(dataHoraEvento)) { // Verifica se a data é válida
+        const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+        const dataHoraFormatada = dataHoraEvento.toLocaleDateString('pt-BR', options);
+
+        // Preenche o conteúdo do card com os detalhes do evento
+        cardElement.innerHTML = `
+          <img class="imgcard" src="${evento.imagemUrl}" alt="event img" />
+          <p class="event-title">${evento.nome}</p>
+          <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+          <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
+        `;
+
+        // Adiciona o card criado ao wrapper de cards na página
+        wrapperElement.appendChild(cardElement);
+      } else {
+        console.error('Data ou horário inválido:', dataHoraString);
+      }
     });
 
   } catch (error) {
@@ -36,5 +45,7 @@ async function obterEventosEExibirCards(id, url) {
 }
 
 // Chama a função para obter os eventos e exibir os cards ao carregar a página
-document.addEventListener('DOMContentLoaded', obterEventosEExibirCards(1, "http://localhost:3000/eventos"));
-document.addEventListener('DOMContentLoaded', obterEventosEExibirCards(2, "http://localhost:3000/eventos"));
+document.addEventListener('DOMContentLoaded', () => {
+  obterEventosEExibirCards(1, "http://localhost:3000/eventos");
+  obterEventosEExibirCards(2, "http://localhost:3000/eventos");
+});
