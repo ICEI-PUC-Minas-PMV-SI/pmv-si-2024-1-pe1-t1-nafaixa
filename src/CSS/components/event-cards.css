@@ -20,10 +20,9 @@
   border-radius: 30px;
   background: #1769c3;
   border: none;
-  padding-left: 30px;
-  padding-right: 30px;
-
+  padding: 10px 30px;
 }
+
 .mostrarMais:hover {
   background: #1769c3;
 }
