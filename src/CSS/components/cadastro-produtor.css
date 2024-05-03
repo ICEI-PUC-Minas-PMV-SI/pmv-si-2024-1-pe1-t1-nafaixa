@@ -1,0 +1,138 @@
+.page {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+}
+
+
+h1 {
+    font-family: "Almarai", sans-serif;
+    font-size: 28px;
+    padding-bottom: 2%;
+}
+
+h2 {
+    font-family: "Almarai", sans-serif;
+    font-size: 24px;
+    padding: 2% 0% 1% 0%;
+}
+
+.form-produtor {
+    display: flex;
+    flex-direction: column;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 8px;
+    gap: 4px;
+}
+
+.form-item input {
+    flex-grow: 1;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #7ac9ff;
+}
+
+.form-item-localizacao {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.localizacao-produtor {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+}
+
+.localizacao-produtor input {
+    flex-grow: 1;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #7ac9ff;
+}
+
+.adicional-produtor {
+    display: flex;
+    flex-direction: column;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    gap: 4px;
+}
+
+textarea {
+    border-radius: 5px;
+    border: 1px solid #7ac9ff;
+}
+
+p {
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    padding-bottom: 2%;
+}
+
+.contato-produtor {
+    display: flex;
+    flex-direction: column;
+    font-family: "Almarai", sans-serif;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.contato-produtor input {
+    border-radius: 5px;
+    border: 1px solid #7ac9ff;
+    padding: 8px;
+}
+
+.perfil {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.preview-foto-produtor {
+    display: none;
+    max-width: 320px;
+}
+
+.termos-uso {
+    padding: 2% 0% 2% 0%;
+    text-decoration: none;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.button-criar {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 120px;
+    background: #1769c3;
+    cursor: pointer;
+    transition: transform 100ms linear;
+}
+
+.button-criar:hover {
+    transform: scale(1.08);
+}

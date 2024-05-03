@@ -1,0 +1,147 @@
+.page {
+    max-width: 1400px;
+}
+
+.imagem-evento {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 1%;
+    object-fit: cover;
+}
+
+.imagem-blur {
+    height: 500px;
+    width: 100%;
+    filter: blur(10px);
+}
+
+.banner-evento {
+    position: absolute;
+    padding-top: 3%;
+    height: 400px;
+    width: 80%;
+}
+
+.nome-evento {
+    font-family: "Almarai", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 2% 5%;
+}
+
+.infos-evento {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 5%;
+    gap: 10px;
+}
+
+.infos-evento-texto {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.topic-h2 {
+    font-family: "Almarai",sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 2% 2% 0% 2%;
+}
+
+.topic-texto {
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    padding: 1% 2% 1% 2%;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.sobre-produtor {
+    display: flex;
+    padding: 2%;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.sobre-produtor-icone {
+    padding-right: 2%;
+    width: 100px;
+    height: 100px;
+}
+
+.sobre-produtor-text {
+    line-height: 25px;
+}
+
+@media (max-width: 500px){
+    .sobre-produtor{
+        display: flexbox;
+        flex-wrap: wrap;
+        align-content: center;
+     }
+    .sobre-produtor-icone {
+        margin: auto;
+        padding-bottom: 10px;
+}
+}
+
+.confirmacao {
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+}
+
+.form-confirmacao {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    gap: 3px;
+}
+
+.form-confirmacao input {
+    border-radius: 5px;
+    padding: 5px;
+    flex-grow: 0.5;
+    border: 1px solid;
+}
+
+.line-button-text {
+    display: flex;
+    gap: 10px;
+}
+
+.line-button-text input {
+    display: flex;
+    flex-grow: 0.5;
+}
+
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Almarai", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 120px;
+    background: #1769c3;
+    padding: 4px 20px;
+    cursor: pointer;
+    transition: transform 100ms linear;
+}
+
+.button:hover {
+    transform: scale(1.08);
+}
+
+.divulgacao-email {
+    padding-bottom: 4%;
+}
