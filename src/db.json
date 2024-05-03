@@ -1,0 +1,54 @@
+{
+  "eventos": [
+    {
+      "id": "bc11",
+      "tipoEvento": "presencial",
+      "nomeEvento": "aaa",
+      "localEvento": "aaaa",
+      "categoriaSelecionada": "esportes"
+    },
+    {
+      "id": "e4ad",
+      "tipoEvento": "online",
+      "nomeEvento": "aaa",
+      "localEvento": "aaaaa",
+      "categoriaSelecionada": "teatro"
+    },
+    {
+      "id": "bbf91f6b-fb90-4d79-8b97-6af36bc3fea0",
+      "tipo": "presencial",
+      "nome": "teste2",
+      "local": "Arraial do Cabo, RJ, Brasil",
+      "startDate": "10/04/2024",
+      "startTime": "12:00",
+      "finalDate": "02/04/2024",
+      "finalTime": "12:00",
+      "sobre": "aa",
+      "informacoes": "aa"
+    },
+    {
+      "id": "e47937e8-a995-47f6-8bbe-63f4b7dd3c6b",
+      "tipo": "online",
+      "nome": "teste2",
+      "local": "",
+      "startDate": "10/04/2024",
+      "startTime": "12:00",
+      "finalDate": "02/04/2024",
+      "finalTime": "12:00",
+      "sobre": "aa",
+      "informacoes": "aa"
+    },
+    {
+      "id": "73067ca2-6ad9-4f4a-9d84-1f4af7c2910b",
+      "tipo": "online",
+      "nome": "Teste3 ",
+      "local": "",
+      "startDate": "10/04/2024",
+      "startTime": "12:12",
+      "finalDate": "02/04/2024",
+      "finalTime": "12:00",
+      "sobre": "aaadarferrweDA",
+      "informacoes": "aaDSFGHYTREDS"
+    }
+  ]
+}
