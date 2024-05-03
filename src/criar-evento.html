@@ -237,7 +237,7 @@
                         </div>
 
                         <div class="termos-uso">
-                            <input type="checkbox">
+                            <input id="terms-checkbox" type="checkbox">
                             <label>Li e aceito os <a href="termosdeuso.html" target="_blank">termos de uso.</a></label>
                         </div>
                     </section>
@@ -297,18 +297,6 @@
             time_24hr: true,
         });
 
-        //Autocomplete do google maps para local do evento//
-        function initializeAutocomplete() {
-            var input = document.getElementById('local');
-            var options = {
-                componentRestrictions: { country: 'BR' }
-            };
-
-            var autocomplete = new google.maps.places.Autocomplete(input, options);
-        }
-
-        google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
-
 
         //Mostrar/ocultar formulario conforme o tipo de evento//    
         const eventBannerInput = document.querySelector('#event-banner-input');
@@ -332,93 +320,84 @@
             document.getElementById("evento-presencial-form").style.display = "none";
         }
 
-// Autocomplete e criar evento
-let selectedPlace = null;
+        // Autocomplete e criar evento
+        let selectedPlace = null;
 
-function initializeAutocomplete() {
-    var input = document.getElementById('local');
-    var options = {
-        componentRestrictions: { country: 'BR' }
-    };
+        function initializeAutocomplete() {
+            var input = document.getElementById('local');
+            var options = {
+                componentRestrictions: { country: 'BR' }
+            };
 
-    var autocomplete = new google.maps.places.Autocomplete(input, options);
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
 
-    autocomplete.addListener('place_changed', function() {
-        selectedPlace = autocomplete.getPlace(); // Armazena o local selecionado
-    });
-}
-
-async function criarEvento() {
-    if (!selectedPlace) {
-        alert('Selecione um local antes de criar o evento.');
-        return;
-    }
-
-    try {
-        const idEvento = uuidv4();
-        const tipoEvento = document.querySelector('input[name="event-type"]:checked').value;
-        const nomeEvento = document.querySelector('#nome').value;
-        const startDateEvento = document.querySelector('#start-date').value;
-        const startTimeEvento = document.querySelector('#start-time').value;
-        const finalDateEvento = document.querySelector('#final-date').value;
-        const finalTimeEvento = document.querySelector('#final-time').value;
-        const sobreEvento = document.querySelector('#sobre').value;
-        const informacoesEvento = document.querySelector('#informacoes').value;
-
-        const evento = {
-            id: idEvento,
-            tipo: tipoEvento,
-            nome: nomeEvento,
-            local: selectedPlace.formatted_address,
-            latitude: selectedPlace.geometry.location.lat(),
-            longitude: selectedPlace.geometry.location.lng(),
-            startDate: startDateEvento,
-            startTime: startTimeEvento,
-            finalDate: finalDateEvento,
-            finalTime: finalTimeEvento,
-            sobre: sobreEvento,
-            informacoes: informacoesEvento
-        };
-
-        const response = await fetch('http://localhost:3000/eventos', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(evento),
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro ao criar evento');
+            autocomplete.addListener('place_changed', function () {
+                selectedPlace = autocomplete.getPlace(); // Armazena o local selecionado
+            });
         }
 
-        const data = await response.json();
-        console.log('Evento criado:', data);
-        alert('Evento criado com sucesso!');
-    } catch (error) {
-        console.error('Erro ao criar evento:', error);
-        alert('Erro ao criar evento. Verifique o console para mais detalhes.');
-    }
-}
+        async function criarEvento() {
+            if (!selectedPlace) {
+                alert('Selecione um local antes de criar o evento.');
+                return;
+            }
 
-function uuidv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        const r = Math.random() * 16 | 0;
-        const v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-}
+            const termsCheckbox = document.getElementById('terms-checkbox');
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeAutocomplete();
+            if (!termsCheckbox.checked) {
+                alert('Você precisa aceitar os termos de uso antes de criar o evento.');
+                return;
+            }
 
-    const criarEventoBtn = document.querySelector('.criar-evento-btn');
+            try {
+                const idEvento = uuidv4();
+                const tipoEvento = document.querySelector('input[name="event-type"]:checked').value;
+                const categoria = document.querySelector('#categorias').value;
+                const nomeEvento = document.querySelector('#nome').value;
+                const startDateEvento = document.querySelector('#start-date').value;
+                const startTimeEvento = document.querySelector('#start-time').value;
+                const finalDateEvento = document.querySelector('#final-date').value;
+                const finalTimeEvento = document.querySelector('#final-time').value;
+                const sobreEvento = document.querySelector('#sobre').value;
+                const informacoesEvento = document.querySelector('#informacoes').value;
 
-    criarEventoBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        criarEvento(); // Chama a função criarEvento somente quando o botão for clicado
-    });
-});
+                const evento = {
+                    id: idEvento,
+                    tipo: tipoEvento,
+                    categoria: categoria,
+                    nome: nomeEvento,
+                    local: selectedPlace.formatted_address,
+                    latitude: selectedPlace.geometry.location.lat(),
+                    longitude: selectedPlace.geometry.location.lng(),
+                    startDate: startDateEvento,
+                    startTime: startTimeEvento,
+                    finalDate: finalDateEvento,
+                    finalTime: finalTimeEvento,
+                    sobre: sobreEvento,
+                    informacoes: informacoesEvento
+                };
+
+                const response = await fetch('http://localhost:3000/eventos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(evento),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao criar evento');
+                }
+
+                const data = await response.json();
+                console.log('Evento criado:', data);
+                alert('Evento criado com sucesso!');
+            } catch (error) {
+                console.error('Erro ao criar evento:', error);
+                alert('Erro ao criar evento. Verifique o console para mais detalhes.');
+            }
+        }
+
         function uuidv4() {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
                 const r = Math.random() * 16 | 0;
@@ -434,10 +413,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             criarEventoBtn.addEventListener('click', (event) => {
                 event.preventDefault();
-                // Nenhuma ação necessária aqui, o evento é tratado no autocompletar
+                // Verifica se o checkbox de termos de uso está marcado antes de criar o evento
+                criarEvento(); // Chama a função criarEvento somente quando o botão for clicado
             });
         });
-
 
     </script>
 </body>

@@ -99,6 +99,8 @@
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
+    background-color: #1769c3;
+    border: none;
 }
 
 .criar-evento-btn:hover {
