@@ -49,16 +49,21 @@
 .form-item-shrinked input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item-pair {
     display: flex;
     gap: 10px;
+    
 }
 
 #form-endereco {
@@ -72,6 +77,9 @@
     border-radius: 5px;
     padding: 8px;
     box-sizing: border-box;
+    border: solid 1px;
+    border-color: #2fa6f5;
+    margin-bottom: 50px;
 }
 
 .banner-preview {
@@ -99,8 +107,8 @@
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
-    background-color: #1769c3;
     border: none;
+    background-color: #1769c3;
 }
 
 .criar-evento-btn:hover {
@@ -109,8 +117,9 @@
     background-color: #1769c3;
 }
 
-.upload-baner {
+.form-item upload-baner {
     margin-top: 50px;
+    border: none;
 }
 
 .termos-uso {
