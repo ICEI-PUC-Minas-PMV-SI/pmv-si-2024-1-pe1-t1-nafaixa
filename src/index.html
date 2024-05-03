@@ -26,6 +26,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"></script>
+
   </head>
 
   <body>
@@ -47,7 +52,8 @@
           </div>
         </form>
         <nav class="nav-options-web">
-          <a href="">Localização</a>
+          <img src="assets/img/localpin.svg"</img>
+          <p id="city">Localização</p>
           <a href="">Criar evento</a>
           <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
         </nav>
@@ -58,18 +64,18 @@
           <a href="index.html">
             <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
         </div>
-  
+
         <a href="">Localização</a>
-  
+
         <nav class="menu-hamburguer">
           <input type="checkbox" class="checkbox-menu">
-  
+
           <label for="checkbox-menu">
             <span></span>
             <span></span>
             <span></span>
           </label>
-  
+
           <div id="menu-options">
             <ul>
               <a href="login.html">Entrar</a></br>
@@ -80,7 +86,7 @@
         </nav>
       </div>
     </header>
-  
+
     <form class="nav-search-mobile">
       <div class="search">
         <span class="search-icon material-symbols-outlined">search</span>
@@ -351,7 +357,7 @@
                   src="assets/img-categorias/Feira.svg"
                   alt="card Feira"
                 />
-  
+
                 <h3>Feira</h3>
 
             </article>
@@ -378,7 +384,7 @@
 
             </article>
 
-            
+
           </div>
         </section>
       </div>
@@ -462,6 +468,50 @@
 
 <script>
 
+       // Função para obter a localização do usuário e preencher os dados
+        function getUserLocationAndFillData() {
+            if ('geolocation' in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"; // Substitua pela sua chave de API do Google Maps
+
+                    // Montando a URL da requisição de geocodificação reversa
+                    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
+
+                    // Fazendo a requisição para a API de geocodificação reversa
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data); // Exibir dados no console para depuração
+
+
+
+                            // Extraindo e exibindo o nome do país no elemento HTML
+                            const addressComponents = data.results[0].address_components;
+                            addressComponents.forEach(part => {
+                                if (part.types.includes("administrative_area_level_2")) {
+                                    const cityName = part.long_name;
+                                    document.getElementById('city').innerHTML = `<p> ${cityName}</p>`;
+                                }
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Erro ao obter dados de localização:', error);
+                        });
+                }, function(error) {
+                    console.error('Erro ao obter a localização do usuário:', error);
+                });
+            } else {
+                console.error('Geolocalização não é suportada pelo navegador.');
+            }
+        }
+
+        // Chamar a função para obter a localização do usuário e preencher os dados ao carregar a página
+        window.onload = getUserLocationAndFillData;
+
+//Carrossel de categorias
 const rightBtn = document.querySelector('#right-btn');
 const leftBtn = document.querySelector('#left-btn');
 
