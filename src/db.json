@@ -1,54 +1,85 @@
 {
   "eventos": [
     {
-      "id": "bc11",
-      "tipoEvento": "presencial",
-      "nomeEvento": "aaa",
-      "localEvento": "aaaa",
-      "categoriaSelecionada": "esportes"
-    },
-    {
-      "id": "e4ad",
-      "tipoEvento": "online",
-      "nomeEvento": "aaa",
-      "localEvento": "aaaaa",
-      "categoriaSelecionada": "teatro"
-    },
-    {
-      "id": "bbf91f6b-fb90-4d79-8b97-6af36bc3fea0",
+      "id": "08863e97-a3e4-40c8-b44a-9015cf7ad953",
       "tipo": "presencial",
-      "nome": "teste2",
+      "categoria": "Teatro",
+      "nome": "Teste1 ",
       "local": "Arraial do Cabo, RJ, Brasil",
-      "startDate": "10/04/2024",
+      "startDate": "02/04/2024",
       "startTime": "12:00",
-      "finalDate": "02/04/2024",
+      "finalDate": "04/04/2024",
       "finalTime": "12:00",
       "sobre": "aa",
       "informacoes": "aa"
     },
     {
-      "id": "e47937e8-a995-47f6-8bbe-63f4b7dd3c6b",
-      "tipo": "online",
-      "nome": "teste2",
+      "id": "b02f7032-f2d6-46ed-bb24-2f9ec6a01379",
+      "tipo": "presencial",
+      "categoria": "0",
+      "nome": "",
       "local": "",
-      "startDate": "10/04/2024",
-      "startTime": "12:00",
-      "finalDate": "02/04/2024",
-      "finalTime": "12:00",
-      "sobre": "aa",
-      "informacoes": "aa"
+      "startDate": "",
+      "startTime": "",
+      "finalDate": "",
+      "finalTime": "",
+      "sobre": "",
+      "informacoes": ""
     },
     {
-      "id": "73067ca2-6ad9-4f4a-9d84-1f4af7c2910b",
-      "tipo": "online",
-      "nome": "Teste3 ",
+      "id": "3cb2814b-aad0-48fa-80a9-1f653b497eff",
+      "tipo": "presencial",
+      "categoria": "0",
+      "nome": "",
       "local": "",
-      "startDate": "10/04/2024",
-      "startTime": "12:12",
-      "finalDate": "02/04/2024",
-      "finalTime": "12:00",
-      "sobre": "aaadarferrweDA",
-      "informacoes": "aaDSFGHYTREDS"
+      "startDate": "",
+      "startTime": "",
+      "finalDate": "",
+      "finalTime": "",
+      "sobre": "",
+      "informacoes": ""
+    },
+    {
+      "id": "772880ec-69bd-47c8-a1a5-3809a5f22818",
+      "tipo": "presencial",
+      "nome": "",
+      "local": "Arraial do Cabo, RJ, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "",
+      "startTime": "",
+      "finalDate": "",
+      "finalTime": "",
+      "sobre": "",
+      "informacoes": ""
+    },
+    {
+      "id": "dac97ecb-f33a-4293-8567-51c6538a13ee",
+      "tipo": "presencial",
+      "nome": "a",
+      "local": "Arraial do Cabo, RJ, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "",
+      "startTime": "",
+      "finalDate": "",
+      "finalTime": "",
+      "sobre": "",
+      "informacoes": ""
+    },
+    {
+      "id": "268ce608-61c5-4d9a-a034-c79cfbc70eec",
+      "tipo": "presencial",
+      "nome": "AGORA VAI ",
+      "local": "Atibaia, SP, Brasil",
+      "latitude": -23.1155873,
+      "longitude": -46.5532067,
+      "startDate": "30/04/2024",
+      "startTime": "10:26",
+      "finalDate": "02/05/2024",
+      "finalTime": "10:26",
+      "sobre": "AAA",
+      "informacoes": "AAAAA"
     }
   ]
 }
