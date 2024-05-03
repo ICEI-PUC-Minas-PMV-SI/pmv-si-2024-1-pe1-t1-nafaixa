@@ -1,0 +1,37 @@
+{
+  "eventos": [
+    {
+      "id": "91463a64-68ca-43bd-8594-e1812f83e0af",
+      "tipo": "presencial",
+      "categoria": "Teatro",
+      "nome": "aa",
+      "link": "",
+      "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "03/05/2024",
+      "startTime": "12:00",
+      "finalDate": "03/05/2024",
+      "finalTime": "12:00",
+      "sobre": "aaaaaaaaaaaaa",
+      "informacoes": "aaaaaaaaaaaaaaa"
+    },
+
+    {
+      "id": "91463a64-68ca-43bd-8594-e1812f83e0af",
+      "tipo": "presencial",
+      "categoria": "Teatro",
+      "nome": "aa",
+      "link": "",
+      "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "03/05/2024",
+      "startTime": "12:00",
+      "finalDate": "03/05/2024",
+      "finalTime": "12:00",
+      "sobre": "aaaaaaaaaaaaa",
+      "informacoes": "aaaaaaaaaaaaaaa"
+    }
+  ]
+}
