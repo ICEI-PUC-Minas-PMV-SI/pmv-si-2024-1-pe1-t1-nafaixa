@@ -64,9 +64,10 @@
           <a href="index.html">
             <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
         </div>
-
-        <a href="">Localização</a>
-
+      <div class="localizacao-mobile">
+        <img src="assets/img/localpin.svg"</img>
+        <p id="city1">Localização</p>
+      </div>
         <nav class="menu-hamburguer">
           <input type="checkbox" class="checkbox-menu">
 
@@ -468,7 +469,7 @@
 
 <script>
 
-       // Função para obter a localização do usuário e preencher os dados
+        // Função para obter a localização do usuário e preencher os dados
         function getUserLocationAndFillData() {
             if ('geolocation' in navigator) {
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -488,12 +489,21 @@
 
 
 
-                            // Extraindo e exibindo o nome do país no elemento HTML
+                            // Extraindo e exibindo o nome da cidade no elemento HTML web
                             const addressComponents = data.results[0].address_components;
                             addressComponents.forEach(part => {
                                 if (part.types.includes("administrative_area_level_2")) {
                                     const cityName = part.long_name;
                                     document.getElementById('city').innerHTML = `<p> ${cityName}</p>`;
+                                }
+                            });
+
+                              // Extraindo e exibindo o nome da cidade no elemento HTML mobile
+                              const addressComponents2 = data.results[0].address_components;
+                            addressComponents2.forEach(part => {
+                                if (part.types.includes("administrative_area_level_2")) {
+                                    const cityName1 = part.long_name;
+                                    document.getElementById('city1').innerHTML = `<p> ${cityName1}</p>`;
                                 }
                             });
                         })
@@ -511,21 +521,21 @@
         // Chamar a função para obter a localização do usuário e preencher os dados ao carregar a página
         window.onload = getUserLocationAndFillData;
 
-//Carrossel de categorias
-const rightBtn = document.querySelector('#right-btn');
-const leftBtn = document.querySelector('#left-btn');
+          //Carrossel de categorias
+          const rightBtn = document.querySelector('#right-btn');
+          const leftBtn = document.querySelector('#left-btn');
 
-rightBtn.addEventListener("click", function(event) {
-  const conent = document.querySelector('#wrapper-categorias');
-  conent.scrollLeft += 150;
-  event.preventDefault();
-});
+          rightBtn.addEventListener("click", function(event) {
+            const conent = document.querySelector('#wrapper-categorias');
+            conent.scrollLeft += 150;
+            event.preventDefault();
+          });
 
-leftBtn.addEventListener("click", function(event) {
-  const conent = document.querySelector('#wrapper-categorias');
-  conent.scrollLeft -= 150;
-  event.preventDefault();
-});
+          leftBtn.addEventListener("click", function(event) {
+            const conent = document.querySelector('#wrapper-categorias');
+            conent.scrollLeft -= 150;
+            event.preventDefault();
+          });
 
 </script>
 
