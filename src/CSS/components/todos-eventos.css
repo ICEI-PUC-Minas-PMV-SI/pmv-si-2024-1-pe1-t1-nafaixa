@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
  }
- /* .page{
-    height: 100vh;
- } */
+ .page{
+    min-height: 100%;
+
+ }
