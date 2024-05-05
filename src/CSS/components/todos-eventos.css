@@ -1,0 +1,10 @@
+.ordenar-btn{
+    padding: 5px;
+    margin: 10px;
+
+ }
+
+ .todos-eventos-title{
+    display: flex;
+    justify-content: space-between;
+ }
