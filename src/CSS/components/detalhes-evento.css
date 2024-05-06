@@ -6,34 +6,45 @@
     display: flex;
     justify-content: center;
     position: relative;
-    padding-top: 1%;
-    object-fit: cover;
+    height: 500px;
 }
 
 .imagem-blur {
-    height: 500px;
     width: 100%;
-    filter: blur(10px);
+    filter: blur(3px);
+    opacity: 0.8;
 }
 
 .banner-evento {
     position: absolute;
-    padding-top: 3%;
-    height: 400px;
-    width: 80%;
+    max-height: 100%;
+    /* height: auto; */
+    max-width: 1400px;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.date-time{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
 }
 
 .nome-evento {
     font-family: "Almarai", sans-serif;
     font-weight: bold;
     font-size: 30px;
-    padding: 2% 5%;
+    padding: 2%;
 }
 
 .infos-evento {
     display: flex;
     flex-direction: column;
-    padding: 0% 5%;
+    padding: 0% 2%;
     gap: 10px;
 }
 
@@ -42,7 +53,7 @@
     align-items: center;
     gap: 5px;
     font-family: "Almarai", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .topic-h2 {
@@ -104,36 +115,39 @@
 .form-confirmacao {
     display: flex;
     flex-direction: column;
-    padding-bottom: 2%;
+    padding-bottom: 2px;
     gap: 3px;
 }
 
 .form-confirmacao input {
+    display: flex;
+    flex-grow: 0.3;
     border-radius: 5px;
     padding: 5px;
-    flex-grow: 0.5;
     border: 1px solid;
 }
 
 .line-button-text {
     display: flex;
     gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.line-button-text input {
-    display: flex;
-    flex-grow: 0.5;
+.line-button-text #input-email{
+    padding: 10px;
+    font-size: 16px;
 }
 
-.button {
+.enviar-email-btn {
     text-decoration: none;
     color: #ffffff;
     font-family: "Almarai", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 120px;
     background: #1769c3;
-    padding: 4px 20px;
+    padding: 8px 20px;
     cursor: pointer;
     transition: transform 100ms linear;
 }
