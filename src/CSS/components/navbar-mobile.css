@@ -168,6 +168,28 @@ header {
   transform: scale(1.08);
 }
 
+.navcenter-mobile p {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "poppins";
+  transition: transform 100ms linear;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+.localizacao-mobile{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "poppins";
+  cursor: pointer;
+}
+
+
 @media (max-width: 859px) {
   .nav-search-mobile {
     display: block;

@@ -15,18 +15,18 @@
     gap: 18px;
 }
 
-#evento-online-form{
+#evento-online-form {
     display: none;
     flex-direction: column;
     gap: 18px;
 }
 
 .new-event-form {
-   display: flex;
-   flex-direction: column;
-   gap: 18px;
-   margin: 0 10px 0 10px;
-   font-family: "almarai";
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 10px 0 10px;
+    font-family: "almarai";
 }
 
 .header-form select {
@@ -49,16 +49,21 @@
 .form-item-shrinked input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item-pair {
     display: flex;
     gap: 10px;
+
 }
 
 #form-endereco {
@@ -72,6 +77,9 @@
     border-radius: 5px;
     padding: 8px;
     box-sizing: border-box;
+    border: solid 1px;
+    border-color: #2fa6f5;
+    margin-bottom: 50px;
 }
 
 .banner-preview {
@@ -96,9 +104,12 @@
     border-radius: 120px;
     background: #1769c3;
     border: none;
+    padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
+    border: none;
+    background-color: #1769c3;
 }
 
 .criar-evento-btn:hover {
@@ -107,10 +118,10 @@
     background-color: #1769c3;
 }
 
-.upload-baner {
+.termos-uso {
     margin-top: 50px;
 }
 
-.termos-uso {
-    margin-top: 50px;
+#event-banner-input {
+    border: none;
 }
