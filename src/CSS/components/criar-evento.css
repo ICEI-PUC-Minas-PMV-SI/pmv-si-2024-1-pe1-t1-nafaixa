@@ -117,11 +117,10 @@
     background-color: #1769c3;
 }
 
-.form-item upload-baner {
-    margin-top: 50px;
-    border: none;
-}
-
 .termos-uso {
     margin-top: 50px;
+}
+
+#event-banner-input{
+    border: none;
 }
