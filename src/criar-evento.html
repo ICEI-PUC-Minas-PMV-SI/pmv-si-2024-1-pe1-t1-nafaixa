@@ -29,6 +29,8 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+
 </head>
 
 <body>
@@ -134,11 +136,11 @@
 
                         <div class="form-item">
                             <label for="local">Local</label>
-                            <input type="text" name="Local" id="local">
-
+                            <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off">
                         </div>
+                        
 
-                        <div class="form-item-pair">
+                        <!-- <div class="form-item-pair">
                             <div class="form-item" id="form-endereco">
                                 <label for="endereco">Endereço</label>
                                 <input type="show" id="long_name" readonly>
@@ -166,7 +168,7 @@
                                 <input type="text" id="estado" readonly>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div id="evento-online-form">
                         <div class="form-item">
@@ -256,59 +258,43 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-        // Inicializando flatpickr no campo de entrada da data de início do evento
         flatpickr("#start-date", {
-            dateFormat: "d/m/Y", // Formato da data (dia/mês/ano)
-            locale: "pt", // Configuração de localização para exibir em português
+            dateFormat: "d/m/Y", 
+            locale: "pt", 
         });
 
-        // Inicializando flatpickr no campo de entrada do horário de início do evento
         flatpickr("#start-time", {
-            enableTime: true, // Habilitar seleção de hora
-            noCalendar: true, // Desabilitar o calendário (somente hora)
-            dateFormat: "H:i", // Formato da hora (24 horas)
-            time_24hr: true, // Exibir hora no formato de 24 horas
+            enableTime: true, 
+            noCalendar: true, 
+            dateFormat: "H:i", 
+            time_24hr: true, 
         });
 
-        // Inicializando flatpickr no campo de entrada da data final do evento
         flatpickr("#final-date", {
-            dateFormat: "d/m/Y", // Formato da data (dia/mês/ano)
-            locale: "pt", // Configuração de localização para exibir em português
+            dateFormat: "d/m/Y", 
+            locale: "pt", // 
         });
 
-        // Inicializando flatpickr no campo de entrada do horário de término do evento
         flatpickr("#final-time", {
-            enableTime: true, // Habilitar seleção de hora
-            noCalendar: true, // Desabilitar o calendário (somente hora)
-            dateFormat: "H:i", // Formato da hora (24 horas)
-            time_24hr: true, // Exibir hora no formato de 24 horas
+            enableTime: true, 
+            noCalendar: true, 
+            dateFormat: "H:i", 
+            time_24hr: true, 
         });
 
-        var searchInput = 'local';
-    
-        $(document).ready(function () {
-            var autocomplete;
-            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-                types: ['geocode'],
-            });
-            
-            google.maps.event.addListener(autocomplete, 'place_changed', function () {
-                var near_place = autocomplete.getPlace();
-                document.getElementById('loc_lat').value = near_place.geometry.location.lat();
-                document.getElementById('loc_long').value = near_place.geometry.location.lng();
-                
-                document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
-                document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
-            });
-        });
-    
-        var autocomplete;
-    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-        types: ['geocode'],
-        componentRestrictions: {
-            country: "BR"
-        }
-    });
+
+    function initializeAutocomplete() {
+        var input = document.getElementById('local');
+        var options = {
+            componentRestrictions: { country: 'BR' } 
+        };
+
+        var autocomplete = new google.maps.places.Autocomplete(input, options);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
+
+
     
         const eventBannerInput = document.querySelector('#event-banner-input');
         const eventBannerPreview = document.querySelector('#event-banner-preview')
