@@ -302,7 +302,7 @@
 
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('http://localhost:3001/categorias');
+                const response = await fetch('http://localhost:3000/categorias');
                 const categorias = await response.json();
 
                 popularCategorias(categorias);
