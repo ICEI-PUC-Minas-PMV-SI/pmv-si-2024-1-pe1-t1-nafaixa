@@ -128,11 +128,13 @@
                         </select>
                     </div>
 
+                    <div class="form-item">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome do evento" id="nome" required> 
+                    </div>
+
                     <div id="evento-presencial-form">
-                        <div class="form-item">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome do evento" id="nome" required> 
-                        </div>
+                        
 
                         <div class="form-item">
                             <label for="local">Local</label>
@@ -168,6 +170,7 @@
                                 <input type="text" id="estado" readonly>
                             </div>
                         </div> -->
+                        
                     </div>
 
                     <div id="evento-online-form">
@@ -235,8 +238,7 @@
     </section>
 
     <div class="rounded-button">
-        <button class="criar-evento-btn">criar evento</button>
-    </div>
+        <button class="criar-evento-btn" onclick="criarEvento()">Criar evento</button>    </div>
 
     </form>
 
@@ -254,7 +256,8 @@
             </div>
         </div>
     </footer>
-
+    
+ 
 <!-- Formata a data e hora  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
@@ -317,6 +320,76 @@
             document.getElementById("evento-online-form").style.display = "block";
             document.getElementById("evento-presencial-form").style.display = "none";
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+  const criarEvento = async (evento) => {
+    try {
+      // Gerar um ID único para o evento
+      const idEvento = uuidv4();
+      evento.id = idEvento;
+
+      const response = await fetch('http://localhost:3000/eventos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(evento),
+      });
+
+      if (!response.ok) {
+        throw new Error('Erro ao criar evento');
+      }
+
+      const data = await response.json();
+      console.log('Evento criado:', data);
+      alert('Evento criado com sucesso!');
+    } catch (error) {
+      console.error('Erro ao criar evento:', error);
+      alert('Erro ao criar evento. Verifique o console para mais detalhes.');
+    }
+  };
+
+  const form = document.querySelector('.new-event-form');
+  const criarEventoBtn = document.querySelector('.criar-evento-btn');
+
+  criarEventoBtn.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    const tipoEvento = document.querySelector('input[name="event-type"]:checked').value;
+    const nomeEvento = document.querySelector('#nome').value;
+    const localEvento = document.querySelector('#local').value;
+    const startDateEvento = document.querySelector('#start-date').value;
+    const startTimeEvento = document.querySelector('#start-time').value;
+    const finalDateEvento = document.querySelector('#final-date').value;
+    const finalTimeEvento = document.querySelector('#final-time').value;
+    const sobreEvento = document.querySelector('#sobre').value;
+    const informacoesEvento = document.querySelector('#informacoes').value;
+
+    const evento = {
+      tipo: tipoEvento,
+      nome: nomeEvento,
+      local: localEvento,
+      startDate: startDateEvento,
+      startTime: startTimeEvento,
+      finalDate: finalDateEvento,
+      finalTime: finalTimeEvento,
+      sobre: sobreEvento,
+      informacoes: informacoesEvento,
+    };
+
+    criarEvento(evento);
+  });
+});
+
+// Função para gerar um ID único (v4) usando UUID
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
     </script>
 </body>
 </html>
