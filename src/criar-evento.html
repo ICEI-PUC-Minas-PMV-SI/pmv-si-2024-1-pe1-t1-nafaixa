@@ -10,7 +10,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="./CSS/components/navbar.css">
     <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
@@ -18,69 +20,67 @@
     <link rel="stylesheet" href="./CSS/components/title.css">
     <link rel="stylesheet" href="CSS/components/page-style.css">
     <link rel="stylesheet" href="./CSS/components/sobreNos.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="CSS/components/criar-evento.css">
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
 </head>
 
 <body>
     <header>
         <div class="navcenter">
-          <div>
-            <a href="index.html">
-              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
-            /></a>
-          </div>
-          <form class="nav-search">
-            <div class="search">
-              <span class="search-icon material-symbols-outlined">search</span>
-              <input
-                class="search-input"
-                type="search"
-                placeholder="pesquise por evento"
-              />
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
             </div>
-          </form>
-          <nav class="nav-options-web">
-            <a href="">Localização</a>
-            <a href="">Criar evento</a>
-            <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
-          </nav>
+            <form class="nav-search">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="pesquise por evento" />
+                </div>
+            </form>
+            <nav class="nav-options-web">
+                <a href="">Localização</a>
+                <a href="">Criar evento</a>
+                <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+            </nav>
         </div>
-  
+
         <div class="navcenter-mobile">
-          <div>
-            <a href="index.html">
-              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
-          </div>
-    
-          <a href="">Localização</a>
-    
-          <nav class="menu-hamburguer">
-            <input type="checkbox" class="checkbox-menu">
-    
-            <label for="checkbox-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-    
-            <div id="menu-options">
-              <ul>
-                <a href="login.html">Entrar</a></br>
-                <a href="criar-evento.html">Criar evento</a>
-                <a href="#">Sair</a>
-              </ul>
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
             </div>
-          </nav>
+
+            <a href="">Localização</a>
+
+            <nav class="menu-hamburguer">
+                <input type="checkbox" class="checkbox-menu">
+
+                <label for="checkbox-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div id="menu-options">
+                    <ul>
+                        <a href="login.html">Entrar</a></br>
+                        <a href="criar-evento.html">Criar evento</a>
+                        <a href="#">Sair</a>
+                    </ul>
+                </div>
+            </nav>
         </div>
-      </header>
+    </header>
 
     <section class="page">
         <div style="width: 100%">
@@ -281,7 +281,7 @@
             dateFormat: "H:i",
             time_24hr: true,
         });
-
+        //------------------------------------------------------------------------------------------//
 
         //Mostrar/ocultar formulario conforme o tipo de evento//    
         document.getElementById("evento-presencial-radio").onclick = function () {
@@ -305,7 +305,7 @@
             }
             eventBannerPreview.style.display = "block"
         }
-
+        //-----------------------------------------------------------------------------------------//
 
         // Autocomplete e criar evento
         let selectedPlace = null;
@@ -319,7 +319,7 @@
             var autocomplete = new google.maps.places.Autocomplete(input, options);
 
             autocomplete.addListener('place_changed', function () {
-                selectedPlace = autocomplete.getPlace(); // Armazena o local selecionado
+                selectedPlace = autocomplete.getPlace();
             });
         }
 
@@ -377,7 +377,6 @@
 
             const tipoEventoValue = tipoEvento.value;
 
-            // Verifica se o tipo de evento é presencial e valida o campo "local"
             if (tipoEventoValue === 'presencial') {
                 if (!selectedPlace || !selectedPlace.formatted_address) {
                     alert('O campo local é obrigatório para eventos presenciais.');
@@ -386,7 +385,6 @@
                 }
             }
 
-            // Verifica se o tipo de evento é online e valida o campo "link"
             if (tipoEventoValue === 'online') {
                 const linkEventoOnline = document.querySelector('#link-evento-online');
                 if (!linkEventoOnline.value) {
@@ -453,12 +451,48 @@
         document.addEventListener('DOMContentLoaded', () => {
             initializeAutocomplete();
 
+            const startDateInput = document.querySelector('#start-date');
+            const finalDateInput = document.querySelector('#final-date');
+
+            const startDatePicker = flatpickr(startDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+                minDate: "today",
+                onClose: function (selectedDates) {
+                    if (selectedDates.length > 0) {
+                        const minDate = selectedDates[0];
+                        finalDatePicker.set('minDate', minDate);
+                    }
+                }
+            });
+
+            const finalDatePicker = flatpickr(finalDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+            });
+
+
+
             const criarEventoBtn = document.querySelector('.criar-evento-btn');
 
             criarEventoBtn.addEventListener('click', (event) => {
                 event.preventDefault();
-                // Verifica se o checkbox de termos de uso está marcado antes de criar o evento
-                criarEvento(); // Chama a função criarEvento somente quando o botão for clicado
+
+                const startDate = startDatePicker.selectedDates[0];
+                const finalDate = finalDatePicker.selectedDates[0];
+
+                if (!startDate || !finalDate) {
+                    alert('Por favor, selecione as datas de início e final do evento.');
+                    return;
+                }
+
+                if (startDate.getTime() > finalDate.getTime()) {
+                    alert('A data final do evento deve ser posterior à data de início.');
+                    return;
+                }
+
+                criarEvento();
+
             });
         });
 

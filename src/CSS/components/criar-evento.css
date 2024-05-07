@@ -15,18 +15,18 @@
     gap: 18px;
 }
 
-#evento-online-form{
+#evento-online-form {
     display: none;
     flex-direction: column;
     gap: 18px;
 }
 
 .new-event-form {
-   display: flex;
-   flex-direction: column;
-   gap: 18px;
-   margin: 0 10px 0 10px;
-   font-family: "almarai";
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 10px 0 10px;
+    font-family: "almarai";
 }
 
 .header-form select {
@@ -63,7 +63,7 @@
 .form-item-pair {
     display: flex;
     gap: 10px;
-    
+
 }
 
 #form-endereco {
@@ -104,6 +104,7 @@
     border-radius: 120px;
     background: #1769c3;
     border: none;
+    padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
@@ -121,6 +122,6 @@
     margin-top: 50px;
 }
 
-#event-banner-input{
+#event-banner-input {
     border: none;
 }
