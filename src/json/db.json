@@ -1,56 +1,43 @@
 {
   "categorias": [
     {
-      "id": "teatro",
-      "nome": "Teatro"
-    },
-    {
-      "id": "esportes",
-      "nome": "Esportes"
-    },
-    {
-      "id": "musicaEShows",
-      "nome": "Música e Shows"
-    },
-    {
-      "id": "religioso",
-      "nome": "Religioso"
-    },
-    {
-      "id": "tecnologia",
-      "nome": "Tecnologia"
-    },
-    {
-      "id": "gastronomia",
-      "nome": "Gastronomia"
-    },
-    {
-      "id": "online",
-      "nome": "Online"
-    },
-    {
-      "id": "cultura",
       "nome": "Cultura"
     },
     {
-      "id": "feiras",
+      "nome": "Esportes"
+    },
+    {
       "nome": "Feiras"
     },
     {
-      "id": "palestras",
-      "nome": "Palestras"
+      "nome": "Gastronomia"
     },
     {
-      "id": "infantil",
       "nome": "Infantil"
     },
     {
-      "id": "standUp",
+      "nome": "Música e Shows"
+    },
+    {
+      "nome": "Online"
+    },
+    {
+      "nome": "Outros"
+    },
+    {
+      "nome": "Palestras"
+    },
+    {
+      "nome": "Religioso"
+    },
+    {
       "nome": "Stand Up"
     },
     {
-      "id": "outros",
-      "nome": "Outros"
+      "nome": "Tecnologia"
+    },
+    {
+      "nome": "Teatro"
     }
   ],
   "eventos": [
@@ -729,6 +716,38 @@
       "finalTime": "12:00",
       "sobre": "<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>\n<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p>",
       "informacoes": "The standard Lorem Ipsum passage, used since the 1500s\n\n\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+    },
+    {
+      "id": "67425b56-088c-487f-a481-88df69ecb211",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "asfadadaad",
+      "link": "",
+      "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "07/05/2024",
+      "startTime": "12:00",
+      "finalDate": "08/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>aaaaa</p>",
+      "informacoes": "aaaa"
+    },
+    {
+      "id": "839f2255-aaa5-46db-8514-f172c36ea857",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "asfadadaad",
+      "link": "",
+      "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "07/05/2024",
+      "startTime": "12:00",
+      "finalDate": "08/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>aaaaa</p>",
+      "informacoes": "aaaa"
     }
   ],
   "emails": [

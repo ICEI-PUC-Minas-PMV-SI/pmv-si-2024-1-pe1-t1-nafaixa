@@ -70,7 +70,7 @@
             <nav class="menu-hamburguer">
                 <input type="checkbox" class="checkbox-menu">
 
-                <label for="checkbox-menu">
+                <label>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -209,7 +209,7 @@
 
                         <div class="form-item">
                             <div>
-                                <label for="bannerEvento">Faça upload do banner do evento</label><br>
+                                <label for="event-banner-input">Faça upload do banner do evento</label><br>
                                 <input type="file" accept="image/*" name="file" id="event-banner-input">
                                 <img class="banner-preview" src="#" id="event-banner-preview" alt="Banner do evento">
                             </div>
@@ -314,14 +314,12 @@
         function popularCategorias(categorias) {
             const selectCategorias = document.querySelector('#categorias');
 
-            // Limpa opções existentes, exceto a primeira que é o placeholder
             selectCategorias.innerHTML = '<option value="">Categoria</option>';
 
-            // Adiciona as novas opções com base nos dados recebidos
             categorias.forEach(categoria => {
                 const option = document.createElement('option');
-                option.value = categoria.id; // Defina o valor apropriado da categoria
-                option.textContent = categoria.nome; // Ajuste de acordo com a estrutura do objeto categoria
+                option.value = categoria.nome;
+                option.textContent = categoria.nome;
                 selectCategorias.appendChild(option);
             });
         }
