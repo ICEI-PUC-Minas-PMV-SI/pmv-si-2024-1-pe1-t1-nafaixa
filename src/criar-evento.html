@@ -167,8 +167,8 @@
                                 <label for="estado">Estado</label>
                                 <input type="text" id="estado" readonly>
                             </div>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
 
                     <div id="evento-online-form">
                         <div class="form-item">
@@ -255,6 +255,7 @@
         </div>
     </footer>
 
+<!-- Formata a data e hora  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
@@ -282,7 +283,7 @@
             time_24hr: true, 
         });
 
-
+//Autocomplete do google maps para local do evento//
     function initializeAutocomplete() {
         var input = document.getElementById('local');
         var options = {
@@ -295,7 +296,7 @@
     google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
 
 
-    
+//Mostrar/ocultar formulario conforme o tipo de evento//    
         const eventBannerInput = document.querySelector('#event-banner-input');
         const eventBannerPreview = document.querySelector('#event-banner-preview')
     
