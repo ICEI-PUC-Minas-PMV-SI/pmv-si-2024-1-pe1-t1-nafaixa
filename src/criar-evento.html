@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="./CSS/components/sobreNos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="CSS/components/criar-evento.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/place/details/json?fields=name%2Crating%2Cformatted_phone_number&place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"></script>
+    
 </head>
 
 <body>
@@ -120,18 +127,19 @@
                     <div id="evento-presencial-form">
                         <div class="form-item">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome do evento" id="nome">
+                            <input type="text" name="nome do evento" id="nome"> 
                         </div>
 
                         <div class="form-item">
                             <label for="local">Local</label>
                             <input type="text" name="Local" id="local">
+
                         </div>
 
                         <div class="form-item-pair">
                             <div class="form-item" id="form-endereco">
                                 <label for="endereco">Endereço</label>
-                                <input type="text" id="endereco" readonly>
+                                <input type="show" id="long_name" readonly>
                             </div>
                             <div class="form-item">
                                 <label for="numero">Número</label>
@@ -245,26 +253,31 @@
 </body>
 
 <script>
-    // const banerEvento = document.querySelector('#baner-evento');
-    // const baner = document.querySelector('#baner');
+    var searchInput = 'local';
 
-    // banerEvento.addEventListener('change', event => {
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+        });
+        
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            var near_place = autocomplete.getPlace();
+            document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+            document.getElementById('loc_long').value = near_place.geometry.location.lng();
+            
+            document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+            document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+        });
+    });
 
-    //     const reader = new FileReader;
-
-    //     reader.onload = function (event) {
-    //         const previewImage = document.createElement('img');
-    //         previewImage.width = 115;
-    //         previewImage.height = 100;
-    //         previewImage.id = 'preview-image';
-    //         previewImage.src = event.target.result;
-    //         baner.insertAdjacentElement('afterend', previewImage);
-    //     }
-
-    //     reader.readAsDataURL(baner.files[0]);
-
-
-    // })
+    var autocomplete;
+autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+    types: ['geocode'],
+    componentRestrictions: {
+        country: "BR"
+    }
+});
 
     const eventBannerInput = document.querySelector('#event-banner-input');
     const eventBannerPreview = document.querySelector('#event-banner-preview')
