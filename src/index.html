@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/reset.css" />
   <link rel="stylesheet" href="CSS/components/navbar.css" />
-  <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
+  <link rel="stylesheet" href="CSS/components/navbar-mobile.css" />
   <link rel="stylesheet" href="CSS/components/page-style.css" />
   <link rel="stylesheet" href="CSS/components/title.css" />
   <link rel="stylesheet" href="CSS/components/event-cards.css" />
@@ -36,7 +36,6 @@
 
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
-
 </head>
 
 <body>
@@ -94,18 +93,14 @@
   <form class="nav-search-mobile">
     <div class="search">
       <span class="search-icon material-symbols-outlined">search</span>
-      <input class="search-input" type="search" placeholder="pesquise por evento"> </input>
+      <input class="search-input" type="search" placeholder="pesquise por evento" </input>
     </div>
   </form>
-
-  </header>
 
   <dialog id="locationPopup">
     <p>Escolha uma localização</p>
     <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
   </dialog>
-
-
 
   <section class="page">
     <div style="width: 100%">
@@ -151,40 +146,7 @@
         <a class="vertodos-button" href="eventosProximos.html">ver todos</a>
       </div>
 
-      <div class="wrapper-cards">
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-      </div>
+      <div id="1" class="wrapper-cards"></div>
 
       <div>
         <button class="vertodos-button-mobile" href="">Ver todos</button>
@@ -192,11 +154,9 @@
 
       <section class="categorias">
         <div class="categorias-header">
-
           <h1>Categorias</h1>
 
           <div id="categorias-button">
-
             <button id="left-btn" type="button">
               <img src="assets/img/arrow-left.svg" alt="botão da esquerda" />
             </button>
@@ -265,166 +225,62 @@
             <img class="icon-card" src="assets/img-categorias/Religioso.svg" alt="card Religioso" />
 
             <h3>Religioso</h3>
-
           </article>
 
           <article class="categories-cards">
             <img class="icon-card" src="assets/img-categorias/Feira.svg" alt="card Feira" />
 
             <h3>Feira</h3>
-
           </article>
 
           <article class="categories-cards">
             <img class="icon-card" src="assets/img-categorias/Online.svg" alt="card Online" />
 
             <h3>Online</h3>
-
           </article>
 
           <article class="categories-cards">
             <img class="icon-card" src="assets/img-categorias/Ver todos(1).svg" alt="card outros" />
 
             <h3>Outros</h3>
-
           </article>
-
-
         </div>
       </section>
     </div>
 
     <div style="width: 100%">
       <h1>Todos os eventos</h1>
-      <div class="wrapper-cards">
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-        <div class="cards">
-          <img class="imgcard" src="assets/img/download (1).jpeg" alt="event img" />
-          <p class="event-title">Nome do evento</p>
-          <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-          <p>
-            <img src="./assets/img/local.svg" alt="Local do evento" />Local
-          </p>
-        </div>
-      </div>
+
+      <div id="2" class="wrapper-cards"></div>
+
       <div class="wrapper-mostrarMais">
         <button class="mostrarMais">mostrar mais</button>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="footercenter">
-      <div class="subtitulo">
-        <p>O seu site de eventos gratuitos</p>
+  <div id="footer-container"></div>
 
-        <img class="logofooter" src="assets/img/logo2.svg" alt="logo NaFaixa" />
-      </div>
+  <script src="/src/JS/navbar.js"></script>
 
-      <div class="txtfooter">
-        <a href="sobrenos.html">Sobre nós</a>
-        <a href="termosdeuso.html">Termos de uso</a>
-      </div>
-    </div>
-  </footer>
+  <script src="/src/JS/footer.js"></script>
+
+  <script src="/src/JS/carrosselCategorias.js"></script>
+
+  <script src="/src/JS/cardsEvento.js"></script>
+
+  <script src="/src/JS/localizacaoPopup.js"></script>
 
   <script>
-
-    //Carrossel de categorias
-    const rightBtn = document.querySelector('#right-btn');
-    const leftBtn = document.querySelector('#left-btn');
-
-    rightBtn.addEventListener("click", function (event) {
-      const conent = document.querySelector('#wrapper-categorias');
-      conent.scrollLeft += 150;
-      event.preventDefault();
-    });
-
-    leftBtn.addEventListener("click", function (event) {
-      const conent = document.querySelector('#wrapper-categorias');
-      conent.scrollLeft -= 150;
-      event.preventDefault();
-    });
-
-
-    // // Função para obter a localização do usuário e preencher os dados
-    // function getUserLocationAndFillData() {
-    //     if ('geolocation' in navigator) {
-    //         navigator.geolocation.getCurrentPosition(function(position) {
-    //             const latitude = position.coords.latitude;
-    //             const longitude = position.coords.longitude;
-
-    //             const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"; // Substitua pela sua chave de API do Google Maps
-
-    //             // Montando a URL da requisição de geocodificação reversa
-    //             const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
-
-    //             // Fazendo a requisição para a API de geocodificação reversa
-    //             fetch(url)
-    //                 .then(response => response.json())
-    //                 .then(data => {
-    //                     console.log(data); // Exibir dados no console para depuração
-
-
-
-    //                     // Extraindo e exibindo o nome da cidade no elemento HTML web
-    //                     const addressComponents = data.results[0].address_components;
-    //                     addressComponents.forEach(part => {
-    //                         if (part.types.includes("administrative_area_level_2")) {
-    //                             const cityName = part.long_name;
-    //                             document.getElementById('city').innerHTML = `<p> ${cityName}</p>`;
-    //                         }
-    //                     });
-
-    //                       // Extraindo e exibindo o nome da cidade no elemento HTML mobile
-    //                       const addressComponents2 = data.results[0].address_components;
-    //                     addressComponents2.forEach(part => {
-    //                         if (part.types.includes("administrative_area_level_2")) {
-    //                             const cityName1 = part.long_name;
-    //                             document.getElementById('city1').innerHTML = `<p> ${cityName1}</p>`;
-    //                         }
-    //                     });
-    //                 })
-    //                 .catch(error => {
-    //                     console.error('Erro ao obter dados de localização:', error);
-    //                 });
-    //         }, function(error) {
-    //             console.error('Erro ao obter a localização do usuário:', error);
-    //         });
-    //     } else {
-    //         console.error('Geolocalização não é suportada pelo navegador.');
-    //     }
-    // }
-
     document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
       const locationLink = document.getElementById('city');
       const locationLinkMobile = document.getElementById('city-mobile');
       const locationPopup = document.getElementById('locationPopup');
       const locationInput = document.getElementById('locationInput');
 
+      // Carregar localização salva no localStorage ao iniciar a página
+      loadSavedLocation();
       // Carregar localização salva no localStorage ao iniciar a página
       loadSavedLocation();
 
@@ -488,9 +344,7 @@
         }
       });
     });
-
   </script>
-
 </body>
 
 </html>
