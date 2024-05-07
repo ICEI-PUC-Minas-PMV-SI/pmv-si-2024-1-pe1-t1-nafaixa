@@ -110,7 +110,7 @@
                             <label for="evento-online-radio">Evento online</label>
                         </div>
 
-                        <select name="categorias">
+                        <select name="categorias" required>
                             <option value="">Categoria</option>
                             <option value="">Teatro</option>
                             <option value="">Esportes</option>
@@ -131,12 +131,12 @@
                     <div id="evento-presencial-form">
                         <div class="form-item">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome do evento" id="nome"> 
+                            <input type="text" name="nome do evento" id="nome" required> 
                         </div>
 
                         <div class="form-item">
                             <label for="local">Local</label>
-                            <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off">
+                            <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off" required>
                         </div>
                         
 
@@ -173,25 +173,25 @@
                     <div id="evento-online-form">
                         <div class="form-item">
                             <label for="link-evento-online">Informe o link do evento online.</label>
-                            <input type="text" name="evento-online" id="link-evento-online">
+                            <input type="text" name="evento-online" id="link-evento-online" required>
                         </div>
                     </div>
 
                     <div class="form-item-pair">
                         <div class="form-item-shrinked">
                             <label for="start-date">Data início do evento</label>
-                            <input type="text" id="start-date" placeholder="Selecione a data" readonly>
+                            <input type="text" id="start-date" placeholder="Selecione a data" required>
                         </div>
                         <div class="form-item-shrinked">
                             <label for="start-time">Horário do início do evento</label>
-                            <input type="text" id="start-time" placeholder="Selecione a hora">
+                            <input type="text" id="start-time" placeholder="Selecione a hora" required>
                         </div>
                     </div>
 
                     <div class="form-item-pair">
                         <div class="form-item-shrinked">
                             <label for="final-date">Data final do evento</label>
-                            <input type="text" id="final-date" placeholder="Selecione a data" readonly>
+                            <input type="text" id="final-date" placeholder="Selecione a data">
                         </div>
                         <div class="form-item-shrinked">
                             <label for="final-time">Horário de término do evento</label>
@@ -204,7 +204,7 @@
 
                         <div class="form-item">
                             <label for="sobre">Fale sobre o evento.</label>
-                            <textarea rows="15" type="text" name="sobre o evento" id="sobre"></textarea>
+                            <textarea rows="15" type="text" name="sobre o evento" id="sobre" required></textarea>
                         </div>
 
                     </section>
@@ -214,7 +214,7 @@
 
                         <div class="form-item">
                             <label for="informacoes">Forneça informações gerais sobre o evento - tais como faixa etária, etc.</label>
-                            <textarea rows="15" type="text" name="informacoes do evento" id="informacoes"></textarea>
+                            <textarea rows="15" type="text" name="informacoes do evento" id="informacoes" required></textarea>
                         </div>
 
                         <div class="form-item upload-baner">
