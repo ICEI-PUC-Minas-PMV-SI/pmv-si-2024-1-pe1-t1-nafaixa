@@ -1,19 +1,60 @@
 {
-    "categorias": [
-      { "id": 0, "nome": "Categorias" },
-      { "id": 1, "nome": "Teatro" },
-      { "id": 2, "nome": "Esportes" },
-      { "id": 3, "nome": "Música e Shows" },
-      { "id": 4, "nome": "Religioso" },
-      { "id": 5, "nome": "Tecnologia" },
-      { "id": 6, "nome": "Gastronomia" },
-      { "id": 7, "nome": "Online" },
-      { "id": 8, "nome": "Cultura" },
-      { "id": 9, "nome": "Feiras" },
-      { "id": 10, "nome": "Palestras" },
-      { "id": 11, "nome": "Infantil" },
-      { "id": 12, "nome": "Stand Up" },
-      { "id": 13, "nome": "Outros" }
-    ]
-  }
-  
+  "categorias": [
+    {
+      "id": "categorias",
+      "nome": "Categorias"
+    },
+    {
+      "id": "teatro",
+      "nome": "Teatro"
+    },
+    {
+      "id": "esportes",
+      "nome": "Esportes"
+    },
+    {
+      "id": "musicaEShows",
+      "nome": "Música e Shows"
+    },
+    {
+      "id": "religioso",
+      "nome": "Religioso"
+    },
+    {
+      "id": "tecnologia",
+      "nome": "Tecnologia"
+    },
+    {
+      "id": "gastronomia",
+      "nome": "Gastronomia"
+    },
+    {
+      "id": "online",
+      "nome": "Online"
+    },
+    {
+      "id": "cultura",
+      "nome": "Cultura"
+    },
+    {
+      "id": "feiras",
+      "nome": "Feiras"
+    },
+    {
+      "id": "palestras",
+      "nome": "Palestras"
+    },
+    {
+      "id": "infantil",
+      "nome": "Infantil"
+    },
+    {
+      "id": "standUp",
+      "nome": "Stand Up"
+    },
+    {
+      "id": "outros",
+      "nome": "Outros"
+    }
+  ]
+}
