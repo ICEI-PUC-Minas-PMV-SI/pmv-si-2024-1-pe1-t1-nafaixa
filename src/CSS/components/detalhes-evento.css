@@ -25,7 +25,7 @@
     border-radius: 20px;
 }
 
-.date-time{
+.date-time {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -57,7 +57,7 @@
 }
 
 .topic-h2 {
-    font-family: "Almarai",sans-serif;
+    font-family: "Almarai", sans-serif;
     font-weight: bold;
     font-size: 24px;
     padding: 2% 2% 0% 2%;
@@ -91,16 +91,17 @@
     line-height: 25px;
 }
 
-@media (max-width: 500px){
-    .sobre-produtor{
+@media (max-width: 500px) {
+    .sobre-produtor {
         display: flexbox;
         flex-wrap: wrap;
         align-content: center;
-     }
+    }
+
     .sobre-produtor-icone {
         margin: auto;
         padding-bottom: 10px;
-}
+    }
 }
 
 .confirmacao {
@@ -134,7 +135,7 @@
     margin-bottom: 5px;
 }
 
-.line-button-text #input-email{
+.line-button-text #input-email {
     padding: 10px;
     font-size: 16px;
 }
