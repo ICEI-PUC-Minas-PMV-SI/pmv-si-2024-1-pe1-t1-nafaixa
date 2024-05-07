@@ -30,7 +30,12 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+    <script src="https://cdn.tiny.cloud/1/td7wgm1izo9h3d17s951if482d4qpmpsfljff1630roi5k00/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
 
 </head>
 
@@ -101,20 +106,8 @@
                         </div>
 
                         <select id="categorias" name="categorias" required>
-                            <option value="">Categoria</option>
-                            <option value="Teatro">Teatro</option>
-                            <option value="Esportes">Esportes</option>
-                            <option value="Musica e shows">Música e shows</option>
-                            <option value="Religioso">Religioso</option>
-                            <option value="Tecnologia">Tecnologia</option>
-                            <option value="Gastronomia">Gastronomia</option>
-                            <option value="Online">Online</option>
-                            <option value="Cultura">Cultura</option>
-                            <option value="Feiras">Feiras</option>
-                            <option value="Palestras">Palestras</option>
-                            <option value="Infantil">Infantil</option>
-                            <option value="Stand up">Stand up</option>
-                            <option value="Outros">Outros</option>
+                            <option value="">Categorias</option>
+
                         </select>
                     </div>
 
@@ -199,7 +192,7 @@
 
                         <div class="form-item">
                             <label for="sobre">Fale sobre o evento.</label>
-                            <textarea rows="15" type="text" name="sobre o evento" id="sobre" required></textarea>
+                            <textarea id="sobre" name="sobre o evento" required></textarea>
                         </div>
 
                     </section>
@@ -307,7 +300,38 @@
         }
         //-----------------------------------------------------------------------------------------//
 
-        // Autocomplete e criar evento
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('http://localhost:3001/categorias');
+                const categorias = await response.json();
+
+                popularCategorias(categorias);
+            } catch (error) {
+                console.error('Erro ao obter categorias:', error);
+            }
+        });
+
+        function popularCategorias(categorias) {
+            const selectCategorias = document.querySelector('#categorias');
+
+            // Limpa opções existentes, exceto a primeira que é o placeholder
+            selectCategorias.innerHTML = '<option value="">Categoria</option>';
+
+            // Adiciona as novas opções com base nos dados recebidos
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria.id; // Defina o valor apropriado da categoria
+                option.textContent = categoria.nome; // Ajuste de acordo com a estrutura do objeto categoria
+                selectCategorias.appendChild(option);
+            });
+        }
+        //-----------------------------------------------------------------------------------------------------------------//
+
+        tinymce.init({
+            selector: '#sobre',
+            height: 300
+        });
+
         let selectedPlace = null;
 
         function initializeAutocomplete() {
@@ -326,6 +350,7 @@
         async function criarEvento() {
             const termsCheckbox = document.getElementById('terms-checkbox');
 
+
             if (!termsCheckbox.checked) {
                 alert('Você precisa aceitar os termos de uso antes de criar o evento.');
                 return;
@@ -339,6 +364,7 @@
             const startTimeEvento = document.querySelector('#start-time');
             const sobreEvento = document.querySelector('#sobre');
             const informacoesEvento = document.querySelector('#informacoes');
+            const sobre = tinymce.get('sobre').getContent();
 
             if (!nomeEvento.value) {
                 alert('O campo nome é obrigatório.');
@@ -364,9 +390,8 @@
                 startTimeEvento.focus();
                 return;
             }
-            if (!sobreEvento.value) {
+            if (!sobre.trim()) {
                 alert('O campo sobre o evento é obrigatório.');
-                sobreEvento.focus();
                 return;
             }
             if (!informacoesEvento.value) {
@@ -401,6 +426,8 @@
             const finalDateEvento = document.querySelector('#final-date').value;
             const finalTimeEvento = document.querySelector('#final-time').value;
 
+
+
             const evento = {
                 id: idEvento,
                 tipo: tipoEventoValue,
@@ -414,11 +441,12 @@
                 startTime: startTimeEvento.value,
                 finalDate: finalDateEvento,
                 finalTime: finalTimeEvento,
-                sobre: sobreEvento.value,
+                sobre: sobre,
                 informacoes: informacoesEvento.value
             };
 
             try {
+
                 const response = await fetch('http://localhost:3000/eventos', {
                     method: 'POST',
                     headers: {
