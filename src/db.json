@@ -80,6 +80,20 @@
       "finalTime": "10:26",
       "sobre": "AAA",
       "informacoes": "AAAAA"
+    },
+    {
+      "id": "b379b4ef-196d-435f-8304-cb2115925fed",
+      "tipo": "presencial",
+      "nome": "a",
+      "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
+      "latitude": -22.9667613,
+      "longitude": -42.0277716,
+      "startDate": "02/05/2024",
+      "startTime": "10:30",
+      "finalDate": "02/05/2024",
+      "finalTime": "22:30",
+      "sobre": "aaa",
+      "informacoes": "aaaa"
     }
   ]
 }
