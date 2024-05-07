@@ -113,7 +113,7 @@
                         </div>
 
                         <select id="categorias" name="categorias" required>
-                            <option value="0">Categoria</option>
+                            <option value="">Categoria</option>
                             <option value="Teatro">Teatro</option>
                             <option value="Esportes">Esportes</option>
                             <option value="Musica e shows">Música e shows</option>
@@ -142,8 +142,7 @@
                             <label for="local">Local</label>
                             <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off"
                                 required>
-                            <input type="hidden" id="latitudeInput">
-                            <input type="hidden" id="longitudeInput">
+
                         </div>
 
 
@@ -227,31 +226,28 @@
                                 required></textarea>
                         </div>
 
-                        <div class="form-item upload-baner">
-                            <div enctype="_multipart/form-data">
-                                <label>Faça upload do baner do evento</label><br>
+                        <div class="form-item upload-banner">
+                            <div>
+                                <label for="bannerEvento">Faça upload do banner do evento</label><br>
                                 <input type="file" accept="image/*" name="file" id="event-banner-input">
-                                <img height="auto" class="banner-preview" src="#" id="event-banner-preview"
-                                    alt="Banner do evento">
+                                <img class="banner-preview" src="#" id="event-banner-preview" alt="Banner do evento">
                             </div>
                         </div>
+
 
                         <div class="termos-uso">
                             <input id="terms-checkbox" type="checkbox">
                             <label>Li e aceito os <a href="termosdeuso.html" target="_blank">termos de uso.</a></label>
                         </div>
                     </section>
-
                 </form>
             </section>
         </div>
     </section>
 
-
     <div class="rounded-button">
-        <button type="button" class="criar-evento-btn">Criar evento</button>
+        <button type="submit" class="criar-evento-btn">Criar evento</button>
     </div>
-
 
     <footer>
 
@@ -268,6 +264,7 @@
         </div>
     </footer>
 
+    <!-- ----------------------------------------------------------------------------------------------- -->
 
     <!-- Formata a data e hora  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -299,6 +296,17 @@
 
 
         //Mostrar/ocultar formulario conforme o tipo de evento//    
+        document.getElementById("evento-presencial-radio").onclick = function () {
+            document.getElementById("evento-presencial-form").style.display = "block";
+            document.getElementById("evento-online-form").style.display = "none";
+        }
+
+        document.getElementById("evento-online-radio").onclick = function () {
+            document.getElementById("evento-online-form").style.display = "block";
+            document.getElementById("evento-presencial-form").style.display = "none";
+        }
+
+        //Preview do banner do evento 
         const eventBannerInput = document.querySelector('#event-banner-input');
         const eventBannerPreview = document.querySelector('#event-banner-preview')
 
@@ -310,15 +318,6 @@
             eventBannerPreview.style.display = "block"
         }
 
-        document.getElementById("evento-presencial-radio").onclick = function () {
-            document.getElementById("evento-presencial-form").style.display = "block";
-            document.getElementById("evento-online-form").style.display = "none";
-        }
-
-        document.getElementById("evento-online-radio").onclick = function () {
-            document.getElementById("evento-online-form").style.display = "block";
-            document.getElementById("evento-presencial-form").style.display = "none";
-        }
 
         // Autocomplete e criar evento
         let selectedPlace = null;
@@ -337,11 +336,6 @@
         }
 
         async function criarEvento() {
-            if (!selectedPlace) {
-                alert('Selecione um local antes de criar o evento.');
-                return;
-            }
-
             const termsCheckbox = document.getElementById('terms-checkbox');
 
             if (!termsCheckbox.checked) {
@@ -349,34 +343,96 @@
                 return;
             }
 
+            // Validação dos campos obrigatórios
+            const nomeEvento = document.querySelector('#nome');
+            const categorias = document.querySelector('#categorias');
+            const tipoEvento = document.querySelector('input[name="event-type"]:checked');
+            const startDateEvento = document.querySelector('#start-date');
+            const startTimeEvento = document.querySelector('#start-time');
+            const sobreEvento = document.querySelector('#sobre');
+            const informacoesEvento = document.querySelector('#informacoes');
+
+            if (!nomeEvento.value) {
+                alert('O campo nome é obrigatório.');
+                nomeEvento.focus();
+                return;
+            }
+            if (!categorias.value) {
+                alert('O campo categorias é obrigatório.');
+                categorias.focus();
+                return;
+            }
+            if (!tipoEvento) {
+                alert('Selecione o tipo de evento (presencial ou online).');
+                return;
+            }
+            if (!startDateEvento.value) {
+                alert('O campo data de início do evento é obrigatório.');
+                startDateEvento.focus();
+                return;
+            }
+            if (!startTimeEvento.value) {
+                alert('O campo horário de início do evento é obrigatório.');
+                startTimeEvento.focus();
+                return;
+            }
+            if (!sobreEvento.value) {
+                alert('O campo sobre o evento é obrigatório.');
+                sobreEvento.focus();
+                return;
+            }
+            if (!informacoesEvento.value) {
+                alert('O campo informações adicionais é obrigatório.');
+                informacoesEvento.focus();
+                return;
+            }
+
+            const tipoEventoValue = tipoEvento.value;
+
+            // Verifica se o tipo de evento é presencial e valida o campo "local"
+            if (tipoEventoValue === 'presencial') {
+                if (!selectedPlace || !selectedPlace.formatted_address) {
+                    alert('O campo local é obrigatório para eventos presenciais.');
+                    document.getElementById('local').focus();
+                    return;
+                }
+            }
+
+            // Verifica se o tipo de evento é online e valida o campo "link"
+            if (tipoEventoValue === 'online') {
+                const linkEventoOnline = document.querySelector('#link-evento-online');
+                if (!linkEventoOnline.value) {
+                    alert('O campo link do evento é obrigatório para eventos online.');
+                    linkEventoOnline.focus();
+                    return;
+                }
+            }
+
+            // Dados do evento
+            const idEvento = uuidv4();
+            const categoriaValue = categorias.value;
+            const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
+            const finalDateEvento = document.querySelector('#final-date').value;
+            const finalTimeEvento = document.querySelector('#final-time').value;
+
+            const evento = {
+                id: idEvento,
+                tipo: tipoEventoValue,
+                categoria: categoriaValue,
+                nome: nomeEvento.value,
+                link: link,
+                local: selectedPlace ? selectedPlace.formatted_address : '',
+                latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
+                longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
+                startDate: startDateEvento.value,
+                startTime: startTimeEvento.value,
+                finalDate: finalDateEvento,
+                finalTime: finalTimeEvento,
+                sobre: sobreEvento.value,
+                informacoes: informacoesEvento.value
+            };
+
             try {
-                const idEvento = uuidv4();
-                const tipoEvento = document.querySelector('input[name="event-type"]:checked').value;
-                const categoria = document.querySelector('#categorias').value;
-                const nomeEvento = document.querySelector('#nome').value;
-                const startDateEvento = document.querySelector('#start-date').value;
-                const startTimeEvento = document.querySelector('#start-time').value;
-                const finalDateEvento = document.querySelector('#final-date').value;
-                const finalTimeEvento = document.querySelector('#final-time').value;
-                const sobreEvento = document.querySelector('#sobre').value;
-                const informacoesEvento = document.querySelector('#informacoes').value;
-
-                const evento = {
-                    id: idEvento,
-                    tipo: tipoEvento,
-                    categoria: categoria,
-                    nome: nomeEvento,
-                    local: selectedPlace.formatted_address,
-                    latitude: selectedPlace.geometry.location.lat(),
-                    longitude: selectedPlace.geometry.location.lng(),
-                    startDate: startDateEvento,
-                    startTime: startTimeEvento,
-                    finalDate: finalDateEvento,
-                    finalTime: finalTimeEvento,
-                    sobre: sobreEvento,
-                    informacoes: informacoesEvento
-                };
-
                 const response = await fetch('http://localhost:3000/eventos', {
                     method: 'POST',
                     headers: {
@@ -394,7 +450,7 @@
                 alert('Evento criado com sucesso!');
             } catch (error) {
                 console.error('Erro ao criar evento:', error);
-                alert('Erro ao criar evento. Verifique o console para mais detalhes.');
+                alert('Erro ao criar evento. Tente novamente mais tarde.');
             }
         }
 
@@ -417,6 +473,8 @@
                 criarEvento(); // Chama a função criarEvento somente quando o botão for clicado
             });
         });
+
+
 
     </script>
 </body>
