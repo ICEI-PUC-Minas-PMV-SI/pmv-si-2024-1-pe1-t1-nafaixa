@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Autocomplete</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
+    <style>
+        /* Estilos opcionais para o popup */
+        #locationPopup {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="locationLink">Localização</a></li>
+        </ul>
+    </nav>
+
+    <div id="locationPopup">
+        <input type="text" id="locationInput" placeholder="Digite sua localização...">
+    </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const locationLink = document.getElementById('locationLink');
+    const locationPopup = document.getElementById('locationPopup');
+    const locationInput = document.getElementById('locationInput');
+
+    locationLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        locationPopup.style.display = 'block';
+
+        const autocomplete = new google.maps.places.Autocomplete(locationInput, {
+            types: ['(cities)'],
+            componentRestrictions: { country: 'BR' }
+        });
+
+        autocomplete.addListener('place_changed', function() {
+            const place = autocomplete.getPlace();
+
+            if (place && place.address_components) {
+                const city = place.address_components.find(component => {
+                    return component.types.includes('locality');
+                });
+
+                if (city) {
+                    const cityName = city.long_name;
+                    updateNavbarLocation(cityName);
+                }
+            }
+        });
+    });
+
+    function updateNavbarLocation(cityName) {
+        locationLink.textContent = cityName;
+        locationPopup.style.display = 'none';
+    }
+
+    document.addEventListener('click', function(event) {
+        if (!locationPopup.contains(event.target) && event.target !== locationLink) {
+            locationPopup.style.display = 'none';
+        }
+    });
+});
+
+</script>
+</body>
+</html>
