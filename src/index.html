@@ -52,10 +52,12 @@
         </div>
       </form>
       <nav class="nav-options-web">
-        <div class="localização-web">
-          <img src="assets/img/localpin.svg" </img>
-          <a id="city">Localização</a>
+        <div onclick="openPopup()" class="localização-web" >
+          <img  src="assets/img/localpin.svg" </img>
+          <span class="localização-web"  id="userLocation">Localização</span>
+            <img src="assets/img/setaprabaixo1.svg"  style="padding-right: 15px"></img>
         </div>
+
         <a href="">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
@@ -99,7 +101,8 @@
 
   <dialog id="locationPopup">
     <p>Escolha uma localização</p>
-    <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
+    <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+    <button onclick="updateLocation()">Confirmar</button>
   </dialog>
 
   <section class="page">
@@ -272,78 +275,207 @@
   <script src="/src/JS/localizacaoPopup.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navbar = document.getElementById('navbar');
-      const locationLink = document.getElementById('city');
-      const locationLinkMobile = document.getElementById('city-mobile');
-      const locationPopup = document.getElementById('locationPopup');
-      const locationInput = document.getElementById('locationInput');
+    // Função para abrir o popup
+    function openPopup() {
+      document.getElementById('locationPopup').style.display = 'block';
 
-      // Carregar localização salva no localStorage ao iniciar a página
-      loadSavedLocation();
-      // Carregar localização salva no localStorage ao iniciar a página
-      loadSavedLocation();
-
-      // Função para atualizar a localização na barra de navegação da web (navcenter)
-      locationLink.addEventListener('click', function (event) {
-        event.preventDefault();
-        openLocationPopup(locationLink);
+      // Inicializa o campo de entrada com autocomplete
+      var input = document.getElementById('cityInput');
+      var autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['(cities)'], // Limita o autocomplete a cidades
+        componentRestrictions: { country: 'BR' } // Restringe às cidades do Brasil
       });
+    }
 
-      // Função para atualizar a localização na barra de navegação móvel (navcenter-mobile)
-      locationLinkMobile.addEventListener('click', function (event) {
-        event.preventDefault();
-        openLocationPopup(locationLinkMobile);
-      });
+    // Função para atualizar a localização na navbar
+    function updateLocation() {
+      var newCity = document.getElementById('cityInput').value.trim();
 
-      function openLocationPopup(linkElement) {
-        locationPopup.style.display = 'block';
+      if (newCity !== '') {
+        // Salva a nova localização no Local Storage
+        localStorage.setItem('userLocation', newCity);
 
-        const autocomplete = new google.maps.places.Autocomplete(locationInput, {
-          types: ['(cities)'],
-          componentRestrictions: { country: 'BR' }
-        });
+        geocodeCity(newCity);
+      }
 
-        autocomplete.addListener('place_changed', function () {
-          const place = autocomplete.getPlace();
+      document.getElementById('locationPopup').style.display = 'none';
 
-          if (place && place.address_components) {
-            const city = place.address_components.find(component => {
-              return component.types.includes('locality');
-            });
+    }
 
-            if (city) {
-              const cityName = city.long_name;
-              updateNavbarLocation(linkElement, cityName);
-              saveLocationToLocalStorage(cityName); // Salvar localização no localStorage
+    function checkAndUpdateLocation() {
+      var savedCity = localStorage.getItem('userLocation');
+      var locationElement = document.getElementById('userLocation');
+
+      if (savedCity && locationElement.textContent !== savedCity) {
+        locationElement.textContent = savedCity;
+
+        window.location.reload();
+      }
+    }
+
+    // Função para obter a localização atual do usuário
+    function getCurrentLocation() {
+      if (navigator.geolocation) {
+        if ('permissions' in navigator) {
+          navigator.permissions.query({ name: 'geolocation' }).then(permissionStatus => {
+            if (permissionStatus.state === 'granted') {
+              getGeolocation();
+            } else if (permissionStatus.state === 'prompt') {
+              navigator.geolocation.getCurrentPosition(
+                      position => {
+                        getGeolocation();
+                      },
+                      error => {
+                        console.error('Erro ao obter a localização do usuário:', error);
+                        alert('Erro ao obter a localização atual.');
+                      }
+              );
             }
-          }
-        });
-      }
-
-      function updateNavbarLocation(linkElement, cityName) {
-        linkElement.textContent = cityName;
-        locationPopup.style.display = 'none';
-      }
-
-      function saveLocationToLocalStorage(cityName) {
-        localStorage.setItem('userLocation', cityName);
-      }
-
-      function loadSavedLocation() {
-        const savedLocation = localStorage.getItem('userLocation');
-        if (savedLocation) {
-          updateNavbarLocation(locationLink, savedLocation); // Atualizar na barra de navegação da web
-          updateNavbarLocation(locationLinkMobile, savedLocation); // Atualizar na barra de navegação móvel
+          });
+        } else {
+          navigator.geolocation.getCurrentPosition(
+                  position => {
+                    getGeolocation();
+                  },
+                  error => {
+                    console.error('Erro ao obter a localização do usuário:', error);
+                    alert('Erro ao obter a localização atual.');
+                  }
+          );
         }
+      } else {
+        console.error('Geolocalização não é suportada pelo navegador.');
+        alert('Geolocalização não é suportada pelo navegador.');
       }
+    }
 
-      document.addEventListener('click', function (event) {
-        if (!locationPopup.contains(event.target) && event.target !== locationLink && event.target !== locationLinkMobile) {
-          locationPopup.style.display = 'none';
+    getCurrentLocation();
+
+    // Função para transformar lat e long em cidade
+    function geocodeCity(city) {
+      var geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode({ 'address': city }, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+          var location = results[0].geometry.location;
+          var latitude = location.lat();
+          var longitude = location.lng();
+
+          reverseGeocodeCity(latitude, longitude);
+        } else {
+          alert('Não foi possível encontrar a localização da cidade inserida.');
         }
       });
-    });
+    }
+
+    function reverseGeocodeCity(latitude, longitude) {
+      const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s";
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
+
+      fetch(url)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`Erro ao fazer a requisição: ${response.status}`);
+                }
+                return response.json();
+              })
+              .then(data => {
+                if (data.status === 'OK' && data.results.length > 0) {
+                  const addressComponents = data.results[0].address_components;
+                  let cityName = 'Cidade desconhecida';
+
+                  addressComponents.forEach(part => {
+                    if (part.types.includes("administrative_area_level_2")) {
+                      cityName = part.long_name;
+                    }
+                  });
+
+                  var locationElement = document.getElementById('userLocation');
+                  locationElement.textContent = cityName;
+                } else {
+                  throw new Error('Nenhuma cidade encontrada para estas coordenadas.');
+                }
+              })
+              .catch(error => {
+                console.error('Erro ao obter dados de localização:', error);
+                alert('Erro ao obter dados de localização. Verifique a conexão com a internet e tente novamente.');
+              });
+    }
+
+    // Função para obter a localização atual do usuário e salvar no localStorage
+    function getCurrentLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          reverseGeocodeCity(latitude, longitude);
+
+          saveLocationToLocalStorage(latitude, longitude);
+        }, function(error) {
+          console.error('Erro ao obter a localização do usuário:', error);
+          alert('Erro ao obter a localização atual.');
+        });
+      } else {
+        console.error('Geolocalização não é suportada pelo navegador.');
+        alert('Geolocalização não é suportada pelo navegador.');
+      }
+    }
+
+    function saveLocationToLocalStorage(latitude, longitude) {
+      const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s";
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
+
+      fetch(url)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`Erro ao fazer a requisição: ${response.status}`);
+                }
+                return response.json();
+              })
+              .then(data => {
+                if (data.status === 'OK' && data.results.length > 0) {
+                  const addressComponents = data.results[0].address_components;
+                  let cityName = 'Cidade desconhecida';
+
+                  addressComponents.forEach(part => {
+                    if (part.types.includes("administrative_area_level_2")) {
+                      cityName = part.long_name;
+                    }
+                  });
+
+                  localStorage.setItem('userLocation', cityName);
+
+                  checkAndUpdateLocation();
+                } else {
+                  throw new Error('Nenhuma cidade encontrada para estas coordenadas.');
+                }
+              })
+              .catch(error => {
+                console.error('Erro ao obter dados de localização:', error);
+                alert('Erro ao obter dados de localização. Verifique a conexão com a internet e tente novamente.');
+              });
+    }
+
+    // Função para verificar se a localização mudou e recarregar a página se necessário
+    function checkAndUpdateLocation() {
+      var savedCity = localStorage.getItem('userLocation');
+      var locationElement = document.getElementById('userLocation');
+
+      if (savedCity && locationElement.textContent !== savedCity) {
+        // Atualiza a localização na navbar com a cidade salva no Local Storage
+        locationElement.textContent = savedCity;
+
+        window.location.reload();
+      }
+    }
+
+    getCurrentLocation();
+
+  </script>
+
+  <!-- Importa a biblioteca do Google Maps JavaScript -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
   </script>
 </body>
 
