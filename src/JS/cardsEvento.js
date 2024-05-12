@@ -49,7 +49,8 @@ function formatarDataHora(data, hora) {
 
 //Paginação
 document.addEventListener('DOMContentLoaded', () => {
-  let eventosExibidos = 0;
+  let eventosExibidosId1 = 0;
+  let eventosExibidosId2 = 0;
   const eventosPorVez = 4;
 
   async function obterEventosEExibirCards(id, url, limit) {
@@ -59,17 +60,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const wrapperElement = document.getElementById(id);
 
-      eventos.slice(eventosExibidos, eventosExibidos + limit).forEach(evento => {
-        const cardElement = criarCardEvento(evento);
-        wrapperElement.appendChild(cardElement);
-      });
+      if (id === 'eventosFiltrados') {
+        // Obter a palavra-chave de localização do localStorage
+        const userLocation = localStorage.getItem('userLocation');
 
-      eventosExibidos += limit;
+        eventos.slice(eventosExibidosId1, eventosExibidosId1 + limit).forEach(evento => {
+          // Verificar se o evento corresponde à palavra-chave da localização do usuário
+          if (userLocation && evento.local.toLowerCase().includes(userLocation.toLowerCase())) {
+            const cardElement = criarCardEvento(evento);
+            wrapperElement.appendChild(cardElement);
+          }
+        });
 
-      if (eventosExibidos >= eventos.length) {
-        const mostrarMaisBtn = document.querySelector('.mostrarMais');
-        if (mostrarMaisBtn) {
-          mostrarMaisBtn.style.display = 'none';
+        eventosExibidosId1 += limit;
+
+        // Verificar se todos os eventos foram exibidos para o id=1
+        if (eventosExibidosId1 >= eventos.length) {
+          const mostrarMaisBtn = document.querySelector('.mostrarMais');
+          if (mostrarMaisBtn) {
+            mostrarMaisBtn.style.display = 'none';
+          }
+        }
+      } else if (id === 'todosEventos') {
+        eventos.slice(eventosExibidosId2, eventosExibidosId2 + limit).forEach(evento => {
+          const cardElement = criarCardEvento(evento);
+          wrapperElement.appendChild(cardElement);
+        });
+
+        eventosExibidosId2 += limit;
+
+        // Verificar se todos os eventos foram exibidos para o id=2
+        if (eventosExibidosId2 >= eventos.length) {
+          const mostrarMaisBtn = document.querySelector('.mostrarMais');
+          if (mostrarMaisBtn) {
+            mostrarMaisBtn.style.display = 'none';
+          }
         }
       }
 
@@ -89,17 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verifica se o evento é presencial ou online
     if (evento.tipo === 'presencial') {
       cardElement.innerHTML = `
-      <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
-      <p class="event-title">${evento.nome}</p>
-      <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
-      <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
-    `;
+        <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
+        <p class="event-title">${evento.nome}</p>
+        <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+        <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
+      `;
     } else if (evento.tipo === 'online') {
       cardElement.innerHTML = `
-      <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
-      <p class="event-title">${evento.nome}</p>
-      <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
-      <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.link}</p>    `;
+        <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
+        <p class="event-title">${evento.nome}</p>
+        <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+        <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.link}</p>
+      `;
     } else {
       console.error('Tipo de evento desconhecido:', evento.tipo);
       return null;
@@ -112,14 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return cardElement;
   }
 
-  obterEventosEExibirCards('1', 'http://localhost:3000/eventos', eventosPorVez);
-  obterEventosEExibirCards('2', 'http://localhost:3000/eventos', eventosPorVez);
+  // Inicializar o carregamento dos eventos com ID '1' e '2'
+  obterEventosEExibirCards('eventosFiltrados', 'http://localhost:3000/eventos', eventosPorVez);
+  obterEventosEExibirCards('todosEventos', 'http://localhost:3000/eventos', eventosPorVez);
 
+  // Listener para o botão "Mostrar Mais" do ID '2'
   const mostrarMaisBtn = document.querySelector('.mostrarMais');
   if (mostrarMaisBtn) {
     mostrarMaisBtn.addEventListener('click', () => {
-      obterEventosEExibirCards('2', 'http://localhost:3000/eventos', eventosPorVez);
+      obterEventosEExibirCards('todosEventos', 'http://localhost:3000/eventos', eventosPorVez);
     });
   }
 });
+
 
