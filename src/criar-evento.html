@@ -36,6 +36,9 @@
     <script src="https://cdn.tiny.cloud/1/td7wgm1izo9h3d17s951if482d4qpmpsfljff1630roi5k00/tinymce/7/tinymce.min.js"
         referrerpolicy="origin"></script>
 
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+
 
 </head>
 
@@ -207,13 +210,20 @@
                                 required></textarea>
                         </div>
 
-                        <div class="form-item">
+<!--                        <div class="form-item">-->
                             <div>
-                                <label for="event-banner-input">Faça upload do banner do evento</label><br>
-                                <input type="file" accept="image/*" name="file" id="event-banner-input">
-                                <img class="banner-preview" src="#" id="event-banner-preview" alt="Banner do evento">
+                                <label>Faça upload do banner do evento</label><br>
+                                <button
+                                        id="event-banner-input"
+                                        class="cloudinary-button">
+                                    Upload files
+                                </button>
+
+
+
                             </div>
-                        </div>
+                        <img id="uploadedimage" src=""></img>
+<!--                        </div>-->
 
 
                         <div class="termos-uso">
@@ -325,12 +335,14 @@
         }
         //-----------------------------------------------------------------------------------------------------------------//
 
+        //Salvar dados do evento no db
         tinymce.init({
             selector: '#sobre',
             height: 300
         });
 
         let selectedPlace = null;
+        let bannerUrl = null;
 
         function initializeAutocomplete() {
             var input = document.getElementById('local');
@@ -345,6 +357,32 @@
             });
         }
 
+        const cloudName = "nafaixa";
+        const uploadPreset = "nafaixa";
+
+        const myWidget = cloudinary.createUploadWidget(
+            {
+                cloudName: cloudName,
+                uploadPreset: uploadPreset
+            },
+            (error, result) => {
+                if (!error && result && result.event === "success") {
+                    console.log("Upload concluído! Aqui estão as informações da imagem: ", result.info);
+                    alert('Upload de imagem concluído!');
+                    document.getElementById("uploadedimage").setAttribute("src", result.info.secure_url);
+                    bannerUrl = result.info.secure_url; // Armazene a URL da imagem carregada
+                }
+            }
+        );
+
+        document.getElementById("event-banner-input").addEventListener(
+            "click",
+            function () {
+                myWidget.open();
+            },
+            false
+        );
+
         async function criarEvento() {
             const termsCheckbox = document.getElementById('terms-checkbox');
 
@@ -354,7 +392,6 @@
                 return;
             }
 
-            // Validação dos campos obrigatórios
             const nomeEvento = document.querySelector('#nome');
             const categorias = document.querySelector('#categorias');
             const tipoEvento = document.querySelector('input[name="event-type"]:checked');
@@ -417,14 +454,11 @@
                 }
             }
 
-            // Dados do evento
             const idEvento = uuidv4();
             const categoriaValue = categorias.value;
             const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
             const finalDateEvento = document.querySelector('#final-date').value;
             const finalTimeEvento = document.querySelector('#final-time').value;
-
-
 
             const evento = {
                 id: idEvento,
@@ -440,7 +474,8 @@
                 finalDate: finalDateEvento,
                 finalTime: finalTimeEvento,
                 sobre: sobre,
-                informacoes: informacoesEvento.value
+                informacoes: informacoesEvento.value,
+                bannerURL: bannerUrl
             };
 
             try {
@@ -497,8 +532,6 @@
                 locale: "pt",
             });
 
-
-
             const criarEventoBtn = document.querySelector('.criar-evento-btn');
 
             criarEventoBtn.addEventListener('click', (event) => {
@@ -521,8 +554,6 @@
 
             });
         });
-
-
 
     </script>
 </body>
