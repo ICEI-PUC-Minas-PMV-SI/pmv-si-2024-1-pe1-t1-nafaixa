@@ -47,6 +47,7 @@ function formatarDataHora(data, hora) {
   return `${dataFormatada} às ${horaFormatada}`;
 }
 
+//Paginação
 document.addEventListener('DOMContentLoaded', () => {
   let eventosExibidos = 0;
   const eventosPorVez = 4;
@@ -88,14 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verifica se o evento é presencial ou online
     if (evento.tipo === 'presencial') {
       cardElement.innerHTML = `
-      <img class="banner" src="${evento.bannerUrl}" alt="banner do evento" />
+      <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
       <p class="event-title">${evento.nome}</p>
       <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
       <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
     `;
     } else if (evento.tipo === 'online') {
       cardElement.innerHTML = `
-      <img class="banner" src="${evento.bannerUrl}" alt="banner do evento" />
+      <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
       <p class="event-title">${evento.nome}</p>
       <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
       <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.link}</p>    `;
