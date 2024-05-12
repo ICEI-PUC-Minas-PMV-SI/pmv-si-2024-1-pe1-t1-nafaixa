@@ -7,21 +7,24 @@
     justify-content: center;
     position: relative;
     height: 500px;
+    object-fit: fill;
 }
 
 .imagem-blur {
+    object-fit: fill;
     width: 100%;
     filter: blur(3px);
     opacity: 0.8;
 }
 
 .banner-evento {
+    background-size: 100% 100%;
+    object-fit: fill;
+    object-position: center;
     position: absolute;
-    max-height: 100%;
-    /* height: auto; */
+    height: 100%;
     max-width: 1400px;
     width: 100%;
-    object-fit: fill;
     border-radius: 20px;
 }
 

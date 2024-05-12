@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(apiUrl)
             .then(response => response.json())
             .then(evento => {
+                const imageUrl = evento.bannerURL;
+                const bannerEventoElement = document.querySelector('.banner-evento');
+
+                bannerEventoElement.style.backgroundImage = `url('${imageUrl}')`;
+                bannerEventoElement.style.backgroundSize = 'scale-down';
+                bannerEventoElement.style.backgroundPosition = 'center';
+
+                const imagemBlurElement = document.querySelector('.imagem-blur');
+                imagemBlurElement.style.backgroundImage = `url('${imageUrl}')`;
+                imagemBlurElement.style.backgroundSize = 'fill';
+                imagemBlurElement.style.backgroundPosition = 'center';
+
                 document.querySelector('.nome-evento').textContent = evento.nome;
                 document.getElementById('categoria-evento').innerHTML = `<img src="assets/img/tag.svg" alt="categoria" /> ${evento.categoria}`;
                 document.getElementById('data-inicio-evento').innerHTML = `<img src="./assets/img/data.svg" alt="Data do evento"/> ${formatarDataHora(evento.startDate)}`;
