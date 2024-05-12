@@ -1902,6 +1902,40 @@
       "sobre": "<p>ee</p>",
       "informacoes": "eee",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715480940/NaFaixa/kgms9zl23qhyuudiogwf.jpg"
+    },
+    {
+      "id": "7be4592e-0d47-4787-85c3-5b7f0aa28aba",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  2",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715481692/NaFaixa/ih8cotlvoy13nuyhq9jd.jpg"
+    },
+    {
+      "id": "5f012b5d-7a2f-40ba-a947-d72f49505869",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  3",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715482870/NaFaixa/s8nu49hnnmroapwwhdus.jpg"
     }
   ],
   "emails": [

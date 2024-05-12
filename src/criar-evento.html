@@ -454,7 +454,33 @@
                 }
             }
 
-            // Verificar se uma imagem de banner foi carregada
+            try {
+                const response = await fetch(`http://localhost:3000/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar a existência do evento');
+                }
+
+                const data = await response.json();
+
+                if (data && data.length > 0) {
+                    const existingEvent = data[0];
+
+                    if (existingEvent.local !== (selectedPlace ? selectedPlace.formatted_address : '')) {
+
+                        alert('Já existe um evento com este nome em um local diferente. Por favor, escolha outro nome ou local.');
+                        return;
+                    }
+
+                    alert('Já existe um evento com este nome e mesmo local. Por favor, crie um evento novo. Não é possível criar um evento repetido.');
+                    return;
+                }
+
             if (!bannerUrl) {
                 alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
                 return;
@@ -484,9 +510,7 @@
                 bannerURL: bannerUrl
             };
 
-            try {
-
-                const response = await fetch('http://localhost:3000/eventos', {
+                const createResponse = await fetch('http://localhost:3000/eventos', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -494,18 +518,19 @@
                     body: JSON.stringify(evento),
                 });
 
-                if (!response.ok) {
+                if (!createResponse.ok) {
                     throw new Error('Erro ao criar evento');
                 }
 
-                const data = await response.json();
-                console.log('Evento criado:', data);
+                const responseData = await createResponse.json();
+                console.log('Evento criado:', responseData);
                 alert('Evento criado com sucesso!');
             } catch (error) {
                 console.error('Erro ao criar evento:', error);
                 alert('Erro ao criar evento. Tente novamente mais tarde.');
             }
         }
+
 
         function uuidv4() {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
