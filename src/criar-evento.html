@@ -471,14 +471,14 @@
                 if (data && data.length > 0) {
                     const existingEvent = data[0];
 
-                    if (existingEvent.local !== (selectedPlace ? selectedPlace.formatted_address : '')) {
+                    const existingStartDate = new Date(existingEvent.startDate);
+                    const selectedStartDate = new Date(startDateEvento.value);
 
-                        alert('Já existe um evento com este nome em um local diferente. Por favor, escolha outro nome ou local.');
+                    if (existingEvent.local === (selectedPlace ? selectedPlace.formatted_address : '') &&
+                        existingStartDate.getTime() === selectedStartDate.getTime()) {
+                        alert('Já existe um evento com o mesmo nome, local e data de início. Por favor, crie um evento que ainda não exista em nosso site.');
                         return;
                     }
-
-                    alert('Já existe um evento com este nome e mesmo local. Por favor, crie um evento novo. Não é possível criar um evento repetido.');
-                    return;
                 }
 
             if (!bannerUrl) {
