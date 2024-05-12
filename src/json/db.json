@@ -1571,6 +1571,337 @@
       "sobre": "<p>ee</p>",
       "informacoes": "eee",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715477851/NaFaixa/dx25rymy9tg9lapoxb8i.jpg"
+    },
+    {
+      "id": "11021799-4bac-45ab-b1aa-8d29a747dd56",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "agora vai",
+      "link": "",
+      "local": [
+        {
+          "long_name": "s/nº",
+          "short_name": "s/nº",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rodovia Hélio Smidt",
+          "short_name": "Rod. Hélio Smidt",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Aeroporto",
+          "short_name": "Aeroporto",
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Guarulhos",
+          "short_name": "Guarulhos",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "SP",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "07190-100",
+          "short_name": "07190-100",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
+    },
+    {
+      "id": "0529fdf9-a1b3-4e40-a04f-350bb894ed4b",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "agora vai",
+      "link": "",
+      "local": [
+        {
+          "long_name": "s/nº",
+          "short_name": "s/nº",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rodovia Hélio Smidt",
+          "short_name": "Rod. Hélio Smidt",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Aeroporto",
+          "short_name": "Aeroporto",
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Guarulhos",
+          "short_name": "Guarulhos",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "SP",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "07190-100",
+          "short_name": "07190-100",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
+    },
+    {
+      "id": "618e4466-23a3-44e0-8a8b-51d9434200f1",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "agora vai",
+      "link": "",
+      "local": "Rod. Hélio Smidt, s/nº - Aeroporto, Guarulhos - SP, 07190-100, Brasil",
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478218/NaFaixa/vyh780yfsrnqooptnf61.jpg"
+    },
+    {
+      "id": "208c1351-ed65-461c-bf77-b6826de5e275",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "agora vai",
+      "link": "",
+      "local": "Av. Carlos Drummond de Andrade, 458 - Praia dos Amores, Balneário Camboriú - SC, 88331-410, Brasil",
+      "latitude": -26.9557616,
+      "longitude": -48.6350468,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478218/NaFaixa/vyh780yfsrnqooptnf61.jpg"
+    },
+    {
+      "id": "69e55c02-582e-482d-a951-220ec4688902",
+      "tipo": "presencial",
+      "categoria": "Infantil",
+      "nome": "agora vai",
+      "link": "",
+      "local": "Av. Miguel Estefano, 4241 - Água Funda, São Paulo - SP, 04301-905, Brasil",
+      "latitude": -23.6508725,
+      "longitude": -46.62044950000001,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478865/NaFaixa/g4egbr3z6yqq3vbstfqi.jpg"
+    },
+    {
+      "id": "6bf18c32-8213-40ed-bf15-f2f02b197694",
+      "tipo": "presencial",
+      "categoria": "Infantil",
+      "nome": "agora vaifgfgdgdff",
+      "link": "",
+      "local": "Av. Miguel Estefano, 4241 - Água Funda, São Paulo - SP, 04301-905, Brasil",
+      "latitude": -23.6508725,
+      "longitude": -46.62044950000001,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715479088/NaFaixa/r7xmoy3r7omtgww4099j.jpg"
+    },
+    {
+      "id": "a1c99f9f-b3ad-4478-9353-d4560ff84a29",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "agora vaifgfgdgdff",
+      "link": "",
+      "local": "Av. Padre Leopoldo Brentano, 110 - Farrapos, Porto Alegre - RS, 90250-590, Brasil",
+      "latitude": -29.9739781,
+      "longitude": -51.19481179999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715479187/NaFaixa/xkakpv4ba5vs2ux5wg9n.jpg"
+    },
+    {
+      "id": "dfb76804-5a60-4f38-adc3-e989a8f1726c",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "jogo ",
+      "link": "",
+      "local": "Av. Perimetral, 921 - St. Campinas, Goiânia - GO, 74520-110, Brasil",
+      "latitude": -16.6701544,
+      "longitude": -49.28423009999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715479385/NaFaixa/uzxjnq10dwo51qekxlwg.jpg"
+    },
+    {
+      "id": "e5b57fd6-8265-4ed3-8c66-5a22df86e951",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  ",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": null
+    },
+    {
+      "id": "5182f44b-a815-467b-8ef6-b59fad62a3ca",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  ",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": null
+    },
+    {
+      "id": "a4eb4b3b-b4ca-4911-8eae-f758f9dab681",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  ",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": null
+    },
+    {
+      "id": "3fdbc3af-7f81-43ea-b26b-03b4929e7001",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  ",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": null
+    },
+    {
+      "id": "ee3243fd-e996-494a-befa-816eb85fb14e",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "Atletico mineiro  ",
+      "link": "",
+      "local": "Rua Cristina Maria de Assis, 202 - Califórnia, Belo Horizonte - MG, 30855-440, Brasil",
+      "latitude": -19.9305975,
+      "longitude": -44.0172112,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715480940/NaFaixa/kgms9zl23qhyuudiogwf.jpg"
     }
   ],
   "emails": [

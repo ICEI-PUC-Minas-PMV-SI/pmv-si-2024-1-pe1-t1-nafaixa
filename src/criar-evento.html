@@ -454,6 +454,12 @@
                 }
             }
 
+            // Verificar se uma imagem de banner foi carregada
+            if (!bannerUrl) {
+                alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
+                return;
+            }
+
             const idEvento = uuidv4();
             const categoriaValue = categorias.value;
             const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
