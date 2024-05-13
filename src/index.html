@@ -54,7 +54,7 @@
       <nav class="nav-options-web">
         <div onclick="openPopup()" class="localização-web" >
           <img  src="assets/img/localpin.svg" </img>
-          <span class="localização-web"  id="userLocation">Localização</span>
+          <span class="localização-web"  id="escolherLocalização">Localização</span>
             <img src="assets/img/setaprabaixo1.svg"  style="padding-right: 15px"></img>
         </div>
 
@@ -304,7 +304,7 @@
 
     function checkAndUpdateLocation() {
       var savedCity = localStorage.getItem('userLocation');
-      var locationElement = document.getElementById('userLocation');
+      var locationElement = document.getElementById('escolherLocalização');
 
       if (savedCity && locationElement.textContent !== savedCity) {
         locationElement.textContent = savedCity;
@@ -390,7 +390,7 @@
                     }
                   });
 
-                  var locationElement = document.getElementById('userLocation');
+                  var locationElement = document.getElementById('escolherLocalização');
                   locationElement.textContent = cityName;
                 } else {
                   throw new Error('Nenhuma cidade encontrada para estas coordenadas.');
@@ -460,7 +460,7 @@
     // Função para verificar se a localização mudou e recarregar a página se necessário
     function checkAndUpdateLocation() {
       var savedCity = localStorage.getItem('userLocation');
-      var locationElement = document.getElementById('userLocation');
+      var locationElement = document.getElementById('escolherLocalização');
 
       if (savedCity && locationElement.textContent !== savedCity) {
         // Atualiza a localização na navbar com a cidade salva no Local Storage
