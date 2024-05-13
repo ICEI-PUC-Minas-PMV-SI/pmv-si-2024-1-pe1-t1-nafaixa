@@ -140,57 +140,6 @@
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715469612/NaFaixa/nq9abmv7rzb8wnrg0ivg.jpg"
     },
     {
-      "id": "5d08f5e7-e1ad-43e9-8f78-574b944d56da",
-      "tipo": "presencial",
-      "categoria": "",
-      "nome": "aaasss",
-      "link": "",
-      "local": "",
-      "latitude": null,
-      "longitude": null,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "12/05/2024",
-      "finalTime": "12/05/2024",
-      "sobre": "<p>AAA</p>",
-      "informacoes": "AAAAAssss",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470107/NaFaixa/pr9j8hjflc2sldf8yyxl.jpg"
-    },
-    {
-      "id": "cf62511a-9560-48ac-bd5d-f784ee771955",
-      "tipo": "presencial",
-      "categoria": "",
-      "nome": "aaasss",
-      "link": "",
-      "local": "",
-      "latitude": null,
-      "longitude": null,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "12/05/2024",
-      "finalTime": "12/05/2024",
-      "sobre": "<p>AAA</p>",
-      "informacoes": "AAAAAssss",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470201/NaFaixa/fx8wdv0u57halkgec5t6.jpg"
-    },
-    {
-      "id": "972f166f-4281-47cb-88bf-0084f8a14123",
-      "tipo": "presencial",
-      "categoria": "",
-      "nome": "aaasss",
-      "link": "",
-      "local": "",
-      "latitude": null,
-      "longitude": null,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "12/05/2024",
-      "finalTime": "12/05/2024",
-      "sobre": "<p>AAA</p>",
-      "informacoes": "AAAAAssss",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470253/NaFaixa/rzk6ownby4un7zlme5lo.jpg"
-    },
-    {
       "id": "4eb1f5c0-f18a-4519-9842-2d2d5c766313",
       "tipo": "presencial",
       "categoria": "Cultura",
@@ -240,40 +189,6 @@
       "sobre": "<p>AAA</p>",
       "informacoes": "AAAAAssss",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470774/NaFaixa/jv26qltubbgjrgp68nkm.jpg"
-    },
-    {
-      "id": "c77c32c3-6bc2-47b9-bfbd-6e66594c8196",
-      "tipo": "presencial",
-      "categoria": "Cultura",
-      "nome": "agora vai",
-      "link": "",
-      "local": "Praça Sen. Salgado Filho, s/n - Centro, Rio de Janeiro - RJ, 20021-340, Brasil",
-      "latitude": -22.9102805,
-      "longitude": -43.16447249999999,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "15/05/2024",
-      "finalTime": "12:00",
-      "sobre": "<p>ee</p>",
-      "informacoes": "eee",
-      "imageUrl": "https://res.cloudinary.com/nafaixa/image/upload/v1715477612/NaFaixa/vljwoqwu80dpevyirtxb.jpg"
-    },
-    {
-      "id": "74e29701-21d0-4e1d-9b87-48ce403edfdc",
-      "tipo": "presencial",
-      "categoria": "Cultura",
-      "nome": "agora vai",
-      "link": "",
-      "local": "Praça Sen. Salgado Filho, s/n - Centro, Rio de Janeiro - RJ, 20021-340, Brasil",
-      "latitude": -22.9102805,
-      "longitude": -43.16447249999999,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "15/05/2024",
-      "finalTime": "12:00",
-      "sobre": "<p>ee</p>",
-      "informacoes": "eee",
-      "imageUrl": "https://res.cloudinary.com/nafaixa/image/upload/v1715477612/NaFaixa/vljwoqwu80dpevyirtxb.jpg"
     },
     {
       "id": "de65752b-3ec5-4d50-97c5-5f3798089f87",
@@ -479,6 +394,11 @@
       "id": "25b8",
       "email": "amanda124@gmail.com",
       "eventoId": "91463a64-68ca-43bd-8594-e1812f83e0af"
+    },
+    {
+      "id": "497e",
+      "email": "teste@gmail.com",
+      "eventoId": "45d7d572-c415-4010-bd0f-5f44a9ac0319"
     }
   ]
 }

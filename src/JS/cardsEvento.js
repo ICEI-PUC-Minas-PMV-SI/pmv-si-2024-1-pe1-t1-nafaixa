@@ -47,63 +47,95 @@ function formatarDataHora(data, hora) {
   return `${dataFormatada} às ${horaFormatada}`;
 }
 
-//Paginação
+//Paginação e mostrar eventos por localização e todos os eventos sem filtragem
 document.addEventListener('DOMContentLoaded', () => {
-  let eventosExibidosId1 = 0;
-  let eventosExibidosId2 = 0;
+  const localizacaoSelect = document.getElementById('escolherLocalização');
+
   const eventosPorVez = 4;
+  const raioMaximoKm = 50;
+  const endpointURL = 'http://localhost:3000/eventos';
 
-  async function obterEventosEExibirCards(id, url, limit) {
+  const state = {
+    eventosExibidosId1: 0,
+    eventosExibidosId2: 0,
+    userLocation: JSON.parse(localStorage.getItem('userLocation')),
+    eventos: []
+  };
+
+  async function obterEventos() {
     try {
-      const response = await fetch(url);
-      const eventos = await response.json();
-
-      const wrapperElement = document.getElementById(id);
-
-      if (id === 'eventosFiltrados') {
-        // Obter a palavra-chave de localização do localStorage
-        const userLocation = localStorage.getItem('userLocation');
-
-        eventos.slice(eventosExibidosId1, eventosExibidosId1 + limit).forEach(evento => {
-          // Verificar se o evento corresponde à palavra-chave da localização do usuário
-          if (userLocation && evento.local.toLowerCase().includes(userLocation.toLowerCase())) {
-            const cardElement = criarCardEvento(evento);
-            wrapperElement.appendChild(cardElement);
-          }
-        });
-
-        eventosExibidosId1 += limit;
-
-        // Verificar se todos os eventos foram exibidos para o id=1
-        if (eventosExibidosId1 >= eventos.length) {
-          const mostrarMaisBtn = document.querySelector('.mostrarMais');
-          if (mostrarMaisBtn) {
-            mostrarMaisBtn.style.display = 'none';
-          }
-        }
-      } else if (id === 'todosEventos') {
-        eventos.slice(eventosExibidosId2, eventosExibidosId2 + limit).forEach(evento => {
-          const cardElement = criarCardEvento(evento);
-          wrapperElement.appendChild(cardElement);
-        });
-
-        eventosExibidosId2 += limit;
-
-        // Verificar se todos os eventos foram exibidos para o id=2
-        if (eventosExibidosId2 >= eventos.length) {
-          const mostrarMaisBtn = document.querySelector('.mostrarMais');
-          if (mostrarMaisBtn) {
-            mostrarMaisBtn.style.display = 'none';
-          }
-        }
-      }
-
+      const response = await fetch(endpointURL);
+      state.eventos = await response.json();
+      exibirEventos('eventosFiltrados');
+      exibirEventos('todosEventos');
     } catch (error) {
       console.error('Erro ao obter os eventos:', error);
     }
   }
 
-  // Função para criar o card de um evento
+  function exibirEventos(id) {
+    const { eventos, userLocation, eventosExibidosId1, eventosExibidosId2 } = state;
+    const wrapperElement = document.getElementById(id);
+
+    const startIndex = id === 'eventosFiltrados' ? eventosExibidosId1 : eventosExibidosId2;
+    const eventosParaExibir = eventos.slice(startIndex, startIndex + eventosPorVez);
+
+    let eventosExibidos = false;
+
+    eventosParaExibir.forEach(evento => {
+      if (id === 'eventosFiltrados' && !isEventoProximo(evento, userLocation)) return;
+
+      const cardElement = criarCardEvento(evento);
+      wrapperElement.appendChild(cardElement);
+      eventosExibidos = true; // Indica que pelo menos um evento foi exibido
+    });
+
+    const todosEventosExibidos = id === 'eventosFiltrados' ? eventosExibidosId1 : eventosExibidosId2;
+    if (todosEventosExibidos >= eventos.length) {
+      const mostrarMaisBtn = document.querySelector('.mostrarMais');
+      if (mostrarMaisBtn) mostrarMaisBtn.style.display = 'none';
+    }
+
+    if (id === 'eventosFiltrados' && !eventosExibidos) {
+      const mensagemElement = document.createElement('p');
+      mensagemElement.textContent = 'Não existem eventos próximos para a localização escolhida.';
+      wrapperElement.appendChild(mensagemElement);
+    }
+
+    if (id === 'eventosFiltrados') {
+      state.eventosExibidosId1 += eventosPorVez;
+    } else if (id === 'todosEventos') {
+      state.eventosExibidosId2 += eventosPorVez;
+    }
+  }
+
+  function isEventoProximo(evento, userLocation) {
+    if (!userLocation) return false;
+
+    const { latitude: userLat, longitude: userLng } = userLocation;
+    const { latitude: eventoLat, longitude: eventoLng } = evento;
+
+    const distanciaKm = calcularDistancia(userLat, userLng, eventoLat, eventoLng);
+    return distanciaKm <= raioMaximoKm;
+  }
+
+
+  function calcularDistancia(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = deg2rad(lat2 - lat1);
+    const dLng = deg2rad(lng2 - lng1);
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+        Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distancia = R * c;
+    return distancia;
+  }
+
+  function deg2rad(deg) {
+    return deg * (Math.PI / 180);
+  }
+
   function criarCardEvento(evento) {
     const cardElement = document.createElement('div');
     cardElement.classList.add('cards');
@@ -111,25 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dataHoraFormatada = formatarDataHora(evento.startDate, evento.startTime);
 
-    // Verifica se o evento é presencial ou online
+    let detalheExtra = '';
     if (evento.tipo === 'presencial') {
-      cardElement.innerHTML = `
-        <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
-        <p class="event-title">${evento.nome}</p>
-        <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
-        <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
-      `;
+      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>`;
     } else if (evento.tipo === 'online') {
-      cardElement.innerHTML = `
-        <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
-        <p class="event-title">${evento.nome}</p>
-        <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
-        <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.link}</p>
-      `;
+      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Link do evento" />${evento.link}</p>`;
     } else {
       console.error('Tipo de evento desconhecido:', evento.tipo);
       return null;
     }
+
+    cardElement.innerHTML = `
+      <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
+      <p class="event-title">${evento.nome}</p>
+      <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+      ${detalheExtra}
+    `;
 
     cardElement.addEventListener('click', () => {
       window.location.href = `detalhes-evento.html?id=${evento.id}`;
@@ -138,17 +167,20 @@ document.addEventListener('DOMContentLoaded', () => {
     return cardElement;
   }
 
-  // Inicializar o carregamento dos eventos com ID '1' e '2'
-  obterEventosEExibirCards('eventosFiltrados', 'http://localhost:3000/eventos', eventosPorVez);
-  obterEventosEExibirCards('todosEventos', 'http://localhost:3000/eventos', eventosPorVez);
+  function formatarDataHora(startDate, startTime) {
+    return `${startDate} ${startTime}`;
+  }
 
-  // Listener para o botão "Mostrar Mais" do ID '2'
+  obterEventos();
+
   const mostrarMaisBtn = document.querySelector('.mostrarMais');
   if (mostrarMaisBtn) {
     mostrarMaisBtn.addEventListener('click', () => {
-      obterEventosEExibirCards('todosEventos', 'http://localhost:3000/eventos', eventosPorVez);
+      exibirEventos('todosEventos');
     });
   }
 });
+
+
 
 

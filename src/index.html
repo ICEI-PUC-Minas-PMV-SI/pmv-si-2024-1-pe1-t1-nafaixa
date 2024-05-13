@@ -58,7 +58,7 @@
             <img src="assets/img/setaprabaixo1.svg"  style="padding-right: 15px"></img>
         </div>
 
-        <a href="">Criar evento</a>
+        <a href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
     </div>
@@ -278,7 +278,6 @@
     function openPopup() {
       document.getElementById('locationPopup').style.display = 'block';
 
-      // Inicializa o campo de entrada com autocomplete
       var input = document.getElementById('cityInput');
       var autocomplete = new google.maps.places.Autocomplete(input, {
         types: ['(cities)'], // Limita o autocomplete a cidades
@@ -300,9 +299,22 @@
           latitude: selectedPlace.geometry.location.lat(),
           longitude: selectedPlace.geometry.location.lng()
         }));
+        window.location.href = window.location.href;
 
         document.getElementById('locationPopup').style.display = 'none';
       });
+    }
+
+    // Função para fechar o popup se o clique for fora dele
+    function closePopupOutside(event) {
+      var popup = document.getElementById('locationPopup');
+      var targetElement = event.target;
+
+      // Verifica se o clique foi fora do popup
+      if (!popup.contains(targetElement)) {
+        popup.style.display = 'none';
+        document.removeEventListener('click', closePopupOutside);
+      }
     }
 
     // Função para atualizar a localização na navbar
@@ -313,7 +325,6 @@
       }
     }
 
-    // Verifica e atualiza a localização na navbar ao carregar a página
     window.onload = function() {
       var userLocation = localStorage.getItem('userLocation');
       if (userLocation) {
@@ -338,7 +349,7 @@
                   geocoder.geocode({ location: latlng }, (results, status) => {
                     if (status === "OK") {
                       if (results[0]) {
-                        const cityName = results[0].address_components[3].long_name; // Pega o nome da cidade (exemplo)
+                        const cityName = results[0].address_components[3].long_name;
 
                         localStorage.setItem('userLocation', JSON.stringify({
                           latitude: latitude,
@@ -368,7 +379,6 @@
       }
     }
 
-    // Chamada para obter a localização quando a página carregar
     window.onload = () => {
       const userLocation = JSON.parse(localStorage.getItem('userLocation'));
       if (!userLocation) {
@@ -402,8 +412,6 @@
     });
 
   </script>
-
-  <!-- Importa a biblioteca do Google Maps JavaScript -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
   </script>
 </body>
