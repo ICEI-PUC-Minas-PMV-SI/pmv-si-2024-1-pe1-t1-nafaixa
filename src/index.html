@@ -102,7 +102,6 @@
   <dialog id="locationPopup">
     <p>Escolha uma localização</p>
     <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
-    <button onclick="updateLocation()">Confirmar</button>
   </dialog>
 
   <section class="page">
@@ -285,192 +284,122 @@
         types: ['(cities)'], // Limita o autocomplete a cidades
         componentRestrictions: { country: 'BR' } // Restringe às cidades do Brasil
       });
-    }
 
-    // Função para atualizar a localização na navbar
-    function updateLocation() {
-      var newCity = document.getElementById('cityInput').value.trim();
-
-      if (newCity !== '') {
-        // Salva a nova localização no Local Storage
-        localStorage.setItem('userLocation', newCity);
-
-        geocodeCity(newCity);
-      }
-
-      document.getElementById('locationPopup').style.display = 'none';
-
-    }
-
-    function checkAndUpdateLocation() {
-      var savedCity = localStorage.getItem('userLocation');
-      var locationElement = document.getElementById('escolherLocalização');
-
-      if (savedCity && locationElement.textContent !== savedCity) {
-        locationElement.textContent = savedCity;
-
-        window.location.reload();
-      }
-    }
-
-    // Função para obter a localização atual do usuário
-    function getCurrentLocation() {
-      if (navigator.geolocation) {
-        if ('permissions' in navigator) {
-          navigator.permissions.query({ name: 'geolocation' }).then(permissionStatus => {
-            if (permissionStatus.state === 'granted') {
-              getGeolocation();
-            } else if (permissionStatus.state === 'prompt') {
-              navigator.geolocation.getCurrentPosition(
-                      position => {
-                        getGeolocation();
-                      },
-                      error => {
-                        console.error('Erro ao obter a localização do usuário:', error);
-                        alert('Erro ao obter a localização atual.');
-                      }
-              );
-            }
-          });
-        } else {
-          navigator.geolocation.getCurrentPosition(
-                  position => {
-                    getGeolocation();
-                  },
-                  error => {
-                    console.error('Erro ao obter a localização do usuário:', error);
-                    alert('Erro ao obter a localização atual.');
-                  }
-          );
+      autocomplete.addListener('place_changed', function() {
+        var selectedPlace = autocomplete.getPlace();
+        if (!selectedPlace.geometry) {
+          return; // Se não houver geometria, saia da função
         }
-      } else {
-        console.error('Geolocalização não é suportada pelo navegador.');
-        alert('Geolocalização não é suportada pelo navegador.');
-      }
-    }
 
-    getCurrentLocation();
+        var cityName = selectedPlace.name;
 
-    // Função para transformar lat e long em cidade
-    function geocodeCity(city) {
-      var geocoder = new google.maps.Geocoder();
+        updateNavbarLocation(cityName);
 
-      geocoder.geocode({ 'address': city }, function(results, status) {
-        if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
-          var location = results[0].geometry.location;
-          var latitude = location.lat();
-          var longitude = location.lng();
+        localStorage.setItem('userLocation', JSON.stringify({
+          cityName: cityName,
+          latitude: selectedPlace.geometry.location.lat(),
+          longitude: selectedPlace.geometry.location.lng()
+        }));
 
-          reverseGeocodeCity(latitude, longitude);
-        } else {
-          alert('Não foi possível encontrar a localização da cidade inserida.');
-        }
+        document.getElementById('locationPopup').style.display = 'none';
       });
     }
 
-    function reverseGeocodeCity(latitude, longitude) {
-      const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s";
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
-
-      fetch(url)
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error(`Erro ao fazer a requisição: ${response.status}`);
-                }
-                return response.json();
-              })
-              .then(data => {
-                if (data.status === 'OK' && data.results.length > 0) {
-                  const addressComponents = data.results[0].address_components;
-                  let cityName = 'Cidade desconhecida';
-
-                  addressComponents.forEach(part => {
-                    if (part.types.includes("administrative_area_level_2")) {
-                      cityName = part.long_name;
-                    }
-                  });
-
-                  var locationElement = document.getElementById('escolherLocalização');
-                  locationElement.textContent = cityName;
-                } else {
-                  throw new Error('Nenhuma cidade encontrada para estas coordenadas.');
-                }
-              })
-              .catch(error => {
-                console.error('Erro ao obter dados de localização:', error);
-                alert('Erro ao obter dados de localização. Verifique a conexão com a internet e tente novamente.');
-              });
-    }
-
-    // Função para obter a localização atual do usuário e salvar no localStorage
-    function getCurrentLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
-
-          reverseGeocodeCity(latitude, longitude);
-
-          saveLocationToLocalStorage(latitude, longitude);
-        }, function(error) {
-          console.error('Erro ao obter a localização do usuário:', error);
-          alert('Erro ao obter a localização atual.');
-        });
-      } else {
-        console.error('Geolocalização não é suportada pelo navegador.');
-        alert('Geolocalização não é suportada pelo navegador.');
-      }
-    }
-
-    function saveLocationToLocalStorage(latitude, longitude) {
-      const KEY = "AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s";
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${KEY}`;
-
-      fetch(url)
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error(`Erro ao fazer a requisição: ${response.status}`);
-                }
-                return response.json();
-              })
-              .then(data => {
-                if (data.status === 'OK' && data.results.length > 0) {
-                  const addressComponents = data.results[0].address_components;
-                  let cityName = 'Cidade desconhecida';
-
-                  addressComponents.forEach(part => {
-                    if (part.types.includes("administrative_area_level_2")) {
-                      cityName = part.long_name;
-                    }
-                  });
-
-                  localStorage.setItem('userLocation', cityName);
-
-                  checkAndUpdateLocation();
-                } else {
-                  throw new Error('Nenhuma cidade encontrada para estas coordenadas.');
-                }
-              })
-              .catch(error => {
-                console.error('Erro ao obter dados de localização:', error);
-                alert('Erro ao obter dados de localização. Verifique a conexão com a internet e tente novamente.');
-              });
-    }
-
-    // Função para verificar se a localização mudou e recarregar a página se necessário
-    function checkAndUpdateLocation() {
-      var savedCity = localStorage.getItem('userLocation');
+    // Função para atualizar a localização na navbar
+    function updateNavbarLocation(cityName) {
       var locationElement = document.getElementById('escolherLocalização');
-
-      if (savedCity && locationElement.textContent !== savedCity) {
-        // Atualiza a localização na navbar com a cidade salva no Local Storage
-        locationElement.textContent = savedCity;
-
-        window.location.reload();
+      if (locationElement) {
+        locationElement.textContent = cityName;
       }
     }
 
-    getCurrentLocation();
+    // Verifica e atualiza a localização na navbar ao carregar a página
+    window.onload = function() {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    };
+
+    // Função para obter a geolocalização do usuário
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+                (position) => {
+                  const latitude = position.coords.latitude;
+                  const longitude = position.coords.longitude;
+
+                  const geocoder = new google.maps.Geocoder();
+                  const latlng = { lat: latitude, lng: longitude };
+
+                  geocoder.geocode({ location: latlng }, (results, status) => {
+                    if (status === "OK") {
+                      if (results[0]) {
+                        const cityName = results[0].address_components[3].long_name; // Pega o nome da cidade (exemplo)
+
+                        localStorage.setItem('userLocation', JSON.stringify({
+                          latitude: latitude,
+                          longitude: longitude,
+                          city: cityName
+                        }));
+
+                        updateNavbarLocation(cityName);
+                      }
+                    }
+                  });
+                },
+                (error) => {
+                  console.error('Erro ao obter localização:', error);
+                }
+        );
+      } else {
+        console.error('Geolocalização não suportada pelo navegador.');
+      }
+    }
+
+    // Função para atualizar o nome da cidade na navbar
+    function updateNavbarLocation(cityName) {
+      const navLocationElement = document.getElementById('escolherLocalização');
+      if (navLocationElement) {
+        navLocationElement.textContent = cityName;
+      }
+    }
+
+    // Chamada para obter a localização quando a página carregar
+    window.onload = () => {
+      const userLocation = JSON.parse(localStorage.getItem('userLocation'));
+      if (!userLocation) {
+        getLocation();
+      } else {
+        updateNavbarLocation(userLocation.city);
+      }
+    };
+
+    // Função para atualizar a localização na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElement = document.getElementById('escolherLocalização');
+      if (locationElement) {
+        locationElement.textContent = cityName;
+      }
+    }
+
+    // Função para carregar e definir a localização ao recarregar a página
+    function loadUserLocation() {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    }
+
+    window.addEventListener('load', function() {
+      loadUserLocation();
+    });
 
   </script>
 
