@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="CSS/components/navbar.css" />
   <link rel="stylesheet" href="CSS/components/navbar-mobile.css" />
   <link rel="stylesheet" href="CSS/components/page-style.css" />
+  <link rel="stylesheet" href="CSS/components/popup.css">
   <link rel="stylesheet" href="CSS/components/title.css" />
   <link rel="stylesheet" href="CSS/components/event-cards.css" />
   <link rel="stylesheet" href="CSS/components/main-carousel.css" />
@@ -26,16 +27,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s"></script>
-
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
 </head>
 
 <body>
@@ -99,10 +91,12 @@
     </div>
   </form>
 
-  <dialog id="locationPopup">
-    <p>Escolha uma localização</p>
-    <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
-  </dialog>
+  <div class="popup" id="locationPopup">
+    <div class="popup-content">
+      <h5>Escolha uma localização</h5>
+      <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+    </div>
+  </div>
 
   <section class="page">
     <div style="width: 100%">
@@ -271,70 +265,16 @@
 
   <script src="/src/JS/cardsEvento.js"></script>
 
-  <script src="/src/JS/localizacaoPopup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
 
   <script>
-    // Função para abrir o popup
-    function openPopup() {
-      document.getElementById('locationPopup').style.display = 'block';
-
-      var input = document.getElementById('cityInput');
-      var autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['(cities)'], // Limita o autocomplete a cidades
-        componentRestrictions: { country: 'BR' } // Restringe às cidades do Brasil
-      });
-
-      autocomplete.addListener('place_changed', function() {
-        var selectedPlace = autocomplete.getPlace();
-        if (!selectedPlace.geometry) {
-          return; // Se não houver geometria, saia da função
-        }
-
-        var cityName = selectedPlace.name;
-
-        updateNavbarLocation(cityName);
-
-        localStorage.setItem('userLocation', JSON.stringify({
-          cityName: cityName,
-          latitude: selectedPlace.geometry.location.lat(),
-          longitude: selectedPlace.geometry.location.lng()
-        }));
-        window.location.href = window.location.href;
-
-        document.getElementById('locationPopup').style.display = 'none';
-      });
-    }
-
-    // Função para fechar o popup se o clique for fora dele
-    function closePopupOutside(event) {
-      var popup = document.getElementById('locationPopup');
-      var targetElement = event.target;
-
-      // Verifica se o clique foi fora do popup
-      if (!popup.contains(targetElement)) {
-        popup.style.display = 'none';
-        document.removeEventListener('click', closePopupOutside);
-      }
-    }
-
-    // Função para atualizar a localização na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElement = document.getElementById('escolherLocalização');
-      if (locationElement) {
-        locationElement.textContent = cityName;
-      }
-    }
-
-    window.onload = function() {
-      var userLocation = localStorage.getItem('userLocation');
-      if (userLocation) {
-        userLocation = JSON.parse(userLocation);
-        if (userLocation.cityName) {
-          updateNavbarLocation(userLocation.cityName);
-        }
-      }
-    };
-
     // Função para obter a geolocalização do usuário
     function getLocation() {
       if (navigator.geolocation) {
@@ -370,6 +310,78 @@
         console.error('Geolocalização não suportada pelo navegador.');
       }
     }
+
+    // Função para abrir o popup/fechar o popup
+    const popup = document.getElementById('locationPopup');
+
+      function openPopup() {
+        popup.style.display = 'block';
+
+        window.addEventListener('click', closePopupOutside);
+
+        window.addEventListener('keydown', closePopupOnEsc);
+
+      function closePopupOutside(event) {
+        if (event.target === popup) {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+      function closePopupOnEsc(event) {
+        if (event.key === 'Escape') {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+    //Função de autocomplete do google no input do popup
+      var input = document.getElementById('cityInput');
+      var autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['(cities)'],
+        componentRestrictions: { country: 'BR' }
+      });
+
+      autocomplete.addListener('place_changed', function() {
+        var selectedPlace = autocomplete.getPlace();
+        if (!selectedPlace.geometry) {
+          return;
+        }
+
+        var cityName = selectedPlace.name;
+
+        updateNavbarLocation(cityName);
+
+        localStorage.setItem('userLocation', JSON.stringify({
+          cityName: cityName,
+          latitude: selectedPlace.geometry.location.lat(),
+          longitude: selectedPlace.geometry.location.lng()
+        }));
+        window.location.href = window.location.href;
+
+        document.getElementById('locationPopup').style.display = 'none';
+      });
+    }
+
+    // Função para atualizar a localização na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElement = document.getElementById('escolherLocalização');
+      if (locationElement) {
+        locationElement.textContent = cityName;
+      }
+    }
+
+    window.onload = function() {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    };
 
     // Função para atualizar o nome da cidade na navbar
     function updateNavbarLocation(cityName) {

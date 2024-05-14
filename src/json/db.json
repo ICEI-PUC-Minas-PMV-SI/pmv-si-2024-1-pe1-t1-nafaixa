@@ -342,6 +342,23 @@
       "sobre": "<p>\\z|</p>",
       "informacoes": "|Zxsasx",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715486658/NaFaixa/gvia1idygdhqu4ccc6bx.jpg"
+    },
+    {
+      "id": "ae5ed228-ee18-4bb4-99b6-bd5886e1e184",
+      "tipo": "presencial",
+      "categoria": "Gastronomia",
+      "nome": "AA",
+      "link": "",
+      "local": "São Paulo, SP, Brasil",
+      "latitude": -23.5557714,
+      "longitude": -46.6395571,
+      "startDate": "17/05/2024",
+      "startTime": "12:00",
+      "finalDate": "17/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p><strong>aassas</strong></p>",
+      "informacoes": "AAAAA",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715642004/NaFaixa/mhnshfqlzqowvggwwwlv.jpg"
     }
   ],
   "emails": [
@@ -399,6 +416,11 @@
       "id": "497e",
       "email": "teste@gmail.com",
       "eventoId": "45d7d572-c415-4010-bd0f-5f44a9ac0319"
+    },
+    {
+      "id": "3083",
+      "email": "teste@gmail.com",
+      "eventoId": "140619f8-280e-44f0-85fb-25ccb785724e"
     }
   ]
 }
