@@ -1,4 +1,38 @@
 {
+  "codigos-de-validacao": [
+    {
+      "id": "934647941",
+      "email": "ritalaura57@gmail.com"
+    },
+    {
+      "id": 3916509376,
+      "email": "ritalaura57@gmail.com"
+    },
+    {
+      "id": 2923688348,
+      "email": "rita.goncalves@sga.pucminas.br"
+    },
+    {
+      "id": 1076098626,
+      "email": "kennedymessias.vb@gmail.com"
+    },
+    {
+      "id": 1960694769,
+      "email": "kennedymessias.vb@gmail.com"
+    },
+    {
+      "id": 6201030,
+      "email": "kennedymessias.vb@gmail.com"
+    },
+    {
+      "id": 3962206702,
+      "email": "kennedymessias.vb@gmail.com"
+    },
+    {
+      "id": 37197894,
+      "email": "kennedymessias.vb@gmail.com"
+    }
+  ],
   "categorias": [
     {
       "nome": "Cultura",
