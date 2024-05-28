@@ -242,6 +242,146 @@
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715477851/NaFaixa/dx25rymy9tg9lapoxb8i.jpg"
     },
     {
+      "id": "11021799-4bac-45ab-b1aa-8d29a747dd56",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "agora vai",
+      "link": "",
+      "local": [
+        {
+          "long_name": "s/nº",
+          "short_name": "s/nº",
+          "types": ["street_number"]
+        },
+        {
+          "long_name": "Rodovia Hélio Smidt",
+          "short_name": "Rod. Hélio Smidt",
+          "types": ["route"]
+        },
+        {
+          "long_name": "Aeroporto",
+          "short_name": "Aeroporto",
+          "types": ["sublocality_level_1", "sublocality", "political"]
+        },
+        {
+          "long_name": "Guarulhos",
+          "short_name": "Guarulhos",
+          "types": ["administrative_area_level_2", "political"]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "SP",
+          "types": ["administrative_area_level_1", "political"]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": ["country", "political"]
+        },
+        {
+          "long_name": "07190-100",
+          "short_name": "07190-100",
+          "types": ["postal_code"]
+        }
+      ],
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
+    },
+    {
+      "id": "0529fdf9-a1b3-4e40-a04f-350bb894ed4b",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "agora vai",
+      "link": "",
+      "local": [
+        {
+          "long_name": "s/nº",
+          "short_name": "s/nº",
+          "types": ["street_number"]
+        },
+        {
+          "long_name": "Rodovia Hélio Smidt",
+          "short_name": "Rod. Hélio Smidt",
+          "types": ["route"]
+        },
+        {
+          "long_name": "Aeroporto",
+          "short_name": "Aeroporto",
+          "types": ["sublocality_level_1", "sublocality", "political"]
+        },
+        {
+          "long_name": "Guarulhos",
+          "short_name": "Guarulhos",
+          "types": ["administrative_area_level_2", "political"]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "SP",
+          "types": ["administrative_area_level_1", "political"]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": ["country", "political"]
+        },
+        {
+          "long_name": "07190-100",
+          "short_name": "07190-100",
+          "types": ["postal_code"]
+        }
+      ],
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
+    },
+    {
+      "id": "618e4466-23a3-44e0-8a8b-51d9434200f1",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "agora vai",
+      "link": "",
+      "local": "Rod. Hélio Smidt, s/nº - Aeroporto, Guarulhos - SP, 07190-100, Brasil",
+      "latitude": -23.4302175,
+      "longitude": -46.47167109999999,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478218/NaFaixa/vyh780yfsrnqooptnf61.jpg"
+    },
+    {
+      "id": "208c1351-ed65-461c-bf77-b6826de5e275",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "agora vai",
+      "link": "",
+      "local": "Av. Carlos Drummond de Andrade, 458 - Praia dos Amores, Balneário Camboriú - SC, 88331-410, Brasil",
+      "latitude": -26.9557616,
+      "longitude": -48.6350468,
+      "startDate": "11/05/2024",
+      "startTime": "12:00",
+      "finalDate": "15/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ee</p>",
+      "informacoes": "eee",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478218/NaFaixa/vyh780yfsrnqooptnf61.jpg"
+    },
+    {
       "id": "69e55c02-582e-482d-a951-220ec4688902",
       "tipo": "presencial",
       "categoria": "Infantil",
@@ -455,6 +595,50 @@
       "id": "3083",
       "email": "teste@gmail.com",
       "eventoId": "140619f8-280e-44f0-85fb-25ccb785724e"
+    }
+  ],
+  "produtor": [
+    {
+      "id": "73ddde49-b38e-4d3c-978c-e603ebdb1650",
+      "nome": "zzzzzzz",
+      "cpf": "12345666666",
+      "celular": "333333",
+      "cidade": "teste",
+      "estado": "minas gerais",
+      "email": "testmail4.com",
+      "senha": "e10adc3949ba59abbe56e057f20f883e",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1716507288/h1bxxdgygiu7qwgx3u1h.webp",
+      "descricao": "sobre sobre",
+      "email_publico": "testuuuiid@testpublico.com",
+      "celular_publico": "11998781011"
+    },
+    {
+      "id": "7c1af7c5-f95c-4f65-b7c6-546c31f97ec5",
+      "nome": "teste67",
+      "cpf": "9999999",
+      "celular": "31999999999",
+      "cidade": "simcity",
+      "estado": "minas gerais",
+      "email": "teste@testmail.com",
+      "senha": "e10adc3949ba59abbe56e057f20f883e",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1716843067/l90sedd6chuz9y1pah7i.jpg",
+      "descricao": "sobre sobre sobre 123",
+      "email_publico": "testepublico@testmail.com",
+      "celular_publico": "33999999999"
+    },
+    {
+      "id": "84b58219-95fd-4c3a-aff4-67b5ca90cc61",
+      "nome": "teste aula",
+      "cpf": "999999999",
+      "celular": "3399991111",
+      "cidade": "simcity",
+      "estado": "minas gerais",
+      "email": "testeaula@testmail.com",
+      "senha": "e10adc3949ba59abbe56e057f20f883e",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1716852383/nm7fjjsuypbsnhdjvo0r.webp",
+      "descricao": "sobre sobre 123",
+      "email_publico": "testemail@test.com",
+      "celular_publico": "31999112222"
     }
   ]
 }
