@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Evento</title>
+
+  <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/reset.css" />
+  <link rel="stylesheet" href="CSS/components/navbar.css" />
+  <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
+  <link rel="stylesheet" href="CSS/components/page-style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/components/footer.css" />
+  <link rel="stylesheet" href="CSS/components/detalhes-evento.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="navcenter">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+      </div>
+      <form class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="pesquise por evento" />
+        </div>
+      </form>
+      <nav class="nav-options-web">
+        <a href="">Localização</a>
+        <a href="">Criar evento</a>
+        <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+      </nav>
+    </div>
+
+    <div class="navcenter-mobile">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+      </div>
+
+      <a href="">Localização</a>
+
+      <nav class="menu-hamburguer">
+        <input type="checkbox" class="checkbox-menu">
+
+        <label for="checkbox-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div id="menu-options">
+          <ul>
+            <a href="login.html">Entrar</a></br>
+            <a href="criar-evento.html">Criar evento</a>
+            <a href="#">Sair</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="imagem-evento">
+    <img class="imagem-blur" src="https://source.unsplash.com/random/" alt="Imagem de fundo">
+    <img class="banner-evento" src="https://source.unsplash.com/random/" alt="Imagem do evento">
+  </div>
+
+
+  <section class="page">
+    <div style="width: 100%">
+
+      <h1 class="nome-evento">Nome do evento</h1>
+      <div class="infos-evento">
+        <p class="infos-evento-texto" id="categoria-evento"><img src="assets/img/tag.svg" alt="categoria">Categoria</p>
+        <div class="date-time">
+          <p class="infos-evento-texto" id="data-inicio-evento"><img src="./assets/img/data.svg"
+              alt="Data do evento" />Data inicio</p>
+          às
+          <p class="infos-evento-texto" id="hora-inicio-evento">hora inicio</p>
+          >
+          <p class="infos-evento-texto" id="data-final-evento">Data final</p>
+          às
+          <p class="infos-evento-texto" id="hora-final-evento">hora final</p>
+
+          <p infos-evento-texto id></p>
+        </div>
+
+        <p class="infos-evento-texto" id="localEvento"><img src="./assets/img/local.svg" alt="Local do evento" />Local
+        </p>
+      </div>
+
+      <h2 class="topic-h2">Sobre o evento</h2>
+      <p class="topic-texto" id="descricao-evento"></p>
+      <h2 class="topic-h2">Informações gerais</h2>
+      <p class="topic-texto" id="informacoes-evento"></p>
+      <h2 class="topic-h2">Sobre o produtor</h2>
+
+      <div class="sobre-produtor">
+        <img class="sobre-produtor-icone" src="./assets/img/icone-produtor.svg" alt="Ícone do produtor">
+        <p class="sobre-produtor-text" id="sobre-produtor"></p>
+      </div>
+
+      <h2 class="topic-h2">Gostou desse evento? Participe dele, é grátis!</h2>
+      <form action="" class="confirmacao">
+        <div class="form-confirmacao">
+
+          <div class="line-button-text">
+            <input type="text" name="confirmacao-evento" id="input-email" placeholder="Informe seu e-mail">
+            <a type="submit" class="enviar-email-btn" href="">Enviar</a>
+          </div>
+
+        </div>
+        <p class="divulgacao-email">Fique tranquilo, seu e-mail não será divulgado!</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footercenter">
+      <div class="subtitulo">
+        <p>O seu site de eventos gratuitos</p>
+
+        <img class="logofooter" src="assets/img/logo2.svg" alt="logo NaFaixa" />
+      </div>
+
+      <div class="txtfooter">
+        <a href="sobrenos.html">Sobre nós</a>
+        <a href="termosdeuso.html">Termos de uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/JS/detalhesEvento.js"></script>
+
+</body>
+
+</html>

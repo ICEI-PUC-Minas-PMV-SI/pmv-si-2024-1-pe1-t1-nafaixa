@@ -1,9 +1,18 @@
-.wrapper-categorias{
+.categorias-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.categorias-button{
+    margin-right: 10px;
+
+}
+
+#wrapper-categorias{
     display: flex;
     gap: 5px;
-    /* justify-content: space-evenly; */
-    /* flex-wrap: wrap; */
-    /* align-items: flex-start; */
+    overflow: auto;
 
 }
 
@@ -23,13 +32,14 @@ article.categories-cards:hover{
     transform: scale(1.08)
 }
 
-.categorias-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#left-btn{
+    background: none;
+    border: none;
+    /* box-sizing: content-box; */
 }
-  
-.categorias-button{
-    margin-right: 10px;
+
+#right-btn{
+    background: none;
+    border: none;
 }
 

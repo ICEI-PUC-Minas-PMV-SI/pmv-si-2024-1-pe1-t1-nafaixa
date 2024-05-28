@@ -15,18 +15,18 @@
     gap: 18px;
 }
 
-#evento-online-form{
+#evento-online-form {
     display: none;
     flex-direction: column;
     gap: 18px;
 }
 
 .new-event-form {
-   display: flex;
-   flex-direction: column;
-   gap: 18px;
-   margin: 0 10px 0 10px;
-   font-family: "almarai";
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 10px 0 10px;
+    font-family: "almarai";
 }
 
 .header-form select {
@@ -49,16 +49,21 @@
 .form-item-shrinked input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item input {
     border-radius: 5px;
     padding: 8px;
+    border: solid 1px;
+    border-color: #2fa6f5;
 }
 
 .form-item-pair {
     display: flex;
     gap: 10px;
+
 }
 
 #form-endereco {
@@ -72,6 +77,9 @@
     border-radius: 5px;
     padding: 8px;
     box-sizing: border-box;
+    border: solid 1px;
+    border-color: #2fa6f5;
+    margin-bottom: 50px;
 }
 
 .banner-preview {
@@ -87,30 +95,33 @@
 
 .criar-evento-btn {
     margin: auto;
-    color: #2fa6f5;
+    color: #fff;
     font-family: Almarai;
     font-size: 20px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
     border-radius: 120px;
-    background: rgba(255, 255, 255, 0.87);
-    border: solid 2px #2fa6f5;
+    background: #1769c3;
+    border: none;
+    padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
+    border: none;
+    background-color: #1769c3;
 }
 
 .criar-evento-btn:hover {
     border: none;
     color: white;
-    background-color: #2fa6f5;
-}
-
-.upload-baner {
-    margin-top: 50px;
+    background-color: #1769c3;
 }
 
 .termos-uso {
     margin-top: 50px;
+}
+
+#event-banner-input {
+    border: none;
 }

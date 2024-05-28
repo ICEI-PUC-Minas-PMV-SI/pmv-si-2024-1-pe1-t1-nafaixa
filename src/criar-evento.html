@@ -13,17 +13,33 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="./CSS/components/navbar.css">
+    <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
     <link rel="stylesheet" href="./CSS/components/footer.css">
     <link rel="stylesheet" href="./CSS/components/title.css">
     <link rel="stylesheet" href="CSS/components/page-style.css">
     <link rel="stylesheet" href="./CSS/components/sobreNos.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
     <link rel="stylesheet" href="CSS/components/criar-evento.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+    <script src="https://cdn.tiny.cloud/1/td7wgm1izo9h3d17s951if482d4qpmpsfljff1630roi5k00/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+
+
 </head>
 
 <body>
@@ -31,18 +47,45 @@
         <div class="navcenter">
             <div>
                 <a href="index.html">
-                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"></a>
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
             </div>
-            <form>
+            <form class="nav-search">
                 <div class="search">
                     <span class="search-icon material-symbols-outlined">search</span>
-                    <input class="search-input" type="search" placeholder="pesquise por evento">
+                    <input class="search-input" type="search" placeholder="pesquise por evento" />
                 </div>
             </form>
-            <nav>
+            <nav class="nav-options-web">
                 <a href="">Localização</a>
                 <a href="">Criar evento</a>
-                <a id="button" class="joinBtn" href="">Entrar</a>
+                <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+            </nav>
+        </div>
+
+        <div class="navcenter-mobile">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+            </div>
+
+            <a href="">Localização</a>
+
+            <nav class="menu-hamburguer">
+                <input type="checkbox" class="checkbox-menu">
+
+                <label>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div id="menu-options">
+                    <ul>
+                        <a href="login.html">Entrar</a></br>
+                        <a href="criar-evento.html">Criar evento</a>
+                        <a href="#">Sair</a>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -52,51 +95,45 @@
             <section>
                 <h1>Informações do evento</h1>
 
-                <form action="" class="new-event-form">
+                <form class="new-event-form">
                     <div class="header-form">
                         <div>
-                            <input type="radio" id="evento-presencial-radio" name="event-type" value="presencial" checked> 
+                            <input type="radio" id="evento-presencial-radio" name="event-type" value="presencial"
+                                checked>
                             <label for="evento-presencial-radio">Evento presencial</label>
                         </div>
 
                         <div>
-                            <input type="radio" id="evento-online-radio" name="event-type" value="online"> 
+                            <input type="radio" id="evento-online-radio" name="event-type" value="online">
                             <label for="evento-online-radio">Evento online</label>
                         </div>
 
-                        <select name="categorias">
-                            <option value="">Categoria</option>
-                            <option value="">Teatro</option>
-                            <option value="">Esportes</option>
-                            <option value="">Música e shows</option>
-                            <option value="">Religioso</option>
-                            <option value="">Tecnologia</option>
-                            <option value="">Gastronomia</option>
-                            <option value="">Online</option>
-                            <option value="">Cultura</option>
-                            <option value="">Feiras</option>
-                            <option value="">Palestras</option>
-                            <option value="">Infantil</option>
-                            <option value="">Stand up</option>
-                            <option value="">Outros</option>
+                        <select id="categorias" name="categorias" required>
+                            <option value="">Categorias</option>
+
                         </select>
                     </div>
 
+                    <div class="form-item">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
                     <div id="evento-presencial-form">
-                        <div class="form-item">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome do evento" id="nome">
-                        </div>
+
 
                         <div class="form-item">
                             <label for="local">Local</label>
-                            <input type="text" name="Local" id="local">
+                            <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off"
+                                required>
+
                         </div>
 
-                        <div class="form-item-pair">
+
+                        <!-- <div class="form-item-pair">
                             <div class="form-item" id="form-endereco">
                                 <label for="endereco">Endereço</label>
-                                <input type="text" id="endereco" readonly>
+                                <input type="show" id="long_name" readonly>
                             </div>
                             <div class="form-item">
                                 <label for="numero">Número</label>
@@ -120,35 +157,36 @@
                                 <label for="estado">Estado</label>
                                 <input type="text" id="estado" readonly>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
 
                     <div id="evento-online-form">
                         <div class="form-item">
                             <label for="link-evento-online">Informe o link do evento online.</label>
-                            <input type="text" name="evento-online" id="link-evento-online">
+                            <input type="text" name="evento-online" id="link-evento-online" required>
                         </div>
                     </div>
 
                     <div class="form-item-pair">
                         <div class="form-item-shrinked">
                             <label for="start-date">Data início do evento</label>
-                            <input type="date" id="start-date">
+                            <input type="text" id="start-date" placeholder="Selecione a data" required>
                         </div>
                         <div class="form-item-shrinked">
                             <label for="start-time">Horário do início do evento</label>
-                            <input type="time" id="start-time">
+                            <input type="text" id="start-time" placeholder="Selecione a hora" required>
                         </div>
                     </div>
 
                     <div class="form-item-pair">
                         <div class="form-item-shrinked">
                             <label for="final-date">Data final do evento</label>
-                            <input type="date" id="final-date">
+                            <input type="text" id="final-date" placeholder="Selecione a data">
                         </div>
                         <div class="form-item-shrinked">
-                            <label for="final-time">Horário de término do evento</label>
-                            <input type="time" id="final-time">
+                            <label for="final-time">Horário final do evento</label>
+                            <input type="text" id="final-time" placeholder="Selecione a hora">
                         </div>
                     </div>
 
@@ -157,7 +195,7 @@
 
                         <div class="form-item">
                             <label for="sobre">Fale sobre o evento.</label>
-                            <textarea rows="15" type="text" name="sobre o evento" id="sobre"></textarea>
+                            <textarea id="sobre" name="sobre o evento" required></textarea>
                         </div>
 
                     </section>
@@ -166,32 +204,41 @@
                         <h1>Informações gerais</h1>
 
                         <div class="form-item">
-                            <label for="informacoes">Forneça informações gerais sobre o evento - tais como faixa etária, etc.</label>
-                            <textarea rows="15" type="text" name="informacoes do evento" id="informacoes"></textarea>
+                            <label for="informacoes">Forneça informações gerais sobre o evento - tais como faixa etária,
+                                etc.</label>
+                            <textarea rows="15" type="text" name="informacoes do evento" id="informacoes"
+                                required></textarea>
                         </div>
 
-                        <div class="form-item upload-baner">
-                            <div enctype="_multipart/form-data">
-                                <label>Faça upload do baner do evento</label><br>
-                                <input type="file" accept="image/*" name="file" id="event-banner-input">
-                                <img height="auto" class="banner-preview" src="#" id="event-banner-preview" alt="Banner do evento">
+<!--                        <div class="form-item">-->
+                            <div>
+                                <label>Faça upload do banner do evento</label><br>
+                                <button
+                                        id="event-banner-input"
+                                        class="cloudinary-button">
+                                    Upload files
+                                </button>
+
+
+
                             </div>
-                        </div>
+                        <img id="uploadedimage" src=""></img>
+<!--                        </div>-->
+
 
                         <div class="termos-uso">
-                            <input type="checkbox">
+                            <input id="terms-checkbox" type="checkbox">
                             <label>Li e aceito os <a href="termosdeuso.html" target="_blank">termos de uso.</a></label>
                         </div>
                     </section>
+                </form>
+            </section>
         </div>
-
     </section>
 
     <div class="rounded-button">
-        <button class="criar-evento-btn">criar evento</button>
+        <button type="submit" class="criar-evento-btn">Criar evento</button>
     </div>
-
-    </form>
 
     <footer>
 
@@ -207,50 +254,339 @@
             </div>
         </div>
     </footer>
-</body>
 
-<script>
-    // const banerEvento = document.querySelector('#baner-evento');
-    // const baner = document.querySelector('#baner');
+    <!-- ----------------------------------------------------------------------------------------------- -->
 
-    // banerEvento.addEventListener('change', event => {
+    <!-- Formata a data e hora  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-    //     const reader = new FileReader;
+    <script>
+        flatpickr("#start-date", {
+            dateFormat: "d/m/Y",
+            locale: "pt",
+        });
 
-    //     reader.onload = function (event) {
-    //         const previewImage = document.createElement('img');
-    //         previewImage.width = 115;
-    //         previewImage.height = 100;
-    //         previewImage.id = 'preview-image';
-    //         previewImage.src = event.target.result;
-    //         baner.insertAdjacentElement('afterend', previewImage);
-    //     }
+        flatpickr("#start-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+        });
 
-    //     reader.readAsDataURL(baner.files[0]);
+        flatpickr("#final-date", {
+            dateFormat: "d/m/Y",
+            locale: "pt", // 
+        });
 
+        flatpickr("#final-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+        });
+        //------------------------------------------------------------------------------------------//
 
-    // })
-
-    const eventBannerInput = document.querySelector('#event-banner-input');
-    const eventBannerPreview = document.querySelector('#event-banner-preview')
-
-    eventBannerInput.onchange = evt => {
-        const [file] = eventBannerInput.files
-        if (file) {
-            eventBannerPreview.src = URL.createObjectURL(file)
+        //Mostrar/ocultar formulario conforme o tipo de evento//    
+        document.getElementById("evento-presencial-radio").onclick = function () {
+            document.getElementById("evento-presencial-form").style.display = "block";
+            document.getElementById("evento-online-form").style.display = "none";
         }
-        eventBannerPreview.style.display = "block"
-    }
 
-    document.getElementById("evento-presencial-radio").onclick = function () {
-        document.getElementById("evento-presencial-form").style.display = "block";
-        document.getElementById("evento-online-form").style.display = "none";
-    }
+        document.getElementById("evento-online-radio").onclick = function () {
+            document.getElementById("evento-online-form").style.display = "block";
+            document.getElementById("evento-presencial-form").style.display = "none";
+        }
 
-    document.getElementById("evento-online-radio").onclick = function () {
-        document.getElementById("evento-online-form").style.display = "block";
-        document.getElementById("evento-presencial-form").style.display = "none";
-    }
-</script>
+        //Preview do banner do evento 
+        const eventBannerInput = document.querySelector('#event-banner-input');
+        const eventBannerPreview = document.querySelector('#event-banner-preview')
+
+        eventBannerInput.onchange = evt => {
+            const [file] = eventBannerInput.files
+            if (file) {
+                eventBannerPreview.src = URL.createObjectURL(file)
+            }
+            eventBannerPreview.style.display = "block"
+        }
+        //-----------------------------------------------------------------------------------------//
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('http://localhost:3000/categorias');
+                const categorias = await response.json();
+
+                popularCategorias(categorias);
+            } catch (error) {
+                console.error('Erro ao obter categorias:', error);
+            }
+        });
+
+        function popularCategorias(categorias) {
+            const selectCategorias = document.querySelector('#categorias');
+
+            selectCategorias.innerHTML = '<option value="">Categoria</option>';
+
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria.nome;
+                option.textContent = categoria.nome;
+                selectCategorias.appendChild(option);
+            });
+        }
+        //-----------------------------------------------------------------------------------------------------------------//
+
+        //Salvar dados do evento no db
+        tinymce.init({
+            selector: '#sobre',
+            height: 300
+        });
+
+        let selectedPlace = null;
+        let bannerUrl = null;
+
+        function initializeAutocomplete() {
+            var input = document.getElementById('local');
+            var options = {
+                componentRestrictions: { country: 'BR' }
+            };
+
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+            autocomplete.addListener('place_changed', function () {
+                selectedPlace = autocomplete.getPlace();
+            });
+        }
+
+        const cloudName = "nafaixa";
+        const uploadPreset = "nafaixa";
+
+        const myWidget = cloudinary.createUploadWidget(
+            {
+                cloudName: cloudName,
+                uploadPreset: uploadPreset
+            },
+            (error, result) => {
+                if (!error && result && result.event === "success") {
+                    console.log("Upload concluído! Aqui estão as informações da imagem: ", result.info);
+                    alert('Upload de imagem concluído!');
+                    document.getElementById("uploadedimage").setAttribute("src", result.info.secure_url);
+                    bannerUrl = result.info.secure_url; // Armazene a URL da imagem carregada
+                }
+            }
+        );
+
+        document.getElementById("event-banner-input").addEventListener(
+            "click",
+            function () {
+                myWidget.open();
+            },
+            false
+        );
+
+        async function criarEvento() {
+            const termsCheckbox = document.getElementById('terms-checkbox');
+
+
+            if (!termsCheckbox.checked) {
+                alert('Você precisa aceitar os termos de uso antes de criar o evento.');
+                return;
+            }
+
+            const nomeEvento = document.querySelector('#nome');
+            const categorias = document.querySelector('#categorias');
+            const tipoEvento = document.querySelector('input[name="event-type"]:checked');
+            const startDateEvento = document.querySelector('#start-date');
+            const startTimeEvento = document.querySelector('#start-time');
+            const sobreEvento = document.querySelector('#sobre');
+            const informacoesEvento = document.querySelector('#informacoes');
+            const sobre = tinymce.get('sobre').getContent();
+
+            if (!nomeEvento.value) {
+                alert('O campo nome é obrigatório.');
+                nomeEvento.focus();
+                return;
+            }
+            if (!categorias.value) {
+                alert('O campo categorias é obrigatório.');
+                categorias.focus();
+                return;
+            }
+            if (!tipoEvento) {
+                alert('Selecione o tipo de evento (presencial ou online).');
+                return;
+            }
+            if (!startDateEvento.value) {
+                alert('O campo data de início do evento é obrigatório.');
+                startDateEvento.focus();
+                return;
+            }
+            if (!startTimeEvento.value) {
+                alert('O campo horário de início do evento é obrigatório.');
+                startTimeEvento.focus();
+                return;
+            }
+            if (!sobre.trim()) {
+                alert('O campo sobre o evento é obrigatório.');
+                return;
+            }
+            if (!informacoesEvento.value) {
+                alert('O campo informações adicionais é obrigatório.');
+                informacoesEvento.focus();
+                return;
+            }
+
+            const tipoEventoValue = tipoEvento.value;
+
+            if (tipoEventoValue === 'presencial') {
+                if (!selectedPlace || !selectedPlace.formatted_address) {
+                    alert('O campo local é obrigatório para eventos presenciais.');
+                    document.getElementById('local').focus();
+                    return;
+                }
+            }
+
+            if (tipoEventoValue === 'online') {
+                const linkEventoOnline = document.querySelector('#link-evento-online');
+                if (!linkEventoOnline.value) {
+                    alert('O campo link do evento é obrigatório para eventos online.');
+                    linkEventoOnline.focus();
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch(`http://localhost:3000/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar a existência do evento');
+                }
+
+                const data = await response.json();
+
+                if (data && data.length > 0) {
+                    const existingEvent = data[0];
+
+                    const existingStartDate = new Date(existingEvent.startDate);
+                    const selectedStartDate = new Date(startDateEvento.value);
+
+                    if (existingEvent.local === (selectedPlace ? selectedPlace.formatted_address : '') &&
+                        existingStartDate.getTime() === selectedStartDate.getTime()) {
+                        alert('Já existe um evento com o mesmo nome, local e data de início. Por favor, crie um evento que ainda não exista em nosso site.');
+                        return;
+                    }
+                }
+
+            if (!bannerUrl) {
+                alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
+                return;
+            }
+
+            const idEvento = uuidv4();
+            const categoriaValue = categorias.value;
+            const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
+            const finalDateEvento = document.querySelector('#final-date').value;
+            const finalTimeEvento = document.querySelector('#final-time').value;
+
+            const evento = {
+                id: idEvento,
+                tipo: tipoEventoValue,
+                categoria: categoriaValue,
+                nome: nomeEvento.value,
+                link: link,
+                local: selectedPlace ? selectedPlace.formatted_address : '',
+                latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
+                longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
+                startDate: startDateEvento.value,
+                startTime: startTimeEvento.value,
+                finalDate: finalDateEvento,
+                finalTime: finalTimeEvento,
+                sobre: sobre,
+                informacoes: informacoesEvento.value,
+                bannerURL: bannerUrl
+            };
+
+                const createResponse = await fetch('http://localhost:3000/eventos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(evento),
+                });
+
+                if (!createResponse.ok) {
+                    throw new Error('Erro ao criar evento');
+                }
+
+                const responseData = await createResponse.json();
+                console.log('Evento criado:', responseData);
+                alert('Evento criado com sucesso!');
+            } catch (error) {
+                console.error('Erro ao criar evento:', error);
+                alert('Erro ao criar evento. Tente novamente mais tarde.');
+            }
+        }
+
+
+        function uuidv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                const r = Math.random() * 16 | 0;
+                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeAutocomplete();
+
+            const startDateInput = document.querySelector('#start-date');
+            const finalDateInput = document.querySelector('#final-date');
+
+            const startDatePicker = flatpickr(startDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+                minDate: "today",
+                onClose: function (selectedDates) {
+                    if (selectedDates.length > 0) {
+                        const minDate = selectedDates[0];
+                        finalDatePicker.set('minDate', minDate);
+                    }
+                }
+            });
+
+            const finalDatePicker = flatpickr(finalDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+            });
+
+            const criarEventoBtn = document.querySelector('.criar-evento-btn');
+
+            criarEventoBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const startDate = startDatePicker.selectedDates[0];
+                const finalDate = finalDatePicker.selectedDates[0];
+
+                if (!startDate || !finalDate) {
+                    alert('Por favor, selecione as datas de início e final do evento.');
+                    return;
+                }
+
+                if (startDate.getTime() > finalDate.getTime()) {
+                    alert('A data final do evento deve ser posterior à data de início.');
+                    return;
+                }
+
+                criarEvento();
+
+            });
+        });
+
+    </script>
+</body>
 
 </html>

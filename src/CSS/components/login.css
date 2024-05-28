@@ -1,135 +1,139 @@
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
-    margin-top: auto;
-  }
+  margin-top: auto;
+}
 
 .botaologin {
-    display: inline-block;
-    background: #1769c3;
-    color: aliceblue;
-    font-family: almarai;
-    font-size: 20px;
-    width: 270px;
-    padding-top: 7px;
-    height: 40px;
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    transition: transform 100ms linear;
-    cursor: pointer;
-    margin-left: 20.5%;
-    border-color: #1769c3;
-    
-  }
+  display: inline-block;
+  background: #1769c3;
+  color: aliceblue;
+  font-family: almarai;
+  font-size: 20px;
+  width: 270px;
+  padding-top: 7px;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  transition: transform 100ms linear;
+  cursor: pointer;
+  margin-left: 20.5%;
+  border-color: #1769c3;
 
-  .txtlogin1 {
-    font-family: almarai;
-    font-size: 32px;
-    font-weight: 500 !important;
-    
-    
-  }
+}
 
-  .txtlogin2{
-    font-family: almarai;
-    font-size: 20px;
-    font-weight: lighter;
-    
-  }
+.txtlogin1 {
+  font-family: almarai;
+  font-size: 32px;
+  font-weight: 500 !important;
 
- .logologin {
-  width: 374.94px;
-  height: 117.519px;
-  
 
- }
+}
 
- .logincontainer {
+.txtlogin2 {
+  font-family: almarai;
+  font-size: 20px;
+  font-weight: lighter;
+
+}
+
+.logincontainer {
   display: block;
   margin-top: 0;
   margin: auto;
 
- }
+}
 
- .textologin {
-text-align: center;
-line-height: 40px;
+.textologin {
+  text-align: center;
+  line-height: 40px;
 
- }
+}
 
- .containeremail {
+.containeremail {
   font-family: almarai;
-  font-size: 16px ;
+  font-size: 16px;
   font-weight: 200 !important;
   margin-top: 25px;
-  
- }
 
- .containeremail input {
+}
+
+.containeremail input {
   width: 100%;
   padding: 12px 10px;
   margin: 8px 0;
   box-sizing: border-box;
 
- }
+}
 
- .containersenha {
+.containersenha {
   font-family: almarai;
-  font-size: 16px ;
+  font-size: 16px;
   font-weight: 200 !important;
- }
+}
 
- .containersenha input {
+.containersenha input {
   width: 100%;
   padding: 12px 10px;
   margin: 8px 0;
   box-sizing: border-box;
 
- }
+}
 
- .checkbox {
+.checkbox {
   font-family: almarai;
   font-size: 16px;
   margin-bottom: 30px;
-  
 
- }
 
- .lembrarsenha a {
-font-family: almarai;
-font-size: 16px;
-text-decoration: none; 
-color: black ;
-font-weight: 700;
+}
+
+.lembrarsenha a {
+  font-family: almarai;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 
 }
 
 
 
 .lembrarsenha {
-text-align: center;
-margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 
 }
- 
+
 .cadastro {
   font-family: almarai;
   font-size: 16px;
-  text-decoration: none; 
-  color: black ;
+  text-decoration: none;
+  color: black;
   text-align: center;
   margin-top: 10px;
-  
+
+}
+
+.cadastro a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+
+}
+
+@media (max-width: 465) {
+  .logincontainer {
+    margin: 20px;
   }
 
-  .cadastro a {
-    text-decoration: none; 
-    color: black ;
-    font-weight: 700;
-
+  header {
+    margin-bottom: 20px;
   }
+
+}

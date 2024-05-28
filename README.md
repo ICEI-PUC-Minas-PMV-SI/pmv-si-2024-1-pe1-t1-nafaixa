@@ -16,7 +16,6 @@ Com proposta inovadora, o NaFaixa visa criar uma comunidade inclusiva, onde a cu
 * Rita Laura Gonçalves
 * Camille Parma Vitoria
 * Amanda Magalhães Silva
-* Bernardo dos Santos Utsch
 * Gustavo Torres da Rocha Castro
 * Matheus Fernandes da Silva Otoni
 
