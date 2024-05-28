@@ -92,3 +92,27 @@ c .evento {
   width: 50px;
   height: 50px;
 }
+.imgcard {
+  width: 100%;
+}
+.esconderMapa-button {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Almarai", sans-serif;
+  border-radius: 5px;
+  background: #1769c3;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.esconderMapa-button:hover {
+  border-radius: 5px;
+  background: #1769c3;
+}
