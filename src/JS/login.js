@@ -1,41 +1,34 @@
-const entrar = document.getElementById('botaoEntrar');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
+const entrar = document.getElementById("botaoEntrar");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
 
-entrar.addEventListener('click', function(event) {
+entrar.addEventListener("click", async function (event) {
   event.preventDefault();
 
-const email = emailInput.value;
-const password = passwordInput.value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const passwordMD5 = hashSenha(password);
 
-    
-let userFound = false;
-
-    
-for (let i = 0; i < localStorage.length; i++) {
-const key = localStorage.key(i);
-if (key.startsWith('userData-')) { 
-    
-const userDataString = localStorage.getItem(key);
-const userData = JSON.parse(userDataString);
-if (userData.email === email) {
-    
-if (password === userData.password) {
-    
-    window.location.href = 'meus-eventos.html';
-    userFound = true;
-    break;
-      } else {
-        alert('Dados inseridos inválidos!');
-        userFound = true;
-        break;
-      }
-    }
+  function hashSenha(senha) {
+    return CryptoJS.MD5(senha).toString();
   }
-}
 
+  try {
+    const response = await fetch("http://localhost:3000/produtor");
+    const produtores = await response.json();
 
-if (!userFound) {
-  alert('Não há nenhum usuário cadastrado com esse email');
-}
+    const produtor = produtores.find(
+      (produtor) => produtor.email === email && produtor.senha === passwordMD5
+    );
+
+    if (produtor) {
+      window.location.href = "meus-eventos.html";
+    } else {
+      alert("Dados inseridos inválidos!");
+      return false;
+    }
+  } catch (error) {
+    console.error("Erro ao buscar dados do JSON-server:", error);
+    alert("Erro ao buscar dados do servidor JSON.");
+  }
 });
