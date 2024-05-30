@@ -1,25 +1,35 @@
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-  const center = { lat: 37.43238031167444, lng: -122.16795397128632 };
-  const map = new Map(document.getElementById("map"), {
-    zoom: 11,
-    center,
-    mapId: "4504f8b37365c3d0",
-  });
+  navigator.geolocation.getCurrentPosition(
+    async (resposta) => {
+      console.log("resposta", resposta);
+      const userLocation = {
+        lat: resposta.coords.latitude,
+        lng: resposta.coords.longitude,
+      };
+      const map = new Map(document.getElementById("map"), {
+        zoom: 11,
+        center: userLocation,
+        mapId: "4504f8b37365c3d0",
+      });
 
-  for (const evento of eventos) {
-    const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
-      map,
-      content: buildContent(evento),
-      position: evento.localizacao,
-      title: evento.description,
-    });
+      for (const evento of eventos) {
+        const AdvancedMarkerElement =
+          new google.maps.marker.AdvancedMarkerElement({
+            map,
+            content: buildContent(evento),
+            position: evento.localizacao,
+            title: evento.description,
+          });
 
-    AdvancedMarkerElement.addListener("click", () => {
-      toggleHighlight(AdvancedMarkerElement, evento);
-    });
-  }
+        AdvancedMarkerElement.addListener("click", () => {
+          toggleHighlight(AdvancedMarkerElement, evento);
+        });
+      }
+    },
+    (erro) => console.log("erro", erro),
+    { enableHighAccuracy: true }
+  );
 }
 
 function toggleHighlight(markerView, evento) {
