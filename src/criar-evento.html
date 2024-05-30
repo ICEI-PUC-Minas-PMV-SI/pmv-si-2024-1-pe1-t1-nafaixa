@@ -492,8 +492,18 @@
             const finalDateEvento = document.querySelector('#final-date').value;
             const finalTimeEvento = document.querySelector('#final-time').value;
 
+                // Recupera o ID do produtor do localStorage
+                const produtorData = JSON.parse(localStorage.getItem('userData'));
+                const produtorId = produtorData ? produtorData.id : null;
+
+                if (!produtorId) {
+                    alert('Erro ao obter o ID do produtor. Faça login novamente.');
+                    return;
+                }
+
             const evento = {
                 id: idEvento,
+                produtorId: produtorId,
                 tipo: tipoEventoValue,
                 categoria: categoriaValue,
                 nome: nomeEvento.value,

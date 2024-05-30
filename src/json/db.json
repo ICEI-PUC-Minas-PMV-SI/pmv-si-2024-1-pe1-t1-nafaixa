@@ -1582,37 +1582,56 @@
         {
           "long_name": "s/nº",
           "short_name": "s/nº",
-          "types": ["street_number"]
+          "types": [
+            "street_number"
+          ]
         },
         {
           "long_name": "Rodovia Hélio Smidt",
           "short_name": "Rod. Hélio Smidt",
-          "types": ["route"]
+          "types": [
+            "route"
+          ]
         },
         {
           "long_name": "Aeroporto",
           "short_name": "Aeroporto",
-          "types": ["sublocality_level_1", "sublocality", "political"]
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ]
         },
         {
           "long_name": "Guarulhos",
           "short_name": "Guarulhos",
-          "types": ["administrative_area_level_2", "political"]
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
         },
         {
           "long_name": "São Paulo",
           "short_name": "SP",
-          "types": ["administrative_area_level_1", "political"]
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
         },
         {
           "long_name": "Brasil",
           "short_name": "BR",
-          "types": ["country", "political"]
+          "types": [
+            "country",
+            "political"
+          ]
         },
         {
           "long_name": "07190-100",
           "short_name": "07190-100",
-          "types": ["postal_code"]
+          "types": [
+            "postal_code"
+          ]
         }
       ],
       "latitude": -23.4302175,
@@ -1635,37 +1654,56 @@
         {
           "long_name": "s/nº",
           "short_name": "s/nº",
-          "types": ["street_number"]
+          "types": [
+            "street_number"
+          ]
         },
         {
           "long_name": "Rodovia Hélio Smidt",
           "short_name": "Rod. Hélio Smidt",
-          "types": ["route"]
+          "types": [
+            "route"
+          ]
         },
         {
           "long_name": "Aeroporto",
           "short_name": "Aeroporto",
-          "types": ["sublocality_level_1", "sublocality", "political"]
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ]
         },
         {
           "long_name": "Guarulhos",
           "short_name": "Guarulhos",
-          "types": ["administrative_area_level_2", "political"]
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
         },
         {
           "long_name": "São Paulo",
           "short_name": "SP",
-          "types": ["administrative_area_level_1", "political"]
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
         },
         {
           "long_name": "Brasil",
           "short_name": "BR",
-          "types": ["country", "political"]
+          "types": [
+            "country",
+            "political"
+          ]
         },
         {
           "long_name": "07190-100",
           "short_name": "07190-100",
-          "types": ["postal_code"]
+          "types": [
+            "postal_code"
+          ]
         }
       ],
       "latitude": -23.4302175,
@@ -1915,6 +1953,41 @@
       "sobre": "<p>\\z|</p>",
       "informacoes": "|Zxsasx",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715486658/NaFaixa/gvia1idygdhqu4ccc6bx.jpg"
+    },
+    {
+      "id": "03ec56df-d458-4802-8741-b72b53be1fb8",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "TesteIdprodutor",
+      "link": "",
+      "local": "Atibaia, SP, Brasil",
+      "latitude": -23.1155873,
+      "longitude": -46.5532067,
+      "startDate": "30/05/2024",
+      "startTime": "12:00",
+      "finalDate": "31/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>sdasdasd</p>",
+      "informacoes": "sadada",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717092392/NaFaixa/mopbmemqwhgxmnm1ulu6.png"
+    },
+    {
+      "id": "8c0235eb-307f-4969-a053-7c8128ba907c",
+      "produtorId": "73ddde49-b38e-4d3c-978c-e603ebdb1650",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "TesteIdprodutor",
+      "link": "",
+      "local": "Atibaia, SP, Brasil",
+      "latitude": -23.1155873,
+      "longitude": -46.5532067,
+      "startDate": "30/05/2024",
+      "startTime": "12:00",
+      "finalDate": "31/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>sdasdasd</p>",
+      "informacoes": "sadada",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717092803/NaFaixa/uyzu4spqq9k9zcnxoqwp.png"
     }
   ],
   "emails": [
