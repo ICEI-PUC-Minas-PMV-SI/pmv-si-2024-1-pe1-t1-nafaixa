@@ -210,20 +210,18 @@
                                 required></textarea>
                         </div>
 
-<!--                        <div class="form-item">-->
-                            <div>
-                                <label>Faça upload do banner do evento</label><br>
-                                <button
-                                        id="event-banner-input"
-                                        class="cloudinary-button">
-                                    Upload files
-                                </button>
+                        <!--                        <div class="form-item">-->
+                        <div>
+                            <label>Faça upload do banner do evento</label><br>
+                            <button id="event-banner-input" class="cloudinary-button">
+                                Upload files
+                            </button>
 
 
 
-                            </div>
+                        </div>
                         <img id="uploadedimage" src=""></img>
-<!--                        </div>-->
+                        <!--                        </div>-->
 
 
                         <div class="termos-uso">
@@ -261,6 +259,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
+
         flatpickr("#start-date", {
             dateFormat: "d/m/Y",
             locale: "pt",
@@ -481,44 +480,42 @@
                     }
                 }
 
-            if (!bannerUrl) {
-                alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
-                return;
-            }
+                if (!bannerUrl) {
+                    alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
+                    return;
+                }
 
-            const idEvento = uuidv4();
-            const categoriaValue = categorias.value;
-            const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
-            const finalDateEvento = document.querySelector('#final-date').value;
-            const finalTimeEvento = document.querySelector('#final-time').value;
+                const idEvento = uuidv4();
+                const categoriaValue = categorias.value;
+                const link = tipoEventoValue === 'online' ? document.querySelector('#link-evento-online').value : '';
+                const finalDateEvento = document.querySelector('#final-date').value;
+                const finalTimeEvento = document.querySelector('#final-time').value;
 
-                // Recupera o ID do produtor do localStorage
-                const produtorData = JSON.parse(localStorage.getItem('userData'));
-                const produtorId = produtorData ? produtorData.id : null;
+                const produtorId = localStorage.getItem('userData');
 
                 if (!produtorId) {
                     alert('Erro ao obter o ID do produtor. Faça login novamente.');
                     return;
                 }
 
-            const evento = {
-                id: idEvento,
-                produtorId: produtorId,
-                tipo: tipoEventoValue,
-                categoria: categoriaValue,
-                nome: nomeEvento.value,
-                link: link,
-                local: selectedPlace ? selectedPlace.formatted_address : '',
-                latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
-                longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
-                startDate: startDateEvento.value,
-                startTime: startTimeEvento.value,
-                finalDate: finalDateEvento,
-                finalTime: finalTimeEvento,
-                sobre: sobre,
-                informacoes: informacoesEvento.value,
-                bannerURL: bannerUrl
-            };
+                const evento = {
+                    id: idEvento,
+                    produtorId: produtorId,
+                    tipo: tipoEventoValue,
+                    categoria: categoriaValue,
+                    nome: nomeEvento.value,
+                    link: link,
+                    local: selectedPlace ? selectedPlace.formatted_address : '',
+                    latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
+                    longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
+                    startDate: startDateEvento.value,
+                    startTime: startTimeEvento.value,
+                    finalDate: finalDateEvento,
+                    finalTime: finalTimeEvento,
+                    sobre: sobre,
+                    informacoes: informacoesEvento.value,
+                    bannerURL: bannerUrl
+                };
 
                 const createResponse = await fetch('http://localhost:3000/eventos', {
                     method: 'POST',
