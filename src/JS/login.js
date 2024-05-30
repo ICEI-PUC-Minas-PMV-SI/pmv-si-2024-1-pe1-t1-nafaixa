@@ -22,6 +22,7 @@ entrar.addEventListener("click", async function (event) {
     );
 
     if (produtor) {
+      localStorage.setItem("userData", produtor.id);
       window.location.href = "meus-eventos.html";
     } else {
       alert("Dados inseridos inválidos!");
@@ -32,3 +33,4 @@ entrar.addEventListener("click", async function (event) {
     alert("Erro ao buscar dados do servidor JSON.");
   }
 });
+
