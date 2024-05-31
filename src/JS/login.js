@@ -23,7 +23,15 @@ entrar.addEventListener("click", async function (event) {
 
     if (produtor) {
       localStorage.setItem("userData", produtor.id);
-      window.location.href = "meus-eventos.html";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectUrl = urlParams.get('redirect');
+
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+      } else {
+        window.location.href = "meus-eventos.html";
+      }
     } else {
       alert("Dados inseridos inválidos!");
       return false;
