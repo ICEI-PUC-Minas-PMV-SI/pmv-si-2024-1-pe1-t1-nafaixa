@@ -43,7 +43,7 @@
             </form>
             <nav class="nav-options-web">
                 <a href="">Localização</a>
-                <a href="">Criar evento</a>
+                <a href="criar-evento.html">Criar evento</a>
                 <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
             </nav>
         </div>
@@ -84,122 +84,8 @@
         <div style="width: 100%">
             <h1>Meus eventos</h1>
 
-            <div class="cards-meus-eventos">
-                <a href="pagina-detalhes-evento.html" class="img-container">
-                    <img class="img-meu-evento" src="https://source.unsplash.com/random/1" alt="img do meu evento">
-                </a>
-
-                <div class="detalhes-evento">
-                    <a href="pagina-detalhes-evento.html">
-                        <h2>Nome do evento</h2>
-                    </a>
-                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
-                    <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
-                    </div>
-
-                    <div class="action-icons">
-                        <button href="criar-evento.html">
-                            <span class="material-symbols-outlined">edit</span>
-                            <span>Editar</sp>
-                        </button>
-                        <button id="delete-btn">
-                            <span class="material-symbols-outlined">delete</span>
-                            Excluir
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cards-meus-eventos">
-                <a href="pagina-detalhes-evento.html" class="img-container">
-                    <img class="img-meu-evento" src="https://source.unsplash.com/random/2" alt="img do meu evento">
-                </a>
-
-                <div class="detalhes-evento">
-                    <a href="pagina-detalhes-evento.html">
-                        <h2>Nome do evento</h2>
-                    </a>
-                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
-                    <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
-                    </div>
-
-                    <div class="action-icons">
-                        <button href="criar-evento.html">
-                            <span class="material-symbols-outlined">edit</span>
-                            <span>Editar</sp>
-                        </button>
-                        <button id="delete-btn">
-                            <span class="material-symbols-outlined">delete</span>
-                            Excluir
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cards-meus-eventos">
-                <a href="pagina-detalhes-evento.html" class="img-container">
-                    <img class="img-meu-evento" src="https://source.unsplash.com/random/3" alt="img do meu evento">
-                </a>
-
-                <div class="detalhes-evento">
-                    <a href="pagina-detalhes-evento.html">
-                        <h2>Nome do evento</h2>
-                    </a>
-                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
-                    <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
-                    </div>
-
-                    <div class="action-icons">
-                        <button href="criar-evento.html">
-                            <span class="material-symbols-outlined">edit</span>
-                            <span>Editar</sp>
-                        </button>
-                        <button id="delete-btn">
-                            <span class="material-symbols-outlined">delete</span>
-                            Excluir
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cards-meus-eventos">
-                <a href="pagina-detalhes-evento.html" class="img-container">
-                    <img class="img-meu-evento" src="https://source.unsplash.com/random/4" alt="img do meu evento">
-                </a>
-
-                <div class="detalhes-evento">
-                    <a href="pagina-detalhes-evento.html">
-                        <h2>Nome do evento</h2>
-                    </a>
-                    <div><img src="./assets/img/local.svg" alt="Local do evento" />Local</div>
-                    <div><img src="assets/img/data.svg" alt="">Data</div>
-                    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>150</p>
-                    </div>
-
-                    <div class="action-icons">
-                        <button href="criar-evento.html">
-                            <span class="material-symbols-outlined">edit</span>
-                            <span>Editar</sp>
-                        </button>
-                        <button id="delete-btn">
-                            <span class="material-symbols-outlined">delete</span>
-                            Excluir
-                        </button>
-                    </div>
-                </div>
-
-            </div>
+            <div id="meus-eventos-container" class="cards-meus-eventos-container"></div>
     </section>
-
-    <dialog class="delete-modal">
-        <p> Tem certeza que deseja excluir esse evento? Essa ação é irreversivel.</p>
-
-        <button id="cancelar-btn">Cancelar</button>
-        <button id="delete-btn">Excluir</button>
-    </dialog>
 
     </div>
     <footer>
@@ -217,22 +103,7 @@
         </div>
     </footer>
 
-    <script>
-        const deleteBtn = document.getElementById("delete-btn")
-        const modal = document.querySelector("dialog")
-        const buttonClose = document.getElementById("cancelar-btn")
-
-        deleteBtn.onclick = function () {
-            modal.showModal()
-        }
-
-        buttonClose.onclick = function () {
-            modal.close()
-        }
-
-
-
-    </script>
+    <script src="./JS/meusEventos.js"></script>
 </body>
 
 </html>
