@@ -53,11 +53,9 @@
     ></script>
     <script src="/src/JS/cardsEvento.js"></script>
 
-    <script 
-    src="JS/esconderMapa.js">
-    </script>
+    
 
-    <script onload="">
+    <script>
       var eventos = []
       async function carregarTodosEventos() {
         console.log('carregando eventos')
@@ -186,16 +184,12 @@
           loadUserLocation();
         });
     </script>
-    <script>
-       // Função para abrir o popup/fechar o popup
-       
-   
-        
-    
-      </script>
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
       </script>
+      <script 
+    src="/src/JS//esconderMapa.js">
+    </script>
   </head>
   <body>
     <div class="popup" id="locationPopup">
@@ -332,9 +326,9 @@
 
         <h1>Todos os eventos próximos de você!</h1>
         <div id="eventosFiltrados" class="wrapper-cards"></div>
-        <!-- <div class="wrapper-mostrarMais">
+        <div class="wrapper-mostrarMais">
           <button class="mostrarMais">mostrar mais</button>
-        </div> -->
+        </div>
       </div>
     </section>
     <footer>

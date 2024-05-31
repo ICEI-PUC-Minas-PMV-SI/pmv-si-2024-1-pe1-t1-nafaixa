@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const mapUserLocation = localStorage.getItem("mapUserLocation");
   const selectedUserLocation = localStorage.getItem("userLocation");
-  const userLocation = estaEmEventosProximos
+  const userLocation = estaEmEventosProximos()
     ? mapUserLocation
     : selectedUserLocation;
   const state = {
@@ -101,18 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const startIndex =
       id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
-    const eventosParaExibir = estaEmEventosProximos()
-      ? eventos
-      : eventos.slice(startIndex, startIndex + eventosPorVez);
 
     let eventosExibidos = false;
-
+    const eventosFiltrados = eventos.filter(
+      (evento) =>
+        id === "todosEventos" ||
+        (id === "eventosFiltrados" && isEventoProximo(evento, userLocation))
+    );
+    const eventosParaExibir = estaEmEventosProximos()
+      ? eventosFiltrados.slice(startIndex, startIndex + eventosPorVez)
+      : eventosFiltrados.slice(startIndex, startIndex + eventosPorVez);
     eventosParaExibir.forEach((evento) => {
-      if (id === "eventosFiltrados" && !isEventoProximo(evento, userLocation))
-        return;
-
       const cardElement = criarCardEvento(evento);
-      wrapperElement.appendChild(cardElement);
+      wrapperElement?.appendChild(cardElement);
       eventosExibidos = true; // Indica que pelo menos um evento foi exibido
     });
 
@@ -215,6 +216,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mostrarMaisBtn) {
     mostrarMaisBtn.addEventListener("click", () => {
       exibirEventos("todosEventos");
+      if (estaEmEventosProximos()) {
+        exibirEventos("eventosFiltrados");
+      }
     });
   }
 });

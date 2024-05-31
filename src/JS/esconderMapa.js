@@ -9,6 +9,7 @@ function aparecerMapa() {
   document.getElementById("esconderMapaTexto").innerText = "Esconder Mapa";
 }
 function esconderOuAparecerMapa() {
+  console.log("escondendo ou aparecendo");
   const map = document.getElementById("map");
   const estaAparecendo = !(map.style.display == "none");
   if (estaAparecendo) {
@@ -18,6 +19,7 @@ function esconderOuAparecerMapa() {
   }
 }
 function adicionarListnerButton() {
+  console.log("adicionando listener");
   document
     .getElementById("esconderMapa-button")
     .addEventListener("click", esconderOuAparecerMapa);
