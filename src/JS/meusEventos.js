@@ -67,7 +67,7 @@ function createEventCard(evento) {
 
 function handleEdit(event) {
     const id = event.target.closest('.edit-btn').dataset.id;
-    window.location.href = criar-evento.html?id=${id};
+    window.location.href = `criar-evento.html?id=${id}`;
 }
 
 
