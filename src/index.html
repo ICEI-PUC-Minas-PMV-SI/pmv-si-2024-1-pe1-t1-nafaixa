@@ -50,7 +50,7 @@
             <img src="assets/img/setaprabaixo1.svg"  style="padding-right: 15px"></img>
         </div>
 
-        <a href="criar-evento.html">Criar evento</a>
+        <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
     </div>
@@ -275,6 +275,18 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
 
   <script>
+
+    function handleCriarEventoOnClick(e){
+      if (!isUserLoggedIn()) {
+        window.location.href = 'login.html';
+        return false;
+      };
+    };
+
+    function isUserLoggedIn() {
+      return localStorage.getItem('userData');
+    };
+
     // Função para obter a geolocalização do usuário
     function getLocation() {
       if (navigator.geolocation) {
