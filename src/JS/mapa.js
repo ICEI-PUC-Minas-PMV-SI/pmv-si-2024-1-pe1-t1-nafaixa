@@ -1,4 +1,4 @@
-async function initMap(eventos) {
+async function initMap(eventos, localSelecionado) {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   navigator.geolocation.getCurrentPosition(
@@ -6,8 +6,8 @@ async function initMap(eventos) {
       console.log("resposta", resposta);
       const { latitude, longitude } = resposta.coords;
       const userLocation = {
-        lat: latitude,
-        lng: longitude,
+        lat: localSelecionado?.latitude || latitude,
+        lng: localSelecionado?.longitude || longitude,
       };
       localStorage.setItem(
         "mapUserLocation",

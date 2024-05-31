@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="CSS/reset.css" />
     <link rel="stylesheet" href="CSS/components/navbar.css" />
+    <link rel="stylesheet" href="CSS/components/popup.css" />
     <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
     <link rel="stylesheet" href="CSS/components/">
     <link rel="stylesheet" href="CSS/components/page-style.css" />
@@ -57,22 +58,153 @@
     </script>
 
     <script onload="">
+      var eventos = []
       async function carregarTodosEventos() {
-      console.log('carregando eventos')
+        console.log('carregando eventos')
 
-    try {
-      const response = await fetch("http://localhost:3000/eventos");
-      const eventos = await response.json();
-      initMap(eventos)
-      console.log('eventos buscados')
-    } catch (error) {
-      console.error("Erro ao carregar os eventos:", error);
-    }
-  }
-  carregarTodosEventos()
+        try {
+          const response = await fetch("http://localhost:3000/eventos");
+          eventos = await response.json();
+          initMap(eventos)
+          console.log('eventos buscados')
+        } catch (error) {
+          console.error("Erro ao carregar os eventos:", error);
+        }
+      }
+      carregarTodosEventos()
+  
+  function openPopup() {
+          console.log('abrindo popup')
+          const popup = document.getElementById('locationPopup');
+          popup.style.display = 'block';
+    
+          window.addEventListener('click', closePopupOutside);
+    
+          window.addEventListener('keydown', closePopupOnEsc);
+    
+          function closePopupOutside(event) {
+            if (event.target === popup) {
+              popup.style.display = 'none';
+              window.removeEventListener('click', closePopupOutside);
+              window.removeEventListener('keydown', closePopupOnEsc);
+            }
+          }
+    
+          function closePopupOnEsc(event) {
+            if (event.key === 'Escape') {
+              popup.style.display = 'none';
+              window.removeEventListener('click', closePopupOutside);
+              window.removeEventListener('keydown', closePopupOnEsc);
+            }
+          }
+    
+          //Função de autocomplete do google no input do popup
+          var input = document.getElementById('cityInput');
+          var autocomplete = new google.maps.places.Autocomplete(input, {
+            types: ['(cities)'],
+            componentRestrictions: { country: 'BR' }
+          });
+    
+          autocomplete.addListener('place_changed', function () {
+            var selectedPlace = autocomplete.getPlace();
+            if (!selectedPlace.geometry) {
+              return;
+            }
+    
+            var cityName = selectedPlace.name;
+    
+            updateNavbarLocation(cityName);
+            const latitude=selectedPlace.geometry.location.lat()
+            const longitude=selectedPlace.geometry.location.lng()
+            localStorage.setItem('userLocation', JSON.stringify({
+              cityName: cityName,
+              latitude,
+              longitude
+            }));
+    
+            document.getElementById('locationPopup').style.display = 'none';
+            initMap(eventos, {latitude, longitude})
+
+          });
+        }
+    
+        // Função para atualizar a localização na navbar
+        function updateNavbarLocation(cityName) {
+          var locationElementWeb = document.getElementById('escolherLocalização');
+          var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+          if (locationElementWeb) {
+            locationElementWeb.textContent = cityName;
+          }
+          if (locationElementMobile) {
+            locationElementMobile.textContent = cityName;
+          }
+        }
+    
+        window.onload = function () {
+          var userLocation = localStorage.getItem('userLocation');
+          if (userLocation) {
+            userLocation = JSON.parse(userLocation);
+            if (userLocation.cityName) {
+              updateNavbarLocation(userLocation.cityName);
+            }
+          }
+        };
+    
+        // Função para atualizar o nome da cidade na navbar
+        function updateNavbarLocation(cityName) {
+          var locationElementWeb = document.getElementById('escolherLocalização');
+          var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+          if (locationElementWeb) {
+            locationElementWeb.textContent = cityName;
+          }
+          if (locationElementMobile) {
+            locationElementMobile.textContent = cityName;
+          }
+        }
+    
+        window.onload = () => {
+          const userLocation = JSON.parse(localStorage.getItem('userLocation'));
+          if (!userLocation) {
+            getLocation();
+          } else {
+            updateNavbarLocation(userLocation.city);
+          }
+        };
+    
+        // Função para carregar e definir a localização ao recarregar a página
+        function loadUserLocation() {
+          var userLocation = localStorage.getItem('userLocation');
+          if (userLocation) {
+            userLocation = JSON.parse(userLocation);
+            if (userLocation.cityName) {
+              updateNavbarLocation(userLocation.cityName);
+            }
+          }
+        }
+    
+        window.addEventListener('load', function () {
+          loadUserLocation();
+        });
     </script>
+    <script>
+       // Função para abrir o popup/fechar o popup
+       
+   
+        
+    
+      </script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+      </script>
   </head>
   <body>
+    <div class="popup" id="locationPopup">
+      <div class="popup-content">
+        <h5>Escolha uma localização</h5>
+        <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+      </div>
+    </div>
+  
     <header>
       <div class="navcenter">
         <div>
@@ -91,8 +223,13 @@
           </div>
         </form>
         <nav class="nav-options-web">
-          <a href="">Localização</a>
-          <a href="">Criar evento</a>
+            <div onclick="openPopup()" class="localização-web">
+              <img src="assets/img/localpin.svg">
+              <span class="localização-web" id="escolherLocalização">Localização</span>
+              <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
+            </div>
+    
+            <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
           <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
         </nav>
       </div>
