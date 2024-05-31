@@ -7,7 +7,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="./CSS/components/mapa.css" />
-    <script type="module" src="./JS/mapa.js"></script>
+    <script src="./JS/mapa.js"></script>
 
     <link
       rel="shortcut icon"
@@ -50,8 +50,26 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="/src/JS/cardsEvento.js"></script>
+
     <script 
     src="JS/esconderMapa.js">
+    </script>
+
+    <script onload="">
+      async function carregarTodosEventos() {
+      console.log('carregando eventos')
+
+    try {
+      const response = await fetch("http://localhost:3000/eventos");
+      const eventos = await response.json();
+      initMap(eventos)
+      console.log('eventos buscados')
+    } catch (error) {
+      console.error("Erro ao carregar os eventos:", error);
+    }
+  }
+  carregarTodosEventos()
     </script>
   </head>
   <body>
@@ -175,60 +193,11 @@
           })({ key: "AIzaSyBrUmshDSudmRUIkgFEGrHmR7rwQvItwqo", v: "weekly" });
         </script>
 
-        <h1>Todos os eventos</h1>
-        <div class="wrapper-cards">
-          <div class="cards">
-            <img
-              class="imgcard"
-              src="assets/img/download (1).jpeg"
-              alt="event img"
-            />
-            <p class="event-title">Nome do evento</p>
-            <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-            <p>
-              <img src="./assets/img/local.svg" alt="Local do evento" />Local
-            </p>
-          </div>
-          <div class="cards">
-            <img
-              class="imgcard"
-              src="assets/img/download (1).jpeg"
-              alt="event img"
-            />
-            <p class="event-title">Nome do evento</p>
-            <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-            <p>
-              <img src="./assets/img/local.svg" alt="Local do evento" />Local
-            </p>
-          </div>
-          <div class="cards">
-            <img
-              class="imgcard"
-              src="assets/img/download (1).jpeg"
-              alt="event img"
-            />
-            <p class="event-title">Nome do evento</p>
-            <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-            <p>
-              <img src="./assets/img/local.svg" alt="Local do evento" />Local
-            </p>
-          </div>
-          <div class="cards">
-            <img
-              class="imgcard"
-              src="assets/img/download (1).jpeg"
-              alt="event img"
-            />
-            <p class="event-title">Nome do evento</p>
-            <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-            <p>
-              <img src="./assets/img/local.svg" alt="Local do evento" />Local
-            </p>
-          </div>
-        </div>
-        <div class="wrapper-mostrarMais">
+        <h1>Todos os eventos próximos de você!</h1>
+        <div id="eventosFiltrados" class="wrapper-cards"></div>
+        <!-- <div class="wrapper-mostrarMais">
           <button class="mostrarMais">mostrar mais</button>
-        </div>
+        </div> -->
       </div>
     </section>
     <footer>

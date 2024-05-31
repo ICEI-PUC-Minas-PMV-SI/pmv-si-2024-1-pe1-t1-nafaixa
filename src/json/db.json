@@ -1802,6 +1802,42 @@
       "sobre": "<p>sdasdasd</p>",
       "informacoes": "sadada",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717092803/NaFaixa/uyzu4spqq9k9zcnxoqwp.png"
+    },
+    {
+      "id": "bf4db9fa-72dc-4a43-84f5-87f61bc30d05",
+      "produtorId": "cf82e020-3d9d-4afb-87b0-39301fbac4ad",
+      "tipo": "presencial",
+      "categoria": "Palestras",
+      "nome": "Evento da rita",
+      "link": "",
+      "local": "Blumenau, SC, Brasil",
+      "latitude": -26.9165792,
+      "longitude": -49.0717331,
+      "startDate": "05/06/2024",
+      "startTime": "12:00",
+      "finalDate": "06/07/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>aaaaaaa</p>",
+      "informacoes": "aaaaaaaaaa",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717175898/NaFaixa/f4ekoescejk7ary6veos.png"
+    },
+    {
+      "id": "2e38923b-662c-4c3f-a8bc-023961d36eb4",
+      "produtorId": "cf82e020-3d9d-4afb-87b0-39301fbac4ad",
+      "tipo": "presencial",
+      "categoria": "Tecnologia",
+      "nome": "Evento da ritaB",
+      "link": "",
+      "local": "R. José Reuter - Velha Central, Blumenau - SC, 89046-001, Brasil",
+      "latitude": -26.9344452,
+      "longitude": -49.130043,
+      "startDate": "04/06/2024",
+      "startTime": "12:00",
+      "finalDate": "06/06/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>bbbbbbbbb</p>",
+      "informacoes": "bbbbbbbbbbbb",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717175980/NaFaixa/aabhsxdzle0lfegz2ipn.jpg"
     }
   ],
   "emails": [
@@ -1912,6 +1948,20 @@
       "descricao": "sdaddasdfewdas",
       "email_publico": "produtor1@gmail.com",
       "celular_publico": "9999999999999999999"
+    },
+    {
+      "id": "cf82e020-3d9d-4afb-87b0-39301fbac4ad",
+      "nome": "rita laura",
+      "cpf": "12345678910",
+      "celular": "47888736678",
+      "cidade": "Blumenau",
+      "estado": "SC",
+      "email": "ritalaura57@gmail.com",
+      "senha": "36d04a9d74392c727b1a9bf97a7bcbac",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717175703/mtnp1toho8esdlyn7rgm.png",
+      "descricao": "aaaaaaaaaa",
+      "email_publico": "ritalaura57@gmail.com",
+      "celular_publico": "47888736678"
     }
   ]
 }
