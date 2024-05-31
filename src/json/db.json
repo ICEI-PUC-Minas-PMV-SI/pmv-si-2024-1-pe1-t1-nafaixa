@@ -543,6 +543,41 @@
       "sobre": "<p><strong>aassas</strong></p>",
       "informacoes": "AAAAA",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715642004/NaFaixa/mhnshfqlzqowvggwwwlv.jpg"
+    },
+    {
+      "id": "03ec56df-d458-4802-8741-b72b53be1fb8",
+      "tipo": "presencial",
+      "categoria": "Esportes",
+      "nome": "TesteIdprodutor",
+      "link": "",
+      "local": "Atibaia, SP, Brasil",
+      "latitude": -23.1155873,
+      "longitude": -46.5532067,
+      "startDate": "30/05/2024",
+      "startTime": "12:00",
+      "finalDate": "31/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>sdasdasd</p>",
+      "informacoes": "sadada",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717092392/NaFaixa/mopbmemqwhgxmnm1ulu6.png"
+    },
+    {
+      "id": "8c0235eb-307f-4969-a053-7c8128ba907c",
+      "produtorId": "73ddde49-b38e-4d3c-978c-e603ebdb1650",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "TesteIdprodutor",
+      "link": "",
+      "local": "Atibaia, SP, Brasil",
+      "latitude": -23.1155873,
+      "longitude": -46.5532067,
+      "startDate": "30/05/2024",
+      "startTime": "12:00",
+      "finalDate": "31/05/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>sdasdasd</p>",
+      "informacoes": "sadada",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717092803/NaFaixa/uyzu4spqq9k9zcnxoqwp.png"
     }
   ],
   "emails": [
