@@ -1103,12 +1103,6 @@
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715468658/NaFaixa/qipglffbtdniciyawdxp.jpg"
     },
     {
-      "id": "cff4"
-    },
-    {
-      "id": "a928"
-    },
-    {
       "id": "22123d4f-ce88-4a02-88eb-688f2a263e93",
       "tipo": "presencial",
       "categoria": "Cultura",
@@ -1124,21 +1118,6 @@
       "sobre": "<p>AAA</p>",
       "informacoes": "AAAAA",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715468682/NaFaixa/mnxtaehjxqojjvcxmlkj.jpg"
-    },
-    {
-      "id": "f5df"
-    },
-    {
-      "id": "0264"
-    },
-    {
-      "id": "94a5"
-    },
-    {
-      "id": "cd1b"
-    },
-    {
-      "id": "271f"
     },
     {
       "id": "7193ab48-7f9a-4ffe-888f-5554dbb7eae5",
@@ -1226,12 +1205,6 @@
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470332/NaFaixa/i9fqii3qkycxpzz2k5ac.jpg"
     },
     {
-      "id": "252a"
-    },
-    {
-      "id": "5feb"
-    },
-    {
       "id": "ac5b0be2-1c91-4216-8852-1aae10b8e673",
       "tipo": "presencial",
       "categoria": "",
@@ -1249,15 +1222,6 @@
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470559/NaFaixa/p7lgbwel3cupijabqo9u.jpg"
     },
     {
-      "id": "191a"
-    },
-    {
-      "id": "c681"
-    },
-    {
-      "id": "0481"
-    },
-    {
       "id": "da3efda0-313b-4923-918b-579608ae2f7e",
       "tipo": "presencial",
       "categoria": "Esportes",
@@ -1273,12 +1237,6 @@
       "sobre": "<p>AAA</p>",
       "informacoes": "AAAAAssss",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715470774/NaFaixa/jv26qltubbgjrgp68nkm.jpg"
-    },
-    {
-      "id": "3e7e"
-    },
-    {
-      "id": "d598"
     },
     {
       "id": "0d536ef5-d833-43b9-9141-63f111fedbae",
@@ -1571,150 +1529,6 @@
       "sobre": "<p>ee</p>",
       "informacoes": "eee",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715477851/NaFaixa/dx25rymy9tg9lapoxb8i.jpg"
-    },
-    {
-      "id": "11021799-4bac-45ab-b1aa-8d29a747dd56",
-      "tipo": "presencial",
-      "categoria": "Esportes",
-      "nome": "agora vai",
-      "link": "",
-      "local": [
-        {
-          "long_name": "s/nº",
-          "short_name": "s/nº",
-          "types": [
-            "street_number"
-          ]
-        },
-        {
-          "long_name": "Rodovia Hélio Smidt",
-          "short_name": "Rod. Hélio Smidt",
-          "types": [
-            "route"
-          ]
-        },
-        {
-          "long_name": "Aeroporto",
-          "short_name": "Aeroporto",
-          "types": [
-            "sublocality_level_1",
-            "sublocality",
-            "political"
-          ]
-        },
-        {
-          "long_name": "Guarulhos",
-          "short_name": "Guarulhos",
-          "types": [
-            "administrative_area_level_2",
-            "political"
-          ]
-        },
-        {
-          "long_name": "São Paulo",
-          "short_name": "SP",
-          "types": [
-            "administrative_area_level_1",
-            "political"
-          ]
-        },
-        {
-          "long_name": "Brasil",
-          "short_name": "BR",
-          "types": [
-            "country",
-            "political"
-          ]
-        },
-        {
-          "long_name": "07190-100",
-          "short_name": "07190-100",
-          "types": [
-            "postal_code"
-          ]
-        }
-      ],
-      "latitude": -23.4302175,
-      "longitude": -46.47167109999999,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "15/05/2024",
-      "finalTime": "12:00",
-      "sobre": "<p>ee</p>",
-      "informacoes": "eee",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
-    },
-    {
-      "id": "0529fdf9-a1b3-4e40-a04f-350bb894ed4b",
-      "tipo": "presencial",
-      "categoria": "Esportes",
-      "nome": "agora vai",
-      "link": "",
-      "local": [
-        {
-          "long_name": "s/nº",
-          "short_name": "s/nº",
-          "types": [
-            "street_number"
-          ]
-        },
-        {
-          "long_name": "Rodovia Hélio Smidt",
-          "short_name": "Rod. Hélio Smidt",
-          "types": [
-            "route"
-          ]
-        },
-        {
-          "long_name": "Aeroporto",
-          "short_name": "Aeroporto",
-          "types": [
-            "sublocality_level_1",
-            "sublocality",
-            "political"
-          ]
-        },
-        {
-          "long_name": "Guarulhos",
-          "short_name": "Guarulhos",
-          "types": [
-            "administrative_area_level_2",
-            "political"
-          ]
-        },
-        {
-          "long_name": "São Paulo",
-          "short_name": "SP",
-          "types": [
-            "administrative_area_level_1",
-            "political"
-          ]
-        },
-        {
-          "long_name": "Brasil",
-          "short_name": "BR",
-          "types": [
-            "country",
-            "political"
-          ]
-        },
-        {
-          "long_name": "07190-100",
-          "short_name": "07190-100",
-          "types": [
-            "postal_code"
-          ]
-        }
-      ],
-      "latitude": -23.4302175,
-      "longitude": -46.47167109999999,
-      "startDate": "11/05/2024",
-      "startTime": "12:00",
-      "finalDate": "15/05/2024",
-      "finalTime": "12:00",
-      "sobre": "<p>ee</p>",
-      "informacoes": "eee",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715478103/NaFaixa/urzaytdqxmkfkyx80ej9.jpg"
     },
     {
       "id": "618e4466-23a3-44e0-8a8b-51d9434200f1",

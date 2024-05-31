@@ -37,10 +37,11 @@
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
       </div>
-      <form class="nav-search">
+      <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
         <div class="search">
           <span class="search-icon material-symbols-outlined">search</span>
-          <input class="search-input" type="search" placeholder="pesquise por evento" />
+          <input type="text" class="search-input" name="q" placeholder="Digite uma palavra-chave">
+
         </div>
       </form>
       <nav class="nav-options-web">
@@ -84,10 +85,10 @@
     </div>
   </header>
 
-  <form class="nav-search-mobile">
+  <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search-mobile">
     <div class="search">
       <span class="search-icon material-symbols-outlined">search</span>
-      <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+      <input type="text" class="search-input" name="q" placeholder="Digite uma palavra-chave">
     </div>
   </form>
 
