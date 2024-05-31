@@ -44,10 +44,10 @@
         </div>
       </form>
       <nav class="nav-options-web">
-        <div onclick="openPopup()" class="localização-web" >
-          <img  src="assets/img/localpin.svg" </img>
-          <span class="localização-web"  id="escolherLocalização">Localização</span>
-            <img src="assets/img/setaprabaixo1.svg"  style="padding-right: 15px"></img>
+        <div onclick="openPopup()" class="localização-web">
+          <img src="assets/img/localpin.svg" </img>
+          <span class="localização-web" id="escolherLocalização">Localização</span>
+          <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
         </div>
 
         <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
@@ -60,9 +60,9 @@
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
       </div>
-      <div class="localizacao-mobile">
+      <div onclick="openPopup()" class="localizacao-mobile">
         <img src="assets/img/localpin.svg" </img>
-        <a id="city-mobile">Localização</a>
+        <span class="localizacao-mobile" id="escolherLocalizacaoMobile">Localização</span>
       </div>
       <nav class="menu-hamburguer">
         <input type="checkbox" class="checkbox-menu">
@@ -76,7 +76,7 @@
         <div id="menu-options">
           <ul>
             <a href="login.html">Entrar</a></br>
-            <a href="criar-evento.html">Criar evento</a>
+            <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
             <a href="#">Sair</a>
           </ul>
         </div>
@@ -266,17 +266,17 @@
   <script src="/src/JS/cardsEvento.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
 
   <script>
 
-    function handleCriarEventoOnClick(e){
+    function handleCriarEventoOnClick(e) {
       if (!isUserLoggedIn()) {
         window.location.href = 'login.html';
         return false;
@@ -291,32 +291,32 @@
     function getLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
-                (position) => {
-                  const latitude = position.coords.latitude;
-                  const longitude = position.coords.longitude;
+          (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
 
-                  const geocoder = new google.maps.Geocoder();
-                  const latlng = { lat: latitude, lng: longitude };
+            const geocoder = new google.maps.Geocoder();
+            const latlng = { lat: latitude, lng: longitude };
 
-                  geocoder.geocode({ location: latlng }, (results, status) => {
-                    if (status === "OK") {
-                      if (results[0]) {
-                        const cityName = results[0].address_components[3].long_name;
+            geocoder.geocode({ location: latlng }, (results, status) => {
+              if (status === "OK") {
+                if (results[0]) {
+                  const cityName = results[0].address_components[3].long_name;
 
-                        localStorage.setItem('userLocation', JSON.stringify({
-                          latitude: latitude,
-                          longitude: longitude,
-                          city: cityName
-                        }));
+                  localStorage.setItem('userLocation', JSON.stringify({
+                    latitude: latitude,
+                    longitude: longitude,
+                    city: cityName
+                  }));
 
-                        updateNavbarLocation(cityName);
-                      }
-                    }
-                  });
-                },
-                (error) => {
-                  console.error('Erro ao obter localização:', error);
+                  updateNavbarLocation(cityName);
                 }
+              }
+            });
+          },
+          (error) => {
+            console.error('Erro ao obter localização:', error);
+          }
         );
       } else {
         console.error('Geolocalização não suportada pelo navegador.');
@@ -326,12 +326,12 @@
     // Função para abrir o popup/fechar o popup
     const popup = document.getElementById('locationPopup');
 
-      function openPopup() {
-        popup.style.display = 'block';
+    function openPopup() {
+      popup.style.display = 'block';
 
-        window.addEventListener('click', closePopupOutside);
+      window.addEventListener('click', closePopupOutside);
 
-        window.addEventListener('keydown', closePopupOnEsc);
+      window.addEventListener('keydown', closePopupOnEsc);
 
       function closePopupOutside(event) {
         if (event.target === popup) {
@@ -349,14 +349,14 @@
         }
       }
 
-    //Função de autocomplete do google no input do popup
+      //Função de autocomplete do google no input do popup
       var input = document.getElementById('cityInput');
       var autocomplete = new google.maps.places.Autocomplete(input, {
         types: ['(cities)'],
         componentRestrictions: { country: 'BR' }
       });
 
-      autocomplete.addListener('place_changed', function() {
+      autocomplete.addListener('place_changed', function () {
         var selectedPlace = autocomplete.getPlace();
         if (!selectedPlace.geometry) {
           return;
@@ -379,13 +379,17 @@
 
     // Função para atualizar a localização na navbar
     function updateNavbarLocation(cityName) {
-      var locationElement = document.getElementById('escolherLocalização');
-      if (locationElement) {
-        locationElement.textContent = cityName;
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
       }
     }
 
-    window.onload = function() {
+    window.onload = function () {
       var userLocation = localStorage.getItem('userLocation');
       if (userLocation) {
         userLocation = JSON.parse(userLocation);
@@ -397,9 +401,13 @@
 
     // Função para atualizar o nome da cidade na navbar
     function updateNavbarLocation(cityName) {
-      const navLocationElement = document.getElementById('escolherLocalização');
-      if (navLocationElement) {
-        navLocationElement.textContent = cityName;
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
       }
     }
 
@@ -412,14 +420,6 @@
       }
     };
 
-    // Função para atualizar a localização na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElement = document.getElementById('escolherLocalização');
-      if (locationElement) {
-        locationElement.textContent = cityName;
-      }
-    }
-
     // Função para carregar e definir a localização ao recarregar a página
     function loadUserLocation() {
       var userLocation = localStorage.getItem('userLocation');
@@ -431,12 +431,13 @@
       }
     }
 
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       loadUserLocation();
     });
 
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
   </script>
 </body>
 
