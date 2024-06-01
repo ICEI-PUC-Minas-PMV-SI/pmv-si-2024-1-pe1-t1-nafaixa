@@ -46,6 +46,7 @@
                 <a href="criar-evento.html">Criar evento</a>
                 <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
             </nav>
+
         </div>
 
         <div class="navcenter-mobile">
@@ -64,7 +65,9 @@
 
                 <div id="menu-options">
                     <ul>
-                        <a href="login.html">Entrar</a></br>
+                        <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                            Perfil</a>
+                        <a href="meus-eventos.html">Meus eventos</a></br>
                         <a href="criar-evento.html">Criar evento</a>
                         <a href="#">Sair</a>
                     </ul>
@@ -104,6 +107,16 @@
     </footer>
 
     <script src="./JS/meusEventos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const meuPerfilLink = document.getElementById('meu-perfil');
+            meuPerfilLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.location.href = 'cadastro-produtor.html?edit';
+            });
+        });
+    </script>
 </body>
 
 </html>
