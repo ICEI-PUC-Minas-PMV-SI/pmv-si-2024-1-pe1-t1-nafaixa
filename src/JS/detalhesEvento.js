@@ -1,49 +1,54 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const idEvento = urlParams.get('id');
 
-    if (idEvento) {
-        const apiUrl = `http://localhost:3000/eventos/${idEvento}`;
+    if (!idEvento) {
+        console.error('ID do evento não encontrado na URL.');
+        return;
+    }
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(evento => {
-                const imageUrl = evento.bannerURL;
-                const bannerEventoElement = document.querySelector('.banner-evento');
+    try {
+        const apiUrlEvento = `http://localhost:3000/eventos/${idEvento}`;
+        const responseEvento = await fetch(apiUrlEvento);
+        const evento = await responseEvento.json();
 
-                bannerEventoElement.style.backgroundImage = `url('${imageUrl}')`;
-                bannerEventoElement.style.backgroundSize = 'scale-down';
-                bannerEventoElement.style.backgroundPosition = 'center';
+        const imageUrl = evento.bannerURL;
+        document.querySelector('.banner-evento').style.backgroundImage = `url('${imageUrl}')`;
+        document.querySelector('.imagem-blur').style.backgroundImage = `url('${imageUrl}')`;
 
-                const imagemBlurElement = document.querySelector('.imagem-blur');
-                imagemBlurElement.style.backgroundImage = `url('${imageUrl}')`;
-                imagemBlurElement.style.backgroundSize = 'fill';
-                imagemBlurElement.style.backgroundPosition = 'center';
+        document.querySelector('.nome-evento').textContent = evento.nome;
+        document.getElementById('categoria-evento').innerHTML = `<img src="assets/img/tag.svg" alt="categoria" /> ${evento.categoria}`;
+        document.getElementById('data-inicio-evento').innerHTML = `<img src="./assets/img/data.svg" alt="Data do evento"/> ${formatarDataHora(evento.startDate)}`;
+        document.getElementById('hora-inicio-evento').textContent = formatarHora(evento.startTime);
+        document.getElementById('data-final-evento').innerHTML = `${formatarDataHora(evento.finalDate)}`;
+        document.getElementById('hora-final-evento').textContent = formatarHora(evento.finalTime);
 
-                document.querySelector('.nome-evento').textContent = evento.nome;
-                document.getElementById('categoria-evento').innerHTML = `<img src="assets/img/tag.svg" alt="categoria" /> ${evento.categoria}`;
-                document.getElementById('data-inicio-evento').innerHTML = `<img src="./assets/img/data.svg" alt="Data do evento"/> ${formatarDataHora(evento.startDate)}`;
-                document.getElementById('hora-inicio-evento').textContent = formatarHora(evento.startTime);
-                document.getElementById('data-final-evento').innerHTML = `${formatarDataHora(evento.finalDate)}`;
-                document.getElementById('hora-final-evento').textContent = formatarHora(evento.finalTime);
+        const localElement = document.getElementById('localEvento');
+        localElement.innerHTML = evento.tipo === 'presencial' ?
+            `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.local}` :
+            `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.link}`;
 
-                if (evento.tipo === 'presencial') {
-                    document.getElementById('localEvento').innerHTML = `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.local}`;
-                } else if (evento.tipo === 'online') {
-                    document.getElementById('localEvento').innerHTML = `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.link}`;
-                }
+        document.getElementById('descricao-evento').innerHTML = evento.sobre;
+        document.getElementById('informacoes-evento').textContent = evento.informacoes;
 
-                document.getElementById('descricao-evento').innerHTML = evento.sobre;
-                document.getElementById('informacoes-evento').textContent = evento.informacoes;
-                document.getElementById('sobre-produtor').textContent = `${evento.sobreProdutor}`;
+        const produtorId = evento.produtorId;
+        if (produtorId) {
+            const apiUrlProdutor = `http://localhost:3000/produtor/${produtorId}`;
+            const responseProdutor = await fetch(apiUrlProdutor);
+            const produtor = await responseProdutor.json();
+            document.getElementById('sobre-produtor').textContent = produtor.descricao;
 
-                localStorage.setItem('eventoDetalhes', JSON.stringify(evento));
-            })
-            .catch(error => {
-                console.error('Erro ao carregar detalhes do evento:', error);
-            });
+            const logoProdutorElement = document.querySelector('.sobre-produtor-icone');
+            logoProdutorElement.src = produtor.logo;
+            logoProdutorElement.alt = `Logo de ${produtor.nome}`;
+        } else {
+            console.error('ID do produtor não encontrado no evento.');
+        }
+    } catch (error) {
+        console.error('Erro ao carregar detalhes do evento:', error);
     }
 });
+
 
 function formatarDataHora(data) {
     const partes = data.split('/');

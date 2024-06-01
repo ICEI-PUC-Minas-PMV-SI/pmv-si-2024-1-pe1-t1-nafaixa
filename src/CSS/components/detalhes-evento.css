@@ -85,13 +85,14 @@
 }
 
 .sobre-produtor-icone {
-    padding-right: 2%;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 .sobre-produtor-text {
     line-height: 25px;
+    padding: 10px;
 }
 
 @media (max-width: 500px) {
