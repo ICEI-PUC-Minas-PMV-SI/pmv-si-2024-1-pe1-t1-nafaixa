@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const meuPerfilLink = document.getElementById('meu-perfil');
-    meuPerfilLink.addEventListener('click', function (event) {
-        event.preventDefault();
-        window.location.href = 'cadastro-produtor.html?edit';
-    });
+    if (meuPerfilLink) {
+        meuPerfilLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'cadastro-produtor.html?edit';
+        });
+    }
 
     function updateNavbar() {
         const userData = localStorage.getItem('userData');
@@ -13,9 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchBars = document.querySelectorAll('.nav-search');
         const criarEventoLinks = document.querySelectorAll('a[href="criar-evento.html"]');
 
-        navbarLoggedOutMobile.style.display = userData ? 'none' : 'flex';
-        navbarLoggedOut.style.display = userData ? 'none' : 'flex';
-        navbarLoggedIn.style.display = userData ? 'flex' : 'none';
+        console.log('Updating navbar...');
+        console.log('User data:', userData);
+
+        if (userData) {
+            navbarLoggedOutMobile.style.display = 'none';
+            navbarLoggedOut.style.display = 'none';
+            navbarLoggedIn.style.display = 'flex';
+        } else {
+            if (window.innerWidth < 864) {
+                navbarLoggedOutMobile.style.display = 'flex';
+                navbarLoggedOut.style.display = 'none';
+            } else {
+                navbarLoggedOutMobile.style.display = 'none';
+                navbarLoggedOut.style.display = 'flex';
+            }
+            navbarLoggedIn.style.display = 'none';
+        }
 
         if (window.innerWidth < 864 && userData) {
             searchBars.forEach(searchBar => {
@@ -34,15 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    window.addEventListener('resize', updateNavbar);
-
-    document.addEventListener('DOMContentLoaded', updateNavbar);
-
-
-    window.addEventListener('resize', updateNavbar);
-
-    document.addEventListener('DOMContentLoaded', updateNavbar);
-
     async function updateProdutorImage() {
         const produtorId = localStorage.getItem('userData');
         if (produtorId) {
@@ -53,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const data = await response.json();
                     if (data.logo) {
                         produtorImg.src = data.logo;
+                        console.log('Produtor image updated:', data.logo);
                     } else {
                         console.error('URL da imagem do produtor está vazia.');
                     }
@@ -65,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    window.onload = function () {
-        updateNavbar();
-        updateProdutorImage();
-    };
+    window.addEventListener('resize', updateNavbar);
+
+    updateNavbar();
+    updateProdutorImage();
 });
