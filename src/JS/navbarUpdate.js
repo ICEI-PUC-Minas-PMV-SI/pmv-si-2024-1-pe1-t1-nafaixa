@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const navbarLoggedOut = document.getElementById('navbar-logged-out');
         const navbarLoggedIn = document.getElementById('navbar-logged-in');
         const searchBars = document.querySelectorAll('.nav-search');
+        const criarEventoLinks = document.querySelectorAll('a[href="criar-evento.html"]');
 
         navbarLoggedOutMobile.style.display = userData ? 'none' : 'flex';
         navbarLoggedOut.style.display = userData ? 'none' : 'flex';
@@ -20,12 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
             searchBars.forEach(searchBar => {
                 searchBar.style.display = 'none';
             });
+            criarEventoLinks.forEach(link => {
+                link.style.display = 'none';
+            });
         } else {
             searchBars.forEach(searchBar => {
                 searchBar.style.display = 'flex';
             });
+            criarEventoLinks.forEach(link => {
+                link.style.display = 'block';
+            });
         }
     }
+
+    window.addEventListener('resize', updateNavbar);
+
+    document.addEventListener('DOMContentLoaded', updateNavbar);
+
 
     window.addEventListener('resize', updateNavbar);
 
