@@ -43,7 +43,8 @@
     <div class="navcenter" id="navbar-logged-out">
       <div>
         <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
       <form class="nav-search">
         <div class="search">
@@ -52,50 +53,57 @@
         </div>
       </form>
       <nav class="nav-options-web">
-        <div class="localização-web">
-          <img src="assets/img/localpin.svg" </img>
-          <a id="city">Localização</a>
-        </div>
-        <a href="">Criar evento</a>
+        <a href="">Localização</a>
+        <a href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
+
     </div>
 
-    <div id="navbar-logged-in" style="display: none">
+    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
         </a>
       </div>
 
-      <a href="">Localização</a>
+      <form class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="pesquise por evento" />
+        </div>
+      </form>
+
+      <nav class="nav-options-web">
+        <a href="">Localização</a>
+        <a href="criar-evento.html">Criar evento</a>
+      </nav>
 
       <nav class="menu-hamburguer">
         <input type="checkbox" class="checkbox-menu">
 
-        <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+        <img id="logo-produtor-menu" src="https://source.unsplash.com/random/1" alt="foto perfil">
 
-        <div class="menu-options">
+        <div id="menu-options2">
           <ul>
             <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
-              Perfil</a>
+              Perfil</a></br>
             <a href="meus-eventos.html">Meus eventos</a></br>
             <a href="criar-evento.html">Criar evento</a>
-            <a href="#">Sair</a>
+            <a id="botaoSair" href="#">Sair</a>
           </ul>
         </div>
       </nav>
     </div>
 
-    <div class="navcenter-mobile">
+    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
       </div>
-      <div class="localizacao-mobile">
-        <img src="assets/img/localpin.svg" </img>
-        <a id="city-mobile">Localização</a>
-      </div>
+
+      <a href="">Localização</a>
+
       <nav class="menu-hamburguer">
         <input type="checkbox" class="checkbox-menu">
 
@@ -105,14 +113,16 @@
           <span></span>
         </label>
 
-        <div class="menu-options">
+        <div id="menu-options">
           <ul>
             <a href="login.html">Entrar</a></br>
             <a href="criar-evento.html">Criar evento</a>
-            <a id="botaoSair" href="#">Sair</a>
+            <a href="#">Sair</a>
           </ul>
         </div>
       </nav>
+    </div>
+    </nav>
     </div>
   </header>
 
