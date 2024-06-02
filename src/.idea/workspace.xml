@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="837f138f-f7ad-4037-97f8-d0b414537107" name="Changes" comment="added function to save producer id when create event in json server" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="criar-evento-dinamica" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;amdmags&quot;
+  }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOLbsj-M5ur8vK&quot;,
+        &quot;number&quot;: 67
+      },
+      &quot;lastSeen&quot;: 1715094817920
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOLbsj-M5ux6Ay&quot;,
+        &quot;number&quot;: 70
+      },
+      &quot;lastSeen&quot;: 1715096417659
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOLbsj-M5uvkl3&quot;,
+        &quot;number&quot;: 69
+      },
+      &quot;lastSeen&quot;: 1715096660310
+    }
+  ]
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="023b7ebb-0c7d-4d4d-b235-71c6a7697224" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa.git&quot;,
+    &quot;accountId&quot;: &quot;023b7ebb-0c7d-4d4d-b235-71c6a7697224&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2g8jMh1S4vgQQ6OE4rhQ7ni2rtB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.json-server.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/mags7/Documents/NaFaixa/pmv-si-2024-1-pe1-t1-nafaixa/src/CSS/pmv-si-2024-1-pe1-t1-nafaixa/src/assets/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="json-server" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Shell Script.json-server">
+    <configuration name="index.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/src/src/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="json-server" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="json-server --watch db.json --port 3000" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/json" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Shell Script.json-server" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="837f138f-f7ad-4037-97f8-d0b414537107" name="Changes" comment="" />
+      <created>1715086053713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715086053713</updated>
+      <workItem from="1715086055183" duration="24000" />
+      <workItem from="1715086086899" duration="356000" />
+      <workItem from="1715086505865" duration="80000" />
+      <workItem from="1715086705846" duration="17000" />
+      <workItem from="1715087229379" duration="10000" />
+      <workItem from="1715087334061" duration="2000" />
+      <workItem from="1715087697978" duration="10007000" />
+      <workItem from="1715110910705" duration="34823000" />
+      <workItem from="1715444184930" duration="134440000" />
+      <workItem from="1715722895910" duration="9321000" />
+      <workItem from="1716919867215" duration="3000" />
+      <workItem from="1717000588096" duration="8042000" />
+      <workItem from="1717087448538" duration="6513000" />
+    </task>
+    <task id="LOCAL-00001" summary="fixed db json categorias and fixed it in the code">
+      <option name="closed" value="true" />
+      <created>1715094416496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715094416497</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed db json categorias and fixed it in the code">
+      <option name="closed" value="true" />
+      <created>1715094561650</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715094561650</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed db json categorias and fixed it in the code">
+      <option name="closed" value="true" />
+      <created>1715094591138</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715094591138</updated>
+    </task>
+    <task id="LOCAL-00004" summary="removed unused code">
+      <option name="closed" value="true" />
+      <created>1715094711191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715094711191</updated>
+    </task>
+    <task id="LOCAL-00005" summary="moved script to here">
+      <option name="closed" value="true" />
+      <created>1715113179065</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715113179065</updated>
+    </task>
+    <task id="LOCAL-00006" summary="moved script to navbar">
+      <option name="closed" value="true" />
+      <created>1715113233308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715113233308</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated script">
+      <option name="closed" value="true" />
+      <created>1715113273196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715113273196</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed layout">
+      <option name="closed" value="true" />
+      <created>1715168441855</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715168441855</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added function to save url image and image is uploading and savind in cloudinary">
+      <option name="closed" value="true" />
+      <created>1715477914479</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715477914479</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added validation to banner before creating event. event banner is required now.">
+      <option name="closed" value="true" />
+      <created>1715481050089</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715481050089</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added validation to name and local. now is not possible to create an event with the same name and local.">
+      <option name="closed" value="true" />
+      <created>1715482841776</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715482841776</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added validation to name and local. now is not possible to create an event with the same name and local.">
+      <option name="closed" value="true" />
+      <created>1715483054358</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715483054358</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated validations to create event.">
+      <option name="closed" value="true" />
+      <created>1715487028927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715487028927</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated event card function to show banner event from the remote storage">
+      <option name="closed" value="true" />
+      <created>1715488934402</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715488934402</updated>
+    </task>
+    <task id="LOCAL-00015" summary="renamed ids to words more descritives">
+      <option name="closed" value="true" />
+      <created>1715489716153</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715489716153</updated>
+    </task>
+    <task id="LOCAL-00016" summary="banner event now is dynamic">
+      <option name="closed" value="true" />
+      <created>1715537659577</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715537659577</updated>
+    </task>
+    <task id="LOCAL-00017" summary="banner event now is dynamic and fixed style">
+      <option name="closed" value="true" />
+      <created>1715538149001</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715538149001</updated>
+    </task>
+    <task id="LOCAL-00018" summary="location now is clickable even if is a city displayed. open popup to choose new location">
+      <option name="closed" value="true" />
+      <created>1715550262237</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715550262237</updated>
+    </task>
+    <task id="LOCAL-00019" summary="renamed id to word more declarative">
+      <option name="closed" value="true" />
+      <created>1715560316127</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715560316127</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactored script">
+      <option name="closed" value="true" />
+      <created>1715569124398</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1715569124398</updated>
+    </task>
+    <task id="LOCAL-00021" summary="resized card">
+      <option name="closed" value="true" />
+      <created>1715635840980</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1715635840980</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Function to show events near by user location">
+      <option name="closed" value="true" />
+      <created>1715635870287</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1715635870287</updated>
+    </task>
+    <task id="LOCAL-00023" summary="created new file to set popup css">
+      <option name="closed" value="true" />
+      <created>1715715074665</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1715715074665</updated>
+    </task>
+    <task id="LOCAL-00024" summary="popup close when click outside or pressing esc. Page is working well">
+      <option name="closed" value="true" />
+      <created>1715720931657</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1715720931657</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added function to close popup clicking outside or pressing esc. Page is working well">
+      <option name="closed" value="true" />
+      <created>1715721157587</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1715721157587</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added function to verify if is logged in on click in criar evento">
+      <option name="closed" value="true" />
+      <created>1717010268746</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1717010268746</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added path to create account">
+      <option name="closed" value="true" />
+      <created>1717010420409</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1717010420409</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added function to save producer id when create event in json server">
+      <option name="closed" value="true" />
+      <created>1717094674726</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1717094674726</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="homepage-dinamica-final" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="criar-evento" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed db json categorias and fixed it in the code" />
+    <MESSAGE value="removed unused code" />
+    <MESSAGE value="moved script to here" />
+    <MESSAGE value="moved script to navbar" />
+    <MESSAGE value="updated script" />
+    <MESSAGE value="fixed layout" />
+    <MESSAGE value="added function to save url image and image is uploading and savind in cloudinary" />
+    <MESSAGE value="added validation to banner before creating event. event banner is required now." />
+    <MESSAGE value="added validation to name and local. now is not possible to create an event with the same name and local." />
+    <MESSAGE value="Updated validations to create event." />
+    <MESSAGE value="Updated event card function to show banner event from the remote storage" />
+    <MESSAGE value="renamed ids to words more descritives" />
+    <MESSAGE value="banner event now is dynamic" />
+    <MESSAGE value="banner event now is dynamic and fixed style" />
+    <MESSAGE value="location now is clickable even if is a city displayed. open popup to choose new location" />
+    <MESSAGE value="renamed id to word more declarative" />
+    <MESSAGE value="refactored script" />
+    <MESSAGE value="resized card" />
+    <MESSAGE value="Function to show events near by user location" />
+    <MESSAGE value="created new file to set popup css" />
+    <MESSAGE value="popup close when click outside or pressing esc. Page is working well" />
+    <MESSAGE value="added function to close popup clicking outside or pressing esc. Page is working well" />
+    <MESSAGE value="added function to verify if is logged in on click in criar evento" />
+    <MESSAGE value="added path to create account" />
+    <MESSAGE value="added function to save producer id when create event in json server" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function to save producer id when create event in json server" />
+  </component>
+</project>

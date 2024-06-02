@@ -369,7 +369,11 @@
     async function salvarAlteracoes() {
       const url = `http://localhost:3000/produtor/${localStorage.getItem('userData')}`;
       const senha = document.querySelector("#criar-senha").value;
-      const senhaHash = hashPassword(senha);
+      let senhaHash = null;
+
+      if (senha) {
+        senhaHash = hashPassword(senha);
+      }
 
       const nomeProdutor = document.querySelector("#produtor-nome").value;
       const identificacaoProdutor = document.querySelector("#produtor-identificacao").value;
@@ -407,12 +411,15 @@
         cidade: cidadeProdutor,
         estado: estadoProdutor,
         email: emailProdutor,
-        senha: senhaHash,
         descricao: sobreProdutor,
         email_publico: emailPublico,
         celular_publico: celularPublico,
         logo: produtorAtual.logo,
       };
+
+      if (senhaHash) {
+        payload.senha = senhaHash;
+      }
 
       if (fotoProdutorFile) {
         const formData = new FormData();
@@ -457,6 +464,7 @@
         alert("Erro ao salvar alterações. Por favor, tente novamente mais tarde.");
       }
     }
+
 
     document.addEventListener("DOMContentLoaded", async function () {
       if (isEditMode()) {
