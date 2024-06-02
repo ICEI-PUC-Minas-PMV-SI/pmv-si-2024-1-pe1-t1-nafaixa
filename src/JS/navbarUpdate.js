@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const navbarLoggedOut = document.getElementById('navbar-logged-out');
         const navbarLoggedIn = document.getElementById('navbar-logged-in');
         const searchBars = document.querySelectorAll('.nav-search');
-        const criarEventoLinks = document.querySelectorAll('a[href="criar-evento.html"]');
+        const criarEventoLinks = document.querySelectorAll('#hide-criar-evento-mobile');
 
         console.log('Updating navbar...');
         console.log('User data:', userData);
