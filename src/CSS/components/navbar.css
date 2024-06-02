@@ -1,14 +1,18 @@
 header {
-  background: linear-gradient(
-    90deg,
-    rgba(111, 196, 255, 0.67) 2.13%,
-    rgba(66, 145, 215, 0.75) 15.59%,
-    rgba(0, 72, 157, 0.89) 28.4%
-  );
+  background: linear-gradient(90deg,
+      rgba(111, 196, 255, 0.67) 2.13%,
+      rgba(66, 145, 215, 0.75) 15.59%,
+      rgba(0, 72, 157, 0.89) 28.4%);
 
   box-shadow: 0px 2px 2px 0px #c9c9c9;
   padding: 10px;
   margin-bottom: 2px;
+}
+
+.menu-hamburguer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .navcenter {
@@ -65,7 +69,7 @@ nav {
   text-align: right;
 }
 
-.nav-options-web{
+.nav-options-web {
   align-items: center;
   align-content: center
 }
@@ -86,7 +90,7 @@ nav {
   transform: scale(1.08);
 }
 
-.localização-web{
+.localização-web {
   color: white;
   font-size: 20px;
   font-family: "poppins";
@@ -95,12 +99,11 @@ nav {
   cursor: pointer;
 }
 
-.localização-web:hover{
+.localização-web:hover {
   transform: scale(1.08)
-
 }
 
-#entrar-btn  {
+#entrar-btn {
   display: inline-block;
   border-radius: 5px;
   background: #1769c3;
@@ -119,8 +122,8 @@ nav {
   color: white;
 }
 
-@media (min-width: 860px){
-  .navcenter{
+@media (min-width: 860px) {
+  .navcenter {
     display: flex;
   }
 }

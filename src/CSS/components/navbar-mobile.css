@@ -106,6 +106,28 @@ header {
 
 }
 
+#menu-options2 ul {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+  background-color: rgba(0, 72, 157);
+  color: white;
+  padding: 20px;
+  margin-top: 60px;
+  margin-right: 27px;
+  font-family: "poppins";
+  text-align: left;
+}
+
+
+.checkbox-menu:checked~#menu-options2 ul {
+  display: block;
+
+}
+
 .menu-hamburguer ul li a {
   text-decoration: none;
 }
@@ -178,7 +200,7 @@ header {
   margin-bottom: 0px;
 }
 
-.localizacao-mobile{
+.localizacao-mobile {
   display: flex;
   gap: 5px;
   align-items: center;

@@ -1,12 +1,3 @@
-.menu-hamburguer img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    /* margin-bottom: 20px; */
-    /* margin-right: 10px; */
-    /* padding-right: 10px; */
-}
-
 .cards-meus-eventos {
     display: flex;
     /* gap: 10px; */
@@ -50,7 +41,7 @@
     background: #EAEAEA;
 }
 
-.detalhes-evento a{
+.detalhes-evento a {
     text-decoration: none;
     color: black;
 }
@@ -66,13 +57,13 @@
     color: black;
 }
 
-.detalhes-evento div{
+.detalhes-evento div {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.action-icons button{
+.action-icons button {
     display: flex;
     cursor: pointer;
     background-color: transparent;
@@ -90,11 +81,12 @@
     background-color: #cfe4f1;
 }
 
-modal{
+modal {
     align-items: center;
     justify-content: center;
 }
-.delete-modal #delete-btn{
+
+.delete-modal #delete-btn {
     border-color: orangered;
     margin-top: 20px;
     align-self: center;
@@ -103,11 +95,9 @@ modal{
     margin-left: 10px;
 }
 
-.delete-modal{
+.delete-modal {
     border: none;
     border-radius: 20px;
     font-size: 20px;
     text-align: center;
 }
-
-

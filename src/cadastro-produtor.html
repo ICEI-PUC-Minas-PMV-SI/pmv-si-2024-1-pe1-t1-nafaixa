@@ -50,33 +50,33 @@
       </nav>
     </div>
 
-    <div id="navbar-logged-in" style="display: none">
+    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
       <div>
-          <a href="index.html">
-              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
-          </a>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
 
       <a href="">Localização</a>
 
       <nav class="menu-hamburguer">
-          <input type="checkbox" class="checkbox-menu">
+        <input type="checkbox" class="checkbox-menu">
 
-          <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+        <img src="https://source.unsplash.com/random/1" alt="foto perfil">
 
-          <div id="menu-options">
-              <ul>
-                  <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
-                      Perfil</a>
-                  <a href="meus-eventos.html">Meus eventos</a></br>
-                  <a href="criar-evento.html">Criar evento</a>
-                  <a href="#">Sair</a>
-              </ul>
-          </div>
+        <div id="menu-options">
+          <ul>
+            <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+              Perfil</a>
+            <a href="meus-eventos.html">Meus eventos</a></br>
+            <a href="criar-evento.html">Criar evento</a>
+            <a href="#">Sair</a>
+          </ul>
+        </div>
       </nav>
-  </div>
+    </div>
 
-    <div class="navcenter-mobile">
+    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
@@ -505,16 +505,8 @@
   </script>
   <script src="./JS/meusEventos.js"></script>
 
-  <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const meuPerfilLink = document.getElementById('meu-perfil');
-          meuPerfilLink.addEventListener('click', function (event) {
-              event.preventDefault();
-              window.location.href = 'cadastro-produtor.html?edit';
-          });
-      });
-  </script>
-  <script  src="./JS/navbarUpdate.js"></script>
+  <script src="./JS/navbarUpdate.js"></script>
+
 </body>
 
 </html>
