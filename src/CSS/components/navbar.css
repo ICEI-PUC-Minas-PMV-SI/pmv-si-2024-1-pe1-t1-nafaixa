@@ -27,6 +27,10 @@ header {
   display: none;
 }
 
+.nav-options-logged-in {
+  display: flex;
+}
+
 .logo {
   object-fit: contain;
   max-height: 40px;
