@@ -22,7 +22,7 @@ entrar.addEventListener("click", async function (event) {
     );
 
     if (produtor) {
-      localStorage.setItem("userData", produtor.id);
+      localStorage.setItem("userData", JSON.stringify({ id: produtor.id })); ;
       window.location.href = "meus-eventos.html";
     } else {
       alert("Dados inseridos inválidos!");
@@ -33,4 +33,22 @@ entrar.addEventListener("click", async function (event) {
     alert("Erro ao buscar dados do servidor JSON.");
   }
 });
+
+
+function updateNavbar() {
+  const userData = JSON.parse(localStorage.getItem('userData'));
+  const navbarLoggedOut = document.getElementsById('navbar-logged-out');
+  const navbarLoggedIn = document.getElementById('navbar-logged-in');
+
+  if (userData && userData.id) {
+      navbarLoggedOut.style.display = 'none';
+      navbarLoggedIn.style.display = 'block';
+  } else {
+      navbarLoggedOut.style.display = 'block';
+      navbarLoggedIn.style.display = 'none';
+  }
+}
+
+
+updateNavbar();
 
