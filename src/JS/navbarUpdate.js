@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             searchBars.forEach(searchBar => {
-                searchBar.style.display = 'flex';
+                searchBar.style.display = 'block';
             });
             criarEventoLinks.forEach(link => {
                 link.style.display = 'block';
