@@ -2062,6 +2062,34 @@
       "email_publico": "fffffffff",
       "celular_publico": "5555555555",
       "id": "ddea420d-907e-4eef-9dfb-5a09b74ded3c"
+    },
+    {
+      "id": "d847deb8-3d87-43b8-a56f-47b33c021c79",
+      "nome": "teste 123",
+      "cpf": "21312412412512512",
+      "celular": "2131231231231",
+      "cidade": "manaus",
+      "estado": "amazonas",
+      "email": "teste123@gmail.com",
+      "senha": "e7d80ffeefa212b7c5c55700e4f7193e",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717305690/pgz8eh03ygmrha0ucbgm.png",
+      "descricao": "lorem ipsum ",
+      "email_publico": "teste123@gmail.com",
+      "celular_publico": "3123123123123"
+    },
+    {
+      "id": "21d31149-ac86-4082-9893-652cbb38203e",
+      "nome": "catharina",
+      "cpf": "3123123",
+      "celular": "12312",
+      "cidade": "2131",
+      "estado": "12312",
+      "email": "catharina@email.com",
+      "senha": "e8d95a51f3af4a3b134bf6bb680a213a",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717307149/lq5mrihvywm9lc208y22.png",
+      "descricao": "lorem",
+      "email_publico": "catharina@email.com",
+      "celular_publico": "3123123123123"
     }
   ]
 }

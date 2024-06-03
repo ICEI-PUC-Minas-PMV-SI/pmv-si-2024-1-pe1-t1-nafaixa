@@ -29,7 +29,7 @@
 
 <body>
     <header>
-        <div class="navcenter">
+        <div class="navcenter" id="navbar-logged-out">
             <div>
                 <a href="index.html">
                     <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
@@ -49,7 +49,43 @@
 
         </div>
 
-        <div class="navcenter-mobile">
+        <div class="navcenter" id="navbar-logged-in" style="display: none">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+                </a>
+            </div>
+
+            <form class="nav-search">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="pesquise por evento" />
+                </div>
+            </form>
+
+            <nav class="nav-options-web">
+                <a href="">Localização</a>
+                <a href="criar-evento.html">Criar evento</a>
+            </nav>
+
+            <nav class="menu-hamburguer">
+                <input type="checkbox" class="checkbox-menu">
+
+                <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+                <div id="menu-options2">
+                    <ul>
+                        <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                            Perfil</a>
+                        <a href="meus-eventos.html">Meus eventos</a></br>
+                        <a href="criar-evento.html">Criar evento</a>
+                        <a id="botaoSair" href="#">Sair</a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="navcenter-mobile" id="navbar-logged-out-mobile">
             <div>
                 <a href="index.html">
                     <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
@@ -66,7 +102,7 @@
                 <div id="menu-options">
                     <ul>
                         <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
-                            Perfil</a>
+                            Perfil</a></br>
                         <a href="meus-eventos.html">Meus eventos</a></br>
                         <a href="criar-evento.html">Criar evento</a>
                         <a href="#">Sair</a>
@@ -105,18 +141,12 @@
             </div>
         </div>
     </footer>
-
+    <script src="./JS/navbarUpdate.js"></script>
     <script src="./JS/meusEventos.js"></script>
+    <script src="JS/logout.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const meuPerfilLink = document.getElementById('meu-perfil');
-            meuPerfilLink.addEventListener('click', function (event) {
-                event.preventDefault();
-                window.location.href = 'cadastro-produtor.html?edit';
-            });
-        });
     </script>
+
 </body>
 
 </html>
