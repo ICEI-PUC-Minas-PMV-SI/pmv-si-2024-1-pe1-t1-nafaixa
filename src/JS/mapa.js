@@ -5,17 +5,31 @@ async function initMap(eventos, localSelecionado) {
     async (resposta) => {
       console.log("resposta", resposta);
       const { latitude, longitude } = resposta.coords;
-      const userLocation = {
+      const googleUserLocation = {
         lat: localSelecionado?.latitude || latitude,
         lng: localSelecionado?.longitude || longitude,
       };
+      if (!isMapLocationBlocked()) {
+        localStorage.setItem(
+          "mapUserLocation",
+          JSON.stringify({ latitude, longitude })
+        );
+      }
       localStorage.setItem(
-        "mapUserLocation",
+        "currentMapUserLocation",
         JSON.stringify({ latitude, longitude })
+      );
+      const savedMapUserLocation = JSON.parse(
+        localStorage.getItem("mapUserLocation")
       );
       const map = new Map(document.getElementById("map"), {
         zoom: 11,
-        center: userLocation,
+        center: isMapLocationBlocked()
+          ? {
+              lat: savedMapUserLocation?.latitude,
+              lng: savedMapUserLocation?.longitude,
+            }
+          : googleUserLocation,
         mapId: "4504f8b37365c3d0",
       });
 
@@ -37,7 +51,7 @@ async function initMap(eventos, localSelecionado) {
       }
     },
     (erro) => console.log("erro", erro),
-    { enableHighAccuracy: true }
+    { enableHighAccuracy: false }
   );
 }
 
@@ -49,6 +63,11 @@ function toggleHighlight(markerView, evento) {
     markerView.content.classList.add("highlight");
     markerView.zIndex = 1;
   }
+}
+
+function isMapLocationBlocked() {
+  const stringValue = localStorage.getItem("isMapLocationBlocked");
+  return Boolean(stringValue);
 }
 
 function buildContent(evento) {

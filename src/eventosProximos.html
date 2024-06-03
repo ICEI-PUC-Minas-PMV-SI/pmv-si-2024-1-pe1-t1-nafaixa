@@ -51,7 +51,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/JS/cardsEvento.js"></script>
+    
 
     
 
@@ -122,6 +122,17 @@
     
             document.getElementById('locationPopup').style.display = 'none';
             initMap(eventos, {latitude, longitude})
+            //sobrescreve user location do mapa
+            localStorage.setItem(
+              "mapUserLocation",
+              JSON.stringify({ latitude, longitude })
+            );
+            //bloqueia mapa de atualizar localização após refresh
+            localStorage.setItem(
+              "isMapLocationBlocked",
+              JSON.stringify(true)
+            );
+          location.reload()
 
           });
         }
@@ -183,6 +194,13 @@
         window.addEventListener('load', function () {
           loadUserLocation();
         });
+
+        function voltarParaLocalizacaoAtual() {
+          localStorage.removeItem("isMapLocationBlocked");
+          localStorage.setItem("mapUserLocation", localStorage.getItem('currentMapUserLocation'));
+          location.reload()
+        }
+        
     </script>
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
@@ -190,12 +208,18 @@
       <script 
     src="/src/JS//esconderMapa.js">
     </script>
+    <script src="/src/JS/cardsEvento.js"></script>
   </head>
   <body>
     <div class="popup" id="locationPopup">
       <div class="popup-content">
         <h5>Escolha uma localização</h5>
         <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+
+        <button class="esconderMapa-button voltarLocalizacao" onclick="voltarParaLocalizacaoAtual()" id="" href="index.html"
+        ><span id="">Voltar para localização atual</span>
+      </button>
+    </div>
       </div>
     </div>
   

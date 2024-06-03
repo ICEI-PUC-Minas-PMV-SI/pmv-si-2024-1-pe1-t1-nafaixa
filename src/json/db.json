@@ -53,6 +53,24 @@
       "id": "57ec"
     }
   ],
+  "codigos-de-validacao": [
+    {
+      "id": 3651932041,
+      "email": "ritalaura57@gmail.com"
+    },
+    {
+      "id": 2949692399,
+      "email": "ritalaura57@gmail.com"
+    },
+    {
+      "id": 1520791482,
+      "email": "kennedymessias.vb@gmail.com"
+    },
+    {
+      "id": 3963792561,
+      "email": "ritalaura57@gmail.com"
+    }
+  ],
   "eventos": [
     {
       "id": "91463a64-68ca-43bd-8594-e1812f83e0af",
@@ -1928,6 +1946,24 @@
       "sobre": "<p>bbbbbbbbb</p>",
       "informacoes": "bbbbbbbbbbbb",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717175980/NaFaixa/aabhsxdzle0lfegz2ipn.jpg"
+    },
+    {
+      "id": "a808e721-0bbb-465f-8fdc-232cfe0161ea",
+      "produtorId": "cf82e020-3d9d-4afb-87b0-39301fbac4ad",
+      "tipo": "presencial",
+      "categoria": "Feiras",
+      "nome": "Feirinha de curitiba",
+      "link": "",
+      "local": "Rod br 116 km 10 Ceasa Curitiba - Tatuquara, Curitiba - PR, 81690-500, Brasil",
+      "latitude": -25.5519541,
+      "longitude": -49.3035095,
+      "startDate": "03/10/2024",
+      "startTime": "12:00",
+      "finalDate": "23/10/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>popopopo</p>",
+      "informacoes": "bibibibi",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717421521/NaFaixa/luwv7qndy8yuteiljxbz.jpg"
     }
   ],
   "emails": [
@@ -2047,7 +2083,7 @@
       "cidade": "Blumenau",
       "estado": "SC",
       "email": "ritalaura57@gmail.com",
-      "senha": "36d04a9d74392c727b1a9bf97a7bcbac",
+      "senha": "098890dde069e9abad63f19a0d9e1f32",
       "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717175703/mtnp1toho8esdlyn7rgm.png",
       "descricao": "aaaaaaaaaa",
       "email_publico": "ritalaura57@gmail.com",
