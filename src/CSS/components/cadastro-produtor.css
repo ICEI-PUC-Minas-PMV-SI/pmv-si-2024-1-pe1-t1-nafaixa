@@ -121,7 +121,8 @@ p {
 }
 
 .button-criar {
-    padding: 5px 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
     text-decoration: none;
     color: #ffffff;
     font-family: "Almarai", sans-serif;

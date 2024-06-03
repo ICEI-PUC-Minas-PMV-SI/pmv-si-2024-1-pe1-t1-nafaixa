@@ -32,10 +32,11 @@
 
 <body>
   <header>
-    <div class="navcenter">
+    <div class="navcenter" id="navbar-logged-out">
       <div>
         <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
       <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
         <div class="search">
@@ -54,9 +55,47 @@
         <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
+
     </div>
 
-    <div class="navcenter-mobile">
+    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
+      </div>
+
+      <form class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="pesquise por evento" />
+        </div>
+      </form>
+      <div class="nav-options-logged-in">
+        <nav class="nav-options-web">
+          <a href="">Localização</a>
+          <a id="hide-criar-evento-mobile" href="criar-evento.html">Criar evento</a>
+        </nav>
+
+        <nav class="menu-hamburguer">
+          <input type="checkbox" class="checkbox-menu">
+
+          <img id="logo-produtor-menu" src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+          <div id="menu-options2">
+            <ul>
+              <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                Perfil</a></br>
+              <a href="meus-eventos.html">Meus eventos</a></br>
+              <a href="criar-evento.html">Criar evento</a>
+              <a id="botaoSair" href="#">Sair</a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
@@ -82,6 +121,8 @@
           </ul>
         </div>
       </nav>
+    </div>
+    </nav>
     </div>
   </header>
 
@@ -277,166 +318,166 @@
 
   <script src="JS/logout.js"></script>
 
-  <script>
+  <script src="./JS/meusEventos.js"></script>
 
-    function handleCriarEventoOnClick(e) {
-      if (!isUserLoggedIn()) {
-        window.location.href = 'login.html';
-        return false;
-      };
-    };
+  function handleCriarEventoOnClick(e) {
+  if (!isUserLoggedIn()) {
+  window.location.href = 'login.html';
+  return false;
+  };
+  };
 
-    function isUserLoggedIn() {
-      return localStorage.getItem('userData');
-    };
+  function isUserLoggedIn() {
+  return localStorage.getItem('userData');
+  };
 
-    // Função para obter a geolocalização do usuário
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+  // Função para obter a geolocalização do usuário
+  function getLocation() {
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+  (position) => {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
 
-            const geocoder = new google.maps.Geocoder();
-            const latlng = { lat: latitude, lng: longitude };
+  const geocoder = new google.maps.Geocoder();
+  const latlng = { lat: latitude, lng: longitude };
 
-            geocoder.geocode({ location: latlng }, (results, status) => {
-              if (status === "OK") {
-                if (results[0]) {
-                  const cityName = results[0].address_components[3].long_name;
+  geocoder.geocode({ location: latlng }, (results, status) => {
+  if (status === "OK") {
+  if (results[0]) {
+  const cityName = results[0].address_components[3].long_name;
 
-                  localStorage.setItem('userLocation', JSON.stringify({
-                    latitude: latitude,
-                    longitude: longitude,
-                    city: cityName
-                  }));
+  localStorage.setItem('userLocation', JSON.stringify({
+  latitude: latitude,
+  longitude: longitude,
+  city: cityName
+  }));
 
-                  updateNavbarLocation(cityName);
-                }
-              }
-            });
-          },
-          (error) => {
-            console.error('Erro ao obter localização:', error);
-          }
-        );
-      } else {
-        console.error('Geolocalização não suportada pelo navegador.');
-      }
-    }
+  updateNavbarLocation(cityName);
+  }
+  }
+  });
+  },
+  (error) => {
+  console.error('Erro ao obter localização:', error);
+  }
+  );
+  } else {
+  console.error('Geolocalização não suportada pelo navegador.');
+  }
+  }
 
-    // Função para abrir o popup/fechar o popup
-    const popup = document.getElementById('locationPopup');
+  // Função para abrir o popup/fechar o popup
+  const popup = document.getElementById('locationPopup');
 
-    function openPopup() {
-      popup.style.display = 'block';
+  function openPopup() {
+  popup.style.display = 'block';
 
-      window.addEventListener('click', closePopupOutside);
+  window.addEventListener('click', closePopupOutside);
 
-      window.addEventListener('keydown', closePopupOnEsc);
+  window.addEventListener('keydown', closePopupOnEsc);
 
-      function closePopupOutside(event) {
-        if (event.target === popup) {
-          popup.style.display = 'none';
-          window.removeEventListener('click', closePopupOutside);
-          window.removeEventListener('keydown', closePopupOnEsc);
-        }
-      }
+  function closePopupOutside(event) {
+  if (event.target === popup) {
+  popup.style.display = 'none';
+  window.removeEventListener('click', closePopupOutside);
+  window.removeEventListener('keydown', closePopupOnEsc);
+  }
+  }
 
-      function closePopupOnEsc(event) {
-        if (event.key === 'Escape') {
-          popup.style.display = 'none';
-          window.removeEventListener('click', closePopupOutside);
-          window.removeEventListener('keydown', closePopupOnEsc);
-        }
-      }
+  function closePopupOnEsc(event) {
+  if (event.key === 'Escape') {
+  popup.style.display = 'none';
+  window.removeEventListener('click', closePopupOutside);
+  window.removeEventListener('keydown', closePopupOnEsc);
+  }
+  }
 
-      //Função de autocomplete do google no input do popup
-      var input = document.getElementById('cityInput');
-      var autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['(cities)'],
-        componentRestrictions: { country: 'BR' }
-      });
+  //Função de autocomplete do google no input do popup
+  var input = document.getElementById('cityInput');
+  var autocomplete = new google.maps.places.Autocomplete(input, {
+  types: ['(cities)'],
+  componentRestrictions: { country: 'BR' }
+  });
 
-      autocomplete.addListener('place_changed', function () {
-        var selectedPlace = autocomplete.getPlace();
-        if (!selectedPlace.geometry) {
-          return;
-        }
+  autocomplete.addListener('place_changed', function () {
+  var selectedPlace = autocomplete.getPlace();
+  if (!selectedPlace.geometry) {
+  return;
+  }
 
-        var cityName = selectedPlace.name;
+  var cityName = selectedPlace.name;
 
-        updateNavbarLocation(cityName);
+  updateNavbarLocation(cityName);
 
-        localStorage.setItem('userLocation', JSON.stringify({
-          cityName: cityName,
-          latitude: selectedPlace.geometry.location.lat(),
-          longitude: selectedPlace.geometry.location.lng()
-        }));
-        window.location.href = window.location.href;
+  localStorage.setItem('userLocation', JSON.stringify({
+  cityName: cityName,
+  latitude: selectedPlace.geometry.location.lat(),
+  longitude: selectedPlace.geometry.location.lng()
+  }));
+  window.location.href = window.location.href;
 
-        document.getElementById('locationPopup').style.display = 'none';
-      });
-    }
+  document.getElementById('locationPopup').style.display = 'none';
+  });
+  }
 
-    // Função para atualizar a localização na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElementWeb = document.getElementById('escolherLocalização');
-      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
-      if (locationElementWeb) {
-        locationElementWeb.textContent = cityName;
-      }
-      if (locationElementMobile) {
-        locationElementMobile.textContent = cityName;
-      }
-    }
+  // Função para atualizar a localização na navbar
+  function updateNavbarLocation(cityName) {
+  var locationElementWeb = document.getElementById('escolherLocalização');
+  var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+  if (locationElementWeb) {
+  locationElementWeb.textContent = cityName;
+  }
+  if (locationElementMobile) {
+  locationElementMobile.textContent = cityName;
+  }
+  }
 
-    window.onload = function () {
-      var userLocation = localStorage.getItem('userLocation');
-      if (userLocation) {
-        userLocation = JSON.parse(userLocation);
-        if (userLocation.cityName) {
-          updateNavbarLocation(userLocation.cityName);
-        }
-      }
-    };
+  window.onload = function () {
+  var userLocation = localStorage.getItem('userLocation');
+  if (userLocation) {
+  userLocation = JSON.parse(userLocation);
+  if (userLocation.cityName) {
+  updateNavbarLocation(userLocation.cityName);
+  }
+  }
+  };
 
-    // Função para atualizar o nome da cidade na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElementWeb = document.getElementById('escolherLocalização');
-      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
-      if (locationElementWeb) {
-        locationElementWeb.textContent = cityName;
-      }
-      if (locationElementMobile) {
-        locationElementMobile.textContent = cityName;
-      }
-    }
+  // Função para atualizar o nome da cidade na navbar
+  function updateNavbarLocation(cityName) {
+  var locationElementWeb = document.getElementById('escolherLocalização');
+  var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+  if (locationElementWeb) {
+  locationElementWeb.textContent = cityName;
+  }
+  if (locationElementMobile) {
+  locationElementMobile.textContent = cityName;
+  }
+  }
 
-    window.onload = () => {
-      const userLocation = JSON.parse(localStorage.getItem('userLocation'));
-      if (!userLocation) {
-        getLocation();
-      } else {
-        updateNavbarLocation(userLocation.city);
-      }
-    };
+  window.onload = () => {
+  const userLocation = JSON.parse(localStorage.getItem('userLocation'));
+  if (!userLocation) {
+  getLocation();
+  } else {
+  updateNavbarLocation(userLocation.city);
+  }
+  };
 
-    // Função para carregar e definir a localização ao recarregar a página
-    function loadUserLocation() {
-      var userLocation = localStorage.getItem('userLocation');
-      if (userLocation) {
-        userLocation = JSON.parse(userLocation);
-        if (userLocation.cityName) {
-          updateNavbarLocation(userLocation.cityName);
-        }
-      }
-    }
+  // Função para carregar e definir a localização ao recarregar a página
+  function loadUserLocation() {
+  var userLocation = localStorage.getItem('userLocation');
+  if (userLocation) {
+  userLocation = JSON.parse(userLocation);
+  if (userLocation.cityName) {
+  updateNavbarLocation(userLocation.cityName);
+  }
+  }
+  }
 
-    window.addEventListener('load', function () {
-      loadUserLocation();
-    });
+  window.addEventListener('load', function () {
+  loadUserLocation();
+  });
 
   </script>
   <script
