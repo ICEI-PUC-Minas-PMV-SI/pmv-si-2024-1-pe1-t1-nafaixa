@@ -37,9 +37,6 @@
         referrerpolicy="origin"></script>
 
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-
-
-
 </head>
 
 <body>
@@ -128,37 +125,6 @@
                                 required>
 
                         </div>
-
-
-                        <!-- <div class="form-item-pair">
-                            <div class="form-item" id="form-endereco">
-                                <label for="endereco">Endereço</label>
-                                <input type="show" id="long_name" readonly>
-                            </div>
-                            <div class="form-item">
-                                <label for="numero">Número</label>
-                                <input type="text" id="numero" readonly></input>
-                            </div>
-                        </div>
-
-                        <div id="form">
-                            <div class="form-item">
-                                <label for="bairro">Bairro</label>
-                                <input type="text" name="Bairro" id="bairro" readonly>
-                            </div>
-                        </div>
-
-                        <div class="form-item-pair">
-                            <div class="form-item">
-                                <label for="cidade">Cidade</label>
-                                <input type="text" id="cidade" readonly>
-                            </div>
-                            <div class="form-item">
-                                <label for="estado">Estado</label>
-                                <input type="text" id="estado" readonly>
-                            </div>
-                        </div> -->
-
                     </div>
 
                     <div id="evento-online-form">
@@ -333,8 +299,6 @@
             });
         }
         //-----------------------------------------------------------------------------------------------------------------//
-
-        //Salvar dados do evento no db
         tinymce.init({
             selector: '#sobre',
             height: 300
@@ -384,7 +348,6 @@
 
         async function criarEvento() {
             const termsCheckbox = document.getElementById('terms-checkbox');
-
 
             if (!termsCheckbox.checked) {
                 alert('Você precisa aceitar os termos de uso antes de criar o evento.');
@@ -538,7 +501,6 @@
             }
         }
 
-
         function uuidv4() {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
                 const r = Math.random() * 16 | 0;
@@ -571,7 +533,6 @@
             });
 
             const criarEventoBtn = document.querySelector('.criar-evento-btn');
-
             criarEventoBtn.addEventListener('click', (event) => {
                 event.preventDefault();
 
@@ -589,9 +550,221 @@
                 }
 
                 criarEvento();
-
             });
         });
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            initializeAutocomplete();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventId = urlParams.get('edit');
+
+            if (eventId) {
+                try {
+                    const response = await fetch(`http://localhost:3000/eventos/${eventId}`);
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar dados do evento');
+                    }
+
+                    const event = await response.json();
+                    populateForm(event);
+
+                    const criarEventoBtn = document.querySelector('.criar-evento-btn');
+                    criarEventoBtn.textContent = 'Salvar alterações';
+                    criarEventoBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        updateEvent(event, startDatePicker, finalDatePicker);
+                    });
+                } catch (error) {
+                    console.error('Erro ao carregar evento:', error);
+                }
+            } else {
+                const criarEventoBtn = document.querySelector('.criar-evento-btn');
+                criarEventoBtn.addEventListener('click', criarEvento);
+            }
+
+            const startDateInput = document.querySelector('#start-date');
+            const finalDateInput = document.querySelector('#final-date');
+
+            const startDatePicker = flatpickr(startDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+                minDate: "today",
+                onClose: function (selectedDates) {
+                    if (selectedDates.length > 0) {
+                        const minDate = selectedDates[0];
+                        finalDatePicker.set('minDate', minDate);
+                    }
+                }
+            });
+
+            const finalDatePicker = flatpickr(finalDateInput, {
+                dateFormat: "d/m/Y",
+                locale: "pt",
+            });
+        });
+
+        function populateForm(event) {
+            document.querySelector('#nome').value = event.nome;
+            document.querySelector('#categorias').value = event.categoria;
+            document.querySelector(input[name="event-type"][value="${event.tipo}"]).checked = true;
+
+            if (event.tipo === 'presencial') {
+                document.querySelector('#local').value = event.local;
+                selectedPlace = {
+                    formatted_address: event.local,
+                    geometry: {
+                        location: {
+                            lat: () => event.latitude,
+                            lng: () => event.longitude,
+                        }
+                    }
+                };
+            } else {
+                document.querySelector('#link-evento-online').value = event.link;
+            }
+
+            document.querySelector('#start-date').value = event.startDate;
+            document.querySelector('#start-time').value = event.startTime;
+            document.querySelector('#final-date').value = event.finalDate;
+            document.querySelector('#final-time').value = event.finalTime;
+            tinymce.get('sobre').setContent(event.sobre);
+            document.querySelector('#informacoes').value = event.informacoes;
+            document.querySelector('#uploadedimage').src = event.bannerURL;
+            bannerUrl = event.bannerURL; 
+        }
+
+        async function updateEvent(event, startDatePicker, finalDatePicker) {
+            const termsCheckbox = document.getElementById('terms-checkbox');
+
+            if (!termsCheckbox.checked) {
+                alert('Você precisa aceitar os termos de uso antes de atualizar o evento.');
+                return;
+            }
+
+            const nomeEvento = document.querySelector('#nome');
+            const categorias = document.querySelector('#categorias');
+            const tipoEvento = document.querySelector('input[name="event-type"]:checked');
+            const startDateEvento = document.querySelector('#start-date');
+            const startTimeEvento = document.querySelector('#start-time');
+            const sobreEvento = document.querySelector('#sobre');
+            const informacoesEvento = document.querySelector('#informacoes');
+            const sobre = tinymce.get('sobre').getContent();
+
+            if (!nomeEvento.value) {
+                alert('O campo nome é obrigatório.');
+                nomeEvento.focus();
+                return;
+            }
+            if (!categorias.value) {
+                alert('O campo categorias é obrigatório.');
+                categorias.focus();
+                return;
+            }
+            if (!tipoEvento) {
+                alert('Selecione o tipo de evento (presencial ou online).');
+                return;
+            }
+            if (!startDateEvento.value) {
+                alert('O campo data de início do evento é obrigatório.');
+                startDateEvento.focus();
+                return;
+            }
+            if (!startTimeEvento.value) {
+                alert('O campo horário de início do evento é obrigatório.');
+                startTimeEvento.focus();
+                return;
+            }
+            if (!sobre.trim()) {
+                alert('O campo sobre o evento é obrigatório.');
+                return;
+            }
+            if (!informacoesEvento.value) {
+                alert('O campo informações adicionais é obrigatório.');
+                informacoesEvento.focus();
+                return;
+            }
+
+            const tipoEventoValue = tipoEvento.value;
+
+            if (tipoEventoValue === 'presencial') {
+                if (!selectedPlace || !selectedPlace.formatted_address) {
+                    alert('O campo local é obrigatório para eventos presenciais.');
+                    document.getElementById('local').focus();
+                    return;
+                }
+            }
+
+            if (tipoEventoValue === 'online') {
+                const linkEventoOnline = document.querySelector('#link-evento-online');
+                if (!linkEventoOnline.value) {
+                    alert('O campo link do evento é obrigatório para eventos online.');
+                    linkEventoOnline.focus();
+                    return;
+                }
+            }
+
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const eventId = urlParams.get('edit');
+
+                if (!bannerUrl) {
+                    alert('É obrigatório fazer o upload de uma imagem para o banner do evento.');
+                    return;
+                }
+
+                const produtorId = localStorage.getItem('userData');
+
+                if (!produtorId) {
+                    alert('Erro ao obter o ID do produtor. Faça login novamente.');
+                    return;
+                }
+
+                const categoriaValue = categorias.value;
+                const link = tipoEvento.value === 'online' ? document.querySelector('#link-evento-online').value : '';
+                const finalDateEvento = document.querySelector('#final-date').value;
+                const finalTimeEvento = document.querySelector('#final-time').value;
+
+                const evento = {
+                    tipo: tipoEvento.value,
+                    produtorId: produtorId,
+                    categoria: categoriaValue,
+                    nome: nomeEvento.value,
+                    link: link,
+                    local: selectedPlace ? selectedPlace.formatted_address : '',
+                    latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
+                    longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
+                    startDate: startDateEvento.value,
+                    startTime: startTimeEvento.value,
+                    finalDate: finalDateEvento,
+                    finalTime: finalTimeEvento,
+                    sobre: sobre,
+                    informacoes: informacoesEvento.value,
+                    bannerURL: bannerUrl
+                };
+
+                const updateResponse = await fetch(`http://localhost:3000/eventos/${eventId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(evento),
+                });
+
+                if (!updateResponse.ok) {
+                    throw new Error('Erro ao atualizar evento');
+                }
+
+                const responseData = await updateResponse.json();
+                console.log('Evento atualizado:', responseData);
+                alert('Evento atualizado com sucesso!');
+            } catch (error) {
+                console.error('Erro ao atualizar evento:', error);
+                alert('Erro ao atualizar evento. Tente novamente mais tarde.');
+            }
+        }
+
+
 
     </script>
 </body>
