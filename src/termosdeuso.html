@@ -1,356 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Termos de Uso</title>
 
-    <link
-      rel="shortcut icon"
-      href="assets/img/logo.xs.svg"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon" />
 
-    <link rel="stylesheet" href="CSS/reset.css" />
-    <link rel="stylesheet" href="CSS/components/navbar.css">
-    <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
-    <link rel="stylesheet" href="CSS/components/page-style.css" />
-    <link rel="stylesheet" href="CSS/components/navbar.css" />
-    <link rel="stylesheet" href="CSS/components/footer.css" />
-    <link rel="stylesheet" href="./CSS/components/termos-de-uso.css" />
-    <link rel="stylesheet" href="CSS/components/footer.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <header>
-      <div class="navcenter" id="navbar-logged-out">
-        <div>
-          <a href="index.html">
-            <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
-          /></a>
-        </div>
-        <form class="nav-search">
-          <div class="search">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input
-              class="search-input"
-              type="search"
-              placeholder="pesquise por evento"
-            />
-          </div>
-        </form>
-        <nav class="nav-options-web">
-          <a href="">Localização</a>
-          <a href="">Criar evento</a>
-          <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
-        </nav>
+  <link rel="stylesheet" href="CSS/reset.css" />
+  <link rel="stylesheet" href="CSS/components/navbar.css">
+  <link rel="stylesheet" href="CSS/components/navbar-mobile.css">
+  <link rel="stylesheet" href="CSS/components/popup.css">
+  <link rel="stylesheet" href="CSS/components/page-style.css" />
+  <link rel="stylesheet" href="CSS/components/navbar.css" />
+  <link rel="stylesheet" href="CSS/components/footer.css" />
+  <link rel="stylesheet" href="./CSS/components/termos-de-uso.css" />
+  <link rel="stylesheet" href="CSS/components/footer.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <header>
+    <div class="navcenter" id="navbar-logged-out">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
-
-      <div class="navcenter-mobile">
-        <div>
-          <a href="index.html">
-            <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+      <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
         </div>
-  
-        <a href="">Localização</a>
-  
-        <nav class="menu-hamburguer">
-          <input type="checkbox" class="checkbox-menu">
-  
-          <label for="checkbox-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-  
-          <div id="menu-options">
-            <ul>
-              <a href="login.html">Entrar</a></br>
-              <a href="criar-evento.html">Criar evento</a>
-              <a href="#">Sair</a>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-  <br>
-    <div class="texto-termos">
-      <h1>Termos de Uso</h1>
-      <ol>
-        <li>
-          Introdução
-          <ol>
-            <li>
-              Os Termos e Condições Gerais de Uso (“Termo”) ora estabelecidos
-              deverão ser atentamente lidos, compreendidos e plenamente aceitos
-              para o cadastro e utilização dos serviços relacionados aos
-              eventos, físicos ou virtuais (“Eventos”), organizados e promovidos
-              pelo Grupo de Alunos "NaFaixa" da graduação em sistemas da
-              informação pela universidade Puc Minas(“Organizadora”),
-              desenvolvidos em meio físico ou disponibilizados por meio da
-              plataforma NaFaixa (“Plataforma”), sendo o acesso e utilização por
-              parte dos usuários e produtores dos Eventos (“Usuários” e
-              “Produtores”), condicionados à sua expressa e integral
-              concordância e adesão.
-            </li>
-            <li>
-              Este Termo estabelece as regras para participação nos Eventos
-              promovidos pelo Produtor, sejam os realizados em meio físico ou
-              virtual. A não aceitação expressa das regras contidas neste Termo
-              impedirá o ingresso aos Eventos e a utilização da Plataforma,
-              considerando que são de caráter obrigatório.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Informações Gerais
-          <ol>
-            <li>
-              Os presentes Termos regulam os serviços oferecidos pela Produtora,
-              que consistem na viabilização (i) da comercialização de acessos
-              e/ou ingressos aos Visitantes e Usuários interessados em visitar
-              os Eventos, sejam os realizados em meio digital ou físico.
-            </li>
-            <li>
-              Os estandes, virtuais ou físicos, são de responsabilidade
-              exclusiva dos próprios Expositores, os quais são os únicos
-              responsáveis por estabelecer as condições de comercialização de
-              seus produtos e serviços. A Produtora não é responsável pelos
-              estandes, porém poderá monitorar a atuação dos Expositores, a fim
-              de verificar se estes estão cumprindo suas obrigações e deveres.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Credenciamento dos Produtores
-          <ol>
-            <li>O credenciamento na Plataforma é gratuito.</li>
-            <li>
-              Para realização do credenciamento, os Produtores deverão fornecer
-              informações exatas e verdadeiras, assumindo o compromisso de
-              atualizar seus dados pessoais sempre que necessário ou quando
-              requerido. Se tivermos motivos que indiquem que quaisquer
-              informações cadastradas não são verdadeiras, teremos o direito de
-              suspender ou encerrar a conta em questão, bem como nos recusar a
-              prover quaisquer de nossos serviços.
-            </li>
-            <li>
-              A Organizadora não se responsabiliza pela veracidade ou
-              assertividade dos dados inseridos no ato do credenciamento, sendo
-              que a criação de perfis falsos na Plataforma poderá ser
-              considerada crime de falsa identidade, falsidade ideológica ou
-              estelionato.
-            </li>
-            <li>
-              Como condição para utilizar a Plataforma e visitar os Eventos, os
-              Visitantes e Usuários concordam em indenizar e isentar a
-              Produtora, seus representantes, diretores, parceiros, sócios,
-              empregados e agentes, de quaisquer reclamações, processos, perdas,
-              responsabilidades, danos e despesas decorrentes ou relacionadas
-              com: (i) violação por parte dos Usuários e Visitantes de quaisquer
-              das declarações, garantias e obrigações estabelecidas neste Termo;
-              e (ii) quaisquer atos e omissões dos Usuários e Visitantes antes,
-              durante e após a utilização da Plataforma e/ou visitação dos
-              Eventos, independentemente de dolo.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Acesso aos Eventos
-          <ol>
-            <li>
-              Os Usuários e Visitantes acessarão sua conta através de login e
-              senha, pessoais e intransferíveis. Estes se comprometem a não
-              informar a terceiros tais dados, responsabilizando-se
-              integralmente pelo uso que deles seja feito, se comprometendo a
-              notificar a Organizadora, imediatamente, acerca de quaisquer usos
-              não autorizados de sua conta, credencial ou quaisquer outras
-              violações de segurança. A Organizadora não será responsável por
-              quaisquer perdas e danos resultantes de acessos não autorizados ou
-              uso da conta.
-            </li>
-            <li>
-              Apenas o titular da conta na Plataforma poderá ter acesso aos
-              dados relativos à mesma, tendo em vista seu caráter pessoal.
-              Eventuais alterações em dados cadastrados somente poderão ser
-              feitas pelo próprio Participante ou Usuário, devidamente logado.
-            </li>
-            <li>
-              Do mesmo modo, somente o Visitante cadastrado poderá ter acesso e
-              fazer uso da credencial emitida com os dados do mesmo, tendo em
-              vista seu caráter pessoal e intransferível.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Responsabilidades e Obrigações dos Usuários e Visitantes
-          <ol>
-            <li>
-              Os Usuários e Visitantes se obrigam a utilizar a Plataforma, bem
-              como visitar os Eventos, de maneira ética e adequada aos
-              propósitos estabelecidos nestes Termos, atendendo ao disposto nas
-              leis brasileiras, comprometendo-se a se abster de qualquer
-              atividade que constitua violação das referidas normas.
-            </li>
-            <li>
-              Ao utilizar a Plataforma e suas funcionalidade, os Produtoresse
-              obrigam a: a) Inserir dados corretos, completos e atualizados na
-              aquisição do acesso a Plataforma; b) Fornecer todas as informações
-              e documentos que forem solicitados pela Produtora, caso seja
-              necessária alguma validação; c) Promover a segurança do acesso de
-              sua conta e do uso de sua credencial, a partir do momento em que
-              os receber, não divulgando-o publicamente, ou permitindo a
-              utilização de terceiros; d) Isentar a Organizadora de qualquer
-              responsabilidade sobre os serviços e produtos veiculados pelos
-              Expositores, restando claro que o papel da Produtora é apenas
-              viabilizar o contato entre os Usuários e Produtores; e) Observar
-              os requisitos mínimos para utilização da Plataforma,
-              disponibilizados pela desenvolvedora e gestora da Plataforma;
-            </li>
-            <li>
-              Em todos os casos, a Produtora, a seu exclusivo critério, poderá
-              ainda se recusar a prestar quaisquer serviços, independentemente
-              da motivação, sem que isso constitua limitação de direitos.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Direitos de Propriedade Intelectual
-          <ol>
-            <li>
-              O uso da denominação dos eventos, nome empresarial ou nome de
-              domínio, bem como os conteúdos das telas relativas aos serviços da
-              Produtora, são de titularidade desta e estão protegidos pelas leis
-              e tratados internacionais de direito autoral, marcas, patentes,
-              modelos e desenhos industriais. O uso indevido e a reprodução
-              total ou parcial dos referidos conteúdos são proibidos, salvo a
-              autorização prévia e expressa por escrito da Organizadora.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Privacidade dos Usuários
-          <ol>
-            <li>
-              A Produtora possui documento próprio, denominado “Política de
-              Privacidade”, que regula o tratamento dado às informações e dados
-              pessoais coletados através da Plataforma e suas funcionalidades,
-              bem como através dos Eventos realizados em meio físico.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Limitação de Responsabilidade
-          <ol>
-            <li>
-              Fica expressamente estabelecido que a Produtora não detém o
-              controle sobre os atos e ações praticados pelos Usuários e
-              Visitantes. Deste modo, a Organizadora não será responsável pelos
-              atos dos Usuários e Visitantes, inclusive os de caráter ilícito,
-              imoral ou antiéticos, cabendo exclusivamente a estes responderem
-              juridicamente perante reclamações de terceiros ou demandas
-              judiciais, devendo manter a Produtora isenta de quaisquer ônus ou
-              reponsabilidade.
-            </li>
-            <li>
-              A Produtora não se responsabiliza por qualquer dano, direto ou
-              indireto, ocasionado por eventos de terceiros, como ataque de
-              hackers, falhas no sistema, no servidor ou na conexão à internet,
-              inclusive por ações de programas maliciosos como vírus, cavalos de
-              troia, e outros que possam, de algum modo, danificar o equipamento
-              ou a conexão dos usuários em decorrência do acesso, utilização ou
-              navegação na Plataforma.
-            </li>
-            <li>
-              A Produtora não se responsabiliza por eventuais gravações de
-              áudio, vídeo ou quaisquer dados transmitidos ou compartilhados nos
-              estandes virtuais dos Expositores.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Disposições Gerais
-          <ol>
-            <li>
-              A Produtora não se responsabiliza por qualquer dano ou prejuízo
-              com envio de informações ou de conteúdo publicitário que não
-              tenham sido disparados pela própria Produtora, também não se
-              responsabiliza pelo conteúdo das opiniões postadas nas páginas dos
-              Eventos virtuais.
-            </li>
-            <li>
-              Ao navegar pela Plataforma e utilizar suas funcionalidades, os
-              Visitantes e Usuários aceitam todo o disposto nos Termos de Uso e
-              demais políticas legais que se encontram vigentes na data de
-              acesso.
-            </li>
-            <li>
-              Os presentes Termos estão sujeitos a constante melhoria e
-              aprimoramento. Assim, a Produtora se reserva o direito de
-              modificá-los a qualquer momento, conforme sua necessidade, tal
-              qual para adequação e conformidade legal de disposição de lei ou
-              norma que tenha força jurídica equivalente, cabendo aos usuários
-              verificá-la sempre que efetuar o acesso à Plataforma.
-            </li>
-            <li>
-              A eventual tolerância quanto a qualquer violação dos termos e
-              condições do contido neste domínio será considerada mera
-              liberalidade e não será interpretada como novação, precedente
-              invocável, renúncia a direitos, alteração tácita dos termos
-              contratuais, direito adquirido ou alteração contratual.
-            </li>
-            <li>
-              Caso alguma disposição destes Termos for julgada inaplicável ou
-              sem efeito, o restante das normas continua a viger, sem a
-              necessidade de medida judicial que declare tal assertiva. Os
-              Termos aqui descritos serão interpretados segundo a legislação
-              brasileira.
-            </li>
-          </ol>
-        </li>
-        <li>
-          Legislação de Regência e do Foro de Eleição
-          <ol>
-            <li>
-              A relação entre as partes é regida exclusivamente pela legislação
-              brasileira, independentemente do domicílio dos Usuários e
-              Visitantes.
-            </li>
-          </ol>
-        </li>
-      </ol>
+      </form>
+      <nav class="nav-options-web">
+        <div onclick="openPopup()" class="localização-web">
+          <img src="assets/img/localpin.svg" </img>
+          <span class="localização-web" id="escolherLocalização">Localização</span>
+          <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
+        </div>
+
+        <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
+        <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+      </nav>
+
     </div>
-    <footer>
-      <div class="footercenter">
-        <div class="subtitulo">
-          <p>O seu site de eventos gratuitos</p>
 
-          <img
-            class="logofooter"
-            src="assets/img/logo2.svg"
-            alt="logo NaFaixa"
-          />
-        </div>
-
-        <div class="txtfooter">
-          <a href="sobrenos.html">Sobre nós</a>
-          <a href="termosdeuso.html">Termos de uso</a>
-        </div>
+    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
-    </footer>
-  </body>
+
+      <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
+        </div>
+      </form>
+
+      <nav class="nav-options-web">
+        <div class="nav-options-logged-in">
+          <div onclick="openPopup()" class="localização-web">
+            <img src="assets/img/localpin.svg" </img>
+            <span class="localização-web" id="escolherLocalizaçãoLoggedin">Localização</span>
+            <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
+          </div>
+          <a id="hide-criar-evento-mobile" href="criar-evento.html">Criar evento</a>
+
+          <nav class="menu-hamburguer">
+            <input type="checkbox" class="checkbox-menu">
+
+            <img id="logo-produtor-menu" src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+            <div id="menu-options2">
+              <ul>
+                <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                  Perfil</a></br>
+                <a href="meus-eventos.html">Meus eventos</a></br>
+                <a href="criar-evento.html">Criar evento</a>
+                <a id="botaoSair" href="#">Sair</a>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </nav>
+    </div>
+    </div>
+
+    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
+      <div>
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+      </div>
+      <div onclick="openPopup()" class="localizacao-mobile">
+        <img src="assets/img/localpin.svg" </img>
+        <span class="localizacao-mobile" id="escolherLocalizacaoMobile">Localização</span>
+      </div>
+      <nav class="menu-hamburguer">
+        <input type="checkbox" class="checkbox-menu">
+
+        <label for="checkbox-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div id="menu-options">
+          <ul>
+            <a href="login.html">Entrar</a></br>
+            <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
+            <a id="botaoSair" href="#">Sair</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </nav>
+    </div>
+  </header>
+
+  <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search-mobile">
+    <div class="search">
+      <span class="search-icon material-symbols-outlined">search</span>
+      <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
+    </div>
+  </form>
+
+  <div class="popup" id="locationPopup">
+    <div class="popup-content">
+      <h5>Escolha uma localização</h5>
+      <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+    </div>
+  </div>
+
+  <br>
+  <div class="texto-termos">
+    <h1>Termos de Uso</h1>
+    <ol>
+      <li>
+        Introdução
+        <ol>
+          <li>
+            Os Termos e Condições Gerais de Uso (“Termo”) ora estabelecidos
+            deverão ser atentamente lidos, compreendidos e plenamente aceitos
+            para o cadastro e utilização dos serviços relacionados aos
+            eventos, físicos ou virtuais (“Eventos”), organizados e promovidos
+            pelo Grupo de Alunos "NaFaixa" da graduação em sistemas da
+            informação pela universidade Puc Minas(“Organizadora”),
+            desenvolvidos em meio físico ou disponibilizados por meio da
+            plataforma NaFaixa (“Plataforma”), sendo o acesso e utilização por
+            parte dos usuários e produtores dos Eventos (“Usuários” e
+            “Produtores”), condicionados à sua expressa e integral
+            concordância e adesão.
+          </li>
+          <li>
+            Este Termo estabelece as regras para participação nos Eventos
+            promovidos pelo Produtor, sejam os realizados em meio físico ou
+            virtual. A não aceitação expressa das regras contidas neste Termo
+            impedirá o ingresso aos Eventos e a utilização da Plataforma,
+            considerando que são de caráter obrigatório.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Informações Gerais
+        <ol>
+          <li>
+            Os presentes Termos regulam os serviços oferecidos pela Produtora,
+            que consistem na viabilização (i) da comercialização de acessos
+            e/ou ingressos aos Visitantes e Usuários interessados em visitar
+            os Eventos, sejam os realizados em meio digital ou físico.
+          </li>
+          <li>
+            Os estandes, virtuais ou físicos, são de responsabilidade
+            exclusiva dos próprios Expositores, os quais são os únicos
+            responsáveis por estabelecer as condições de comercialização de
+            seus produtos e serviços. A Produtora não é responsável pelos
+            estandes, porém poderá monitorar a atuação dos Expositores, a fim
+            de verificar se estes estão cumprindo suas obrigações e deveres.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Credenciamento dos Produtores
+        <ol>
+          <li>O credenciamento na Plataforma é gratuito.</li>
+          <li>
+            Para realização do credenciamento, os Produtores deverão fornecer
+            informações exatas e verdadeiras, assumindo o compromisso de
+            atualizar seus dados pessoais sempre que necessário ou quando
+            requerido. Se tivermos motivos que indiquem que quaisquer
+            informações cadastradas não são verdadeiras, teremos o direito de
+            suspender ou encerrar a conta em questão, bem como nos recusar a
+            prover quaisquer de nossos serviços.
+          </li>
+          <li>
+            A Organizadora não se responsabiliza pela veracidade ou
+            assertividade dos dados inseridos no ato do credenciamento, sendo
+            que a criação de perfis falsos na Plataforma poderá ser
+            considerada crime de falsa identidade, falsidade ideológica ou
+            estelionato.
+          </li>
+          <li>
+            Como condição para utilizar a Plataforma e visitar os Eventos, os
+            Visitantes e Usuários concordam em indenizar e isentar a
+            Produtora, seus representantes, diretores, parceiros, sócios,
+            empregados e agentes, de quaisquer reclamações, processos, perdas,
+            responsabilidades, danos e despesas decorrentes ou relacionadas
+            com: (i) violação por parte dos Usuários e Visitantes de quaisquer
+            das declarações, garantias e obrigações estabelecidas neste Termo;
+            e (ii) quaisquer atos e omissões dos Usuários e Visitantes antes,
+            durante e após a utilização da Plataforma e/ou visitação dos
+            Eventos, independentemente de dolo.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Acesso aos Eventos
+        <ol>
+          <li>
+            Os Usuários e Visitantes acessarão sua conta através de login e
+            senha, pessoais e intransferíveis. Estes se comprometem a não
+            informar a terceiros tais dados, responsabilizando-se
+            integralmente pelo uso que deles seja feito, se comprometendo a
+            notificar a Organizadora, imediatamente, acerca de quaisquer usos
+            não autorizados de sua conta, credencial ou quaisquer outras
+            violações de segurança. A Organizadora não será responsável por
+            quaisquer perdas e danos resultantes de acessos não autorizados ou
+            uso da conta.
+          </li>
+          <li>
+            Apenas o titular da conta na Plataforma poderá ter acesso aos
+            dados relativos à mesma, tendo em vista seu caráter pessoal.
+            Eventuais alterações em dados cadastrados somente poderão ser
+            feitas pelo próprio Participante ou Usuário, devidamente logado.
+          </li>
+          <li>
+            Do mesmo modo, somente o Visitante cadastrado poderá ter acesso e
+            fazer uso da credencial emitida com os dados do mesmo, tendo em
+            vista seu caráter pessoal e intransferível.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Responsabilidades e Obrigações dos Usuários e Visitantes
+        <ol>
+          <li>
+            Os Usuários e Visitantes se obrigam a utilizar a Plataforma, bem
+            como visitar os Eventos, de maneira ética e adequada aos
+            propósitos estabelecidos nestes Termos, atendendo ao disposto nas
+            leis brasileiras, comprometendo-se a se abster de qualquer
+            atividade que constitua violação das referidas normas.
+          </li>
+          <li>
+            Ao utilizar a Plataforma e suas funcionalidade, os Produtoresse
+            obrigam a: a) Inserir dados corretos, completos e atualizados na
+            aquisição do acesso a Plataforma; b) Fornecer todas as informações
+            e documentos que forem solicitados pela Produtora, caso seja
+            necessária alguma validação; c) Promover a segurança do acesso de
+            sua conta e do uso de sua credencial, a partir do momento em que
+            os receber, não divulgando-o publicamente, ou permitindo a
+            utilização de terceiros; d) Isentar a Organizadora de qualquer
+            responsabilidade sobre os serviços e produtos veiculados pelos
+            Expositores, restando claro que o papel da Produtora é apenas
+            viabilizar o contato entre os Usuários e Produtores; e) Observar
+            os requisitos mínimos para utilização da Plataforma,
+            disponibilizados pela desenvolvedora e gestora da Plataforma;
+          </li>
+          <li>
+            Em todos os casos, a Produtora, a seu exclusivo critério, poderá
+            ainda se recusar a prestar quaisquer serviços, independentemente
+            da motivação, sem que isso constitua limitação de direitos.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Direitos de Propriedade Intelectual
+        <ol>
+          <li>
+            O uso da denominação dos eventos, nome empresarial ou nome de
+            domínio, bem como os conteúdos das telas relativas aos serviços da
+            Produtora, são de titularidade desta e estão protegidos pelas leis
+            e tratados internacionais de direito autoral, marcas, patentes,
+            modelos e desenhos industriais. O uso indevido e a reprodução
+            total ou parcial dos referidos conteúdos são proibidos, salvo a
+            autorização prévia e expressa por escrito da Organizadora.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Privacidade dos Usuários
+        <ol>
+          <li>
+            A Produtora possui documento próprio, denominado “Política de
+            Privacidade”, que regula o tratamento dado às informações e dados
+            pessoais coletados através da Plataforma e suas funcionalidades,
+            bem como através dos Eventos realizados em meio físico.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Limitação de Responsabilidade
+        <ol>
+          <li>
+            Fica expressamente estabelecido que a Produtora não detém o
+            controle sobre os atos e ações praticados pelos Usuários e
+            Visitantes. Deste modo, a Organizadora não será responsável pelos
+            atos dos Usuários e Visitantes, inclusive os de caráter ilícito,
+            imoral ou antiéticos, cabendo exclusivamente a estes responderem
+            juridicamente perante reclamações de terceiros ou demandas
+            judiciais, devendo manter a Produtora isenta de quaisquer ônus ou
+            reponsabilidade.
+          </li>
+          <li>
+            A Produtora não se responsabiliza por qualquer dano, direto ou
+            indireto, ocasionado por eventos de terceiros, como ataque de
+            hackers, falhas no sistema, no servidor ou na conexão à internet,
+            inclusive por ações de programas maliciosos como vírus, cavalos de
+            troia, e outros que possam, de algum modo, danificar o equipamento
+            ou a conexão dos usuários em decorrência do acesso, utilização ou
+            navegação na Plataforma.
+          </li>
+          <li>
+            A Produtora não se responsabiliza por eventuais gravações de
+            áudio, vídeo ou quaisquer dados transmitidos ou compartilhados nos
+            estandes virtuais dos Expositores.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Disposições Gerais
+        <ol>
+          <li>
+            A Produtora não se responsabiliza por qualquer dano ou prejuízo
+            com envio de informações ou de conteúdo publicitário que não
+            tenham sido disparados pela própria Produtora, também não se
+            responsabiliza pelo conteúdo das opiniões postadas nas páginas dos
+            Eventos virtuais.
+          </li>
+          <li>
+            Ao navegar pela Plataforma e utilizar suas funcionalidades, os
+            Visitantes e Usuários aceitam todo o disposto nos Termos de Uso e
+            demais políticas legais que se encontram vigentes na data de
+            acesso.
+          </li>
+          <li>
+            Os presentes Termos estão sujeitos a constante melhoria e
+            aprimoramento. Assim, a Produtora se reserva o direito de
+            modificá-los a qualquer momento, conforme sua necessidade, tal
+            qual para adequação e conformidade legal de disposição de lei ou
+            norma que tenha força jurídica equivalente, cabendo aos usuários
+            verificá-la sempre que efetuar o acesso à Plataforma.
+          </li>
+          <li>
+            A eventual tolerância quanto a qualquer violação dos termos e
+            condições do contido neste domínio será considerada mera
+            liberalidade e não será interpretada como novação, precedente
+            invocável, renúncia a direitos, alteração tácita dos termos
+            contratuais, direito adquirido ou alteração contratual.
+          </li>
+          <li>
+            Caso alguma disposição destes Termos for julgada inaplicável ou
+            sem efeito, o restante das normas continua a viger, sem a
+            necessidade de medida judicial que declare tal assertiva. Os
+            Termos aqui descritos serão interpretados segundo a legislação
+            brasileira.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Legislação de Regência e do Foro de Eleição
+        <ol>
+          <li>
+            A relação entre as partes é regida exclusivamente pela legislação
+            brasileira, independentemente do domicílio dos Usuários e
+            Visitantes.
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <footer>
+    <div class="footercenter">
+      <div class="subtitulo">
+        <p>O seu site de eventos gratuitos</p>
+
+        <img class="logofooter" src="assets/img/logo2.svg" alt="logo NaFaixa" />
+      </div>
+
+      <div class="txtfooter">
+        <a href="sobrenos.html">Sobre nós</a>
+        <a href="termosdeuso.html">Termos de uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/navbarUpdate.js"></script>
+
+  <script src="JS/barra-pesquisa.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
+  <script>
+
+    function handleCriarEventoOnClick(e) {
+      if (!isUserLoggedIn()) {
+        window.location.href = 'login.html';
+        return false;
+      };
+    };
+
+    function isUserLoggedIn() {
+      return localStorage.getItem('userData');
+    };
+
+    // Função para obter a geolocalização do usuário
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const geocoder = new google.maps.Geocoder();
+            const latlng = { lat: latitude, lng: longitude };
+
+            geocoder.geocode({ location: latlng }, (results, status) => {
+              if (status === "OK") {
+                if (results[0]) {
+                  const cityName = results[0].address_components[3].long_name;
+
+                  localStorage.setItem('userLocation', JSON.stringify({
+                    latitude: latitude,
+                    longitude: longitude,
+                    city: cityName
+                  }));
+
+                  updateNavbarLocation(cityName);
+                }
+              }
+            });
+          },
+          (error) => {
+            console.error('Erro ao obter localização:', error);
+          }
+        );
+      } else {
+        console.error('Geolocalização não suportada pelo navegador.');
+      }
+    }
+
+    // Função para abrir o popup/fechar o popup
+    const popup = document.getElementById('locationPopup');
+
+    function openPopup() {
+      popup.style.display = 'block';
+
+      window.addEventListener('click', closePopupOutside);
+
+      window.addEventListener('keydown', closePopupOnEsc);
+
+      function closePopupOutside(event) {
+        if (event.target === popup) {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+      function closePopupOnEsc(event) {
+        if (event.key === 'Escape') {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+      //Função de autocomplete do google no input do popup
+      var input = document.getElementById('cityInput');
+      var autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['(cities)'],
+        componentRestrictions: { country: 'BR' }
+      });
+
+      autocomplete.addListener('place_changed', function () {
+        var selectedPlace = autocomplete.getPlace();
+        if (!selectedPlace.geometry) {
+          return;
+        }
+
+        var cityName = selectedPlace.name;
+
+        updateNavbarLocation(cityName);
+
+        localStorage.setItem('userLocation', JSON.stringify({
+          cityName: cityName,
+          latitude: selectedPlace.geometry.location.lat(),
+          longitude: selectedPlace.geometry.location.lng()
+        }));
+        window.location.href = window.location.href;
+
+        document.getElementById('locationPopup').style.display = 'none';
+      });
+    }
+
+    // Função para atualizar a localização na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      var locationElementLoggedIn = document.getElementById('escolherLocalizaçãoLoggedin');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
+      }
+      if (locationElementLoggedIn) {
+        locationElementLoggedIn.textContent = cityName;
+      }
+    }
+
+    window.onload = function () {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    };
+
+    // Função para atualizar o nome da cidade na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      var locationElementLoggedIn = document.getElementById('escolherLocalizaçãoLoggedin');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
+      }
+      if (locationElementLoggedIn) {
+        locationElementLoggedIn.textContent = cityName;
+      }
+    }
+
+    window.onload = () => {
+      const userLocation = JSON.parse(localStorage.getItem('userLocation'));
+      if (!userLocation) {
+        getLocation();
+      } else {
+        updateNavbarLocation(userLocation.city);
+      }
+    };
+
+    // Função para carregar e definir a localização ao recarregar a página
+    function loadUserLocation() {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    }
+
+    window.addEventListener('load', function () {
+      loadUserLocation();
+    });
+
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+  </script>
+</body>
+
 </html>

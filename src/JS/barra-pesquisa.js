@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const endpointURL = 'http://localhost:3000/eventos';
 
