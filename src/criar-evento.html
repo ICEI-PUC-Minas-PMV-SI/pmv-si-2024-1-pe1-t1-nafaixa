@@ -240,7 +240,7 @@
 
         flatpickr("#final-date", {
             dateFormat: "d/m/Y",
-            locale: "pt", // 
+            locale: "pt", 
         });
 
         flatpickr("#final-time", {
@@ -250,8 +250,7 @@
             time_24hr: true,
         });
         //------------------------------------------------------------------------------------------//
-
-        //Mostrar/ocultar formulario conforme o tipo de evento//    
+  
         document.getElementById("evento-presencial-radio").onclick = function () {
             document.getElementById("evento-presencial-form").style.display = "block";
             document.getElementById("evento-online-form").style.display = "none";
@@ -262,7 +261,6 @@
             document.getElementById("evento-presencial-form").style.display = "none";
         }
 
-        //Preview do banner do evento 
         const eventBannerInput = document.querySelector('#event-banner-input');
         const eventBannerPreview = document.querySelector('#event-banner-preview')
 
@@ -333,7 +331,7 @@
                     console.log("Upload concluído! Aqui estão as informações da imagem: ", result.info);
                     alert('Upload de imagem concluído!');
                     document.getElementById("uploadedimage").setAttribute("src", result.info.secure_url);
-                    bannerUrl = result.info.secure_url; // Armazene a URL da imagem carregada
+                    bannerUrl = result.info.secure_url;
                 }
             }
         );
@@ -607,7 +605,7 @@
         function populateForm(event) {
             document.querySelector('#nome').value = event.nome;
             document.querySelector('#categorias').value = event.categoria;
-            document.querySelector(input[name="event-type"][value="${event.tipo}"]).checked = true;
+            document.querySelector(`input[name="event-type"][value="${event.tipo}"]`).checked = true;
 
             if (event.tipo === 'presencial') {
                 document.querySelector('#local').value = event.local;
@@ -763,8 +761,6 @@
                 alert('Erro ao atualizar evento. Tente novamente mais tarde.');
             }
         }
-
-
 
     </script>
 </body>
