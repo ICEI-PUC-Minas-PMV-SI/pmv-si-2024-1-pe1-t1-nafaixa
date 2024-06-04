@@ -1939,7 +1939,7 @@
     },
     {
       "id": "1afd17b5-5eb8-4311-a9bd-17ae938417bd",
-      "produtorId": "c832b226-1e76-4138-9a1f-3642c39b7f8c",
+      "produtorId": "ddea420d-907e-4eef-9dfb-5a09b74ded3c",
       "tipo": "presencial",
       "categoria": "Esportes",
       "nome": "atletico mineiro 2",
@@ -2058,10 +2058,11 @@
       "cidade": "Blumenau",
       "estado": "SC",
       "email": "camilleparma@gmail.com",
-      "senha": "202cb962ac59075b964b07152d234b70",
       "descricao": "rrrrrrrrrrrr",
       "email_publico": "fffffffff",
       "celular_publico": "5555555555",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717466701/syay8am6i5u4gb3sxad2.svg",
+      "senha": "202cb962ac59075b964b07152d234b70",
       "id": "ddea420d-907e-4eef-9dfb-5a09b74ded3c"
     },
     {
@@ -2091,33 +2092,6 @@
       "descricao": "lorem",
       "email_publico": "catharina@email.com",
       "celular_publico": "3123123123123"
-    },
-    {
-      "nome": "Amanda",
-      "cpf": "9999999999999",
-      "celular": "999999999999999",
-      "cidade": "BH",
-      "estado": "MG",
-      "email": "amanda.mags7@gmail.com",
-      "descricao": "jasdlaskhdlashdlkadsh",
-      "email_publico": "eeeeeeeeeeeeeee",
-      "celular_publico": "999999999999",
-      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717456102/sezutlxwjdtriyscqtzn.svg",
-      "id": "fd8aa9f3-b3fe-4fb8-b79e-99e365a784c7"
-    },
-    {
-      "id": "c832b226-1e76-4138-9a1f-3642c39b7f8c",
-      "nome": "Teste333",
-      "cpf": "999999999999",
-      "celular": "9999999999999",
-      "cidade": "BH",
-      "estado": "MG",
-      "email": "teste333@gmail.com",
-      "senha": "25d55ad283aa400af464c76d713c07ad",
-      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717463199/fepiqvev8sxq0imzibye.svg",
-      "descricao": "asasadasdasdasd",
-      "email_publico": "asasdadasd",
-      "celular_publico": "99999999999"
     }
   ]
 }
