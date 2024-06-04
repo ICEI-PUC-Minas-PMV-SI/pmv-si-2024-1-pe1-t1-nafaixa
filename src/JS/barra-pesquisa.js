@@ -21,11 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Palavra-chave de pesquisa:', searchTerm);
 
         const tituloEventos = document.getElementById('tituloEventos');
-        if (searchTerm) {
-            tituloEventos.textContent = `Eventos encontrados`;
-        } else {
-            tituloEventos.textContent = 'Todos os Eventos';
-        }
+        tituloEventos.textContent = searchTerm ? 'Eventos encontrados' : 'Todos os Eventos';
 
         let eventosExibidos = false;
 
@@ -38,10 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (eventMatchesSearch(evento, searchTerm)) {
                 console.log('Evento corresponde ao termo de pesquisa:', evento.nome);
                 const cardElement = criarCardEvento(evento);
-                eventList.appendChild(cardElement);
-                eventosExibidos = true;
+                if (cardElement) {
+                    eventList.appendChild(cardElement);
+                    eventosExibidos = true;
+                }
             } else {
                 console.log('Evento não corresponde ao termo de pesquisa:', evento.nome);
+                console.log('Evento:', evento);
+                console.log('Corresponde ao termo de pesquisa:', eventMatchesSearch(evento, searchTerm));
+
             }
         });
 
@@ -55,13 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function eventMatchesSearch(evento, searchTerm) {
         if (!searchTerm) return true;
 
-        const lowerSearchTerm = searchTerm.toLowerCase();
+        const lowerSearchTerm = searchTerm.trim().toLowerCase();
+
+        if (!evento.nome || typeof evento.nome !== 'string' ||
+            !evento.local || typeof evento.local !== 'string' ||
+            !evento.tipo || typeof evento.tipo !== 'string') {
+            console.error('Evento incompleto ou campos não são strings:', evento);
+            return false;
+        }
+
+        const lowerNome = evento.nome.trim().toLowerCase();
+        const lowerLocal = evento.local.trim().toLowerCase();
+        const lowerTipo = evento.tipo.trim().toLowerCase();
+
         return (
-            evento.nome.toLowerCase().includes(lowerSearchTerm) ||
-            evento.local.toLowerCase().includes(lowerSearchTerm) ||
-            evento.tipo.toLowerCase().includes(lowerSearchTerm)
+            lowerNome.includes(lowerSearchTerm) ||
+            lowerLocal.includes(lowerSearchTerm) ||
+            lowerTipo.includes(lowerSearchTerm)
         );
     }
+
 
     function criarCardEvento(evento) {
         const cardElement = document.createElement('div');
@@ -81,11 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         cardElement.innerHTML = `
-                <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
-                <p class="event-title">${evento.nome}</p>
-                <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
-                ${detalheExtra}
-            `;
+            <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
+            <p class="event-title">${evento.nome}</p>
+            <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+            ${detalheExtra}
+        `;
 
         cardElement.addEventListener('click', () => {
             window.location.href = `detalhes-evento.html?id=${evento.id}`;
