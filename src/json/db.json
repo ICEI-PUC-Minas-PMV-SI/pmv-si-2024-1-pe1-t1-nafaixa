@@ -1939,6 +1939,7 @@
     },
     {
       "id": "1afd17b5-5eb8-4311-a9bd-17ae938417bd",
+      "produtorId": "fd8aa9f3-b3fe-4fb8-b79e-99e365a784c7",
       "tipo": "presencial",
       "categoria": "Esportes",
       "nome": "atletico mineiro 2",
@@ -2090,6 +2091,19 @@
       "descricao": "lorem",
       "email_publico": "catharina@email.com",
       "celular_publico": "3123123123123"
+    },
+    {
+      "nome": "Amanda",
+      "cpf": "9999999999999",
+      "celular": "999999999999999",
+      "cidade": "BH",
+      "estado": "MG",
+      "email": "amanda.mags7@gmail.com",
+      "descricao": "jasdlaskhdlashdlkadsh",
+      "email_publico": "eeeeeeeeeeeeeee",
+      "celular_publico": "999999999999",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717456102/sezutlxwjdtriyscqtzn.svg",
+      "id": "fd8aa9f3-b3fe-4fb8-b79e-99e365a784c7"
     }
   ]
 }
