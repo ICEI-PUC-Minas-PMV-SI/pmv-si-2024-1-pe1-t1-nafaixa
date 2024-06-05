@@ -1,3 +1,4 @@
+// Função para converter string "DD MM YYYY" para objeto Date
 function converterParaData(data) {
   if (!data) {
     console.error("Data inválida:", data);
@@ -28,7 +29,7 @@ function isDataFuturaOuHoje(dataEvento) {
     console.error("Erro ao converter data:", dataEvento);
     return false;
   }
-  return dataConvertida >= hoje.setHours(0, 0, 0, 0);
+  return dataConvertida >= hoje.setHours(0, 0, 0, 0); // Comparar com o início do dia de hoje
 }
 
 function estaEmEventosProximos() {
@@ -100,6 +101,17 @@ document.addEventListener("DOMContentLoaded", () => {
       state.eventosExibidosId2 += eventosPorVez;
     }
 
+    // Verifica se há mais eventos a serem exibidos e esconde o botão se não houver mais
+    const mostrarMaisBtn = document.querySelector(".mostrarMais");
+    if ((startIndex + eventosPorVez) >= eventosFiltrados.length) {
+      if (mostrarMaisBtn) {
+        mostrarMaisBtn.style.display = "none";
+      }
+    } else {
+      if (mostrarMaisBtn) {
+        mostrarMaisBtn.style.display = "block";
+      }
+    }
   }
 
   function isEventoProximo(evento, userLocation) {
@@ -184,9 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const mostrarMaisBtn = document.querySelector(".mostrarMais");
   if (mostrarMaisBtn) {
     mostrarMaisBtn.addEventListener("click", () => {
-      exibirEventos("todosEventos");
       if (estaEmEventosProximos()) {
         exibirEventos("eventosFiltrados");
+      } else {
+        exibirEventos("todosEventos");
       }
     });
   }
