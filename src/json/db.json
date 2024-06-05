@@ -1954,6 +1954,42 @@
       "sobre": "<p>\\z|</p>",
       "informacoes": "|Zxsasx",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1715486658/NaFaixa/gvia1idygdhqu4ccc6bx.jpg"
+    },
+    {
+      "id": "5365c37c-cc6a-4fd8-8985-215c2de62e0a",
+      "produtorId": "ddea420d-907e-4eef-9dfb-5a09b74ded3c",
+      "tipo": "presencial",
+      "categoria": "Infantil",
+      "nome": "Testefiltro data",
+      "link": "",
+      "local": "São Paulo, SP, Brasil",
+      "latitude": -23.5557714,
+      "longitude": -46.6395571,
+      "startDate": "05/06/2024",
+      "startTime": "12:00",
+      "finalDate": "08/06/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>aaaaaaaaaaaaaa</p>",
+      "informacoes": "aaaaaaaaaaaa",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717611869/NaFaixa/uk8iz1zadqdwjf11aayu.jpg"
+    },
+    {
+      "id": "bda76c4f-8bd3-471c-a8df-9f2f5b930561",
+      "produtorId": "ddea420d-907e-4eef-9dfb-5a09b74ded3c",
+      "tipo": "presencial",
+      "categoria": "Cultura",
+      "nome": "Testeeventosfiltrado2",
+      "link": "",
+      "local": "Camboriú, SC, Brasil",
+      "latitude": -27.0217451,
+      "longitude": -48.6515664,
+      "startDate": "05/06/2024",
+      "startTime": "12:00",
+      "finalDate": "21/06/2024",
+      "finalTime": "12:00",
+      "sobre": "<p>ssssssssssssss</p>",
+      "informacoes": "ssssssssssssss",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717612221/NaFaixa/xyw5f4kr03bvodspeiqh.jpg"
     }
   ],
   "emails": [

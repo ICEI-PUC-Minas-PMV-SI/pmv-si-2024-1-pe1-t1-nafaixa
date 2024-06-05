@@ -1,69 +1,40 @@
-// Função para formatar a data
-function formatarData(data) {
-  const partes = data.split("/");
+function converterParaData(data) {
+  if (!data) {
+    console.error("Data inválida:", data);
+    return null;
+  }
 
+  const partes = data.split("/");
   if (partes.length !== 3) {
     console.error("Formato de data inválido:", data);
     return null;
   }
 
   const dia = parseInt(partes[0], 10);
-  const mesNumero = parseInt(partes[1], 10);
+  const mes = parseInt(partes[1], 10) - 1;
   const ano = parseInt(partes[2], 10);
 
-  const meses = [
-    "janeiro",
-    "fevereiro",
-    "março",
-    "abril",
-    "maio",
-    "junho",
-    "julho",
-    "agosto",
-    "setembro",
-    "outubro",
-    "novembro",
-    "dezembro",
-  ];
-
-  const mesNome = meses[mesNumero - 1];
-
-  return `${dia} de ${mesNome} de ${ano}`;
+  return new Date(ano, mes, dia);
 }
 
-// Função para formatar a hora
-function formatarHora(hora) {
-  const partes = hora.split(":");
-
-  if (partes.length !== 2) {
-    console.error("Formato de hora inválido:", hora);
-    return null;
+function isDataFuturaOuHoje(dataEvento) {
+  if (!dataEvento) {
+    console.error("Data do evento inválida:", dataEvento);
+    return false;
   }
-
-  const horas = parseInt(partes[0], 10);
-  const minutos = parseInt(partes[1], 10);
-  return `${horas.toString().padStart(2, "0")}:${minutos
-    .toString()
-    .padStart(2, "0")}`;
-}
-
-// Função para formatar data e hora juntas
-function formatarDataHora(data, hora) {
-  const dataFormatada = formatarData(data);
-  const horaFormatada = formatarHora(hora);
-
-  if (!dataFormatada || !horaFormatada) {
-    return null;
+  const hoje = new Date();
+  const dataConvertida = converterParaData(dataEvento);
+  if (!dataConvertida) {
+    console.error("Erro ao converter data:", dataEvento);
+    return false;
   }
-
-  return `${dataFormatada} às ${horaFormatada}`;
+  return dataConvertida >= hoje.setHours(0, 0, 0, 0);
 }
 
 function estaEmEventosProximos() {
   return window.location.href.includes("Proximo");
 }
 
-//Paginação e mostrar eventos por localização e todos os eventos sem filtragem
 document.addEventListener("DOMContentLoaded", () => {
   const localizacaoSelect = document.getElementById("escolherLocalização");
 
@@ -86,7 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   async function obterEventos() {
     try {
       const response = await fetch(endpointURL);
-      state.eventos = await response.json();
+      const eventos = await response.json();
+
+      state.eventos = eventos.filter(evento => isDataFuturaOuHoje(evento.finalDate));
+
       exibirEventos("eventosFiltrados");
       exibirEventos("todosEventos");
     } catch (error) {
@@ -95,39 +69,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function exibirEventos(id) {
-    const { eventos, userLocation, eventosExibidosId1, eventosExibidosId2 } =
-      state;
+    const { eventos, userLocation, eventosExibidosId1, eventosExibidosId2 } = state;
     const wrapperElement = document.getElementById(id);
 
-    const startIndex =
-      id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
+    const startIndex = id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
 
     let eventosExibidos = false;
     const eventosFiltrados = eventos.filter(
       (evento) =>
-        id === "todosEventos" ||
-        (id === "eventosFiltrados" && isEventoProximo(evento, userLocation))
+        (id === "eventosFiltrados" && isEventoProximo(evento, userLocation)) ||
+        (id === "todosEventos")
     );
-    const eventosParaExibir = estaEmEventosProximos()
-      ? eventosFiltrados.slice(startIndex, startIndex + eventosPorVez)
-      : eventosFiltrados.slice(startIndex, startIndex + eventosPorVez);
+
+    const eventosParaExibir = eventosFiltrados.slice(startIndex, startIndex + eventosPorVez);
     eventosParaExibir.forEach((evento) => {
       const cardElement = criarCardEvento(evento);
       wrapperElement?.appendChild(cardElement);
-      eventosExibidos = true; // Indica que pelo menos um evento foi exibido
+      eventosExibidos = true;
     });
 
-    const todosEventosExibidos =
-      id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
-    if (todosEventosExibidos >= eventos.length) {
-      const mostrarMaisBtn = document.querySelector(".mostrarMais");
-      if (mostrarMaisBtn) mostrarMaisBtn.style.display = "none";
-    }
-
-    if (id === "eventosFiltrados" && !eventosExibidos) {
+    if (eventosFiltrados.length <= 0 && id === "eventosFiltrados") {
       const mensagemElement = document.createElement("p");
-      mensagemElement.textContent =
-        "Não existem eventos próximos para a localização escolhida.";
+      mensagemElement.textContent = "Não existem eventos próximos para a localização escolhida.";
       wrapperElement.appendChild(mensagemElement);
     }
 
@@ -136,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (id === "todosEventos") {
       state.eventosExibidosId2 += eventosPorVez;
     }
+
   }
 
   function isEventoProximo(evento, userLocation) {
@@ -160,12 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(deg2rad(lat1)) *
-        Math.cos(deg2rad(lat2)) *
-        Math.sin(dLng / 2) *
-        Math.sin(dLng / 2);
+      Math.cos(deg2rad(lat2)) *
+      Math.sin(dLng / 2) *
+      Math.sin(dLng / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distancia = R * c;
-    return distancia;
+    return R * c;
   }
 
   function deg2rad(deg) {
@@ -207,7 +170,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function formatarDataHora(startDate, startTime) {
-    return `${startDate} ${startTime}`;
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    const partesData = startDate.split("/");
+    const dia = partesData[0];
+    const mes = meses[parseInt(partesData[1], 10) - 1];
+    const ano = partesData[2];
+    const dataFormatada = `${dia.padStart(2, '0')} de ${mes} de ${ano}`;
+    return `${dataFormatada} às ${startTime}`;
   }
 
   obterEventos();
