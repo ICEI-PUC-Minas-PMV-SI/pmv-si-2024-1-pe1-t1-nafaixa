@@ -595,7 +595,7 @@
                     console.log("Upload concluído! Aqui estão as informações da imagem: ", result.info);
                     alert('Upload de imagem concluído!');
                     document.getElementById("uploadedimage").setAttribute("src", result.info.secure_url);
-                    bannerUrl = result.info.secure_url; // Armazene a URL da imagem carregada
+                    bannerUrl = result.info.secure_url;
                 }
             }
         );
@@ -822,7 +822,6 @@
             const eventId = urlParams.get('edit');
 
             if (eventId) {
-                // Edit mode: Load event data
                 try {
                     const response = await fetch(`http://localhost:3000/eventos/${eventId}`);
                     if (!response.ok) {
@@ -832,7 +831,6 @@
                     const event = await response.json();
                     populateForm(event);
 
-                    // Alterar o texto do botão para "Salvar alterações"
                     const criarEventoBtn = document.querySelector('.criar-evento-btn');
                     criarEventoBtn.textContent = 'Salvar alterações';
                     criarEventoBtn.addEventListener('click', (event) => {
@@ -915,7 +913,6 @@
             const informacoesEvento = document.querySelector('#informacoes');
             const sobre = tinymce.get('sobre').getContent();
 
-            // Perform validation as done in criarEvento
             if (!nomeEvento.value) {
                 alert('O campo nome é obrigatório.');
                 nomeEvento.focus();
