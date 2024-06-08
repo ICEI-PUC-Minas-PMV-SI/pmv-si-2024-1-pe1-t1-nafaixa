@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todos-eventos</title>
+    <title>eventos-categoria</title>
    
     <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -18,226 +19,134 @@
     <link rel="stylesheet" href="CSS/components/footer.css" />
     <link rel="stylesheet" href="CSS/components/eventos-page.css"/>
 
-
 </head>
 <body>
     
-  <header>
-    <div class="navcenter" id="navbar-logged-out">
-      <div>
-        <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
-        </a>
-      </div>
-      <form class="nav-search">
-        <div class="search">
-          <span class="search-icon material-symbols-outlined">search</span>
-          <input class="search-input" type="search" placeholder="pesquise por evento" />
-        </div>
-      </form>
-      <nav class="nav-options-web">
-        <a href="">Localização</a>
-        <a href="criar-evento.html">Criar evento</a>
-        <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
-      </nav>
-
-    </div>
-
-    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
-      <div>
-        <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
-        </a>
-      </div>
-
-      <form class="nav-search">
-        <div class="search">
-          <span class="search-icon material-symbols-outlined">search</span>
-          <input class="search-input" type="search" placeholder="pesquise por evento" />
-        </div>
-      </form>
-      <div class="nav-options-logged-in">
-        <nav class="nav-options-web">
-          <a href="">Localização</a>
-          <a id="hide-criar-evento-mobile" href="criar-evento.html">Criar evento</a>
-        </nav>
-
-        <nav class="menu-hamburguer">
-          <input type="checkbox" class="checkbox-menu">
-
-          <img id="logo-produtor-menu" src="https://source.unsplash.com/random/1" alt="foto perfil">
-
-          <div id="menu-options2">
-            <ul>
-              <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
-                Perfil</a></br>
-              <a href="meus-eventos.html">Meus eventos</a></br>
-              <a href="criar-evento.html">Criar evento</a>
-              <a id="botaoSair" href="#">Sair</a>
-            </ul>
+    <header>
+        <div class="navcenter" id="navbar-logged-out">
+          <div>
+            <a href="index.html">
+              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
+            /></a>
           </div>
-        </nav>
-      </div>
-    </div>
-
-    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
-      <div>
-        <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
-      </div>
-
-      <a href="">Localização</a>
-
-      <nav class="menu-hamburguer">
-        <input type="checkbox" class="checkbox-menu">
-
-        <label for="checkbox-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <div id="menu-options">
-          <ul>
-            <a href="login.html">Entrar</a></br>
-            <a href="criar-evento.html">Criar evento</a>
-          </ul>
+          <form class="nav-search">
+            <div class="search">
+              <span class="search-icon material-symbols-outlined">search</span>
+              <input
+                class="search-input"
+                type="search"
+                placeholder="pesquise por evento"
+              />
+            </div>
+          </form>
+          <nav class="nav-options-web">
+            <a href="">Localização</a>
+            <a href="">Criar evento</a>
+            <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
+          </nav>
         </div>
-      </nav>
-    </div>
-    </nav>
-    </div>
-  </header>
+  
 
-  <form class="nav-search-mobile">
-    <div class="search">
-      <span class="search-icon material-symbols-outlined">search</span>
-      <input class="search-input" type="search" placeholder="pesquise por evento" </input>
-    </div>
-  </form>
+        <div id="navbar-logged-in" style="display: none">
+          <div>
+              <a href="index.html">
+                  <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+              </a>
+          </div>
 
-  <dialog id="locationPopup">
-    <p>Escolha uma localização</p>
-    <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
-  </dialog>
+          <a href="">Localização</a>
 
+          <nav class="menu-hamburguer">
+              <input type="checkbox" class="checkbox-menu">
+
+              <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+              <div id="menu-options">
+                  <ul>
+                      <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                          Perfil</a>
+                      <a href="meus-eventos.html">Meus eventos</a></br>
+                      <a href="criar-evento.html">Criar evento</a>
+                      <a href="#">Sair</a>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+
+        <div class="navcenter-mobile">
+          <div>
+            <a href="index.html">
+              <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          </div>
+    
+          <a href="">Localização</a>
+    
+          <nav class="menu-hamburguer">
+            <input type="checkbox" class="checkbox-menu">
+    
+            <label for="checkbox-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+    
+            <div id="menu-options">
+              <ul>
+                <a href="login.html">Entrar</a></br>
+                <a href="criar-evento.html">Criar evento</a>
+                <a href="#">Sair</a>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <form class="nav-search-mobile">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="pesquise por evento"> </input>
+        </div>
+        
+      </form>
+  
+     
       <section class="page">
         <div style="width: 100%">
             <div class="todos-eventos-title"> 
                 <h1>Todos os Eventos</h1>
-                <select class="ordenar-btn">
+               
+
+                <select name="ordenacao" class="ordenar-btn">
                     <option value=""> Ordenar</option>
+                      <option value="date"> Data</option>
+                      <option value="name-asc"> A a Z</option>
+                      <option value="name-desc"> Z a A</option>
+
 
                 </select>
 
             </div>
+
+            
+
             
 
             <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-        
-        
-              <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-              <div class="wrapper-mostrarMais">
-                <button class="mostrarMais">mostrar mais</button>
-              </div>
+            </div>
+
+            <div class="wrapper-mostrarMais">
+              <button class="mostrarMais">mostrar mais</button>
+            </div>
+        </div>
+      </section>
+
+
+
+      <section class="page">
+        <div style="width: 100%">
+            
+            <div class="wrapper-cards">
+            </div>
+
         </div>
       </section>
 
@@ -264,6 +173,23 @@
         </div>
       </footer>
   
-  
+      <script src="./JS/meusEventos.js"></script>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              const meuPerfilLink = document.getElementById('meu-perfil');
+              meuPerfilLink.addEventListener('click', function (event) {
+                  event.preventDefault();
+                  window.location.href = 'cadastro-produtor.html?edit';
+              });
+          });
+      </script>
+
+      <script  src="./JS/navbarUpdate.js"></script>
+      <script  src="./JS/eventos.js"></script>
+      <script  src="./JS/detalhesEvento.js"></script>
+      <script  src="./JS/eventos-categorias.js"></script>
+
+
 </body>
 </html>
