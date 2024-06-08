@@ -116,26 +116,26 @@
                 <h1>Categoria</h1>
                 <select name="categorias">
                   <option value="">Categoria</option>
-                  <option value="">Teatro</option>
-                  <option value="">Esportes</option>
-                  <option value="">Música e shows</option>
-                  <option value="">Religioso</option>
-                  <option value="">Tecnologia</option>
-                  <option value="">Gastronomia</option>
-                  <option value="">Online</option>
-                  <option value="">Cultura</option>
-                  <option value="">Feiras</option>
-                  <option value="">Palestras</option>
-                  <option value="">Infantil</option>
-                  <option value="">Stand up</option>
-                  <option value="">Outros</option>
+                  <option value="teatro">Teatro</option>
+                  <option value="esportes">Esportes</option>
+                  <option value="musica-shows">Música e shows</option>
+                  <option value="religioso">Religioso</option>
+                  <option value="tecnologia">Tecnologia</option>
+                  <option value="gastronomia">Gastronomia</option>
+                  <option value="online">Online</option>
+                  <option value="cultura">Cultura</option>
+                  <option value="feiras">Feiras</option>
+                  <option value="palestras">Palestras</option>
+                  <option value="infantil">Infantil</option>
+                  <option value="stand-up">Stand up</option>
+                  <option value="outros">Outros</option>
               </select>
 
-                <select class="ordenar-btn">
+                <select name="ordenacao" class="ordenar-btn">
                     <option value=""> Ordenar</option>
-                      <option value=""> Data</option>
-                      <option value=""> A a Z</option>
-                      <option value=""> Z a A</option>
+                      <option value="date"> Data</option>
+                      <option value="name-asc"> A a Z</option>
+                      <option value="name-desc"> Z a A</option>
 
 
                 </select>
@@ -145,110 +145,11 @@
             
 
             <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-        
-        
-              <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-              <div class="wrapper-mostrarMais">
-                <button class="mostrarMais">mostrar mais</button>
-              </div>
+            </div>
+
+            <div class="wrapper-mostrarMais">
+              <button class="mostrarMais">mostrar mais</button>
+            </div>
         </div>
       </section>
 
@@ -287,6 +188,9 @@
           });
       </script>
       <script  src="./JS/navbarUpdate.js"></script>
+
+      <script  src="./JS/eventos-categorias.js"></script>
+
 
 </body>
 </html>
