@@ -62,6 +62,7 @@
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
         </a>
+
       </div>
 
       <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
@@ -213,79 +214,82 @@
 
         <div id="wrapper-categorias">
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Teatro.svg" alt="card teatro" />
+            <img id="teatro" class="icon-card" src="assets/img-categorias/Teatro.svg" alt="card teatro" />
 
             <h3>Teatro</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Cultura(1).svg" alt="card Cultura" />
+            <img id="cultura" class="icon-card" src="assets/img-categorias/Cultura(1).svg" alt="card Cultura" />
 
             <h3>Cultura</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Palestras.svg" alt="card Cursos e workshops" />
+            <img id="palestras" class="icon-card" src="assets/img-categorias/Palestras.svg"
+              alt="card Cursos e workshops" />
 
             <h3>Palestras</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Esportes(1).svg" alt="card Esportes" />
+            <img id="esportes" class="icon-card" src="assets/img-categorias/Esportes(1).svg" alt="card Esportes" />
 
             <h3>Esportes</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Gastronomia(2).svg" alt="card Gastronomia" />
+            <img id="gastronomia" class="icon-card" src="assets/img-categorias/Gastronomia(2).svg"
+              alt="card Gastronomia" />
 
             <h3>Gastronomia</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Infantil(1).svg" alt="card Infantil" />
+            <img id="infantil" class="icon-card" src="assets/img-categorias/Infantil(1).svg" alt="card Infantil" />
 
             <h3>Infantil</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/musica e shows.svg" alt="card Música e shows" />
+            <img id="musica-shows" class="icon-card" src="assets/img-categorias/musica e shows.svg"
+              alt="card Música e shows" />
 
             <h3>Música e shows</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Standup.svg" alt="card stand up" />
+            <img id="stand-up" class="icon-card" src="assets/img-categorias/Standup.svg" alt="card stand up" />
 
             <h3>Stand up</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Tecnologia.svg" alt="card Tecnologia" />
+            <img id="tecnologia" class="icon-card" src="assets/img-categorias/Tecnologia.svg" alt="card Tecnologia" />
 
             <h3>Tecnologia</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Religioso.svg" alt="card Religioso" />
+            <img id="religioso" class="icon-card" src="assets/img-categorias/Religioso.svg" alt="card Religioso" />
 
             <h3>Religioso</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Feira.svg" alt="card Feira" />
+            <img id="feiras" class="icon-card" src="assets/img-categorias/Feira.svg" alt="card Feira" />
 
-            <h3>Feira</h3>
+            <h3>Feiras</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Online.svg" alt="card Online" />
+            <img id="online" class="icon-card" src="assets/img-categorias/Online.svg" alt="card Online" />
 
             <h3>Online</h3>
           </article>
 
           <article class="categories-cards">
-            <img class="icon-card" src="assets/img-categorias/Ver todos(1).svg" alt="card outros" />
+            <img id="outros" class="icon-card" src="assets/img-categorias/Ver todos(1).svg" alt="card outros" />
 
             <h3>Outros</h3>
           </article>
@@ -294,14 +298,20 @@
     </div>
 
     <div style="width: 100%">
-      <h1>Todos os eventos</h1>
-
+      <div class="events-nearme">
+        <h1>Todos os eventos</h1>
+        <a class="vertodos-button" href="eventos.html">ver todos</a>
+      </div>
       <div id="todosEventos" class="wrapper-cards"></div>
+      <div>
+        <button class="vertodos-button-mobile" href="">Ver todos</button>
+      </div>
 
       <div class="wrapper-mostrarMais">
         <button class="mostrarMais">mostrar mais</button>
       </div>
     </div>
+
   </section>
 
   <div id="footer-container"></div>
@@ -500,6 +510,9 @@
   </script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+
+  <script src="./JS/index.js"></script>
+
   </script>
 </body>
 
