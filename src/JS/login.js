@@ -33,4 +33,3 @@ entrar.addEventListener("click", async function (event) {
     alert("Erro ao buscar dados do servidor JSON.");
   }
 });
-

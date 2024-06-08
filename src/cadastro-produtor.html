@@ -40,7 +40,7 @@
 
   <body>
     <header>
-      <div class="navcenter">
+      <div class="navcenter" id="navbar-logged-out">
         <div>
           <a href="index.html">
             <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
@@ -63,7 +63,41 @@
         </nav>
       </div>
 
-      <div class="navcenter-mobile">
+      <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
+        <div>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="assets/img/logo2.svg"
+              alt="logo do NaFaixa"
+            />
+          </a>
+        </div>
+
+        <a href="">Localização</a>
+
+        <nav class="menu-hamburguer">
+          <input type="checkbox" class="checkbox-menu" />
+
+          <img src="https://source.unsplash.com/random/1" alt="foto perfil" />
+
+          <div id="menu-options">
+            <ul>
+              <a
+                id="meu-perfil"
+                href="cadastro-produtor.html"
+                onclick="redirecionarParaEdicao()"
+                >Meu Perfil</a
+              >
+              <a href="meus-eventos.html">Meus eventos</a>
+              <a href="criar-evento.html">Criar evento</a>
+              <a href="#">Sair</a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="navcenter-mobile" id="navbar-logged-out-mobile">
         <div>
           <a href="index.html">
             <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa"
@@ -157,7 +191,7 @@
             />
           </div>
 
-          <div class="form-item">
+          <div class="form-item" id="senha-container">
             <label for="password">Digite sua senha</label>
             <input
               type="password"
@@ -168,7 +202,7 @@
             />
           </div>
 
-          <div class="form-item">
+          <div class="form-item" id="repita-senha-container">
             <label for="password">Repita sua senha</label>
             <input
               type="password"
@@ -253,7 +287,7 @@
     </footer>
 
     <script>
-      //Preview da foto do produtor
+      // Preview da foto do produtor
       const eventBannerInput = document.querySelector("#foto-produtor");
       const eventBannerPreview = document.querySelector(
         "#foto-produtor-preview"
@@ -272,8 +306,6 @@
       }
 
       async function criarProdutor() {
-        // event.preventDefault();
-
         const url = "http://localhost:3000/produtor";
 
         const nomeProdutor = document.querySelector("#produtor-nome");
@@ -355,6 +387,7 @@
         } catch (error) {
           console.error("Erro:", error);
           alert("Erro em concluir o cadastro. Por favor tente mais tarde.");
+          return false;
         }
         window.location.href = "login.html";
       }
@@ -362,6 +395,10 @@
       function verificarCampos() {
         const primeiraSenha = document.querySelector("#criar-senha").value;
         const segundaSenha = document.querySelector("#repita-senha").value;
+
+        if (isEditMode()) {
+          return true;
+        }
 
         if (primeiraSenha !== segundaSenha) {
           alert("As senhas não coincidem. Por favor, digite novamente.");
@@ -378,15 +415,24 @@
             return false;
           }
         }
+        const fotoProdutorInput = document.querySelector("#foto-produtor");
+        const fotoProdutorFile = fotoProdutorInput.files[0];
+
+        if (!fotoProdutorFile) {
+          alert("Por favor, selecione uma imagem de logo");
+          return false;
+        }
         if (!document.querySelector("#aceito-termos").checked) {
           alert("Você deve aceitar os termos de uso para se cadastrar.");
           return false;
         }
-
         criarProdutor();
       }
 
       async function verificarDuplicatas(cpf, email) {
+        if (isEditMode()) {
+          return true;
+        }
         try {
           const response = await fetch("http://localhost:3000/produtor");
           const dataDuplicata = await response.json();
@@ -423,7 +469,184 @@
             verificarCampos();
           }
         });
+
+      // Edição do cadastro do produtor
+      function isEditMode() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.has("edit");
+      }
+
+      async function preencherDadosProdutor() {
+        try {
+          const response = await fetch(
+            `http://localhost:3000/produtor/${localStorage.getItem("userData")}`
+          );
+          const produtor = await response.json();
+
+          document.querySelector("#produtor-nome").value = produtor.nome;
+          document.querySelector("#produtor-identificacao").value =
+            produtor.cpf;
+          document.querySelector("#produtor-celular").value = produtor.celular;
+          document.querySelector("#produtor-cidade").value = produtor.cidade;
+          document.querySelector("#produtor-estado").value = produtor.estado;
+          document.querySelector("#produtor-email").value = produtor.email;
+          document.querySelector("#produtor-sobre").value = produtor.descricao;
+          document.querySelector("#email-publico").value =
+            produtor.email_publico;
+          document.querySelector("#celular-publico").value =
+            produtor.celular_publico;
+          document.querySelector("#foto-produtor-preview").src = produtor.logo;
+          document.querySelector("#foto-produtor-preview").style.display =
+            "block";
+        } catch (error) {
+          console.error("Erro ao preencher dados do produtor:", error);
+          alert(
+            "Erro ao preencher dados do produtor. Por favor, tente novamente mais tarde."
+          );
+        }
+      }
+
+      async function salvarAlteracoes() {
+        const url = `http://localhost:3000/produtor/${localStorage.getItem(
+          "userData"
+        )}`;
+        const senha = document.querySelector("#criar-senha").value;
+        let senhaHash = null;
+
+        if (senha) {
+          senhaHash = hashPassword(senha);
+        }
+
+        const nomeProdutor = document.querySelector("#produtor-nome").value;
+        const identificacaoProdutor = document.querySelector(
+          "#produtor-identificacao"
+        ).value;
+        const celularProdutor =
+          document.querySelector("#produtor-celular").value;
+        const cidadeProdutor = document.querySelector("#produtor-cidade").value;
+        const estadoProdutor = document.querySelector("#produtor-estado").value;
+        const emailProdutor = document.querySelector("#produtor-email").value;
+        const sobreProdutor = document.querySelector("#produtor-sobre").value;
+        const emailPublico = document.querySelector("#email-publico").value;
+        const celularPublico = document.querySelector("#celular-publico").value;
+
+        const fotoProdutorInput = document.querySelector("#foto-produtor");
+        const fotoProdutorFile = fotoProdutorInput.files[0];
+
+        const cloudName = "dmcuzezlv";
+        const unsignedUploadPreset = "w1cukmci";
+
+        let produtorAtual;
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(
+              `Erro ao obter os dados atuais do produtor. Status: ${response.status}`
+            );
+          }
+          produtorAtual = await response.json();
+        } catch (error) {
+          console.error("Erro ao obter os dados atuais do produtor:", error);
+          alert(
+            "Erro ao obter os dados atuais do produtor. Por favor, tente novamente mais tarde."
+          );
+          return;
+        }
+
+        const payload = {
+          nome: nomeProdutor,
+          cpf: identificacaoProdutor,
+          celular: celularProdutor,
+          cidade: cidadeProdutor,
+          estado: estadoProdutor,
+          email: emailProdutor,
+          descricao: sobreProdutor,
+          email_publico: emailPublico,
+          celular_publico: celularPublico,
+          logo: produtorAtual.logo,
+        };
+
+        if (senhaHash) {
+          payload.senha = senhaHash;
+        }
+
+        if (fotoProdutorFile) {
+          const formData = new FormData();
+          formData.append("file", fotoProdutorFile);
+          formData.append("upload_preset", unsignedUploadPreset);
+
+          try {
+            const response = await fetch(
+              `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+              {
+                method: "POST",
+                body: formData,
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(
+                `Erro ao fazer upload da imagem para o Cloudinary. Status: ${response.status}`
+              );
+            }
+
+            const data = await response.json();
+            payload.logo = data.secure_url;
+          } catch (error) {
+            console.error("Erro ao fazer upload da imagem:", error);
+            alert(
+              "Erro ao fazer upload da imagem. Por favor, tente novamente mais tarde."
+            );
+            return;
+          }
+        }
+
+        try {
+          const response = await fetch(url, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `Erro ao atualizar os dados do produtor. Status: ${response.status}`
+            );
+          }
+
+          alert("Dados atualizados com sucesso!");
+        } catch (error) {
+          console.error("Erro ao salvar alterações:", error);
+          alert(
+            "Erro ao salvar alterações. Por favor, tente novamente mais tarde."
+          );
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        if (isEditMode()) {
+          await preencherDadosProdutor();
+          const buttonCriar = document.querySelector(".button-criar");
+          buttonCriar.textContent = "Salvar Alterações";
+          buttonCriar.removeEventListener("click", verificarCampos);
+          buttonCriar.addEventListener("click", salvarAlteracoes);
+
+          const senhaContainer = document.getElementById("senha-container");
+          senhaContainer.style.display = "none";
+          const repitaSenhaContainer = document.getElementById(
+            "repita-senha-container"
+          );
+          repitaSenhaContainer.style.display = "none";
+
+          const aceitarTermosUso = document.querySelector(".termos-uso");
+          aceitarTermosUso.style.display = "none";
+        }
+      });
     </script>
+    <script src="./JS/meusEventos.js"></script>
+
+    <script src="./JS/navbarUpdate.js"></script>
   </body>
 </html>
-

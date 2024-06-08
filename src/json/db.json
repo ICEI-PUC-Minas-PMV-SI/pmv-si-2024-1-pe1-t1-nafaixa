@@ -1582,56 +1582,37 @@
         {
           "long_name": "s/nº",
           "short_name": "s/nº",
-          "types": [
-            "street_number"
-          ]
+          "types": ["street_number"]
         },
         {
           "long_name": "Rodovia Hélio Smidt",
           "short_name": "Rod. Hélio Smidt",
-          "types": [
-            "route"
-          ]
+          "types": ["route"]
         },
         {
           "long_name": "Aeroporto",
           "short_name": "Aeroporto",
-          "types": [
-            "sublocality_level_1",
-            "sublocality",
-            "political"
-          ]
+          "types": ["sublocality_level_1", "sublocality", "political"]
         },
         {
           "long_name": "Guarulhos",
           "short_name": "Guarulhos",
-          "types": [
-            "administrative_area_level_2",
-            "political"
-          ]
+          "types": ["administrative_area_level_2", "political"]
         },
         {
           "long_name": "São Paulo",
           "short_name": "SP",
-          "types": [
-            "administrative_area_level_1",
-            "political"
-          ]
+          "types": ["administrative_area_level_1", "political"]
         },
         {
           "long_name": "Brasil",
           "short_name": "BR",
-          "types": [
-            "country",
-            "political"
-          ]
+          "types": ["country", "political"]
         },
         {
           "long_name": "07190-100",
           "short_name": "07190-100",
-          "types": [
-            "postal_code"
-          ]
+          "types": ["postal_code"]
         }
       ],
       "latitude": -23.4302175,
@@ -1654,56 +1635,37 @@
         {
           "long_name": "s/nº",
           "short_name": "s/nº",
-          "types": [
-            "street_number"
-          ]
+          "types": ["street_number"]
         },
         {
           "long_name": "Rodovia Hélio Smidt",
           "short_name": "Rod. Hélio Smidt",
-          "types": [
-            "route"
-          ]
+          "types": ["route"]
         },
         {
           "long_name": "Aeroporto",
           "short_name": "Aeroporto",
-          "types": [
-            "sublocality_level_1",
-            "sublocality",
-            "political"
-          ]
+          "types": ["sublocality_level_1", "sublocality", "political"]
         },
         {
           "long_name": "Guarulhos",
           "short_name": "Guarulhos",
-          "types": [
-            "administrative_area_level_2",
-            "political"
-          ]
+          "types": ["administrative_area_level_2", "political"]
         },
         {
           "long_name": "São Paulo",
           "short_name": "SP",
-          "types": [
-            "administrative_area_level_1",
-            "political"
-          ]
+          "types": ["administrative_area_level_1", "political"]
         },
         {
           "long_name": "Brasil",
           "short_name": "BR",
-          "types": [
-            "country",
-            "political"
-          ]
+          "types": ["country", "political"]
         },
         {
           "long_name": "07190-100",
           "short_name": "07190-100",
-          "types": [
-            "postal_code"
-          ]
+          "types": ["postal_code"]
         }
       ],
       "latitude": -23.4302175,
@@ -2051,7 +2013,6 @@
       "celular_publico": "31999112222"
     },
     {
-      "id": "ddea420d-907e-4eef-9dfb-5a09b74ded3c",
       "nome": "Camille Parma",
       "cpf": "07707946960",
       "celular": "47988944207",
@@ -2059,10 +2020,10 @@
       "estado": "SC",
       "email": "camilleparma@gmail.com",
       "senha": "202cb962ac59075b964b07152d234b70",
-      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717095202/nqm00axticspw9js44k2.jpg",
-      "descricao": "ccccccccccc",
-      "email_publico": "cccccccccc",
-      "celular_publico": "cccccccccc"
+      "descricao": "rrrrrrrrrrrr",
+      "email_publico": "fffffffff",
+      "celular_publico": "5555555555",
+      "id": "ddea420d-907e-4eef-9dfb-5a09b74ded3c"
     }
   ]
 }
