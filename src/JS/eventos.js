@@ -39,7 +39,9 @@ function populateEvents() {
     }')">
                     <img
                       class="imgcard"
+
                       src=${evento.bannerURL || ""}
+
                       alt="event img"
                     />
                     <p class="event-title">${evento.nome}</p>
