@@ -29,7 +29,7 @@ function isDataFuturaOuHoje(dataEvento) {
     console.error("Erro ao converter data:", dataEvento);
     return false;
   }
-  return dataConvertida >= hoje.setHours(0, 0, 0, 0); // Comparar com o início do dia de hoje
+  return dataConvertida >= hoje.setHours(0, 0, 0, 0);
 }
 
 function estaEmEventosProximos() {
