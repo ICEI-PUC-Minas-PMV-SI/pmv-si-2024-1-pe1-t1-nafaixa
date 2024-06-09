@@ -121,7 +121,7 @@
     {
       "id": "2fc3df5c-8cc9-4776-971b-f0c1ce47a917",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "TESTE7",
       "link": "",
       "local": "Av. Carlos Drummond de Andrade, 458 - Praia dos Amores, Balneário Camboriú - SC, 88331-410, Brasil",
@@ -281,7 +281,7 @@
     {
       "id": "145778a0-c122-4804-9eac-d91dc165dee7",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Lorem",
       "link": "",
       "local": "Lorena Park, Goiânia - GO, Brasil",
@@ -313,7 +313,7 @@
     {
       "id": "2c6c7176-fa35-4749-9021-7733384d3874",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste com editor",
       "link": "",
       "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
@@ -377,7 +377,7 @@
     {
       "id": "c958a9b5-99d2-495a-a1de-15a28602b688",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste com editor",
       "link": "",
       "local": "Atibaia, SP, Brasil",
@@ -563,7 +563,7 @@
     {
       "id": "3c3605d3-0333-489c-afe2-d5a6160b2a4f",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste final mesmo ",
       "link": "",
       "local": "",
@@ -591,7 +591,7 @@
     {
       "id": "a5c542a0-c2dc-4fcd-8269-213f3a963e8e",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste final mesmo kkkk",
       "link": "",
       "local": "",
@@ -621,7 +621,7 @@
     {
       "id": "881ac256-c4a7-4db4-b420-15e6b61bb0f3",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste final nº 82698127817",
       "link": "",
       "local": "R. Dr. Tirso Martins - Vila Mariana, São Paulo - SP, 04035-000, Brasil",
@@ -717,7 +717,7 @@
     {
       "id": "c66b486a-ed79-4d55-ad94-28df3b5c372c",
       "tipo": "presencial",
-      "categoria": "musica-shows",
+      "categoria": "Música e Shows",
       "nome": "Teste fixed localhost",
       "link": "",
       "local": "São Paulo, SP, Brasil",
@@ -1054,7 +1054,7 @@
     {
       "id": "d799f579-b71f-40ed-b0a7-88e748397df5",
       "tipo": "presencial",
-      "categoria": "",
+      "categoria": "stand Up",
       "nome": "aaa",
       "link": "",
       "local": "",
@@ -1139,7 +1139,7 @@
     {
       "id": "5d08f5e7-e1ad-43e9-8f78-574b944d56da",
       "tipo": "presencial",
-      "categoria": "",
+      "categoria": "stand Up",
       "nome": "aaasss",
       "link": "",
       "local": "",
@@ -1156,7 +1156,7 @@
     {
       "id": "cf62511a-9560-48ac-bd5d-f784ee771955",
       "tipo": "presencial",
-      "categoria": "",
+      "categoria": "stand Up",
       "nome": "aaasss",
       "link": "",
       "local": "",
@@ -1173,7 +1173,7 @@
     {
       "id": "972f166f-4281-47cb-88bf-0084f8a14123",
       "tipo": "presencial",
-      "categoria": "",
+      "categoria": "stand Up",
       "nome": "aaasss",
       "link": "",
       "local": "",
@@ -1207,7 +1207,7 @@
     {
       "id": "ac5b0be2-1c91-4216-8852-1aae10b8e673",
       "tipo": "presencial",
-      "categoria": "",
+      "categoria": "stand Up",
       "nome": "aaasss",
       "link": "",
       "local": "Arraial do Cabo, RJ, 28930-000, Brasil",
