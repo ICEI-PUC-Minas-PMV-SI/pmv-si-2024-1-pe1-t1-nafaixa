@@ -1,3 +1,37 @@
+// Função para converter string "DD/MM/YYYY" para objeto Date
+function converterParaData(data) {
+    if (!data) {
+        console.error("Data inválida:", data);
+        return null;
+    }
+
+    const partes = data.split("/");
+    if (partes.length !== 3) {
+        console.error("Formato de data inválido:", data);
+        return null;
+    }
+
+    const dia = parseInt(partes[0], 10);
+    const mes = parseInt(partes[1], 10) - 1;
+    const ano = parseInt(partes[2], 10);
+
+    return new Date(ano, mes, dia);
+}
+
+function isDataFuturaOuHoje(dataEvento) {
+    if (!dataEvento) {
+        console.error("Data do evento inválida:", dataEvento);
+        return false;
+    }
+    const hoje = new Date();
+    const dataConvertida = converterParaData(dataEvento);
+    if (!dataConvertida) {
+        console.error("Erro ao converter data:", dataEvento);
+        return false;
+    }
+    return dataConvertida >= hoje.setHours(0, 0, 0, 0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const endpointURL = 'http://localhost:3000/eventos';
 
@@ -31,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            if (eventMatchesSearch(evento, searchTerm)) {
+            if (isDataFuturaOuHoje(evento.finalDate) && eventMatchesSearch(evento, searchTerm)) {
                 console.log('Evento corresponde ao termo de pesquisa:', evento.nome);
                 const cardElement = criarCardEvento(evento);
                 if (cardElement) {
@@ -39,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     eventosExibidos = true;
                 }
             } else {
-                console.log('Evento não corresponde ao termo de pesquisa:', evento.nome);
+                console.log('Evento não corresponde ao termo de pesquisa ou está em uma data passada:', evento.nome);
                 console.log('Evento:', evento);
                 console.log('Corresponde ao termo de pesquisa:', eventMatchesSearch(evento, searchTerm));
-
+                console.log('Data válida:', isDataFuturaOuHoje(evento.finalDate));
             }
         });
 
@@ -75,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
             lowerTipo.includes(lowerSearchTerm)
         );
     }
-
 
     function criarCardEvento(evento) {
         const cardElement = document.createElement('div');
