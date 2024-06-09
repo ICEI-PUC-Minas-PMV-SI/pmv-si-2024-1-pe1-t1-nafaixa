@@ -242,13 +242,13 @@
           </article>
 
           <article class="categories-cards">
-            <img id="musica-shows" class="icon-card" src="assets/img-categorias/musica e shows.svg" alt="card Música e shows" />
+            <img id="Música e Shows" class="icon-card" src="assets/img-categorias/musica e shows.svg" alt="card Música e shows" />
 
             <h3>Música e shows</h3>
           </article>
 
           <article class="categories-cards">
-            <img id="stand-up" class="icon-card" src="assets/img-categorias/Standup.svg" alt="card stand up" />
+            <img id="stand Up" class="icon-card" src="assets/img-categorias/Standup.svg" alt="card stand up" />
 
             <h3>Stand up</h3>
           </article>
@@ -289,7 +289,9 @@
     <div style="width: 100%">
       <div class="events-nearme">
         <h1>Todos os eventos</h1>
-        <a class="vertodos-button" href="eventos.html">ver todos</a>
+
+        <a class="vertodos-button" href="todos-eventos.html">ver todos</a>
+
       </div>
       <div id="2" class="wrapper-cards"></div>
       <div>
@@ -321,7 +323,22 @@
 
   <script src="./JS/navbarUpdate.js"></script>
   
-  <script src="./JS/index.js"></script>
+  <script src="./JS/Index.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM is ready!");
+
+  document.querySelectorAll("article.categories-cards").forEach((article) => {
+    article.addEventListener("click", handleClick);
+  });
+});
+
+function handleClick(e) {
+  console.log("clicked", e.target.id);
+  window.location.href = `eventos-categorias.html?categoria=${e.target.id}`;
+}
+  </script>
 
 </body>
 

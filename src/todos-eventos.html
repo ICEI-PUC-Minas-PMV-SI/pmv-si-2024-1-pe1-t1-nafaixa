@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todos-eventos</title>
+    <title>eventos-categoria</title>
    
     <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -18,10 +19,8 @@
     <link rel="stylesheet" href="CSS/components/footer.css" />
     <link rel="stylesheet" href="CSS/components/eventos-page.css"/>
 
-
 </head>
 <body>
-    
   <header>
     <div class="navcenter" id="navbar-logged-out">
       <div>
@@ -48,6 +47,7 @@
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
         </a>
+
       </div>
 
       <form class="nav-search">
@@ -78,7 +78,8 @@
           </div>
         </nav>
       </div>
-    </div>
+
+      </div>
 
     <div class="navcenter-mobile" id="navbar-logged-out-mobile">
       <div>
@@ -121,123 +122,45 @@
     <input type="text" id="locationInput" placeholder="Digite o nome da cidade que deseja...">
   </dialog>
 
+     
       <section class="page">
         <div style="width: 100%">
             <div class="todos-eventos-title"> 
                 <h1>Todos os Eventos</h1>
-                <select class="ordenar-btn">
+               
+
+                <select name="ordenacao" class="ordenar-btn">
                     <option value=""> Ordenar</option>
+                      <option value="date"> Data</option>
+                      <option value="name-asc"> A a Z</option>
+                      <option value="name-desc"> Z a A</option>
+
 
                 </select>
 
             </div>
+
+            
+
             
 
             <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-        
-        
-              <div class="wrapper-cards">
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-                <div class="cards">
-                  <img
-                    class="imgcard"
-                    src="assets/img/download (1).jpeg"
-                    alt="event img"
-                  />
-                  <p class="event-title">Nome do evento</p>
-                  <p><img src="./assets/img/data.svg" alt="Data do evento" />Data</p>
-                  <p>
-                    <img src="./assets/img/local.svg" alt="Local do evento" />Local
-                  </p>
-                </div>
-              </div>
-              <div class="wrapper-mostrarMais">
-                <button class="mostrarMais">mostrar mais</button>
-              </div>
+            </div>
+
+            <div class="wrapper-mostrarMais">
+              <button class="mostrarMais">mostrar mais</button>
+            </div>
+        </div>
+      </section>
+
+
+
+      <section class="page">
+        <div style="width: 100%">
+            
+            <div class="wrapper-cards">
+            </div>
+
         </div>
       </section>
 
@@ -264,6 +187,23 @@
         </div>
       </footer>
   
-  
+      <script src="./JS/meusEventos.js"></script>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              const meuPerfilLink = document.getElementById('meu-perfil');
+              meuPerfilLink.addEventListener('click', function (event) {
+                  event.preventDefault();
+                  window.location.href = 'cadastro-produtor.html?edit';
+              });
+          });
+      </script>
+
+      <script  src="./JS/navbarUpdate.js"></script>
+      <script  src="./JS/eventos.js"></script>
+      <script  src="./JS/detalhesEvento.js"></script>
+      <script  src="./JS/eventos-categorias.js"></script>
+
+
 </body>
 </html>
