@@ -83,3 +83,7 @@ function removePastEvents() {
     return new Date(evento.startDate) >= today;
   });
 }
+
+function onClickEventCard(id) {
+  window.location.href = `detalhes-evento.html?id=${id}`;
+}
