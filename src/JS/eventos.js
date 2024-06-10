@@ -31,32 +31,38 @@ function populateEvents() {
   //   removePastEvents();
 
   eventos.forEach((evento) => {
-    const card = document.createElement("article");
-    card.classList.add("card");
-    card.innerHTML = `
-              <div class="cards" id="${evento.id}" onclick="onClickEventCard('${
-      evento.id
-    }')">
-                    <img
-                      class="imgcard"
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('cards');
+    cardElement.dataset.id = evento.id;
 
-                      src=${evento.bannerURL || ""}
+    const dataHoraFormatada = formatarDataHora(evento.startDate, evento.startTime);
 
-                      alt="event img"
-                    />
-                    <p class="event-title">${evento.nome}</p>
-                    <p><img src="./assets/img/data.svg" alt="Data do evento" />${
-                      evento.startDate
-                    }</p>
-                    <p>
-                      <img src="./assets/img/local.svg" alt="Local do evento" />${
-                        evento.local
-                      }
-                    </p>
-                  </div>
-              `;
-    divContainerCards.appendChild(card);
+    let detalheExtra = '';
+    if (evento.tipo === 'presencial') {
+      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>`;
+    } else if (evento.tipo === 'online') {
+      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Link do evento" />${evento.link}</p>`;
+    } else {
+      console.error('Tipo de evento desconhecido:', evento.tipo);
+      return null;
+    }
+
+    cardElement.innerHTML = `
+            <img class="banner-card" src="${evento.bannerURL}" alt="banner do evento" />
+            <p class="event-title">${evento.nome}</p>
+            <p><img src="./assets/img/data.svg" alt="Data e Horário do evento" />${dataHoraFormatada}</p>
+            ${detalheExtra}
+        `;
+
+    cardElement.addEventListener('click', () => {
+      window.location.href = `detalhes-evento.html?id=${evento.id}`;
+    });
+    divContainerCards.appendChild(cardElement);
   });
+}
+
+function formatarDataHora(startDate, startTime) {
+  return `${startDate} ${startTime}`;
 }
 
 function onChangeSort(e) {

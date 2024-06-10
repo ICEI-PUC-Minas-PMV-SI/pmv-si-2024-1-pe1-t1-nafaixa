@@ -4,48 +4,19 @@
 
 .page {
   display: flex;
+  min-height: 77vh;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
   max-width: 1400px;
   margin: auto;
 }
 
 
 body {
-  background: linear-gradient(
-    180deg,
-    #dee9f0 0%,
-    #faf9f9 22.6%,
-    #fdfcfc 70.1%,
-    #dee9f0 100%
-  );
+  background: linear-gradient(180deg,
+      #dee9f0 0%,
+      #faf9f9 22.6%,
+      #fdfcfc 70.1%,
+      #dee9f0 100%);
   box-shadow: 0px 0px 0px 0px #0097ff;
-}
-
-#locationPopup {
-  z-index: 100;
-  display: none;
-  top: 50px;
-  left: 50px;
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 320px;
-  height: 350px;
-  font-size: 20px;
-
-}
-#locationPopup dialog::backdrop{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-#locationPopup input{
-  display: flex;
-  padding: 10px;
-  border-radius: 5px;
-  width: 295px;
-  font-size: 14px;
-
 }

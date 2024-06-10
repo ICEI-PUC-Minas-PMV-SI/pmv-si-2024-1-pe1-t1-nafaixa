@@ -29,6 +29,7 @@ header {
 
 .nav-options-logged-in {
   display: flex;
+  align-items: center;
 }
 
 .logo {
