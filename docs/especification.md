@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-Como apresentado anteriormente, o “NaFaixa” visa auxiliar em problemas complementares que impactam os organizadores de eventos gratuitos e seu público. Nosso propósito é proporcionar benefícios mútuos, possibilitando uma divulgação eficiente dos eventos por parte dos organizadores e facilitando a busca por eventos gratuitos para o público.
+Como apresentado anteriormente, o “NaFaixa” visa auxiliar em problemas complementares que impactam os produtores de eventos gratuitos e seu público. Nosso propósito é proporcionar benefícios mútuos, possibilitando uma divulgação eficiente dos eventos por parte dos produtores e facilitando a busca por eventos gratuitos para o público.
 
 Nesta etapa do projeto foram utilizadas:
 
@@ -23,8 +23,8 @@ Eduarda tem 22 anos, está em um relacionamento há dois anos, está no segundo 
 ## Histórias de Usuários
 | EU COMO | QUERO/PRECISO | PARA |
 | --- | --- | --- |
-| Organizador de eventos | cadastrar meu evento na plataforma | atrair potenciais participantes. |
-| Organizador de eventos | ter visibilidade prévia de quem confirmou presença no meu evento | poder gerenciar os recursos da melhor forma. |
+| Produtor de eventos | cadastrar meu evento na plataforma | atrair potenciais participantes. |
+| Produtor de eventos | ter visibilidade prévia de quem confirmou presença no meu evento | poder gerenciar os recursos da melhor forma. |
 | Pessoa interessada em eventos gratuitos | filtrar os eventos por categoria específica | agilizar minha busca. |
 | Pessoa interessada em eventos gratuitos | pesquisar por um evento específico | facilitar minha busca. |
 | Pessoa interessada em eventos gratuitos | visualizar os eventos mais próximos a mim | aprimorar minha busca. |
@@ -47,9 +47,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-005 | O sistema deve apresentar uma listagem completa de todos os eventos cadastrados. | ALTA |
 | RF-006 | O sistema deve apresentar os dados detalhados de todos os eventos cadastrados. | ALTA |
 | RF-007 | O sistema deve oferecer a opção de confirmar presença em um ou mais eventos. | MÉDIA |
-| RF-008 | O sistema deve oferecer uma página de cadastro de organizador. | ALTA |
-| RF-009 | O sistema deve oferecer uma página de login para o organizador. | ALTA |
-| RF-010 | O sistema deve oferecer uma página para alteração de dados do organizador. | ALTA |
+| RF-008 | O sistema deve oferecer uma página de cadastro de produtor. | ALTA |
+| RF-009 | O sistema deve oferecer uma página de login para o produtor. | ALTA |
+| RF-010 | O sistema deve oferecer uma página para alteração de dados do produtor. | ALTA |
 | RF-011 | O sistema deve oferecer a opção de alteração dos dados do evento já cadastrado. | ALTA |
 
 
@@ -57,7 +57,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID | DESCRIÇÃO DO REQUISITO | PRIORIDADE |
 | --- | --- | --- |
-| RNF-001 | O sistema deve ser compatível com o Google Chrome,, garantindo uma experiência consistente. | ALTA |
+| RNF-001 | O sistema deve ser compatível com o Google Chrome, garantindo uma experiência consistente. | ALTA |
 | RNF-002 | O sistema deve possuir uma API integrada com o Google Maps para fornecer informações de localização. | BAIXA |
 | RNF-003 | As tecnologias fundamentais para o sistema são HTML, CSS e Javascript. | ALTA |
 | RNF-004 | Os dados do sistema devem ser armazenados no formato JSON. | ALTA |
