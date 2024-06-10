@@ -38,7 +38,9 @@ function populateEvents() {
       }')">
                     <img
                       class="imgcard"
-                      src=${evento.imagem || ""}
+
+                      src=${evento.bannerURL || ""}
+
                       alt="event img"
                     />
                     <p class="event-title">${evento.nome}</p>
@@ -79,4 +81,8 @@ function removePastEvents() {
   eventos = eventos.filter((evento) => {
     return new Date(evento.startDate) >= today;
   });
+}
+
+function onClickEventCard(id) {
+  window.location.href = `detalhes-evento.html?id=${id}`;
 }

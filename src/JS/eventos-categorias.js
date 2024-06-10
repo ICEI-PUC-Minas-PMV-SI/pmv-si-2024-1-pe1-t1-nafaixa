@@ -25,7 +25,7 @@ function searchCategory(category) {
       .then((response) => response.json())
       .then((events) => {
         eventos = events;
-        console.log("GOKU eventos", eventos);
+        console.log("QLQR evento", eventos);
         populateEvents();
       })
       .catch((error) => {
@@ -53,12 +53,24 @@ function onChangeCategory(e) {
   searchCategory(category);
 }
 
+
+
+
+
+
+
+
+
+
+
+
 function onChangeSort(e) {
   const sort = e.target.value;
   console.log("sort", sort);
   if (sort === "date") {
-    eventos.sort((a, b) => {
-      return new Date(a.startDate) - new Date(b.startDate);
+    eventos.sort((a, b) => { 
+      
+      return new Date(b.startDate) - new Date(a.finalDate);
     });
   } else if (sort === "name-asc") {
     eventos.sort((a, b) => {
@@ -77,8 +89,9 @@ function populateEvents() {
   const divContainerCards = document.querySelector("div.wrapper-cards");
   divContainerCards.innerHTML = "";
 
-  //   removePastEvents();
 
+ // removePastEvents();
+ 
   eventos.forEach((evento) => {
     const card = document.createElement("article");
     card.classList.add("card");
@@ -88,12 +101,12 @@ function populateEvents() {
     }')">
                     <img
                       class="imgcard"
-                      src=${evento.imagem || ""}
+                      src=${evento.bannerURL || ""}
                       alt="event img"
                     />
                     <p class="event-title">${evento.nome}</p>
                     <p><img src="./assets/img/data.svg" alt="Data do evento" />${
-                      evento.startDate
+                      evento.finalDate
                     }</p>
                     <p>
                       <img src="./assets/img/local.svg" alt="Local do evento" />${
@@ -106,9 +119,11 @@ function populateEvents() {
   });
 }
 
+
 function removePastEvents() {
   const today = new Date();
+  console.log(today)
   eventos = eventos.filter((evento) => {
-    return new Date(evento.startDate) >= today;
+    return new Date(evento.finalDate) >= today;
   });
 }
