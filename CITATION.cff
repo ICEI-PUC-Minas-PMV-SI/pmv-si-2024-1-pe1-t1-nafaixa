@@ -1,29 +1,55 @@
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title:
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: NaFaixa
+message: >-
+  Repositório NaFaixa para o Eixo 1 - Projeto 1: Aplicações
+  Web do curso de Sistemas de Informação EAD da PUC Minas
+type: software
 authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
-    affiliation: PUC Minas
-    family-names:
-    given-names:
+  - given-names: Camille
+    family-names: Parma
+    email: camille.parma@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Amanda
+    family-names: Magalhães Silva
+    email: 1508909@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Catharina
+    family-names: Perdigão Carneiro
+    email: 1504927@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Gustavo
+    family-names: Torres da Rocha
+    email: 1511517@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Rita Laura
+    family-names: Gonçalves
+    email: 1507030@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Matheus
+    family-names: Fernandes da Silva Otoni
+    email: 946900@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+  - given-names: Hugo
+    name-particle: B
+    family-names: de Paula
+    name-suffix: Prof.
+    email: hugo@sga.pucminas.br
+    affiliation: PUC Minas Virtual
+repository-code: >-
+  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t1-nafaixa
+abstract: >-
+  O NaFaixa é uma plataforma digital que conecta produtores
+  de eventos gratuitos a potenciais participantes,
+  oferecendo uma ampla gama de opções para todos os gostos e
+  idades. Seja um workshop, show, exposição artística, ou
+  qualquer outra atividade sem custo, nossa plataforma é o
+  ponto de encontro perfeito para produtores e
+  participantes.
 keywords:
-  -
-  -
-repository-code:
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2023-06-30
+  - Evento gratuito
+  - Desenvolvimento Web
+  - Produção de evento
+date-released: '2024-06-23'
