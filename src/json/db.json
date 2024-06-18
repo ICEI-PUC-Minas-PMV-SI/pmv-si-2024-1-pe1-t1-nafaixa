@@ -1804,6 +1804,60 @@
       "sobre": "<p>ssssssssssssss</p>",
       "informacoes": "ssssssssssssss",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717612221/NaFaixa/xyw5f4kr03bvodspeiqh.jpg"
+    },
+    {
+      "id": "c764b7b6-8ba9-4c32-b7fb-794580318dee",
+      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
+      "tipo": "presencial",
+      "categoria": "Gastronomia",
+      "nome": "Rodada de Negócio - pré -cadastro do VII Prêmio Queijo Brasil 2024",
+      "link": "",
+      "local": "R. Alberto Stein, 199 - loja 109 - Velha, Blumenau - SC, 89036-200, Brasil",
+      "latitude": -26.9155433,
+      "longitude": -49.0846725,
+      "startDate": "11/07/2024",
+      "startTime": "08:00",
+      "finalDate": "12/07/2024",
+      "finalTime": "23:00",
+      "sobre": "<div class=\"sc-537fdfcb-0 bdUbUp\">\n<p class=\"MsoNormal\">O Pr&ecirc;mio Queijo Brasil &eacute; um ponto de encontro anual de &acirc;mbito nacional para diferentes atores do setor artesanal do queijo e latic&iacute;nios. Produtores, compradores e vendedores de todo o territ&oacute;rio nacional se encontram aqui durante o evento.</p>\n<p class=\"MsoNormal\">O evento Pr&ecirc;mio Queijo Brasil tem diversas etapas, sempre pensadas para gerar oportunidades de neg&oacute;cios para os pequenos e m&eacute;dios empreendedores.</p>\n<p class=\"MsoNormal\">O evento acontecer&aacute; em Blumenau / SC entre os dias 11 a 12 de julho de 2024 .</p>\n<p class=\"MsoNormal\">1.&nbsp;Concurso&nbsp;exclusivo para pequenas e m&eacute;dias queijarias nacionais.</p>\n<p class=\"MsoNormal\">Tendo a cerim&ocirc;nia de premia&ccedil;&atilde;o no dia 11 de julho a partir das 18h</p>\n<p class=\"MsoNormal\">&nbsp;</p>\n<p class=\"MsoNormal\">2.&nbsp;Feira de produtores&nbsp;com venda direta ao consumidor&nbsp;produtores de queijo e outros produtores de produtos artesanais como vinho, cerveja, charcutaria, caf&eacute; e afins.&nbsp;<br>A feira ser&aacute; realizada entre os dias 11 &agrave; 12 de julho de 2024.</p>\n<p class=\"MsoNormal\">Dia 11, quinta-feira, das 14h &agrave;s 22h.&nbsp;</p>\n<p class=\"MsoNormal\">Dia 12 de julho, sexta-feira, das 12h &agrave;s 22h.&nbsp;</p>\n<p class=\"MsoNormal\">4.&nbsp;Forma&ccedil;&atilde;o queijista, forma&ccedil;&atilde;o voltada para o profissionais ou entusiastas do mundo do queijo.</p>\n<p class=\"MsoNormal\">Inscri&ccedil;&otilde;es para a&nbsp;forma&ccedil;&atilde;o queijista.</p>\n<p class=\"MsoNormal\">M&oacute;dulo 1.</p>\n<p class=\"MsoNormal\">Aula 1, dia 11 de julho, quarta-feira, das 13h30 &agrave;s 17h30.</p>\n<p class=\"MsoNormal\">Aula 2, dia 11 de julho, quarta-feira das 18h30 &agrave;s 22h30.</p>\n<p class=\"MsoNormal\">M&oacute;dulo 2.</p>\n<p class=\"MsoNormal\">Aula 1, dia 12 de julho, sexta-feira, das 17h30 &agrave;s 22h.</p>\n<p class=\"MsoNormal\">5.&nbsp;Rodada de Neg&oacute;cios, onde pequenos e m&eacute;dios produtores se encontram com comerciantes para gerar contatos e vendas.</p>\n<div class=\"MsoNormal\" align=\"center\"><hr align=\"center\" noshade=\"noshade\" size=\"0\" width=\"100%\"></div>\n</div>",
+      "informacoes": "Livre para todos os públicos.",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718632056/NaFaixa/o3frtwss04jrc7ty1xxl.jpg"
+    },
+    {
+      "tipo": "presencial",
+      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
+      "categoria": "Feiras",
+      "nome": "Feira CASA SC - Blumenau",
+      "link": "",
+      "local": "R. Alberto Stein, 199 - loja 109 - Velha, Blumenau - SC, 89036-200, Brasil",
+      "latitude": -26.9155433,
+      "longitude": -49.0846725,
+      "startDate": "04/07/2024",
+      "startTime": "10:00",
+      "finalDate": "07/07/2024",
+      "finalTime": "19:00",
+      "sobre": "<p>Livre para todos os p&uacute;blicos.</p>",
+      "informacoes": "Livre para todos os públicos.",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718632367/NaFaixa/fnxqdvdkbeebwu9qk2nx.png",
+      "id": "0b7eb9b9-15bb-49de-a5ad-9cec67015ceb"
+    },
+    {
+      "id": "12ba9cb6-e2e8-42d5-9306-da7686e274fa",
+      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
+      "tipo": "presencial",
+      "categoria": "Palestras",
+      "nome": "Palestra Gratuita - Paz e Universalismo / Blumenau - SC",
+      "link": "",
+      "local": "Av. Martin Luther, 111 - Victor Konder, Blumenau - SC, 89012-010, Brasil",
+      "latitude": -26.9126064,
+      "longitude": -49.0700481,
+      "startDate": "12/07/2024",
+      "startTime": "19:00",
+      "finalDate": "13/07/2024",
+      "finalTime": "19:00",
+      "sobre": "<p>Principais T&oacute;picos da Palestra:</p>\n<p>O entendimento da realidade humana al&eacute;m do mundo f&iacute;sico.</p>\n<p>Desarmamento &iacute;ntimo em prol do melhor para todos.</p>\n<p>Paradoxo das m&uacute;ltiplas vidas e o preconceito &eacute;tnico</p>\n<p>A responsabilidade evolutiva pessoal, contribuindo para o Universalismo</p>\n<p>&nbsp;</p>\n<p>Venha participar, tirar d&uacute;vidas e contribuir com sua vis&atilde;o sobre o assunto em um ambiente otimizado e com a orienta&ccedil;&atilde;o de professores especializados!</p>\n<p>Pr&eacute;-Requisito: Esta atividade n&atilde;o tem pr&eacute;-requisitos.</p>\n<p>Recomenda&ccedil;&otilde;es para participar:</p>\n<p>Procure chegar com anteced&ecirc;ncia; os inscritos t&ecirc;m 15 minutos de toler&acirc;ncia para entrar na sala de aula.</p>\n<p>Se desejar convidar algu&eacute;m para o evento, fique &agrave; vontade; s&oacute; lembramos que os acompanhantes tamb&eacute;m precisam se inscrever e seguir estas recomenda&ccedil;&otilde;es para que todos aproveitem bem a atividade.</p>",
+      "informacoes": "Livre para todos",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718667248/NaFaixa/itvdo6n3xiiofzk4mto4.png"
     }
   ],
   "emails": [
@@ -1886,6 +1940,11 @@
       "id": "8579",
       "email": "asklhdasljdaj@skajda.com",
       "eventoId": "5365c37c-cc6a-4fd8-8985-215c2de62e0a"
+    },
+    {
+      "email": "kennedymessias.vb@gmail.com",
+      "eventoId": "c764b7b6-8ba9-4c32-b7fb-794580318dee",
+      "id": "tempwuE"
     }
   ],
   "produtor": [
@@ -1944,6 +2003,20 @@
       "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1717466701/syay8am6i5u4gb3sxad2.svg",
       "senha": "202cb962ac59075b964b07152d234b70",
       "id": "ddea420d-907e-4eef-9dfb-5a09b74ded3c"
+    },
+    {
+      "nome": "Rita Laura Gonçalves",
+      "cpf": "13566899674",
+      "celular": "47983876156",
+      "cidade": "Blumenau",
+      "estado": "SC",
+      "email": "ritalaura57@gmail.com",
+      "descricao": "Muitos anos fazendo o baile rolar por ai!",
+      "email_publico": "ritalaura57@gmail,.com",
+      "celular_publico": "47986766654",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1718630996/hshlyqhwsidec00r6tqn.png",
+      "senha": "e10adc3949ba59abbe56e057f20f883e",
+      "id": "a6465b9a-34e6-411f-bba9-a83229d4b03f"
     }
   ]
 }
