@@ -1,12 +1,12 @@
 function esconderMapa() {
   const map = document.getElementById("map");
   map.style.display = "none";
-  document.getElementById("esconderMapaTexto").innerText = "Aparecer Mapa";
+  document.getElementById("esconderMapaTexto").innerText = "Mostrar mapa";
 }
 function aparecerMapa() {
   const map = document.getElementById("map");
   map.style.display = "";
-  document.getElementById("esconderMapaTexto").innerText = "Esconder Mapa";
+  document.getElementById("esconderMapaTexto").innerText = "Esconder mapa";
 }
 function esconderOuAparecerMapa() {
   console.log("escondendo ou aparecendo");

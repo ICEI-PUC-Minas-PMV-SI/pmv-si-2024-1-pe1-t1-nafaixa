@@ -4,11 +4,13 @@
   width: 50px;
   height: 50px;
 }
-p {
-  font-size: 11px;
+
+.wrapper-cards p {
+  font-size: 14px;
   margin-top: 0;
   margin-bottom: 7px !important;
 }
+
 p:last-of-type {
   margin-bottom: 0 !important;
 }
@@ -24,9 +26,11 @@ body {
   height: 420px;
   width: 100%;
 }
+
 .IconeEsconderMapa {
   fill: #ffffff;
 }
+
 c .evento {
   align-items: center;
   background-color: #ffffff;
@@ -92,9 +96,11 @@ c .evento {
   width: 50px;
   height: 50px;
 }
+
 .imgcard {
   width: 100%;
 }
+
 .esconderMapa-button {
   text-decoration: none;
   font-weight: bold;
@@ -107,6 +113,7 @@ c .evento {
   border-radius: 5px;
   margin-right: 10px;
 }
+
 .voltarLocalizacao {
   margin-top: 30px;
 }

@@ -38,161 +38,6 @@
     crossorigin="anonymous"></script>
 
 
-
-
-  <script>
-    var eventos = []
-    async function carregarTodosEventos() {
-      console.log('carregando eventos')
-
-      try {
-        const response = await fetch("http://localhost:3000/eventos");
-        eventos = await response.json();
-        initMap(eventos)
-        console.log('eventos buscados')
-      } catch (error) {
-        console.error("Erro ao carregar os eventos:", error);
-      }
-    }
-    carregarTodosEventos()
-
-    function openPopup() {
-      console.log('abrindo popup')
-      const popup = document.getElementById('locationPopup');
-      popup.style.display = 'block';
-
-      window.addEventListener('click', closePopupOutside);
-
-      window.addEventListener('keydown', closePopupOnEsc);
-
-      function closePopupOutside(event) {
-        if (event.target === popup) {
-          popup.style.display = 'none';
-          window.removeEventListener('click', closePopupOutside);
-          window.removeEventListener('keydown', closePopupOnEsc);
-        }
-      }
-
-      function closePopupOnEsc(event) {
-        if (event.key === 'Escape') {
-          popup.style.display = 'none';
-          window.removeEventListener('click', closePopupOutside);
-          window.removeEventListener('keydown', closePopupOnEsc);
-        }
-      }
-
-      //Função de autocomplete do google no input do popup
-      var input = document.getElementById('cityInput');
-      var autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['(cities)'],
-        componentRestrictions: { country: 'BR' }
-      });
-
-      autocomplete.addListener('place_changed', function () {
-        var selectedPlace = autocomplete.getPlace();
-        if (!selectedPlace.geometry) {
-          return;
-        }
-
-        var cityName = selectedPlace.name;
-
-        updateNavbarLocation(cityName);
-        const latitude = selectedPlace.geometry.location.lat()
-        const longitude = selectedPlace.geometry.location.lng()
-        localStorage.setItem('userLocation', JSON.stringify({
-          cityName: cityName,
-          latitude,
-          longitude
-        }));
-
-        document.getElementById('locationPopup').style.display = 'none';
-        initMap(eventos, { latitude, longitude })
-        //sobrescreve user location do mapa
-        localStorage.setItem(
-          "mapUserLocation",
-          JSON.stringify({ latitude, longitude })
-        );
-        //bloqueia mapa de atualizar localização após refresh
-        localStorage.setItem(
-          "isMapLocationBlocked",
-          JSON.stringify(true)
-        );
-        location.reload()
-
-      });
-    }
-
-    // Função para atualizar a localização na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElementWeb = document.getElementById('escolherLocalização');
-      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
-      if (locationElementWeb) {
-        locationElementWeb.textContent = cityName;
-      }
-      if (locationElementMobile) {
-        locationElementMobile.textContent = cityName;
-      }
-    }
-
-    window.onload = function () {
-      var userLocation = localStorage.getItem('userLocation');
-      if (userLocation) {
-        userLocation = JSON.parse(userLocation);
-        if (userLocation.cityName) {
-          updateNavbarLocation(userLocation.cityName);
-        }
-      }
-    };
-
-    // Função para atualizar o nome da cidade na navbar
-    function updateNavbarLocation(cityName) {
-      var locationElementWeb = document.getElementById('escolherLocalização');
-      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
-      if (locationElementWeb) {
-        locationElementWeb.textContent = cityName;
-      }
-      if (locationElementMobile) {
-        locationElementMobile.textContent = cityName;
-      }
-    }
-
-    window.onload = () => {
-      const userLocation = JSON.parse(localStorage.getItem('userLocation'));
-      if (!userLocation) {
-        getLocation();
-      } else {
-        updateNavbarLocation(userLocation.city);
-      }
-    };
-
-    // Função para carregar e definir a localização ao recarregar a página
-    function loadUserLocation() {
-      var userLocation = localStorage.getItem('userLocation');
-      if (userLocation) {
-        userLocation = JSON.parse(userLocation);
-        if (userLocation.cityName) {
-          updateNavbarLocation(userLocation.cityName);
-        }
-      }
-    }
-
-    window.addEventListener('load', function () {
-      loadUserLocation();
-    });
-
-    function voltarParaLocalizacaoAtual() {
-      localStorage.removeItem("isMapLocationBlocked");
-      localStorage.setItem("mapUserLocation", localStorage.getItem('currentMapUserLocation'));
-      location.reload()
-    }
-
-  </script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
-  </script>
-  <script src="/src/JS//esconderMapa.js">
-  </script>
-  <script src="/src/JS/cardsEvento.js"></script>
 </head>
 
 <body>
@@ -212,17 +57,18 @@
     <div class="navcenter" id="navbar-logged-out">
       <div>
         <a href="index.html">
-          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
+          <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
+        </a>
       </div>
-      <form class="nav-search">
+      <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
         <div class="search">
           <span class="search-icon material-symbols-outlined">search</span>
-          <input class="search-input" type="search" placeholder="pesquise por evento" />
+          <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
         </div>
       </form>
       <nav class="nav-options-web">
         <div onclick="openPopup()" class="localização-web">
-          <img src="assets/img/localpin.svg">
+          <img src="assets/img/localpin.svg" </img>
           <span class="localização-web" id="escolherLocalização">Localização</span>
           <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
         </div>
@@ -230,43 +76,62 @@
         <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
+
     </div>
 
-
-    <div id="navbar-logged-in" style="display: none">
+    <div class="navcenter-mobile" id="navbar-logged-in" style="display: none">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" />
         </a>
+
       </div>
 
-      <a href="">Localização</a>
+      <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search">
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
+        </div>
+      </form>
 
-      <nav class="menu-hamburguer">
-        <input type="checkbox" class="checkbox-menu">
+      <nav class="nav-options-web">
+        <div class="nav-options-logged-in">
+          <div onclick="openPopup()" class="localização-web">
+            <img src="assets/img/localpin.svg" </img>
+            <span class="localização-web" id="escolherLocalizaçãoLoggedin">Localização</span>
+            <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
+          </div>
+          <a id="hide-criar-evento-mobile" href="criar-evento.html">Criar evento</a>
 
-        <img src="https://source.unsplash.com/random/1" alt="foto perfil">
+          <nav class="menu-hamburguer">
+            <input type="checkbox" class="checkbox-menu">
 
-        <div id="menu-options">
-          <ul>
-            <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
-              Perfil</a>
-            <a href="meus-eventos.html">Meus eventos</a></br>
-            <a href="criar-evento.html">Criar evento</a>
-            <a href="#">Sair</a>
-          </ul>
+            <img id="logo-produtor-menu" src="https://source.unsplash.com/random/1" alt="foto perfil">
+
+            <div id="menu-options2">
+              <ul>
+                <a id="meu-perfil" href="cadastro-produtor.html" onclick="redirecionarParaEdicao()">Meu
+                  Perfil</a></br>
+                <a href="meus-eventos.html">Meus eventos</a></br>
+                <a href="criar-evento.html">Criar evento</a>
+                <a id="botaoSair" href="#">Sair</a>
+              </ul>
+            </div>
+          </nav>
         </div>
       </nav>
     </div>
+    </div>
 
-    <div class="navcenter-mobile">
+    <div class="navcenter-mobile" id="navbar-logged-out-mobile">
       <div>
         <a href="index.html">
           <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
       </div>
-
-      <a href="">Localização</a>
-
+      <div onclick="openPopup()" class="localizacao-mobile">
+        <img src="assets/img/localpin.svg" </img>
+        <span class="localizacao-mobile" id="escolherLocalizacaoMobile">Localização</span>
+      </div>
       <nav class="menu-hamburguer">
         <input type="checkbox" class="checkbox-menu">
 
@@ -279,18 +144,20 @@
         <div id="menu-options">
           <ul>
             <a href="login.html">Entrar</a></br>
-            <a href="criar-evento.html">Criar evento</a>
-            <a href="#">Sair</a>
+            <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
+            <a id="botaoSair" href="#">Sair</a>
           </ul>
         </div>
       </nav>
     </div>
+    </nav>
+    </div>
   </header>
 
-  <form class="nav-search-mobile">
+  <form action="todos-eventos.html" method="GET" id="search-form" class="nav-search-mobile">
     <div class="search">
       <span class="search-icon material-symbols-outlined">search</span>
-      <input class="search-input" type="search" placeholder="pesquise por evento" </input>
+      <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
     </div>
   </form>
 
@@ -368,17 +235,228 @@
       </div>
     </div>
   </footer>
-  <script src="./JS/meusEventos.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+  </script>
+
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const meuPerfilLink = document.getElementById('meu-perfil');
-      meuPerfilLink.addEventListener('click', function (event) {
-        event.preventDefault();
-        window.location.href = 'cadastro-produtor.html?edit';
+    // Função para converter string "DD MM YYYY" para objeto Date
+    function converterParaData(data) {
+      if (!data) {
+        console.error("Data inválida:", data);
+        return null;
+      }
+
+      const partes = data.split("/");
+      if (partes.length !== 3) {
+        console.error("Formato de data inválido:", data);
+        return null;
+      }
+
+      const dia = parseInt(partes[0], 10);
+      const mes = parseInt(partes[1], 10) - 1;
+      const ano = parseInt(partes[2], 10);
+
+      return new Date(ano, mes, dia);
+    }
+
+    function isDataFuturaOuHoje(dataEvento) {
+      if (!dataEvento) {
+        console.error("Data do evento inválida:", dataEvento);
+        return false;
+      }
+      const hoje = new Date();
+      const dataConvertida = converterParaData(dataEvento);
+      if (!dataConvertida) {
+        console.error("Erro ao converter data:", dataEvento);
+        return false;
+      }
+      return dataConvertida >= hoje.setHours(0, 0, 0, 0);
+    }
+
+
+    function handleCriarEventoOnClick(e) {
+      if (!isUserLoggedIn()) {
+        window.location.href = 'login.html';
+        return false;
+      };
+    };
+
+    function isUserLoggedIn() {
+      return localStorage.getItem('userData');
+    };
+
+    var eventos = []
+    async function carregarTodosEventos() {
+      console.log('carregando eventos');
+
+      try {
+        const response = await fetch("http://localhost:3000/eventos");
+        const eventos = await response.json();
+
+        const eventosFuturosOuHoje = eventos.filter(evento => isDataFuturaOuHoje(evento.finalDate));
+
+        initMap(eventosFuturosOuHoje);
+        console.log('eventos buscados');
+      } catch (error) {
+        console.error("Erro ao carregar os eventos:", error);
+      }
+    }
+    carregarTodosEventos();
+
+    function openPopup() {
+      console.log('abrindo popup')
+      const popup = document.getElementById('locationPopup');
+      popup.style.display = 'block';
+
+      window.addEventListener('click', closePopupOutside);
+
+      window.addEventListener('keydown', closePopupOnEsc);
+
+      function closePopupOutside(event) {
+        if (event.target === popup) {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+      function closePopupOnEsc(event) {
+        if (event.key === 'Escape') {
+          popup.style.display = 'none';
+          window.removeEventListener('click', closePopupOutside);
+          window.removeEventListener('keydown', closePopupOnEsc);
+        }
+      }
+
+      //Função de autocomplete do google no input do popup
+      var input = document.getElementById('cityInput');
+      var autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['(cities)'],
+        componentRestrictions: { country: 'BR' }
       });
+
+      autocomplete.addListener('place_changed', function () {
+        var selectedPlace = autocomplete.getPlace();
+        if (!selectedPlace.geometry) {
+          return;
+        }
+
+        var cityName = selectedPlace.name;
+
+        updateNavbarLocation(cityName);
+        const latitude = selectedPlace.geometry.location.lat()
+        const longitude = selectedPlace.geometry.location.lng()
+        localStorage.setItem('userLocation', JSON.stringify({
+          cityName: cityName,
+          latitude,
+          longitude
+        }));
+
+        document.getElementById('locationPopup').style.display = 'none';
+        initMap(eventos, { latitude, longitude })
+        //sobrescreve user location do mapa
+        localStorage.setItem(
+          "mapUserLocation",
+          JSON.stringify({ latitude, longitude })
+        );
+        //bloqueia mapa de atualizar localização após refresh
+        localStorage.setItem(
+          "isMapLocationBlocked",
+          JSON.stringify(true)
+        );
+        location.reload()
+
+      });
+    }
+
+    // Função para atualizar a localização na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      var locationElementLoggedIn = document.getElementById('escolherLocalizaçãoLoggedin');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
+      }
+      if (locationElementLoggedIn) {
+        locationElementLoggedIn.textContent = cityName;
+      }
+    }
+
+    window.onload = function () {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    };
+
+    // Função para atualizar o nome da cidade na navbar
+    function updateNavbarLocation(cityName) {
+      var locationElementWeb = document.getElementById('escolherLocalização');
+      var locationElementMobile = document.getElementById('escolherLocalizacaoMobile');
+      var locationElementLoggedIn = document.getElementById('escolherLocalizaçãoLoggedin');
+      if (locationElementWeb) {
+        locationElementWeb.textContent = cityName;
+      }
+      if (locationElementMobile) {
+        locationElementMobile.textContent = cityName;
+      }
+      if (locationElementLoggedIn) {
+        locationElementLoggedIn.textContent = cityName;
+      }
+    }
+
+    window.onload = () => {
+      const userLocation = JSON.parse(localStorage.getItem('userLocation'));
+      if (!userLocation) {
+        getLocation();
+      } else {
+        updateNavbarLocation(userLocation.city);
+      }
+    };
+
+    // Função para carregar e definir a localização ao recarregar a página
+    function loadUserLocation() {
+      var userLocation = localStorage.getItem('userLocation');
+      if (userLocation) {
+        userLocation = JSON.parse(userLocation);
+        if (userLocation.cityName) {
+          updateNavbarLocation(userLocation.cityName);
+        }
+      }
+    }
+
+    window.addEventListener('load', function () {
+      loadUserLocation();
     });
+
+    function voltarParaLocalizacaoAtual() {
+      localStorage.removeItem("isMapLocationBlocked");
+
+      const currentMapUserLocation = JSON.parse(localStorage.getItem('currentMapUserLocation'));
+
+      localStorage.setItem('userLocation', JSON.stringify({
+        cityName: currentMapUserLocation.cityName,
+        latitude: currentMapUserLocation.latitude,
+        longitude: currentMapUserLocation.longitude
+      }));
+
+      updateNavbarLocation(currentMapUserLocation.cityName);
+
+      location.reload();
+    }
+
   </script>
+  <script src="/src/JS//esconderMapa.js"></script>
+  <script src="/src/JS/cardsEvento.js"></script>
+  <script src="./JS/meusEventos.js"></script>
   <script src="./JS/navbarUpdate.js"></script>
   <script src="JS/logout.js"></script>
 </body>
