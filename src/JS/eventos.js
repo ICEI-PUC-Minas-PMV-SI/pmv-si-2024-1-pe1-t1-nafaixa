@@ -1,3 +1,37 @@
+// Função para converter string "DD/MM/YYYY" para objeto Date
+function converterParaData(data) {
+  if (!data) {
+    console.error("Data inválida:", data);
+    return null;
+  }
+
+  const partes = data.split("/");
+  if (partes.length !== 3) {
+    console.error("Formato de data inválido:", data);
+    return null;
+  }
+
+  const dia = parseInt(partes[0], 10);
+  const mes = parseInt(partes[1], 10) - 1;
+  const ano = parseInt(partes[2], 10);
+
+  return new Date(ano, mes, dia);
+}
+
+function isDataFuturaOuHoje(dataEvento) {
+  if (!dataEvento) {
+    console.error("Data do evento inválida:", dataEvento);
+    return false;
+  }
+  const hoje = new Date();
+  const dataConvertida = converterParaData(dataEvento);
+  if (!dataConvertida) {
+    console.error("Erro ao converter data:", dataEvento);
+    return false;
+  }
+  return dataConvertida >= hoje.setHours(0, 0, 0, 0);
+}
+
 let eventos = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,7 +49,7 @@ function searchEvents() {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((events) => {
-      eventos = events;
+      eventos = events.filter(evento => isDataFuturaOuHoje(evento.finalDate));
       console.log("GOKU eventos", eventos);
       populateEvents();
     })
@@ -27,8 +61,6 @@ function searchEvents() {
 function populateEvents() {
   const divContainerCards = document.querySelector("div.wrapper-cards");
   divContainerCards.innerHTML = "";
-
-  //   removePastEvents();
 
   eventos.forEach((evento) => {
     const cardElement = document.createElement('div');
@@ -62,24 +94,27 @@ function populateEvents() {
 }
 
 function formatarDataHora(startDate, startTime) {
-  return `${startDate} ${startTime}`;
+  const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  const partesData = startDate.split("/");
+  const dia = partesData[0];
+  const mes = meses[parseInt(partesData[1], 10) - 1];
+  const ano = partesData[2];
+  const dataFormatada = `${dia.padStart(2, '0')} de ${mes} de ${ano}`;
+  return `${dataFormatada} às ${startTime}`;
 }
 
 function onChangeSort(e) {
   const sort = e.target.value;
-  console.log("sort", sort);
   if (sort === "date") {
     eventos.sort((a, b) => {
-      return new Date(a.startDate) - new Date(b.startDate);
+      const dateA = converterParaData(a.startDate);
+      const dateB = converterParaData(b.startDate);
+      return dateA - dateB;
     });
   } else if (sort === "name-asc") {
-    eventos.sort((a, b) => {
-      return a.nome?.localeCompare(b.nome);
-    });
+    eventos.sort((a, b) => a.nome.localeCompare(b.nome));
   } else if (sort === "name-desc") {
-    eventos.sort((a, b) => {
-      return b.nome?.localeCompare(a.nome);
-    });
+    eventos.sort((a, b) => b.nome.localeCompare(a.nome));
   }
 
   populateEvents();
@@ -88,7 +123,7 @@ function onChangeSort(e) {
 function removePastEvents() {
   const today = new Date();
   eventos = eventos.filter((evento) => {
-    return new Date(evento.startDate) >= today;
+    return new Date(converterParaData(evento.finalDate)) >= today.setHours(0, 0, 0, 0);
   });
 }
 
