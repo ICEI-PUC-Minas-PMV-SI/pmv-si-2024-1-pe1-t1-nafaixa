@@ -49,13 +49,48 @@ function searchEvents() {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((events) => {
-      eventos = events.filter(evento => isDataFuturaOuHoje(evento.finalDate));
+      eventos = events.filter(evento => isDataFuturaOuHoje(evento.finalDate) && filterBySearchTerm(evento));
       console.log("GOKU eventos", eventos);
       populateEvents();
     })
     .catch((error) => {
       console.error("Erro ao carregar todos eventos:", error);
     });
+}
+
+function filterBySearchTerm(evento) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get('q');
+  console.log('Palavra-chave de pesquisa:', searchTerm);
+
+  if (searchTerm === "") {
+    return true
+  }
+
+  function eventMatchesSearch(evento, searchTerm) {
+    if (!searchTerm) return true;
+
+    const lowerSearchTerm = searchTerm.trim().toLowerCase();
+
+    if (!evento.nome || typeof evento.nome !== 'string' ||
+        !evento.local || typeof evento.local !== 'string' ||
+        !evento.tipo || typeof evento.tipo !== 'string') {
+      console.error('Evento incompleto ou campos não são strings:', evento);
+      return false;
+    }
+
+    const lowerNome = evento.nome.trim().toLowerCase();
+    const lowerLocal = evento.local.trim().toLowerCase();
+    const lowerTipo = evento.tipo.trim().toLowerCase();
+
+    return (
+        lowerNome.includes(lowerSearchTerm) ||
+        lowerLocal.includes(lowerSearchTerm) ||
+        lowerTipo.includes(lowerSearchTerm)
+    );
+  }
+
+  return eventMatchesSearch(evento, searchTerm)
 }
 
 function populateEvents() {
