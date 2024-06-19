@@ -52,7 +52,7 @@ eventBannerInput.onchange = evt => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('http://localhost:3000/categorias');
+        const response = await fetch(obterUrlBase() +'/categorias');
         const categorias = await response.json();
 
         popularCategorias(categorias);
@@ -192,7 +192,7 @@ async function criarEvento() {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
+        const response = await fetch(obterUrlBase() +`/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -255,7 +255,7 @@ async function criarEvento() {
             bannerURL: bannerUrl
         };
 
-        const createResponse = await fetch('http://localhost:3000/eventos', {
+        const createResponse = await fetch(obterUrlBase() +'/eventos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (eventId) {
         try {
-            const response = await fetch(`http://localhost:3000/eventos/${eventId}`);
+            const response = await fetch(obterUrlBase() +`/eventos/${eventId}`);
             if (!response.ok) {
                 throw new Error('Erro ao carregar dados do evento');
             }
@@ -518,7 +518,7 @@ async function updateEvent(event, startDatePicker, finalDatePicker) {
             bannerURL: bannerUrl
         };
 
-        const updateResponse = await fetch(`http://localhost:3000/eventos/${eventId}`, {
+        const updateResponse = await fetch(obterUrlBase() +`/eventos/${eventId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

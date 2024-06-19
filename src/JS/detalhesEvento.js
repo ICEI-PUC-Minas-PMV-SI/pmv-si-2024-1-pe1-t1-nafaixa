@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const apiUrlEvento = `http://localhost:3000/eventos/${idEvento}`;
+        const apiUrlEvento = obterUrlBase() + `/eventos/${idEvento}`;
         const responseEvento = await fetch(apiUrlEvento);
         const evento = await responseEvento.json();
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const produtorId = evento.produtorId;
         if (produtorId) {
-            const apiUrlProdutor = `http://localhost:3000/produtor/${produtorId}`;
+            const apiUrlProdutor = obterUrlBase() + `/produtor/${produtorId}`;
             const responseProdutor = await fetch(apiUrlProdutor);
             const produtor = await responseProdutor.json();
             document.getElementById('sobre-produtor').textContent = produtor.descricao;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const resp = await fetch(`http://localhost:3000/emails?email=${emailInput}&eventoId=${idEvento}`, {
+            const resp = await fetch(obterUrlBase() + `/emails?email=${emailInput}&eventoId=${idEvento}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Email já cadastrado para esse evento.');
             }
 
-            const response = await fetch('http://localhost:3000/emails', {
+            const response = await fetch(obterUrlBase() + '/emails', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

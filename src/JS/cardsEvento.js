@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const eventosPorVez = 4;
   const raioMaximoKm = 50;
-  const endpointURL = "http://localhost:3000/eventos";
+  const endpointURL = obterUrlBase() + "/eventos";
 
   const mapUserLocation = localStorage.getItem("mapUserLocation");
   const selectedUserLocation = localStorage.getItem("userLocation");

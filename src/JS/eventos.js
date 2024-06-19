@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function searchEvents() {
-  const apiUrl = `http://localhost:3000/eventos`;
+  const apiUrl = obterUrlBase() + `/eventos`;
   fetch(apiUrl)
     .then((response) => response.json())
     .then((events) => {

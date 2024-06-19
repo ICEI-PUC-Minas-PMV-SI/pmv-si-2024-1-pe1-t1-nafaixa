@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (produtorId) {
             const produtorImg = document.getElementById('logo-produtor-menu');
             try {
-                const response = await fetch(`http://localhost:3000/produtor/${produtorId}`);
+                const response = await fetch(obterUrlBase() + `/produtor/${produtorId}`);
                 if (response.ok) {
                     const data = await response.json();
                     if (data.logo) {

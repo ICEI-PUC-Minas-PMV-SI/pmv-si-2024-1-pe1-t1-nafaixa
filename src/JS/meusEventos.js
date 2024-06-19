@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    fetch('http://localhost:3000/eventos')
+    fetch(obterUrlBase() + '/eventos')
         .then(response => response.json())
         .then(eventos => {
             const eventosDoProdutor = eventos.filter(evento => evento.produtorId === produtorId);
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 eventosContainer.innerHTML = '<p>Você ainda não possui eventos. Crie agora mesmo seu evento clicando no botão da barra de navegação.</p>';
             } else {
                 eventosDoProdutor.forEach(evento => {
-                    fetch(`http://localhost:3000/emails?eventoId=${evento.id}`)
+                    fetch(obterUrlBase() + `/emails?eventoId=${evento.id}`)
                         .then(response => response.json())
                         .then(emails => {
                             const emailCount = emails.length;
@@ -84,7 +84,7 @@ function handleDelete(eventId) {
     const confirmed = confirm('Tem certeza que deseja excluir esse evento? Essa ação é irreversível.');
 
     if (confirmed) {
-        fetch(`http://localhost:3000/eventos/${eventId}`, {
+        fetch(obterUrlBase() + `/eventos/${eventId}`, {
             method: 'DELETE'
         })
             .then(response => {

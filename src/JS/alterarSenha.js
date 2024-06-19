@@ -2,7 +2,7 @@ var email = "";
 
 function validarCodigo() {
   const codigo = new URLSearchParams(document.location.search).get("codigo");
-  fetch("http://localhost:3000/codigos-de-validacao/" + codigo, {
+  fetch(obterUrlBase() + "/codigos-de-validacao/" + codigo, {
     method: "GET",
   })
     .then((response) => {
@@ -24,7 +24,7 @@ function hashPassword(password) {
 
 function salvarNovaSenha(novaSenha, idProdutor) {
   const senhaHasheada = hashPassword(novaSenha);
-  fetch("http://localhost:3000/produtor/" + idProdutor, {
+  fetch("/produtor/" + idProdutor, {
     method: "PATCH",
     body: JSON.stringify({
       senha: senhaHasheada,
@@ -48,7 +48,7 @@ function cadastrarNovaSenha(event) {
     return;
   }
   console.log("email", email);
-  fetch("http://localhost:3000/produtor?email=" + email, {
+  fetch("/produtor?email=" + email, {
     method: "GET",
     headers: {
       "Content-type": "application/json; charset=UTF-8",

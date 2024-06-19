@@ -33,7 +33,7 @@ function isDataFuturaOuHoje(dataEvento) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const endpointURL = 'http://localhost:3000/eventos';
+    const endpointURL = obterUrlBase() +'/eventos';
 
     async function obterEventos() {
         try {

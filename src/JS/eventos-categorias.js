@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchCategorias() {
-  return fetch('http://localhost:3000/categorias')
+  return fetch(obterUrlBase() + '/categorias')
     .then(response => response.json())
     .then(categorias => {
       populateCategorySelect(categorias);
@@ -53,7 +53,7 @@ function populateCategorySelect(categorias) {
 
 function searchCategory(category) {
   if (category) {
-    const apiUrl = `http://localhost:3000/eventos?categoria=${category}`;
+    const apiUrl = obterUrlBase() + `/eventos?categoria=${category}`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(events => {

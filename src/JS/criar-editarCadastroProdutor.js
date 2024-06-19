@@ -15,7 +15,7 @@ function hashPassword(password) {
 }
 
 async function criarProdutor() {
-  const url = "http://localhost:3000/produtor";
+  const url = obterUrlBase() + "/produtor";
 
   const nomeProdutor = document.querySelector("#produtor-nome");
   const identificacaoProdutor = document.querySelector("#produtor-identificacao");
@@ -125,7 +125,7 @@ async function verificarDuplicatas(cpf, email) {
     return true;
   }
   try {
-    const response = await fetch("http://localhost:3000/produtor");
+    const response = await fetch(obterUrlBase() + "/produtor");
     const dataDuplicata = await response.json();
 
     for (let produtor of dataDuplicata) {
@@ -165,7 +165,7 @@ function isEditMode() {
 
 async function preencherDadosProdutor() {
   try {
-    const response = await fetch(`http://localhost:3000/produtor/${localStorage.getItem('userData')}`);
+    const response = await fetch(obterUrlBase() + `/produtor/${localStorage.getItem('userData')}`);
     const produtor = await response.json();
 
     document.querySelector("#produtor-nome").value = produtor.nome;
@@ -187,7 +187,7 @@ async function preencherDadosProdutor() {
 }
 
 async function salvarAlteracoes() {
-  const url = `http://localhost:3000/produtor/${localStorage.getItem('userData')}`;
+  const url = obterUrlBase() + `/produtor/${localStorage.getItem('userData')}`;
   const senha = document.querySelector("#criar-senha").value;
   let senhaHash = null;
 

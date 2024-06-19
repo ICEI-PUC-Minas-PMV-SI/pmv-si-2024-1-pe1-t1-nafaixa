@@ -22,6 +22,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="CSS/components/footer.css" />
   <link rel="stylesheet" href="CSS/components/cadastro-produtor.css" />
+  <script src="./JS/obterUrlBase.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
@@ -284,7 +285,8 @@
     }
 
     async function criarProdutor() {
-      const url = "http://localhost:3000/produtor";
+      const baseUrl = obterUrlBase()
+      const url = `${baseUrl}/produtor`;
 
       const nomeProdutor = document.querySelector("#produtor-nome");
       const identificacaoProdutor = document.querySelector(
@@ -412,7 +414,7 @@
         return true;
       }
       try {
-        const response = await fetch("http://localhost:3000/produtor");
+        const response = await fetch("/produtor");
         const dataDuplicata = await response.json();
 
         for (let produtor of dataDuplicata) {
@@ -457,7 +459,7 @@
     async function preencherDadosProdutor() {
       try {
         const response = await fetch(
-          `http://localhost:3000/produtor/${localStorage.getItem("userData")}`
+          `/produtor/${localStorage.getItem("userData")}`
         );
         const produtor = await response.json();
 
@@ -485,7 +487,7 @@
     }
 
     async function salvarAlteracoes() {
-      const url = `http://localhost:3000/produtor/${localStorage.getItem(
+      const url = `/produtor/${localStorage.getItem(
         "userData"
       )}`;
       const senha = document.querySelector("#criar-senha").value;

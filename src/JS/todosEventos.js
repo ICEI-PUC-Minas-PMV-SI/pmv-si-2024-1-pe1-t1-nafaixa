@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM is ready!");
 
-  const apiUrl = `http://localhost:3000/eventos`;
+  const apiUrl = obterUrlBase() + `/eventos`;
   fetch(apiUrl)
     .then((response) => response.json())
     .then((eventos) => {

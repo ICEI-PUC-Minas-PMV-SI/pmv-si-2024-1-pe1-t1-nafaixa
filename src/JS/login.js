@@ -14,7 +14,7 @@ entrar.addEventListener("click", async function (event) {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/produtor");
+    const response = await fetch(obterUrlBase() + "/produtor");
     const produtores = await response.json();
 
     const produtor = produtores.find(

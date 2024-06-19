@@ -9,6 +9,7 @@
   <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
   <link rel="stylesheet" type="text/css" href="./CSS/components/mapa.css" />
   <script src="./JS/mapa.js"></script>
+  <script src="./JS/obterUrlBase.js"></script>
 
   <link rel="shortcut icon" href="assets/img/logo.xs.svg" type="image/x-icon" />
 
@@ -292,7 +293,7 @@
       console.log('carregando eventos');
 
       try {
-        const response = await fetch("http://localhost:3000/eventos");
+        const response = await fetch(obterUrlBase()+"/eventos");
         const eventos = await response.json();
 
         const eventosFuturosOuHoje = eventos.filter(evento => isDataFuturaOuHoje(evento.finalDate));
