@@ -447,6 +447,11 @@
         latitude: currentMapUserLocation.latitude,
         longitude: currentMapUserLocation.longitude
       }));
+      localStorage.setItem('userLocation', JSON.stringify({
+        cityName: currentMapUserLocation.cityName,
+        latitude: currentMapUserLocation.latitude,
+        longitude: currentMapUserLocation.longitude
+      }));
 
       updateNavbarLocation(currentMapUserLocation.cityName);
 
