@@ -752,11 +752,12 @@
                     throw new Error('Erro ao criar evento');
                 }
 
+                window.location.replace('meus-eventos.html');
+
                 const responseData = await createResponse.json();
                 console.log('Evento criado:', responseData);
                 alert('Evento criado com sucesso!');
 
-                window.location.replace('meus-eventos.html');
 
             } catch (error) {
                 console.error('Erro ao criar evento:', error);
@@ -1022,11 +1023,13 @@
                     throw new Error('Erro ao atualizar evento');
                 }
 
+                window.location.replace('meus-eventos.html');
+
                 const responseData = await updateResponse.json();
+
                 console.log('Evento atualizado:', responseData);
                 alert('Evento atualizado com sucesso!');
 
-                window.location.replace('meus-eventos.html');
             } catch (error) {
                 console.error('Erro ao atualizar evento:', error);
                 alert('Erro ao atualizar evento. Tente novamente mais tarde.');
