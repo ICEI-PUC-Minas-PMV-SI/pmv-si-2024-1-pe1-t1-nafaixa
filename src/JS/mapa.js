@@ -96,18 +96,41 @@ function isMapLocationBlocked() {
 
 function buildContent(evento) {
   const content = document.createElement("div");
-
   content.classList.add("evento");
+
+  let detalheExtra = "";
+  let dataFormatada = formatarDataHora(evento.startDate, evento.startTime);
+
+  if (evento.tipo === "presencial") {
+    const local = evento.nomeLocal ? evento.nomeLocal : evento.local;
+    detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${local}</p>`;
+  } else if (evento.tipo === "online") {
+    detalheExtra = `<p><img src="./assets/img/local.svg" alt="Link do evento" />${evento.link}</p>`;
+  } else {
+    console.error("Tipo de evento desconhecido:", evento.tipo);
+    return null;
+  }
+
   content.innerHTML = `
     <div class="icon">
       <img class="imgEventoMapa" src=${evento.bannerURL} alt="event img"/>
     </div>
     <div class="details">
       <p class="event-title">${evento.nome}</p>
-      <p><img src="./assets/img/data.svg" alt="Data do evento" />${evento.startDate}</p>
-      <p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>
+      <p><img src="./assets/img/data.svg" alt="Data do evento" />${dataFormatada}</p>
+      ${detalheExtra}
     </div>
   `;
 
   return content;
+}
+
+function formatarDataHora(startDate, startTime) {
+  const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  const partesData = startDate.split("/");
+  const dia = partesData[0];
+  const mes = meses[parseInt(partesData[1], 10) - 1];
+  const ano = partesData[2];
+  const dataFormatada = `${dia.padStart(2, '0')} de ${mes} de ${ano}`;
+  return `${dataFormatada} às ${startTime}`;
 }

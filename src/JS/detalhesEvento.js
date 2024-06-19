@@ -25,8 +25,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const localElement = document.getElementById('localEvento');
         localElement.innerHTML = evento.tipo === 'presencial' ?
-            `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.local}` :
+            `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.nomeLocal ? evento.nomeLocal + ' - ' + evento.local : evento.local}` :
             `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.link}`;
+
 
         document.getElementById('descricao-evento').innerHTML = evento.sobre;
         document.getElementById('informacoes-evento').textContent = evento.informacoes;

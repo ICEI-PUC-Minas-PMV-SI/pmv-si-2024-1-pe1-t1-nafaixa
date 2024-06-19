@@ -117,13 +117,16 @@ function populateEvents() {
 
       const dataHoraFormatada = formatarDataHora(evento.startDate, evento.startTime);
 
-      let detalheExtra = '';
-      if (evento.tipo === 'presencial') {
-        detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>`;
-      } else if (evento.tipo === 'online') {
+      let detalheExtra = "";
+
+      if (evento.tipo === "presencial") {
+        const local = evento.nomeLocal ? evento.nomeLocal : evento.local;
+
+        detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${local}</p>`;
+      } else if (evento.tipo === "online") {
         detalheExtra = `<p><img src="./assets/img/local.svg" alt="Link do evento" />${evento.link}</p>`;
       } else {
-        console.error('Tipo de evento desconhecido:', evento.tipo);
+        console.error("Tipo de evento desconhecido:", evento.tipo);
         return null;
       }
 

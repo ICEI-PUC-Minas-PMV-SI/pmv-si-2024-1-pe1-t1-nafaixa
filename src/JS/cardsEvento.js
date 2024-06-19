@@ -158,8 +158,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     let detalheExtra = "";
+
     if (evento.tipo === "presencial") {
-      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</p>`;
+      const local = evento.nomeLocal ? evento.nomeLocal : evento.local;
+
+      detalheExtra = `<p><img src="./assets/img/local.svg" alt="Local do evento" />${local}</p>`;
     } else if (evento.tipo === "online") {
       detalheExtra = `<p><img src="./assets/img/local.svg" alt="Link do evento" />${evento.link}</p>`;
     } else {

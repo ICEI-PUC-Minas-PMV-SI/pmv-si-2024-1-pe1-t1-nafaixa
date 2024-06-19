@@ -49,9 +49,16 @@ function createEventCard(evento, emailCount) {
     <a href="detalhes-evento.html?id=${evento.id}">
         <h2>${evento.nome}</h2>
     </a>
-    <div><img src="./assets/img/local.svg" alt="Local do evento" />${evento.local}</div>
-    <div><img src="assets/img/data.svg" alt="">${evento.startDate}</div>
-    <div><img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>${emailCount}</p></div>
+    <div>
+        <img src="./assets/img/local.svg" alt="Local do evento" />
+        ${evento.tipo === 'presencial' ? (evento.nomeLocal ? evento.nomeLocal + ' - ' + evento.local : evento.local) : evento.link}
+    </div>
+    <div>
+        <img src="assets/img/data.svg" alt="">${evento.startDate}
+    </div>
+    <div>
+        <img src="assets/img/bi_people.svg" alt="">Pessoas confirmadas:<p>${emailCount}</p>
+    </div>
 
     <div class="action-icons">
         <button class="edit-btn" data-id="${evento.id}">

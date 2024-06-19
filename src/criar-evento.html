@@ -190,12 +190,10 @@
 
                     <div id="evento-presencial-form">
 
-
                         <div class="form-item">
                             <label for="local">Local</label>
                             <input type="text" id="local" placeholder="Digite o local do evento" autocomplete="off"
                                 required>
-
                         </div>
                     </div>
 
@@ -729,6 +727,7 @@
                     categoria: categoriaValue,
                     nome: nomeEvento.value,
                     link: link,
+                    nomeLocal: selectedPlace ? selectedPlace.name : '',
                     local: selectedPlace ? selectedPlace.formatted_address : '',
                     latitude: selectedPlace ? selectedPlace.geometry.location.lat() : null,
                     longitude: selectedPlace ? selectedPlace.geometry.location.lng() : null,
