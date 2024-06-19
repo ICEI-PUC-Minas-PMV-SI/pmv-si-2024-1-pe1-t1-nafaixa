@@ -78,9 +78,9 @@
       "categoria": "Feiras",
       "nome": "Feira CASA SC - Blumenau",
       "link": "",
-      "local": "R. Alberto Stein, 199 - loja 109 - Velha, Blumenau - SC, 89036-200, Brasil",
-      "latitude": -26.9155433,
-      "longitude": -49.0846725,
+      "local": "R. Alberto Stein, 200 - loja 110 - Velha, Blumenau - SC, 89036-200, Brasil",
+      "latitude": -26.9155681,
+      "longitude": -49.0840226,
       "startDate": "04/07/2024",
       "startTime": "10:00",
       "finalDate": "07/07/2024",
@@ -168,7 +168,6 @@
       "startDate": "08/05/2024",
       "startTime": "12:00",
       "finalDate": "11/05/2024",
-      "finalDate": "11/05/2024",
       "finalTime": "12:00",
       "sobre": "DDDDDDDDDDDDDDDD",
       "informacoes": "FFFFFFFFFFFFFFF"
@@ -248,7 +247,6 @@
       "longitude": -44.25116679999999,
       "startDate": "04/05/2024",
       "startTime": "12:00",
-      "finalDate": "11/05/2024",
       "finalDate": "11/05/2024",
       "finalTime": "12:00",
       "sobre": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -1914,6 +1912,20 @@
     }
   ],
   "produtor": [
+    {
+      "nome": "Rita Laura Gonçalves",
+      "cpf": "13566899674",
+      "celular": "47983876156",
+      "cidade": "Blumenau",
+      "estado": "SC",
+      "email": "ritalaura57@gmail.com",
+      "descricao": "Muitos anos fazendo o baile rolar por ai!",
+      "email_publico": "ritalaura57@gmail,.com",
+      "celular_publico": "47986766654",
+      "logo": "https://res.cloudinary.com/dmcuzezlv/image/upload/v1718630996/hshlyqhwsidec00r6tqn.png",
+      "senha": "e10adc3949ba59abbe56e057f20f883e",
+      "id": "a6465b9a-34e6-411f-bba9-a83229d4b03f"
+    },
     {
       "id": "73ddde49-b38e-4d3c-978c-e603ebdb1650",
       "nome": "zzzzzzz",
