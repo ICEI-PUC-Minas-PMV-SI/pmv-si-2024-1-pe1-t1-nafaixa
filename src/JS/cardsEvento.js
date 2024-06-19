@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const userLocation = estaEmEventosProximos()
     ? mapUserLocation
     : selectedUserLocation;
+  debugger;
   const state = {
     eventosExibidosId1: 0,
     eventosExibidosId2: 0,
@@ -60,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(endpointURL);
       const eventos = await response.json();
 
-      state.eventos = eventos.filter(evento => isDataFuturaOuHoje(evento.finalDate));
+      state.eventos = eventos.filter((evento) =>
+        isDataFuturaOuHoje(evento.finalDate)
+      );
 
       exibirEventos("eventosFiltrados");
       exibirEventos("todosEventos");
@@ -70,19 +73,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function exibirEventos(id) {
-    const { eventos, userLocation, eventosExibidosId1, eventosExibidosId2 } = state;
+    const { eventos, userLocation, eventosExibidosId1, eventosExibidosId2 } =
+      state;
     const wrapperElement = document.getElementById(id);
 
-    const startIndex = id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
+    const startIndex =
+      id === "eventosFiltrados" ? eventosExibidosId1 : eventosExibidosId2;
 
     let eventosExibidos = false;
     const eventosFiltrados = eventos.filter(
       (evento) =>
         (id === "eventosFiltrados" && isEventoProximo(evento, userLocation)) ||
-        (id === "todosEventos")
+        id === "todosEventos"
     );
 
-    const eventosParaExibir = eventosFiltrados.slice(startIndex, startIndex + eventosPorVez);
+    const eventosParaExibir = eventosFiltrados.slice(
+      startIndex,
+      startIndex + eventosPorVez
+    );
     eventosParaExibir.forEach((evento) => {
       const cardElement = criarCardEvento(evento);
       wrapperElement?.appendChild(cardElement);
@@ -91,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (eventosFiltrados.length <= 0 && id === "eventosFiltrados") {
       const mensagemElement = document.createElement("p");
-      mensagemElement.textContent = "Não existem eventos próximos para a localização escolhida.";
+      mensagemElement.textContent =
+        "Não existem eventos próximos para a localização escolhida.";
       wrapperElement.appendChild(mensagemElement);
     }
 
@@ -103,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Verifica se há mais eventos a serem exibidos e esconde o botão se não houver mais
     const mostrarMaisBtn = document.querySelector(".mostrarMais");
-    if ((startIndex + eventosPorVez) >= eventosFiltrados.length) {
+    if (startIndex + eventosPorVez >= eventosFiltrados.length) {
       if (mostrarMaisBtn) {
         mostrarMaisBtn.style.display = "none";
       }
@@ -136,9 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(deg2rad(lat1)) *
-      Math.cos(deg2rad(lat2)) *
-      Math.sin(dLng / 2) *
-      Math.sin(dLng / 2);
+        Math.cos(deg2rad(lat2)) *
+        Math.sin(dLng / 2) *
+        Math.sin(dLng / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
   }
@@ -185,12 +194,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function formatarDataHora(startDate, startTime) {
-    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    const meses = [
+      "janeiro",
+      "fevereiro",
+      "março",
+      "abril",
+      "maio",
+      "junho",
+      "julho",
+      "agosto",
+      "setembro",
+      "outubro",
+      "novembro",
+      "dezembro",
+    ];
     const partesData = startDate.split("/");
     const dia = partesData[0];
     const mes = meses[parseInt(partesData[1], 10) - 1];
     const ano = partesData[2];
-    const dataFormatada = `${dia.padStart(2, '0')} de ${mes} de ${ano}`;
+    const dataFormatada = `${dia.padStart(2, "0")} de ${mes} de ${ano}`;
     return `${dataFormatada} às ${startTime}`;
   }
 
