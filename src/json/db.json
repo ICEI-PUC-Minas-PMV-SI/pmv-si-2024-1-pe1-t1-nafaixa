@@ -55,9 +55,8 @@
   ],
   "eventos": [
     {
-      "id": "c764b7b6-8ba9-4c32-b7fb-794580318dee",
-      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
       "tipo": "presencial",
+      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
       "categoria": "Gastronomia",
       "nome": "Rodada de Negócio - pré -cadastro do VII Prêmio Queijo Brasil 2024",
       "link": "",
@@ -70,7 +69,8 @@
       "finalTime": "23:00",
       "sobre": "<div class=\"sc-537fdfcb-0 bdUbUp\">\n<p class=\"MsoNormal\">O Pr&ecirc;mio Queijo Brasil &eacute; um ponto de encontro anual de &acirc;mbito nacional para diferentes atores do setor artesanal do queijo e latic&iacute;nios. Produtores, compradores e vendedores de todo o territ&oacute;rio nacional se encontram aqui durante o evento.</p>\n<p class=\"MsoNormal\">O evento Pr&ecirc;mio Queijo Brasil tem diversas etapas, sempre pensadas para gerar oportunidades de neg&oacute;cios para os pequenos e m&eacute;dios empreendedores.</p>\n<p class=\"MsoNormal\">O evento acontecer&aacute; em Blumenau / SC entre os dias 11 a 12 de julho de 2024 .</p>\n<p class=\"MsoNormal\">1.&nbsp;Concurso&nbsp;exclusivo para pequenas e m&eacute;dias queijarias nacionais.</p>\n<p class=\"MsoNormal\">Tendo a cerim&ocirc;nia de premia&ccedil;&atilde;o no dia 11 de julho a partir das 18h</p>\n<p class=\"MsoNormal\">&nbsp;</p>\n<p class=\"MsoNormal\">2.&nbsp;Feira de produtores&nbsp;com venda direta ao consumidor&nbsp;produtores de queijo e outros produtores de produtos artesanais como vinho, cerveja, charcutaria, caf&eacute; e afins.&nbsp;<br>A feira ser&aacute; realizada entre os dias 11 &agrave; 12 de julho de 2024.</p>\n<p class=\"MsoNormal\">Dia 11, quinta-feira, das 14h &agrave;s 22h.&nbsp;</p>\n<p class=\"MsoNormal\">Dia 12 de julho, sexta-feira, das 12h &agrave;s 22h.&nbsp;</p>\n<p class=\"MsoNormal\">4.&nbsp;Forma&ccedil;&atilde;o queijista, forma&ccedil;&atilde;o voltada para o profissionais ou entusiastas do mundo do queijo.</p>\n<p class=\"MsoNormal\">Inscri&ccedil;&otilde;es para a&nbsp;forma&ccedil;&atilde;o queijista.</p>\n<p class=\"MsoNormal\">M&oacute;dulo 1.</p>\n<p class=\"MsoNormal\">Aula 1, dia 11 de julho, quarta-feira, das 13h30 &agrave;s 17h30.</p>\n<p class=\"MsoNormal\">Aula 2, dia 11 de julho, quarta-feira das 18h30 &agrave;s 22h30.</p>\n<p class=\"MsoNormal\">M&oacute;dulo 2.</p>\n<p class=\"MsoNormal\">Aula 1, dia 12 de julho, sexta-feira, das 17h30 &agrave;s 22h.</p>\n<p class=\"MsoNormal\">5.&nbsp;Rodada de Neg&oacute;cios, onde pequenos e m&eacute;dios produtores se encontram com comerciantes para gerar contatos e vendas.</p>\n<div class=\"MsoNormal\" align=\"center\"><hr align=\"center\" noshade=\"noshade\" size=\"0\" width=\"100%\"></div>\n</div>",
       "informacoes": "Livre para todos os públicos.",
-      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718632056/NaFaixa/o3frtwss04jrc7ty1xxl.jpg"
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718632056/NaFaixa/o3frtwss04jrc7ty1xxl.jpg",
+      "id": "c764b7b6-8ba9-4c32-b7fb-794580318dee"
     },
     {
       "tipo": "presencial",
@@ -1857,6 +1857,24 @@
       "sobre": "<p>ssssssssssssss</p>",
       "informacoes": "ssssssssssssss",
       "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1717612221/NaFaixa/xyw5f4kr03bvodspeiqh.jpg"
+    },
+    {
+      "tipo": "presencial",
+      "produtorId": "a6465b9a-34e6-411f-bba9-a83229d4b03f",
+      "categoria": "Palestras",
+      "nome": "Seminário Estadual para a Avaliação e Revisão do Plano de Atendimento Socioeducativo Sinase - Paraná",
+      "link": "",
+      "local": "R. XV de Novembro, 1299 - Centro, Curitiba - PR, 80060-000, Brasil",
+      "latitude": -25.42683229999999,
+      "longitude": -49.2619041,
+      "startDate": "17/07/2024",
+      "startTime": "08:30",
+      "finalDate": "17/07/2024",
+      "finalTime": "18:00",
+      "sobre": "<p><img src=\"https://images.sympla.com.br/666cb6ed98be5.png\"></p>",
+      "informacoes": "Para todos os públicos",
+      "bannerURL": "https://res.cloudinary.com/nafaixa/image/upload/v1718819714/NaFaixa/r23esiepbcmvftnmm9s0.png",
+      "id": "c6410b4e-7a5b-4b2a-ad77-7ef788cc4159"
     }
   ],
   "emails": [

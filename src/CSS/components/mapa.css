@@ -102,6 +102,7 @@ c .evento {
 }
 
 .esconderMapa-button {
+  border: none;
   text-decoration: none;
   font-weight: bold;
   color: #fff;
