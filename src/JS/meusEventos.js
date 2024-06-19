@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventosDoProdutor = eventos.filter(evento => evento.produtorId === produtorId);
 
             if (eventosDoProdutor.length === 0) {
-                eventosContainer.innerHTML = '<p>Nenhum evento encontrado para este produtor.</p>';
+                eventosContainer.innerHTML = '<p>Você ainda não possui eventos. Crie agora mesmo seu evento clicando no botão da barra de navegação.</p>';
             } else {
                 eventosDoProdutor.forEach(evento => {
                     fetch(`http://localhost:3000/emails?eventoId=${evento.id}`)

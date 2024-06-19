@@ -1,19 +1,18 @@
-.ordenar-btn{
+.ordenar-btn {
+  right: 10px;
+  top: center;
+  padding: 5px;
 
-   position: absolute;
-   right: 10px;
-   top: center;
+}
 
- }
-
- .todos-eventos-title{
-   position: relative;
-   display: flex;
-   font-family: "almarai";
-   margin-bottom: 30px;
-   align-items: center;
-   margin-top: 30px;
-   margin-right: 10px;
-   margin-left: 10px;
-   gap: 2%;
- }
+.todos-eventos-title {
+  justify-content: space-between;
+  display: flex;
+  font-family: "almarai";
+  margin-bottom: 30px;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  gap: 2%;
+}

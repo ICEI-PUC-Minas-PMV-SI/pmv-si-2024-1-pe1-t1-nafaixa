@@ -105,6 +105,11 @@ function populateEvents() {
   if (divContainerCards) {
     divContainerCards.innerHTML = "";
 
+    if (eventos.length === 0) {
+      divContainerCards.innerHTML = '<p class="no-events-message">Não existe eventos para a categoria selecionada.</p>';
+      return;
+    }
+
     eventos.forEach(evento => {
       const cardElement = document.createElement('div');
       cardElement.classList.add('cards');
@@ -136,6 +141,7 @@ function populateEvents() {
     });
   }
 }
+
 
 function converterParaData(data) {
   const partes = data.split("/");

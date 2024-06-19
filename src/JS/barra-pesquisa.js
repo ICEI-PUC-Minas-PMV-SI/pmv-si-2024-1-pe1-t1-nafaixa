@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Palavra-chave de pesquisa:', searchTerm);
 
         const tituloEventos = document.getElementById('tituloEventos');
-        tituloEventos.textContent = searchTerm ? 'Eventos encontrados' : 'Todos os Eventos';
+        tituloEventos.textContent = searchTerm ? 'Eventos encontrados' : 'Todos os eventos';
 
         let eventosExibidos = false;
 
