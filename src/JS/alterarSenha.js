@@ -24,7 +24,7 @@ function hashPassword(password) {
 
 function salvarNovaSenha(novaSenha, idProdutor) {
   const senhaHasheada = hashPassword(novaSenha);
-  fetch("/produtor/" + idProdutor, {
+  fetch(obterUrlBase()+"/produtor/" + idProdutor, {
     method: "PATCH",
     body: JSON.stringify({
       senha: senhaHasheada,
@@ -48,7 +48,7 @@ function cadastrarNovaSenha(event) {
     return;
   }
   console.log("email", email);
-  fetch("/produtor?email=" + email, {
+  fetch(obterUrlBase()+"/produtor?email=" + email, {
     method: "GET",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
