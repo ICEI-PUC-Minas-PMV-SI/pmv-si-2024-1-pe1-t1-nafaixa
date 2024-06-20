@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const userLocation = estaEmEventosProximos()
     ? mapUserLocation
     : selectedUserLocation;
-  debugger;
   const state = {
     eventosExibidosId1: 0,
     eventosExibidosId2: 0,
