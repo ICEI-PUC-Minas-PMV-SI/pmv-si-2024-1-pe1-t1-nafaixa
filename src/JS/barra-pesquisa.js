@@ -59,24 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let eventosExibidos = false;
 
+        eventos = eventos.filter((evento) => isDataFuturaOuHoje(evento.finalDate) && eventMatchesSearch(evento, searchTerm));
+
         eventos.forEach(evento => {
             if (!evento) {
                 console.error('Evento inválido:', evento);
                 return;
             }
-
-            if (isDataFuturaOuHoje(evento.finalDate) && eventMatchesSearch(evento, searchTerm)) {
-                console.log('Evento corresponde ao termo de pesquisa:', evento.nome);
-                const cardElement = criarCardEvento(evento);
-                if (cardElement) {
-                    eventList.appendChild(cardElement);
-                    eventosExibidos = true;
-                }
-            } else {
-                console.log('Evento não corresponde ao termo de pesquisa ou está em uma data passada:', evento.nome);
-                console.log('Evento:', evento);
-                console.log('Corresponde ao termo de pesquisa:', eventMatchesSearch(evento, searchTerm));
-                console.log('Data válida:', isDataFuturaOuHoje(evento.finalDate));
+            const cardElement = criarCardEvento(evento);
+            if (cardElement) {
+                eventList.appendChild(cardElement);
+                eventosExibidos = true;
             }
         });
 
@@ -111,15 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function criarCardEvento(evento) {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("cards");
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('cards');
         cardElement.dataset.id = evento.id;
 
-        const dataHoraFormatada = formatarDataHora(
-            evento.startDate,
-            evento.startTime
-        );
-
+        const dataHoraFormatada = formatarDataHora(evento.startDate, evento.startTime);
         let detalheExtra = "";
 
         if (evento.tipo === "presencial") {
@@ -158,4 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     obterEventos();
-})
+});
