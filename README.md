@@ -33,9 +33,9 @@ Com proposta inovadora, o NaFaixa visa criar uma comunidade inclusiva, onde a cu
 | ETAPA 4        |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
 | ETAPA 5         | [Apresentação](presentation/README.md) |
 
-# Código
+# Acesse nosso site!
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+https://nafaixa-13247e25093e.herokuapp.com/
 
 # Apresentação
 
