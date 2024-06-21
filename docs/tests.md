@@ -18,28 +18,149 @@ A documentação dos testes é dividida nas seguintes seções:
 
 # Teste de Software
 
-Nesta seção o grupo deverá documentar os testes de software que verificam a correta implementação dos requisitos funcionais e não funcionais do software.
-
 ## Plano de Testes de Software
 
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
+Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está associado o Requisito Funcional que ele está verificando.
 
+| Caso de teste | CT01 - Criar conta |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html 
+2) Clique em “Entrar”
+3) Clique em “Cadastre-se”
+4) Preencha todos os campos do formulário
+5) Clique no botão “Criar perfil” |
+| Requisitos associados | RF-008 |
+| Resultado esperado | Prosseguir para a tela de login |
+| Dados de entrada | Inserção de dados válidos no formulário de cadastro |
+| Resultado obtido | Sucesso |
 
-**Caso de Teste** | **CT01 - Criar conta parte 1**
- :--------------: | ------------
-**Procedimento**  | 1) Acesse o endereço www.teste.com.br <br> 2) Clique em criar conta <br> 2) Preencha todos os campos do formulário <br> 3) Clique no botão "Continuar".
-**Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
-**Resultado obtido** | Sucesso
+| Caso de teste | CT02 - Fazer login |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html 
+2) Clique em “Entrar”
+3) Preencha os campos de e-mail e senha
+4) Clique no botão “Entrar”. |
+| Requisitos associados | RF-009 |
+| Resultado esperado | Prosseguir para a tela “Meus eventos” |
+| Dados de entrada | Inserção de dados de login válidos |
+| Resultado obtido | Sucesso |
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
- :--------------: | ------------
-**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Criar conta" <br> 
-**Requisitos associados** | RF-001
-**Resultado esperado** | Usuário cadastrado
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
-**Resultado obtido** | Sucesso
+| Caso de teste | CT03 - Alterar dados do produtor |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/login.html
+2) Faça login
+3) Clique em “Meu perfil”
+4) Altere o dado desejado
+5) Clique no botão “Salvar alterações”. |
+| Requisitos associados | RF-010 |
+| Resultado esperado | Prosseguir para a tela “Meu perfil” com os dados atualizados |
+| Dados de entrada | Inserção de dado válido no campo a ser alterado |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT04 - Alterar dados de evento cadastrado |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Faça login
+3) Clique em “Meus eventos”
+4) Altere o dado desejado
+5) Clique no botão “Salvar alterações”. |
+| Requisitos associados | RF-011 |
+| Resultado esperado | Prosseguir para a tela “Meus eventos” com os dados atualizados |
+| Dados de entrada | Inserção de dado válido no campo a ser alterado |
+| Resultado obtido | Problema identificado |
+| Bug identificado | O campo “Sobre o evento” não está aparecendo automaticamente preenchido na edição do evento cadastrado. |
+
+| Caso de teste | CT05 - Criar evento |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Faça login
+3) Clique em “Criar evento”
+4) Preencha todos os campos do formulário
+5) Clique no botão “Criar evento”. |
+| Requisitos associados | RF-001 |
+| Resultado esperado | Prosseguir para a tela “Meus eventos” |
+| Dados de entrada | Inserção de dados válidos no formulário de cadastro |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT06 - Visualizar todos os eventos |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique no botão “mostrar mais” |
+| Requisitos associados | RF-005 |
+| Resultado esperado | Prosseguir para a tela com todos os eventos cadastrados |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT07 - Visualizar eventos por categoria |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique na categoria desejada |
+| Requisitos associados | RF-002 |
+| Resultado esperado | Prosseguir para a tela com a listagem dos eventos da categoria selecionada |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT08 - Visualizar eventos por proximidade 01 |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique em “Localização” na navbar
+3) Permita o site a acessar a sua localização
+4) Clique no botão “ver todos” ao lado de “Eventos perto de mim” |
+| Requisitos associados | RF-004 |
+| Resultado esperado | Prosseguir para a tela com o mapa e a listagem dos eventos mais próximos do usuário |
+| Dados de entrada | Permissão para acessar localização |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT09 - Visualizar eventos por proximidade 02 |
+| --- | --- |
+| Procedimento | 1) Navegue pelo mapa
+2) Clique em “Esconder o mapa” |
+| Requisitos associados | RF-004 |
+| Resultado esperado | O mapa deve ser ocultado |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT10 - Utilizar a barra de pesquisa |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Digite o nome do evento que você procura na barra de pesquisa localizada na navbar
+3) Clique na tecla Enter do teclado |
+| Requisitos associados | RF-003 |
+| Resultado esperado | Prosseguir para a tela com os eventos que correspondem ao termo pesquisado |
+| Dados de entrada | Inserção de dado de pesquisa |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT11 - Visualizar os detalhes de eventos |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique no evento que você deseja visualizar |
+| Requisitos associados | RF-006 |
+| Resultado esperado | Prosseguir para a tela com os detalhes do evento selecionado |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT12 - Confirmar presença em um evento |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique no evento que você deseja visualizar
+3) Informe o seu e-mail no campo de formulário
+4) Clique no botão “Enviar” |
+| Requisitos associados | RF-007 |
+| Resultado esperado | Exibir uma mensagem de sucesso ao usuário e contabilizar esta pessoa confirmada em “Meus eventos” para o produtor |
+| Dados de entrada | Inserção de dado válido no formulário de confirmação de presença |
+| Resultado obtido | Sucesso |
+
+| Caso de teste | CT13 - Ordenar eventos |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
+2) Clique na aba de eventos que deseja (por categoria ou para ver todos os eventos cadastrados)
+3) Clique no filtro “Ordenar”
+4) Escolha como prefere o ordenamento (por data, de A a Z ou de Z a A) |
+| Requisitos associados | RF-002 e RF-005 |
+| Resultado esperado | Os eventos devem se ordenar de acordo com a escolha de ordenamento |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
+
 
 ## Registro dos Testes de Software
 
