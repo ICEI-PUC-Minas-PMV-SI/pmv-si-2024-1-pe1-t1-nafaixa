@@ -225,7 +225,13 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 
 ## Avaliação dos Testes de Software
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Durante a execução dos primeiros testes, ainda antes do site ser oficialmente lançado, foram identificados alguns bugs relacionados ao cadastro do produtor que estava permitindo cadastrar o mesmo e-mail mais de uma vez; o carrossel de imagens da página inicial não estava direcionando o usuário à categoria específica; o mapa, onde é possível observar os eventos por proximidade, não estava funcionando de forma adequada; e havia também falhas em alguns redirecionamentos. É importante ressaltar que todos estes problemas foram solucionados antes de lançarmos o site.
+
+Já após o lançamento, elaboramos nosso plano de testes e verificamos cada requisito/funcionalidade destacada, onde pudemos identificar pequenos bugs, como o preenchimento automático de todas as informações ao editar um evento já cadastrado e também o funcionamento do link de recuperação de senha, os quais estão em processo de resolução.
+
+Os principais pontos fortes do nosso projeto, além da entrega de valor, podem ser facilmente observados nos resultados do plano de testes, onde fica evidente que a visualização de eventos, seja por categorias, proximidade, barra de pesquisa ou detalhes específicos, está completamente funcional. Além disso, o processo de confirmação de presença em eventos acontece de forma rápida e eficaz, onde os usuários podem registrar sua presença e essa informação é devidamente contabilizada para os produtores quase de imediato. Tendo em vista os pontos apresentados, é possível afirmar que a experiência do usuário (potencial participante) é simples, eficiente e funcional, o que com certeza é um grande ponto forte do nosso projeto.
+
+Já os pontos fracos estão relacionados ao cadastro do produtor e a edição dos eventos já cadastrados, onde é possível identificar pequenas falhas que podem dificultar a experiência do produtor. Considerando que a nossa equipe está dedicada na resolução desses problemas, creio que será possível entregar um projeto sem falhas relevantes no funcionamento do site e na experiência do produtor, a qual é a nossa prioridade, para que seja possível tanto para o produtor quanto para o potencial participante ter uma boa experiência no uso do NaFaixa.
 
 
 # Testes de Usabilidade
