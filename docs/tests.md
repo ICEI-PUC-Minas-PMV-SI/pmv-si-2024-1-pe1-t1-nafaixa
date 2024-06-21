@@ -24,11 +24,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT01 - Criar conta |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html 
-2) Clique em “Entrar”
-3) Clique em “Cadastre-se”
-4) Preencha todos os campos do formulário
-5) Clique no botão “Criar perfil” |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique em “Entrar” <br> 3) Clique em “Cadastre-se” <br> 4) Preencha todos os campos do formulário <br> 5) Clique no botão “Criar perfil” |
 | Requisitos associados | RF-008 |
 | Resultado esperado | Prosseguir para a tela de login |
 | Dados de entrada | Inserção de dados válidos no formulário de cadastro |
@@ -36,10 +32,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT02 - Fazer login |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html 
-2) Clique em “Entrar”
-3) Preencha os campos de e-mail e senha
-4) Clique no botão “Entrar”. |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique em “Entrar” <br> 3) Preencha os campos de e-mail e senha <br> 4) Clique no botão “Entrar”. |
 | Requisitos associados | RF-009 |
 | Resultado esperado | Prosseguir para a tela “Meus eventos” |
 | Dados de entrada | Inserção de dados de login válidos |
@@ -47,11 +40,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT03 - Alterar dados do produtor |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/login.html
-2) Faça login
-3) Clique em “Meu perfil”
-4) Altere o dado desejado
-5) Clique no botão “Salvar alterações”. |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/login.html <br> 2) Faça login <br> 3) Clique em “Meu perfil” <br> 4) Altere o dado desejado <br> 5) Clique no botão “Salvar alterações”. |
 | Requisitos associados | RF-010 |
 | Resultado esperado | Prosseguir para a tela “Meu perfil” com os dados atualizados |
 | Dados de entrada | Inserção de dado válido no campo a ser alterado |
@@ -59,24 +48,16 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT04 - Alterar dados de evento cadastrado |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Faça login
-3) Clique em “Meus eventos”
-4) Altere o dado desejado
-5) Clique no botão “Salvar alterações”. |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Faça login <br> 3) Clique em “Meus eventos” <br> 4) Altere o dado desejado <br> 5) Clique no botão “Salvar alterações”. |
 | Requisitos associados | RF-011 |
 | Resultado esperado | Prosseguir para a tela “Meus eventos” com os dados atualizados |
 | Dados de entrada | Inserção de dado válido no campo a ser alterado |
 | Resultado obtido | Problema identificado |
-| Bug identificado | O campo “Sobre o evento” não está aparecendo automaticamente preenchido na edição do evento cadastrado. |
+| Bug identificado | O campo “Sobre o evento” não está aparecendo automaticamente preenchido na edição do evento cadastrado |
 
 | Caso de teste | CT05 - Criar evento |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Faça login
-3) Clique em “Criar evento”
-4) Preencha todos os campos do formulário
-5) Clique no botão “Criar evento”. |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Faça login <br> 3) Clique em “Criar evento” <br> 4) Preencha todos os campos do formulário <br> 5) Clique no botão “Criar evento”. |
 | Requisitos associados | RF-001 |
 | Resultado esperado | Prosseguir para a tela “Meus eventos” |
 | Dados de entrada | Inserção de dados válidos no formulário de cadastro |
@@ -84,8 +65,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT06 - Visualizar todos os eventos |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique no botão “mostrar mais” |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique no botão “mostrar mais” |
 | Requisitos associados | RF-005 |
 | Resultado esperado | Prosseguir para a tela com todos os eventos cadastrados |
 | Dados de entrada | Sem dados de entrada |
@@ -93,8 +73,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT07 - Visualizar eventos por categoria |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique na categoria desejada |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique na categoria desejada |
 | Requisitos associados | RF-002 |
 | Resultado esperado | Prosseguir para a tela com a listagem dos eventos da categoria selecionada |
 | Dados de entrada | Sem dados de entrada |
@@ -102,10 +81,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT08 - Visualizar eventos por proximidade 01 |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique em “Localização” na navbar
-3) Permita o site a acessar a sua localização
-4) Clique no botão “ver todos” ao lado de “Eventos perto de mim” |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique em “Localização” na navbar <br> 3) Permita o site a acessar a sua localização <br> 4) Clique no botão “ver todos” ao lado de “Eventos perto de mim” |
 | Requisitos associados | RF-004 |
 | Resultado esperado | Prosseguir para a tela com o mapa e a listagem dos eventos mais próximos do usuário |
 | Dados de entrada | Permissão para acessar localização |
@@ -113,8 +89,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT09 - Visualizar eventos por proximidade 02 |
 | --- | --- |
-| Procedimento | 1) Navegue pelo mapa
-2) Clique em “Esconder o mapa” |
+| Procedimento | 1) Navegue pelo mapa <br> 2) Clique em “Esconder o mapa” |
 | Requisitos associados | RF-004 |
 | Resultado esperado | O mapa deve ser ocultado |
 | Dados de entrada | Sem dados de entrada |
@@ -122,9 +97,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT10 - Utilizar a barra de pesquisa |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Digite o nome do evento que você procura na barra de pesquisa localizada na navbar
-3) Clique na tecla Enter do teclado |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Digite o nome do evento que você procura na barra de pesquisa localizada na navbar <br> 3) Clique na tecla Enter do teclado |
 | Requisitos associados | RF-003 |
 | Resultado esperado | Prosseguir para a tela com os eventos que correspondem ao termo pesquisado |
 | Dados de entrada | Inserção de dado de pesquisa |
@@ -132,8 +105,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT11 - Visualizar os detalhes de eventos |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique no evento que você deseja visualizar |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique no evento que você deseja visualizar |
 | Requisitos associados | RF-006 |
 | Resultado esperado | Prosseguir para a tela com os detalhes do evento selecionado |
 | Dados de entrada | Sem dados de entrada |
@@ -141,10 +113,7 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT12 - Confirmar presença em um evento |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique no evento que você deseja visualizar
-3) Informe o seu e-mail no campo de formulário
-4) Clique no botão “Enviar” |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique no evento que você deseja visualizar <br> 3) Informe o seu e-mail no campo de formulário <br> 4) Clique no botão “Enviar” |
 | Requisitos associados | RF-007 |
 | Resultado esperado | Exibir uma mensagem de sucesso ao usuário e contabilizar esta pessoa confirmada em “Meus eventos” para o produtor |
 | Dados de entrada | Inserção de dado válido no formulário de confirmação de presença |
@@ -152,38 +121,112 @@ Abaixo é apresentado o plano dos testes, onde em cada Caso de Teste (CT) está 
 
 | Caso de teste | CT13 - Ordenar eventos |
 | --- | --- |
-| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html
-2) Clique na aba de eventos que deseja (por categoria ou para ver todos os eventos cadastrados)
-3) Clique no filtro “Ordenar”
-4) Escolha como prefere o ordenamento (por data, de A a Z ou de Z a A) |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique na aba de eventos que deseja (por categoria ou para ver todos os eventos cadastrados) <br> 3) Clique no filtro “Ordenar” <br> 4) Escolha como prefere o ordenamento (por data, de A a Z ou de Z a A) |
 | Requisitos associados | RF-002 e RF-005 |
 | Resultado esperado | Os eventos devem se ordenar de acordo com a escolha de ordenamento |
 | Dados de entrada | Sem dados de entrada |
 | Resultado obtido | Sucesso |
 
+| Caso de teste | CT14 - Recuperação de senha |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique em Entrar <br> 3) Clique em “Esqueceu sua senha?” <br> 4) Informe o e-mail para o qual deve ser enviado o link de recuperação de senha <br> 5) Em seu e-mail, acesse o link enviado pelo NaFaixa <br> 6) Crie a sua nova senha e confirme ela novamente <br> 7) Clique em Enviar <br> 8) Realize login com a nova senha cadastrada |
+| Requisitos associados | RF-009 |
+| Resultado esperado | Modificação da senha cadastrada |
+| Dados de entrada | Inserção de e-mail válido e nova senha criada |
+| Resultado obtido | Problema identificado |
+| Bug identificado | Link de recuperação de senha inválido |
+
+| Caso de teste | CT15 - Direcionamento do carrossel |
+| --- | --- |
+| Procedimento | 1) Acesse o endereço https://nafaixa-13247e25093e.herokuapp.com/index.html <br> 2) Clique numa das páginas do carrossel de imagens |
+| Requisitos associados | RF-002 |
+| Resultado esperado | Prosseguir para a tela com a listagem dos eventos da categoria referente à imagem no carrossel |
+| Dados de entrada | Sem dados de entrada |
+| Resultado obtido | Sucesso |
 
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
 
-|*Caso de Teste*                                 |*CT01 - Criar conta parte 1*                                         |
+|*Caso de Teste*                                 |*CT01 - Criar conta*                                         |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
+|Requisito Associado | RF-008 - O sistema deve oferecer uma página de cadastro do produtor.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1f0J1u5J6O48UBaBNq0RfkZxMWEG5KCU5/view?usp=sharing | 
 
-|*Caso de Teste*                                 |*CT02 - Criar conta parte 2*                                        |
+|*Caso de Teste*                                 |*CT02 - Fazer login*                                        |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Requisito Associado | RF-009 - O sistema deve oferecer uma página de login para o produtor.		|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1FQi4bUN5RqyKJ416H3z9M8ULm9M4nXnB/view?usp=sharing | 
 
+|*Caso de Teste*                                 |*CT03 - Alterar dados do produtor*                                        |
+|---|---|
+|Requisito Associado | RF-010 - O sistema deve oferecer uma página para alteração de dados do produtor.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1lqOeazcKe_5d_M3ECIr3U7Bhn0jlabNh/view?usp=sharin | 
+
+|*Caso de Teste*                                 |*CT04 - Alterar dados de evento cadastrado*                                        |
+|---|---|
+|Requisito Associado | RF-011 - O sistema deve oferecer a opção de alteração dos dados do evento já cadastrado.	|
+|Link do vídeo do teste realizado: |  | 
+
+|*Caso de Teste*                                 |*CT05 - Criar evento*                                        |
+|---|---|
+|Requisito Associado | RF-001 - O sistema deve oferecer a funcionalidade de cadastrar um novo evento.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1Mz6juhLDiw399o0es0_hNpd6gK7DydmA/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT06 - Visualizar todos os eventos*                                        |
+|---|---|
+|Requisito Associado | RF-005 - O sistema deve apresentar uma lista completa de todos os eventos cadastrados.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1DUBlemIizfK5PIh7rnBGl32ph88czlbt/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT07 - Visualizar eventos por categoria*                                        |
+|---|---|
+|Requisito Associado | RF-002 - O sistema deve fornecer um filtro por categoria para facilitar a navegação.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1KIQ7yw1GGTT-Ua048CSwdiRIKuvcdnJ5/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT08 - Visualizar eventos por proximidade 01*                                        |
+|---|---|
+|Requisito Associado | RF-004 - O sistema deve apresentar os eventos cadastrados por proximidade de localização em um mapa.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1UUShG7B61GIBbdXTj54lomz-K3Ytf58-/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT09 - Visualizar eventos por proximidade 02*                                        |
+|---|---|
+|Requisito Associado | RF-004 - O sistema deve apresentar os eventos cadastrados por proximidade de localização em um mapa.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1UUShG7B61GIBbdXTj54lomz-K3Ytf58-/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT10 - Utilizar a barra de pesquisa*                                        |
+|---|---|
+|Requisito Associado | RF-003 - O sistema deve apresentar uma barra de pesquisa para facilitar a localização de eventos específicos.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/16RE97kmF6C_1mtVJWy_8rUE2pZAwXU4p/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT11 - Visualizar os detalhes de eventos*                                        |
+|---|---|
+|Requisito Associado | RF-006 - O sistema deve apresentar os dados detalhados de todos os eventos cadastrados.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/15EeQFVsWT35xrYc8JNFp5owDN7TuJBpb/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT12 - Confirmar presença em um evento*                                        |
+|---|---|
+|Requisito Associado | RF-007 - O sistema deve oferecer a opção de confirmar a presença de um ou mais eventos.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/15EeQFVsWT35xrYc8JNFp5owDN7TuJBpb/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT13 - Ordenar eventos*                                        |
+|---|---|
+|Requisitos Associados | RF-002 -	O sistema deve fornecer um filtro por categoria para facilitar a navegação.	<br> RF-005 - O sistema deve apresentar uma lista completa de todos os eventos cadastrados.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1KIQ7yw1GGTT-Ua048CSwdiRIKuvcdnJ5/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT14 - Recuperação de senha*                                        |
+|---|---|
+|Requisitos Associados | RF-009 - O sistema deve oferecer uma página de login para o produtor. |
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1WSK41GvKLrK0-fq4TrYDxbizpUf0ahbA/view?usp=sharing | 
+
+|*Caso de Teste*                                 |*CT15 - Direcionamento do carrossel*                                        |
+|---|---|
+|Requisito Associado | RF-002 - O sistema deve fornecer um filtro por categoria para facilitar a navegação.	|
+|Link do vídeo do teste realizado: | https://drive.google.com/file/d/1mF6v27OGQt8fucEkFoZNIXGFoFx1YqnN/view?usp=sharing | 
 
 ## Avaliação dos Testes de Software
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-## Testes de unidade automatizados (Opcional)
-
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
 
 # Testes de Usabilidade
 
