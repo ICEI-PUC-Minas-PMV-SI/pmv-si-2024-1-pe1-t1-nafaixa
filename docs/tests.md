@@ -236,9 +236,9 @@ Já os pontos fracos estão relacionados ao cadastro do produtor e a edição do
 
 O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
 
-Para tanto, elaboramos quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
+Para tanto, elaboramos três cenários, cada um baseado nas funções que seriam mais usadas do site para diferentes situações.
 
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+Foram convidadas três pessoas que os perfis se encaixassem potenciais usuários da plataforma, visando averiguar os seguintes indicadores:
 
 Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
 
@@ -263,54 +263,59 @@ Apresente os cenários de testes utilizados na realização dos testes de usabil
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
+| 1             | Você é uma pessoa que deseja participar de um evento na cidade de São Paulo. Encontre no site um evento em São Paulo e veja detalhes do evento anunciado e confirme sua presença. |
+| 2             | Você é uma pessoa que deseja participar de um evento online. Encontre no site um evento online e veja detalhes do evento anunciado e confirme sua presença. |
+| 3             | Você é uma pessoa que deseja cadastrar um evento gratuito no site. Cadastre um evento presencial no site. |
 
 
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você é uma pessoa que deseja participar de um evento na cidade de São Paulo. Encontre no site um evento em São Paulo e veja detalhes do evento anunciado e confirme sua presença.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
+| 1       | SIM             | 4                    | 45.22 segundos                  |
+| 2       | SIM             | 5                    | 37.77 segundos                  |
+| 3       | SIM             | 4                    | 28.53 segundos                  |
 |  |  |  |  |
-| **Média**     | 100%           | 5                | 28.02 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
+| **Média**     | 100%           | 4.33                | 37.17 segundos                           |
+| **Especialista** | SIM | 5 | 20.99 segundos |
 
 
     Comentários dos usuários: Achei o site muito bom e intuitivo. 
     Não tive dificuldades e acho que ficou bem intuitivo.
 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Você é uma pessoa que deseja participar de um evento online. Encontre no site um evento online e veja detalhes do evento anunciado e confirme sua presença.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 4                    | 36.21 segundos                          |
+| 1       | SIM             | 3                    | 61.49 segundos                          |
+| 2       | SIM             | 4                    | 17.38 segundos                          |
+| 3       | SIM             | 4                    | 32.26 segundos                          |
 |  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| **Média**     | 100%           | 3.7                | 37.04 segundos                           |
+| **Especialista** | SIM | 5 | 13.18 segundos |
 
 
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+    Comentários dos usuários: O site poderia classificar eventos online de outra maneira e não como categoria pois fica confuso onde encontrar eventos online, uma vez que o evento online pode ser de qualquer outra categoria. 
+
+Cenário 3: Você é uma pessoa que deseja cadastrar um evento gratuito no site. Cadastre um evento presencial no site.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 192.53 segundos                          |
+| 2       | SIM             | 5                    | 129.37 segundos                          |
+| 3       | SIM             | 5                    | 92.58 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 5                | 138.16 segundos                           |
+| **Especialista** | SIM | 5 | 45.21 segundos |
 
 ## Avaliação dos Testes de Usabilidade
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
+Os testes de usabilidade realizados com os usuários revelaram resultados positivos em termos de taxa de sucesso e satisfação subjetiva. Em todos os três cenários, os usuários conseguiram concluir as tarefas com sucesso, o que indica que a aplicação web é capaz de atender às necessidades dos usuários.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+No cenário 1, os usuários encontraram e participaram de um evento em São Paulo com facilidade, com uma taxa de sucesso de 100% e uma satisfação subjetiva média de 4.33. Os comentários dos usuários indicam que o site é intuitivo e fácil de usar. Já no cenário 2, os usuários também encontraram e participaram de um evento online com sucesso, com uma taxa de sucesso de 100% e uma satisfação subjetiva média de 3.7, no entanto, os usuários sugeriram que o site poderia melhorar a classificação de eventos online para facilitar a busca. E no cenário 3, os usuários cadastraram um evento presencial com facilidade, com uma taxa de sucesso de 100% e uma satisfação subjetiva média de 5. O tempo mais longo deste cenário já era esperado devido à complexidade desta tarefa em comparação às outras.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
-
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
-
-
-
+Em geral, os resultados dos testes de usabilidade indicam que a aplicação web é fácil de usar e atende às necessidades dos usuários. No entanto, há oportunidades de melhoria, especialmente no tempo para conclusão de cada tarefa e na classificação de eventos online.
