@@ -282,11 +282,6 @@ Cenário 1: Você é uma pessoa que deseja participar de um evento na cidade de 
 | **Média**     | 100%           | 4.33                | 37.17 segundos                           |
 | **Especialista** | SIM | 5 | 20.99 segundos |
 
-
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
-    Não tive dificuldades e acho que ficou bem intuitivo.
-
-
 Cenário 2: Você é uma pessoa que deseja participar de um evento online. Encontre no site um evento online e veja detalhes do evento anunciado e confirme sua presença.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
