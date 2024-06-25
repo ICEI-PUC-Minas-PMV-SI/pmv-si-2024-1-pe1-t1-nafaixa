@@ -266,7 +266,7 @@ Cenário 1: Você é uma pessoa que deseja participar de um evento na cidade de 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
 | 1       | SIM             | 4                    | 45.22 segundos                  |
-| 2       | SIM             | 5                    | 37.77 segundos                  |
+| 2       | SIM             | 5                    | 37.47 segundos                  |
 | 3       | SIM             | 4                    | 28.53 segundos                  |
 |  |  |  |  |
 | **Média**     | 100%           | 4.33                | 37.17 segundos                           |
