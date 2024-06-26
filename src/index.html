@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="CSS/components/navbar.css" />
   <link rel="stylesheet" href="CSS/components/navbar-mobile.css" />
   <link rel="stylesheet" href="CSS/components/page-style.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/components/mapa.css" />
   <link rel="stylesheet" href="CSS/components/popup.css">
   <link rel="stylesheet" href="CSS/components/title.css" />
   <link rel="stylesheet" href="CSS/components/event-cards.css" />
@@ -143,6 +144,9 @@
     <div class="popup-content">
       <h5>Escolha uma localização</h5>
       <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
+      <button class="esconderMapa-button voltarLocalizacao" onclick="voltarParaLocalizacaoAtual()" id=""
+      href="index.html"><span id="">Voltar para localização atual</span>
+    </button>
     </div>
   </div>
 
@@ -348,6 +352,27 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places"></script>
   <script>
+       function voltarParaLocalizacaoAtual() {
+      localStorage.removeItem("isMapLocationBlocked");
+
+      const currentMapUserLocation = JSON.parse(localStorage.getItem('currentMapUserLocation'));
+
+      localStorage.setItem('mapUserLocation', JSON.stringify({
+        cityName: currentMapUserLocation.cityName,
+        latitude: currentMapUserLocation.latitude,
+        longitude: currentMapUserLocation.longitude
+      }));
+      localStorage.setItem('userLocation', JSON.stringify({
+        cityName: currentMapUserLocation.cityName,
+        latitude: currentMapUserLocation.latitude,
+        longitude: currentMapUserLocation.longitude
+      }));
+
+      updateNavbarLocation(currentMapUserLocation.cityName);
+
+      location.reload();
+    }
+
 
     function handleCriarEventoOnClick(e) {
       if (!isUserLoggedIn()) {
