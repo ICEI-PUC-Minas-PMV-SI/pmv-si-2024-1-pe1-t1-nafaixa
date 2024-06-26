@@ -19,15 +19,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelector('.nome-evento').textContent = evento.nome;
         document.getElementById('categoria-evento').innerHTML = `<img src="assets/img/tag.svg" alt="categoria" /> ${evento.categoria}`;
         document.getElementById('data-inicio-evento').innerHTML = `<img src="./assets/img/data.svg" alt="Data do evento"/> ${formatarDataHora(evento.startDate)}`;
-        document.getElementById('hora-inicio-evento').textContent = formatarHora(evento.startTime);
-        document.getElementById('data-final-evento').innerHTML = `${formatarDataHora(evento.finalDate)}`;
-        document.getElementById('hora-final-evento').textContent = formatarHora(evento.finalTime);
+        document.getElementById('hora-inicio-evento').textContent = ` às ${formatarHora(evento.startTime)}`;
+        document.getElementById('data-final-evento').innerHTML = ` > ${formatarDataHora(evento.finalDate)}`;
+        document.getElementById('hora-final-evento').textContent = ` às ${formatarHora(evento.finalTime)}`;
 
         const localElement = document.getElementById('localEvento');
         localElement.innerHTML = evento.tipo === 'presencial' ?
             `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.nomeLocal ? evento.nomeLocal + ' - ' + evento.local : evento.local}` :
             `<img src="./assets/img/local.svg" alt="Local do evento" /> ${evento.link}`;
-
 
         document.getElementById('descricao-evento').innerHTML = evento.sobre;
         document.getElementById('informacoes-evento').textContent = evento.informacoes;
@@ -37,7 +36,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             const apiUrlProdutor = obterUrlBase() + `/produtor/${produtorId}`;
             const responseProdutor = await fetch(apiUrlProdutor);
             const produtor = await responseProdutor.json();
-            document.getElementById('sobre-produtor').textContent = produtor.descricao;
+
+            const sobreProdutorElem = document.getElementById('sobre-produtor');
+            sobreProdutorElem.innerHTML = `<b>${produtor.nome}</b><br>${produtor.descricao}</br>`;
+
+            let contatoInfo = '';
+
+            if (produtor.email_publico) {
+                contatoInfo += `Contato: ${produtor.email_publico}<br>`;
+            }
+
+            if (produtor.celular_publico) {
+                contatoInfo += `Celular: ${produtor.celular_publico}`;
+            }
+
+            if (contatoInfo) {
+                const contatoPublicoProdutorElem = document.createElement('div');
+                contatoPublicoProdutorElem.innerHTML = contatoInfo;
+                sobreProdutorElem.appendChild(document.createElement('br'));
+                sobreProdutorElem.appendChild(contatoPublicoProdutorElem);
+            }
 
             const logoProdutorElement = document.querySelector('.sobre-produtor-icone');
             logoProdutorElement.src = produtor.logo;

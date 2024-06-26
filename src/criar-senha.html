@@ -35,15 +35,9 @@
             <a href="index.html">
                 <img class="logo" src="assets/img/logo2.svg" alt="logo do NaFaixa" /></a>
         </div>
-        <form class="nav-search">
-            <div class="search">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" type="search" placeholder="pesquise por evento" />
-            </div>
+
         </form>
         <nav class="nav-options-web">
-            <a href="">Localização</a>
-            <a href="">Criar evento</a>
             <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
         </nav>
     </div>
@@ -95,7 +89,6 @@
                 <ul>
                     <a href="login.html">Entrar</a></br>
                     <a href="criar-evento.html">Criar evento</a>
-                    <a href="#">Sair</a>
                 </ul>
             </div>
         </nav>
@@ -131,15 +124,15 @@
 </footer>
 <script src="./JS/meusEventos.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const meuPerfilLink = document.getElementById('meu-perfil');
-            meuPerfilLink.addEventListener('click', function (event) {
-                event.preventDefault();
-                window.location.href = 'cadastro-produtor.html?edit';
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const meuPerfilLink = document.getElementById('meu-perfil');
+        meuPerfilLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'cadastro-produtor.html?edit';
         });
-    </script>
+    });
+</script>
 </body>
 
 </html>

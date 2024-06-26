@@ -38,7 +38,7 @@
         referrerpolicy="origin"></script>
 
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-  <script src="./JS/obterUrlBase.js"></script>
+    <script src="./JS/obterUrlBase.js"></script>
 
 
 
@@ -122,7 +122,6 @@
                     <ul>
                         <a href="login.html">Entrar</a></br>
                         <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
-                        <a id="botaoSair" href="#">Sair</a>
                     </ul>
                 </div>
             </nav>
@@ -522,7 +521,7 @@
 
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch(obterUrlBase()+'/categorias');
+                const response = await fetch(obterUrlBase() + '/categorias');
                 const categorias = await response.json();
 
                 popularCategorias(categorias);
@@ -663,7 +662,7 @@
             }
 
             try {
-                const response = await fetch(obterUrlBase()+`/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
+                const response = await fetch(obterUrlBase() + `/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -727,7 +726,7 @@
                     bannerURL: bannerUrl
                 };
 
-                const createResponse = await fetch(obterUrlBase()+'/eventos', {
+                const createResponse = await fetch(obterUrlBase() + '/eventos', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -806,7 +805,7 @@
 
             if (eventId) {
                 try {
-                    const response = await fetch(obterUrlBase()+`/eventos/${eventId}`);
+                    const response = await fetch(obterUrlBase() + `/eventos/${eventId}`);
                     if (!response.ok) {
                         throw new Error('Erro ao carregar dados do evento');
                     }
@@ -998,7 +997,7 @@
                     bannerURL: bannerUrl
                 };
 
-                const updateResponse = await fetch(obterUrlBase()+`/eventos/${eventId}`, {
+                const updateResponse = await fetch(obterUrlBase() + `/eventos/${eventId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

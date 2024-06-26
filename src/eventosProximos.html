@@ -147,7 +147,6 @@
           <ul>
             <a href="login.html">Entrar</a></br>
             <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
-            <a id="botaoSair" href="#">Sair</a>
           </ul>
         </div>
       </nav>
@@ -294,7 +293,7 @@
       console.log('carregando eventos');
 
       try {
-        const response = await fetch(obterUrlBase()+"/eventos");
+        const response = await fetch(obterUrlBase() + "/eventos");
         const eventos = await response.json();
 
         const eventosFuturosOuHoje = eventos.filter(evento => isDataFuturaOuHoje(evento.finalDate));
