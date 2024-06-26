@@ -46,12 +46,6 @@
         </div>
       </form>
       <nav class="nav-options-web">
-        <div onclick="openPopup()" class="localização-web">
-          <img src="assets/img/localpin.svg" </img>
-          <span class="localização-web" id="escolherLocalização">Localização</span>
-          <img src="assets/img/setaprabaixo1.svg" style="padding-right: 15px"></img>
-        </div>
-
         <a onclick='return handleCriarEventoOnClick()' href="criar-evento.html">Criar evento</a>
         <a id="entrar-btn" class="joinBtn" href="login.html">Entrar</a>
       </nav>
@@ -139,17 +133,6 @@
       <input type="text" class="search-input" name="q" placeholder="Pesquise por evento...">
     </div>
   </form>
-
-  <div class="popup" id="locationPopup">
-    <div class="popup-content">
-      <h5>Escolha uma localização</h5>
-      <input type="text" id="cityInput" placeholder="Digite o nome da cidade que deseja...">
-      <button class="esconderMapa-button voltarLocalizacao" onclick="voltarParaLocalizacaoAtual()" id=""
-      href="index.html"><span id="">Voltar para localização atual</span>
-    </button>
-    </div>
-  </div>
-
   <section class="page">
     <div style="width: 100%">
       <div class="todos-eventos-title">
@@ -208,7 +191,7 @@
       updateNavbarLocation(currentMapUserLocation.cityName);
 
       location.reload();
-    }
+    };
 
     function handleCriarEventoOnClick(e) {
       if (!isUserLoggedIn()) {
