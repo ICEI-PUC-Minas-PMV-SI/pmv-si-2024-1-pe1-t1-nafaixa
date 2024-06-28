@@ -52,7 +52,7 @@ eventBannerInput.onchange = evt => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch(obterUrlBase() +'/categorias');
+        const response = await fetch(obterUrlBase() + '/categorias');
         const categorias = await response.json();
 
         popularCategorias(categorias);
@@ -192,7 +192,7 @@ async function criarEvento() {
     }
 
     try {
-        const response = await fetch(obterUrlBase() +`/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
+        const response = await fetch(obterUrlBase() + `/eventos?nome=${encodeURIComponent(nomeEvento.value)}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -255,7 +255,7 @@ async function criarEvento() {
             bannerURL: bannerUrl
         };
 
-        const createResponse = await fetch(obterUrlBase() +'/eventos', {
+        const createResponse = await fetch(obterUrlBase() + '/eventos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (eventId) {
         try {
-            const response = await fetch(obterUrlBase() +`/eventos/${eventId}`);
+            const response = await fetch(obterUrlBase() + `/eventos/${eventId}`);
             if (!response.ok) {
                 throw new Error('Erro ao carregar dados do evento');
             }
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function populateForm(event) {
     document.querySelector('#nome').value = event.nome;
     document.querySelector('#categorias').value = event.categoria;
-    document.querySelector(input[name = "event-type"][value = "${event.tipo}"]).checked = true;
+    document.querySelector(`input[name="event-type"][value="${event.tipo}"]`).checked = true;
 
     if (event.tipo === 'presencial') {
         document.querySelector('#local').value = event.local;
@@ -403,7 +403,16 @@ function populateForm(event) {
     document.querySelector('#start-time').value = event.startTime;
     document.querySelector('#final-date').value = event.finalDate;
     document.querySelector('#final-time').value = event.finalTime;
-    tinymce.get('sobre').setContent(event.sobre);
+
+    tinymce.init({
+        selector: '#sobre',
+        setup: function (editor) {
+            editor.on('init', function () {
+                editor.setContent(event.sobre);
+            });
+        }
+    });
+
     document.querySelector('#informacoes').value = event.informacoes;
     document.querySelector('#uploadedimage').src = event.bannerURL;
     bannerUrl = event.bannerURL;
@@ -518,7 +527,7 @@ async function updateEvent(event, startDatePicker, finalDatePicker) {
             bannerURL: bannerUrl
         };
 
-        const updateResponse = await fetch(obterUrlBase() +`/eventos/${eventId}`, {
+        const updateResponse = await fetch(obterUrlBase() + `/eventos/${eventId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
