@@ -34,7 +34,7 @@ async function criarProdutor() {
   const fotoProdutorFile = fotoProdutorInput.files[0];
 
   // Cloudinary config
-  const cloudName = "dmcuzezlv";
+  const cloudName = "CLOUDINARY_CHAVE_API";
   const unsignedUploadPreset = "w1cukmci";
 
   const formData = new FormData();
@@ -208,7 +208,7 @@ async function salvarAlteracoes() {
   const fotoProdutorInput = document.querySelector("#foto-produtor");
   const fotoProdutorFile = fotoProdutorInput.files[0];
 
-  const cloudName = "dmcuzezlv";
+  const cloudName = "CLOUDINARY_CHAVE_API";
   const unsignedUploadPreset = "w1cukmci";
 
   let produtorAtual;

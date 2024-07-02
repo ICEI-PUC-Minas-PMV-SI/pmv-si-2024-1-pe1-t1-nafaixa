@@ -168,5 +168,5 @@ window.addEventListener('load', function () {
 
 </script >
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s&libraries=places&language=pt-BR"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=CHAVE_GOOGLE_MAPS&libraries=places&language=pt-BR"></script>
 </script >

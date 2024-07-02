@@ -64,7 +64,7 @@ async function initMap(eventos, localSelecionado) {
 
 async function getCityFromCoordinates(latitude, longitude) {
   const response = await fetch(
-    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyC6Mt2GUjTup_ly3tWro_MnX6L9v_l5o1s`
+    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=CHAVE_GOOGLE_MAPS`
   );
   const data = await response.json();
   if (data.status === "OK") {
