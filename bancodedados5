@@ -1,0 +1,17 @@
+1. Cliente (dispositivos móveis e desktops)
+São dispositivos como computadores, smartphones ou tablets que solicitam informações ou serviços da Internet.
+Os clientes podem acessar páginas da web, baixar arquivos ou enviar requisições (como fazer login ou acessar um sistema online).
+2. Internet
+Representada como uma nuvem, a Internet é o meio que conecta os clientes aos servidores.
+A Internet funciona utilizando um conjunto de protocolos de comunicação, sendo o mais comum o TCP/IP (Transmission Control Protocol/Internet Protocol), que permite o envio de dados em pacotes.
+Quando um cliente faz uma solicitação, os dados são transmitidos pela Internet e encaminhados para o servidor correspondente.
+3. Servidor
+O servidor é uma máquina que armazena e processa as informações solicitadas pelos clientes.
+Ele pode hospedar páginas web, bancos de dados, aplicações ou sistemas. Quando um cliente faz uma solicitação (por exemplo, ao acessar um site), o servidor processa a solicitação e envia uma resposta (página ou dados) de volta ao cliente.
+O servidor está conectado à Internet através de uma rede e responde às requisições de clientes.
+Resumo do Funcionamento:
+O cliente faz uma requisição para acessar um site ou recurso, como uma página web.
+A requisição é enviada pela Internet (rede global de computadores), que utiliza protocolos para garantir a entrega correta.
+O servidor recebe a requisição, processa os dados e envia a resposta (dados solicitados, como a página web) de volta ao cliente através da Internet.
+O cliente exibe a resposta recebida, como o conteúdo da página solicitada.
+Esse é o princípio básico da arquitetura cliente-servidor, amplamente utilizada na web e em aplicações distribuídas.
